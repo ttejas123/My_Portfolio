@@ -13,6 +13,18 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/rfqN'))
   },
   {
+    path: '/topbar',
+    component: lazy(() => import('../../views/Rfq7/topbar'))
+  },
+  {
+    path: '/serach-grid',
+    component: lazy(() => import('../../views/Rfq7/searchGrid.js'))
+  },
+  {
+    path: '/create-cart',
+    component: lazy(() => import('../../views/Rfq7/createCart.js'))
+  },
+  {
     path: '/login',
     component: lazy(() => import('../../views/Login')),
     layout: 'BlankLayout',
@@ -24,18 +36,6 @@ const Routes = [
     path: '/error',
     component: lazy(() => import('../../views/Error')),
     layout: 'BlankLayout'
-  },
-  {
-    path: '/ccdashboard',
-    component: lazy(() => import('../../views/dashboards/call_center'))
-  },
-  {
-    path: '/ogedashbaord',
-    component: lazy(() => import('../../views/dashboards/on_ground_executive'))
-  },
-  {
-    path: '/comingSoon',
-    component: lazy(() => import('../../views/pages/comingSoon'))
   }
 ]
 

@@ -13,13 +13,13 @@ const themeConfig = {
     type: 'vertical', // vertical, horizontal
     contentWidth: 'full', // full, boxed
     menu: {
-      isHidden: false,
+      isHidden: true,
       isCollapsed: false
     },
     navbar: {
       // ? For horizontal menu, navbar type will work for navMenu type
       // type: 'floating', // static , sticky , floating, hidden
-      type: 'sticky', // static , sticky , floating, hidden
+      type: 'hidden', // static , sticky , floating, hidden
 
       backgroundColor: 'primary' // BS color options [primary, success, etc]
     },

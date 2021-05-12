@@ -59,60 +59,7 @@ const Checkout = () => {
   // }, [])
 
   return (
-     <Fragment>
-      <Card>
-        <CardHeader>
-          <CardTitle tag='h4'>Search product</CardTitle>
-        </CardHeader>
-        <CardBody>
-          <Row>
-            <Col md='4'>
-              <label>Search Parent Products</label>
-              <Select
-                isClearable={false}
-                theme={selectThemeColors}
-                className='react-select'
-                classNamePrefix='select'
-                options={optionStatus}
-                
-                onChange={data => {
-                  handleFilterByDropDown(data)
-                }}
-              />
-            </Col>
-            <Col md='4'>
-              <label>Search Product Category</label>
-              <Select
-                isClearable={false}
-                theme={selectThemeColors}
-                className='react-select'
-                classNamePrefix='select'
-                options={optionStatus}
-                
-                onChange={data => {
-                  handleFilterByDropDown(data)
-                }}
-              />
-            </Col>
-            <Col md='4'>
-              <label>Search Product Sub Category</label>
-              <Select
-                isClearable={false}
-                theme={selectThemeColors}
-                className='react-select'
-                classNamePrefix='select'
-                options={optionStatus}
-                
-                onChange={data => {
-                  handleFilterByDropDown(data)
-                }}
-              />
-            </Col>
-          </Row>
-        </CardBody>
-      </Card>
-
-      
+     <Fragment>    
       <Cards
             stepper={stepper}
             products={products}
