@@ -25,6 +25,10 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
   },
   {
+    path: '/product/productDetails',
+    component: lazy(() => import('../../views/product/productDetail'))
+  },
+  {
     path: '/login',
     component: lazy(() => import('../../views/Login')),
     layout: 'BlankLayout',
