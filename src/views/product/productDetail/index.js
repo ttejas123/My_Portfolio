@@ -1,7 +1,7 @@
 // ** React Imports
 import { useEffect, Fragment } from 'react'
 import { useParams } from 'react-router-dom'
-
+import Review from './review'
 // ** Product detail components
 import ItemFeatures from './ItemFeatures'
 import ProductDetails from './productDetails'
@@ -56,7 +56,7 @@ const Details = () => {
 
           <Card className='pb-1'>
             <CardBody>
-               <ItemFeatures />
+               <Review />
             </CardBody>           
           </Card>
         
