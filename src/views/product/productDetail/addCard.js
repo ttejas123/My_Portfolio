@@ -42,7 +42,7 @@ const NumberInputBasic = () => {
       </CardHeader>
 
       <div className="p-0 m-0 pl-2 d-flex mb-1">
-        <><h1 className="p-0 m-0">$89.74</h1> <div className='text-decoration-underline'>$60.24 Save</div></>
+        <><h1 className="p-0 m-0">₹89000.74</h1> <div className='text-decoration-underline'>₹600.24 Save</div></>
       </div>
           <div className="p-0 m-0 pl-2 pb-1 ">
               <h4 className="pb-1"><b>Color</b></h4>
@@ -81,8 +81,11 @@ const NumberInputBasic = () => {
           </Col>
           <Col md='11' xs='12'>
               <div className="p-0 m-0 mb-2 mt-2 d-flex">
-                <Button.Ripple className='round' style={{width:"100%"}} color='primary' outline>
+                <Button.Ripple className='round' style={{width:"50%", marginRight: "10px"}} color='primary' outline>
                    Add To Cart
+                </Button.Ripple>
+                <Button.Ripple className='round' style={{width:"50%"}} color='primary' outline>
+                   Create RFQ
                 </Button.Ripple>
               </div> 
           </Col>

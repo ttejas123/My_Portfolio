@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom'
 import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
-import Collaps from './collapsMenu'
-import Byprice from './byprice'
-import Brands from './brands'
-import Ratings from './rating'
-import Colors from './colors'
+import CollapsData from './collapData.js'
 import { useRTL } from '@hooks/useRTL'
 
 import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
@@ -47,11 +43,8 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-      <Collaps /><hr />
-      <Byprice /><hr />
-      <Brands  /><hr />
-      <Colors /><hr />
-      <Ratings />
+      <h4><b>Categories</b></h4>
+      <CollapsData />
     </>
   )
 }

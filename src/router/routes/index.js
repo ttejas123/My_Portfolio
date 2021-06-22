@@ -33,6 +33,10 @@ const Routes = [
     component: lazy(() => import('../../views/search'))
   },
   {
+    path: '/home/dashBoard',
+    component: lazy(() => import('../../views/Ddashboard'))
+  },
+  {
     path: '/login',
     component: lazy(() => import('../../views/Login')),
     layout: 'BlankLayout',
