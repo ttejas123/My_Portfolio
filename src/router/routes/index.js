@@ -77,7 +77,13 @@ const Routes = [
   {
     path: '/dash',
     component: lazy(() => import('../../views/register/dash'))
+  },
+  {
+    path: '/home1',
+    component: lazy(() => import('../../views/Home/home_info_card'))
   }
+
+  
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }
