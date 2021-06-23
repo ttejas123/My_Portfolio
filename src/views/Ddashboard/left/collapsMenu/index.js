@@ -7,7 +7,7 @@ import classnames from 'classnames'
 import CollapsData from './collapData.js'
 import { useRTL } from '@hooks/useRTL'
 
-import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
+import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, User } from 'react-feather'
 import {
   Row,
   Col,
