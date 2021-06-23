@@ -4,19 +4,21 @@ import { Link } from 'react-router-dom'
 import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
-import Collaps from './collapsMenu'
-import Right from './Right'
-import MainSubMenu from './MainSubMenu'
-
+import InfoCard from './staticCard'
+import { data } from './data'
+import StatsVertical from './inVactiV'
 import { useRTL } from '@hooks/useRTL'
-
-import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
+import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, Bookmark } from 'react-feather'
 import {
   Row,
   Col,
   CardText,
   Button,
   Card,
+  Media,
+  CardTitle,
+  CardHeader,
+  ListGroupItem,
   CardBody,
   UncontrolledButtonDropdown,
   DropdownToggle,
@@ -47,23 +49,16 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-      <Row>
-            <Col md='3' xs='12'>
-                <Card>
-                  <CardBody > 
-                    <Collaps />
-                  </CardBody>
-                </Card>
-            </Col>
-
-            <Col md='9' xs='12'>
-                
-                    <Right />
-                    {/* <MainSubMenu/> */}
-                  
-            </Col>  
-           
-        </Row>
+      <Card>
+        <CardBody >
+          <CardTitle>Recent Activities</CardTitle><hr />
+          {data.map(item => {
+                    return (
+                      <><StatsVertical icon={item.icon} color={item.color} stats={item.name} statTitle='Job Bookmarked' /><hr /></>
+                    )
+                  })}
+        </CardBody>
+      </Card>
     </>
   )
 }

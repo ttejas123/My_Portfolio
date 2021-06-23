@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
-import Collaps from './collapsMenu'
-import Right from './Right'
-import MainSubMenu from './MainSubMenu'
-
+import InfoCard from './staticCard'
+import Activity from './activity'
+import Invoice from './invoice'
 import { useRTL } from '@hooks/useRTL'
 
 import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
@@ -48,20 +47,15 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
 
     <>
       <Row>
-            <Col md='3' xs='12'>
-                <Card>
-                  <CardBody > 
-                    <Collaps />
-                  </CardBody>
-                </Card>
+            <Col md='12' xs='12'>    
+                    <InfoCard />
             </Col>
-
-            <Col md='9' xs='12'>
-                
-                    <Right />
-                    {/* <MainSubMenu/> */}
-                  
-            </Col>  
+            <Col md='6' xs='12'>    
+                    <Activity />
+            </Col>
+            <Col md='6' xs='12'>    
+                    <Invoice />
+            </Col> 
            
         </Row>
     </>
