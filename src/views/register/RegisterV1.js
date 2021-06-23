@@ -107,7 +107,24 @@ const RegisterV2 = () => {
         <h2 className='mb-1'>Bid Bulk Buy</h2>
         </div></div> */}
       {/* //  d-none d-lg-flex  */}
-        <Col className='p-5' lg='6' sm='12'>
+        <Col className='pt-5' lg='12' sm='12'>
+          <Row>
+            <Col lg='4' sm='12'>
+               
+            </Col>
+            <Col lg='6' sm='12'>
+               <img className="img-fluid w-30" src={logo} />
+            </Col>
+            <Col lg='2' sm='12'>
+               
+            </Col>
+          </Row>
+        </Col>
+
+        <Col className='p-5' lg='1' sm='12'>
+         
+        </Col>
+        <Col className='p-5' lg='5' sm='12'>
           {/* <div className='w-100 d-lg-flex  px-5'>
             <div className='text-center'>
               <h1 className='mt-5'>Pricing Plans</h1>
@@ -126,19 +143,47 @@ const RegisterV2 = () => {
           </CardText>
 
         </Col>
-        <Col className='d-flex align-items-center px-2 p-lg-5' lg='6' sm='12'>
+        <Col className='d-flex align-items-center px-2 p-lg-5' lg='5' sm='12'>
           {/* <Row>
         <Col> */}
-          <Col className='px-xl-2 mx-auto' sm='8' md='6' lg='12'>
+          <Col  sm='8' md='6' lg='12'>
             <Card className='mb-0'>
               <CardBody>
-                <CardTitle tag='h4' className='mb-1'>
-                  Welcome to Bidoya
-          </CardTitle>
+                <Row className='mb-1'>
+                  <Col md="3">
+                    
+                  </Col>
+                  <Col md="6">
+                    <div className="align-items-center">
+                      <h3>Create Your Account</h3>
+                    </div>
+                  </Col>
+                  <Col md="3">
+                    
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col md="1">
+                    
+                  </Col>
+                  <Col md="10">
+                    <div className="text-center ">
+                      <p>Please fill the following fields with appropriate information to register a new MartPlace account.</p>
+                    </div>
+                  </Col>
+                  <Col md="1">
+                    
+                  </Col>
+                </Row>
+
+                <div className='border-bottom'></div>
+
+
                 <Form className='auth-register-form mt-2' onSubmit={e => e.preventDefault()}>
 
                   <FormGroup>
-                    <Label className='form-label' for='register-registeras'>
+                    <Label className='form-label m-0' for='register-registeras'>
                       Register As
               </Label>
                     <div className='demo-inline-spacing'>
@@ -250,10 +295,10 @@ const RegisterV2 = () => {
         </Col>
         {/* </Row>
       </Col> */}
+      <Col md="3" lg='12'>
+      </Col>
       </Row>
     </div>
-
-
   )
 }
 

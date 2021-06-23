@@ -57,19 +57,8 @@ const Details = () => {
                     <Left />
                   
             </Col>
-            <Col md='9' xs='12'>
-              {/* <Row> */}
-              <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
-              {/* <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> */}
 
-             {/* <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
-             <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
-             <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> */}
-              {/* </Row> */}
-             
-              </Col>
-            
-           
+ 
         </Row>
       </div>
     </Fragment>
@@ -77,3 +66,16 @@ const Details = () => {
 }
 
 export default Details
+
+       
+                // <Col md='9' xs='12'>
+                //          {/* <Row> */}
+                //          <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
+                //          {/* <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> */}
+           
+                //         { <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
+                //         <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
+                //         <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> }
+                //          {/* </Row> */}
+                        
+                // </Col>
