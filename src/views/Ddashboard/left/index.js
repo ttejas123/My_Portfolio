@@ -47,11 +47,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-      <Collaps /><hr />
-      <Byprice /><hr />
-      <Brands  /><hr />
-      <Colors /><hr />
-      <Ratings />
+      <Collaps />
     </>
   )
 }

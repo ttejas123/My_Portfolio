@@ -57,6 +57,10 @@ const Routes = [
     }
   },
   {
+    path: '/home/dashBoard',
+    component: lazy(() => import('../../views/Ddashboard'))
+  },
+  {
     path: '/login',
     component: lazy(() => import('../../views/register/Login')),
     layout: 'BlankLayout',

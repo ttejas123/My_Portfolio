@@ -37,7 +37,7 @@ const NumberInputBasic = props => {
     <Card className='bor m-0 mb-1 mt-1' style={{backgroundColor:"#fff", paddingRight:"5px"}}>
 
       <div className="p-0 m-0 pl-1 d-flex mb-1 mt-1">
-        <><h1 className="p-0 m-0"><b>{props.price}</b></h1> <div className='text-decoration-underline'>$60.24 Save</div></>
+        <><h1 className="p-0 m-0"><b>{props.price}</b></h1> <div className='text-decoration-underline'>₹60.24 <b>Save</b></div></>
       </div>
           
       <CardBody className="p-0 m-0 pl-1">
@@ -50,8 +50,11 @@ const NumberInputBasic = props => {
           </Col>
           <Col md='12' xs='12'>
               <div className="p-0 m-0 mb-2 mt-2 d-flex">
-                <Button.Ripple className='round' style={{width:"100%"}} color='primary' outline>
+                <Button.Ripple className='round' style={{width:"50%", marginRight: "10px"}} color='primary' outline>
                    Add To Cart
+                </Button.Ripple>
+                <Button.Ripple className='round' style={{width:"50%"}} color='primary' outline>
+                   Create RFQ
                 </Button.Ripple>
               </div> 
           </Col>
