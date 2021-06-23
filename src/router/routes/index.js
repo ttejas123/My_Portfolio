@@ -32,14 +32,14 @@ const Routes = [
     path: '/search/searchPage',
     component: lazy(() => import('../../views/search'))
   },
-  {
-    path: '/login',
-    component: lazy(() => import('../../views/Login')),
-    layout: 'BlankLayout',
-    meta: {
-      authRoute: true
-    }
-  },
+  // {
+  //   path: '/login',
+  //   component: lazy(() => import('../../views/Login')),
+  //   layout: 'BlankLayout',
+  //   meta: {
+  //     authRoute: true
+  //   }
+  // },
   {
     path: '/register',
     component: lazy(() => import('../../views/register/RegisterV1')),
@@ -49,9 +49,30 @@ const Routes = [
     }
   },
   {
+    path: '/log1',
+    component: lazy(() => import('../../views/register/LoginV1')),
+    layout: 'BlankLayout',
+    meta: {
+      authRoute: true
+    }
+  },
+  {
+    path: '/login',
+    component: lazy(() => import('../../views/register/Login')),
+    layout: 'BlankLayout',
+    meta: {
+      authRoute: true
+    }
+  },
+  
+  {
     path: '/error',
     component: lazy(() => import('../../views/Error')),
     layout: 'BlankLayout'
+  },
+  {
+    path: '/dash',
+    component: lazy(() => import('../../views/register/dash'))
   }
 ]
 
