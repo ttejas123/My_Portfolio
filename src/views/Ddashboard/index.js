@@ -44,13 +44,10 @@ const Details = () => {
       <div >
       <Header />
         <Row>
-            <Col md='3' xs='12'>
-                <Card>
-                  <CardBody >
-                    
+            <Col md='12' xs='12'>
+                 
                     <Left />
-                  </CardBody>
-                </Card>
+                  
             </Col>
             
            

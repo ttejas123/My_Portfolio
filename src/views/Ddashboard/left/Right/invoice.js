@@ -4,18 +4,21 @@ import { Link } from 'react-router-dom'
 import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
-import Collaps from './collapsMenu'
-import Right from './Right'
-
+import InfoCard from './staticCard'
+import { data1 } from './data'
+import StatsVertical from './invoiceCard'
 import { useRTL } from '@hooks/useRTL'
-
-import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
+import { Star, File, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, Bookmark } from 'react-feather'
 import {
   Row,
   Col,
   CardText,
   Button,
   Card,
+  Media,
+  CardTitle,
+  CardHeader,
+  ListGroupItem,
   CardBody,
   UncontrolledButtonDropdown,
   DropdownToggle,
@@ -46,22 +49,16 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-      <Row>
-            <Col md='3' xs='12'>
-                <Card>
-                  <CardBody > 
-                    <Collaps />
-                  </CardBody>
-                </Card>
-            </Col>
-
-            <Col md='9' xs='12'>
-                
-                    <Right />
-                  
-            </Col>  
-           
-        </Row>
+      <Card>
+        <CardBody >
+          <CardTitle>Invoices</CardTitle><hr />
+          {data1.map(item => {
+                    return (
+                      <><StatsVertical icon=<File size={16} /> color={item.color} stats={item.name} statTitle={item.title} /><hr /></>
+                    )
+                  })}
+        </CardBody>
+      </Card>
     </>
   )
 }
