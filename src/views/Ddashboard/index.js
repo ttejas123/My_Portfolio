@@ -46,12 +46,16 @@ const Details = () => {
       <div >
       <Header />
         <Row>
+{ /*<<<<<<< HEAD
             <Col md='3' xs='12'>
                 <Card>
                   <CardBody >
+=======*/ }
+            <Col md='12' xs='12'>
+                 
+
                     <Left />
-                  </CardBody>
-                </Card>
+                  
             </Col>
             <Col md='9' xs='12'>
               {/* <Row> */}
