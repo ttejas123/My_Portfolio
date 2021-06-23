@@ -9,6 +9,8 @@ import { AlignJustify, Rss, Info, Image, Users, Edit } from 'react-feather'
 import BreadCrumbs from '@components/breadcrumbs'
 import Left from './left'
 import Header from './header'
+import InfoCard from './dashboardComponent/index'
+
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
 import '@styles/react/pages/page-profile.scss'
@@ -47,11 +49,21 @@ const Details = () => {
             <Col md='3' xs='12'>
                 <Card>
                   <CardBody >
-                    
                     <Left />
                   </CardBody>
                 </Card>
             </Col>
+            <Col md='9' xs='12'>
+              {/* <Row> */}
+              <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
+              {/* <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> */}
+
+             {/* <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
+             <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
+             <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> */}
+              {/* </Row> */}
+             
+              </Col>
             
            
         </Row>

@@ -4,7 +4,7 @@ import Avatar from '@components/avatar'
 
 const StatesticCard = ({item}) => {
     return (
-        <Col>
+       
           <Media>
             <Avatar color={item.color} icon={item.icon} className='mr-2' />
             <Media className='my-auto' body>
@@ -13,7 +13,6 @@ const StatesticCard = ({item}) => {
               <CardText className='font-small-3 mb-0'>{item.subtitle}</CardText>
             </Media>
           </Media>
-        </Col>
     )
 }
 export default StatesticCard
