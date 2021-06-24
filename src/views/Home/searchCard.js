@@ -66,7 +66,9 @@ const SearchCard = () => {
                    <h3 className=' font-weight-bolder text-center' >What are you Searching For ?</h3>
                 </CardTitle>
                 <Row>
-                    <Col lg='8'>
+                <Col lg='2'>
+                                </Col>
+                    <Col lg='6'>
               <Input onChange={e => onChange(e)} placeholder='Ask a question...' />
                     </Col>
                     <Col lg='4'>

@@ -4,6 +4,7 @@ import Header from './header'
 import CreateCart from '../Rfq7/createCart'
 import Category from './categories'
 import Footer from '../Home'
+import Marketting from './marketing'
 // import '@styles/base/pages/page-knowledge-base.scss'
 
 const Homepage = () => {
@@ -14,6 +15,7 @@ const Homepage = () => {
            <SearchCard/>
            {/* <Header/> */}
            <Category/>
+           <Marketting/>
            <Footer/>
        </div>
     )
