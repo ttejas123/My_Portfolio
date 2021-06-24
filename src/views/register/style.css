@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Playfair+Display:wght@500&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Patua+One&family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Lora:ital@1&family=Playfair+Display:wght@500&display=swap');
+h3{
+/*font-family: 'Lora', serif;*/
+	font-family: 'Raleway', sans-serif;
+}
+
+.auth-wrapper {
+   
+    background-repeat: no-repeat ;
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+     height: 100vh; 
+	background-color: #f3ffe6;
+}
+
+.font-weight-normal{
+    font-family: Hellixtrial,Arial,sans-serif;
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+ }
+
+.font-weight-bolder{
+ 	font-family: Hellixtrial,Arial,sans-serif;
+ 	font-size: 18px;
+ 	color: #000;
+    line-height: 30px;
+ }
+
+.bidoyaCreate{
+    color: #000;
+    font-size: 14px;
+   
+}
+
+img {
+    width: 40%;
+}

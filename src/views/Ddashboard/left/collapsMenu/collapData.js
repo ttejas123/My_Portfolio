@@ -89,18 +89,7 @@ const data = [
     )
   },
   {
-    title: <div className="d-flex"><Users size={18}/><b className='pl-1'>My Team</b></div>,
-    content: (
-      <CardText className='mb-0'>
-        <div className="ml-2">Biopsy Tools</div><hr />
-        <div className="ml-2">Endoscopes</div><hr />
-        <div className="ml-2">Monitoring</div><hr />
-        <div className="ml-2">Otoscopes</div><hr />
-        <div className="ml-2">Oxygen Concentrators</div><hr />
-        <div className="ml-2">Tables And Assistants</div><hr />
-        <div className="ml-2">Thermometer</div>
-      </CardText>
-    )
+    title: <div className="d-flex"><Users size={18}/><b className='pl-1'>My Team</b></div>
   }
 ]
 

@@ -4,16 +4,19 @@ import { Link } from 'react-router-dom'
 import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
-import CollapsData from './collapData.js'
+import InfoCard from './cards'
+import UpcomingBid from './dataTable/upBid'
+import ParticipentR from './dataTable/ParticR'
 import { useRTL } from '@hooks/useRTL'
 
-import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, User } from 'react-feather'
+import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
 import {
   Row,
   Col,
   CardText,
   Button,
   Card,
+  CardBody,
   UncontrolledButtonDropdown,
   DropdownToggle,
   DropdownItem,
@@ -42,9 +45,16 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
  const [isRtls, setIsRtl] = useRTL()
   return (
 
-    <>
-      <h4><b>Links</b></h4>
-      <CollapsData />
+    <>    
+                    <InfoCard />
+                    <Row>
+                      <Col md='6' xs='12'>    
+                          <UpcomingBid />
+                      </Col>
+                      <Col md='6' xs='12'>    
+                          <ParticipentR />
+                      </Col>
+                    </Row>
     </>
   )
 }

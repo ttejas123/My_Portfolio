@@ -49,7 +49,7 @@ const Details = () => {
             </Col>
             
             <Col md='9' xs='12'>
-              <Card >
+              <Card className="d-none d-md-block">
                   <CardBody className="m-0 p-0">
                     <div >
                       <div className="ps-categogy__wrapper">
