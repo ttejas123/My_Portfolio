@@ -7,7 +7,7 @@ import { Row, Col, Card, CardBody, CardTitle, CardText, Form, FormGroup, Label, 
 import '@styles/base/pages/page-auth.scss'
 import Select from 'react-select'
 import { selectThemeColors, isObjEmpty } from '@utils'
-
+import './style.css'
 import ContactNumber from '../../components/register/ContactNumber'
 import CountrySelect from '../../components/register/CountrySelect'
 import StateSelect from '../../components/register/StateSelect'
@@ -109,13 +109,13 @@ const RegisterV2 = () => {
       {/* //  d-none d-lg-flex  */}
         <Col className='pt-5' lg='12' sm='12'>
           <Row>
-            <Col lg='4' sm='12'>
+            <Col md='1' sm='12'>
                
             </Col>
-            <Col lg='6' sm='12'>
-               <img className="img-fluid w-30" src={logo} />
+            <Col md='10' sm='12' className='text-center'>
+               <img className="img-fluid " style={{width: "20%"}} src={logo} />
             </Col>
-            <Col lg='2' sm='12'>
+            <Col md='1' sm='12'>
                
             </Col>
           </Row>
@@ -133,12 +133,12 @@ const RegisterV2 = () => {
           </div> */}
           <CardText>
             <h3 className='font-weight-normal'>
-              {dummyText}
+             {dummyText}
             </h3>
           </CardText>
           <CardText>
-            <h3 className='font-weight-bolder'>
-              {dummyText}
+            <h3 className='mt-3 font-weight-bolder strong'>
+             Sign up today to get must-read HR stories from. Lattice and other trusted sources as well as profiles and insights from members of Resources for Humans delivered directly to your inbox every week.
             </h3>
           </CardText>
 
@@ -150,15 +150,15 @@ const RegisterV2 = () => {
             <Card className='mb-0'>
               <CardBody>
                 <Row className='mb-1'>
-                  <Col md="3">
+                  <Col md="1">
                     
                   </Col>
-                  <Col md="6">
-                    <div className="align-items-center">
+                  <Col md="10">
+                    <div className="text-center RbidoyaCreate">
                       <h3>Create Your Account</h3>
                     </div>
                   </Col>
-                  <Col md="3">
+                  <Col md="1">
                     
                   </Col>
                 </Row>
@@ -168,7 +168,7 @@ const RegisterV2 = () => {
                     
                   </Col>
                   <Col md="10">
-                    <div className="text-center ">
+                    <div className="text-center bidoyaCreate ">
                       <p>Please fill the following fields with appropriate information to register a new MartPlace account.</p>
                     </div>
                   </Col>
@@ -177,14 +177,14 @@ const RegisterV2 = () => {
                   </Col>
                 </Row>
 
-                <div className='border-bottom'></div>
+                <div className='border'></div>
 
 
                 <Form className='auth-register-form mt-2' onSubmit={e => e.preventDefault()}>
 
                   <FormGroup>
-                    <Label className='form-label m-0' for='register-registeras'>
-                      Register As
+                    <Label className='form-label TakeFont m-0 d-flex' for='register-registeras'>
+                      <div ><h5 className="text-danger" style={{margin: "0px", marginRight: "5px"}}>* </h5></div><b>Register As</b>
               </Label>
                     <div className='demo-inline-spacing'>
                       <CustomInput
@@ -205,21 +205,21 @@ const RegisterV2 = () => {
                       /></div>
                   </FormGroup>
                   <FormGroup>
-                    <Label className='form-label' for='register-email'>
-                      Email
+                    <Label className='form-label TakeFont d-flex' for='register-email'>
+                      <div ><h5 className="text-danger" style={{marginRight: "5px"}}>* </h5></div><b> Email</b>
               </Label>
                     <Input type='email' id='register-email' placeholder='john@example.com' />
                   </FormGroup>
                   <FormGroup>
-                    <Label className='form-label' for='register-password'>
-                      Password
+                    <Label className='form-label TakeFont d-flex' for='register-password'>
+                      <div ><h5 className="text-danger" style={{marginRight: "5px"}}>* </h5></div><b>Password</b>
               </Label>
                     <InputPasswordToggle className='input-group-merge' id='register-password' />
                   </FormGroup>
 
                   <FormGroup>
-                    <Label className='form-label' for='register-fusername'>
-                      First Name
+                    <Label className='form-label TakeFont d-flex' for='register-fusername'>
+                      <div ><h5 className="text-danger" style={{marginRight: "5px"}}>* </h5></div><b>First Name</b>
               </Label>
                     <Input type='text' id='register-fusername' autoFocus />
                   </FormGroup>
@@ -232,46 +232,46 @@ const RegisterV2 = () => {
               Address,PanCard,Pancard type,Profile Image,GST Number */}
 
                   <FormGroup>
-                    <Label className='form-label' for='register-lusername'>
-                      Last Name
+                    <Label className='form-label TakeFont d-flex' for='register-lusername'>
+                       <div ><h5 className="text-danger" style={{marginRight: "5px"}}>* </h5></div><b>Last Name</b>
               </Label>
                     <Input type='text' id='register-lusername' autoFocus />
                   </FormGroup>
                   <FormGroup>
-                    <ContactNumber lable={"Mobile Number"} />
+                    <ContactNumber  lable={"Mobile Number"} />
                   </FormGroup>
                   <FormGroup>
                     <ContactNumber lable={"Land Line"} />
                   </FormGroup>
                   <FormGroup>
-                    <Label className='form-label' for='register-address'>
-                      Address
+                    <Label className='form-label TakeFont d-flex' for='register-address'>
+                       <div ><h5 className="text-danger" style={{marginRight: "5px"}}>* </h5></div><b>Address</b>
               </Label>
                     <Input type='textarea' id='register-address' autoFocus />
                   </FormGroup>
                   <FormGroup>
-                    <Label className='form-label' for='register-state'>
-                      Country
+                    <Label className='form-label TakeFont d-flex' for='register-state'>
+                       <div ><h5 className="text-danger" style={{marginRight: "5px"}}>* </h5></div><b>Country</b>
               </Label>
                     <CountrySelect style={{ width: '45%' }} value={values.country} optionCode={countryCode} onChange1={handleCountryFilter} />
 
                   </FormGroup>
                   <FormGroup>
-                    <Label className='form-label' for='register-state'>
-                      State
+                    <Label className='form-label TakeFont' for='register-state'>
+                      <b>State</b>
               </Label>
                     <StateSelect style={{ width: '45%' }} value={values.state} optionCode={stateCode} onChange1={handleStateFilter} />
 
                   </FormGroup>
                   <FormGroup>
-                    <Label className='form-label' for='register-pin'>
-                      PIN Code
+                    <Label className='form-label TakeFont' for='register-pin'>
+                      <b>PIN Code</b>
               </Label>
                     <Input type='text' id='register-pin' autoFocus />
                   </FormGroup>
                   <FormGroup>
-                    <Label className='form-label' for='register-gst'>
-                      GST Number
+                    <Label className='form-label TakeFont' for='register-gst'>
+                      <b>GST Number</b>
               </Label>
                     <Input type='text' id='register-gst' autoFocus />
                   </FormGroup>

@@ -5,7 +5,7 @@ import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
 import Collaps from './collapsMenu'
-import Right from './Right/index'
+import Rights from './Right/index'
 
 import { useRTL } from '@hooks/useRTL'
 
@@ -44,14 +44,9 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   const CartBtnTag = 'button'
  const [isRtls, setIsRtl] = useRTL()
   return (
-    <>
-     
-                <Card>
-                  <CardBody > 
-                    <Collaps />
-                  </CardBody>
-                </Card>
 
+    <>
+                    <Rights />     
     </>
   )
 }
