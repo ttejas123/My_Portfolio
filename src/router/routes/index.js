@@ -33,6 +33,22 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
   },
   {
+    path: '/product/productDetails',
+    component: lazy(() => import('../../views/product/productDetail'))
+  },
+  {
+    path: '/search/searchPage',
+    component: lazy(() => import('../../views/search'))
+  },
+  {
+    path: '/home',
+    component: lazy(() => import('../../views/Home/index.js'))
+  },
+  {
+    path: '/create-cart',
+    component: lazy(() => import('../../views/Rfq7/createCart.js'))
+  },
+  {
     path: '/login',
     component: lazy(() => import('../../views/Login')),
     layout: 'BlankLayout',
