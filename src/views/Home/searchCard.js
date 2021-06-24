@@ -1,0 +1,95 @@
+import { Card, CardBody, CardTitle,  Row, Col, Media, Input, InputGroup, InputGroupAddon, InputGroupText, Form, CardText, Button } from 'reactstrap'
+import { Search } from 'react-feather'
+import classnames from 'classnames'
+
+const SearchCard = () => {
+  const cols = { md: '3', sm: '6' }
+    const data = [
+        {
+          title: 'Price Range',
+          subtitle: '1000-2000'
+        },
+        {
+          title: 'Inventory',
+          subtitle: '1k'
+        },
+        {
+          title: '#Sellers',
+          subtitle: '10'
+        },
+        {
+          title: 'Created Date',
+          subtitle: '10-11-12'
+        }
+      ]
+    
+      const renderData = () => {
+        return data.map((item, index) => {
+          const margin = Object.keys(cols)
+          return (
+            <Col
+              key={index}
+              {...cols}
+              className={classnames({
+                [`mb-2 mt-0 mb-${margin[0]}-0`]: index !== data.length - 1
+              })}
+            >
+              <Media>
+                <Media className='my-auto' body>
+                  <h5 className='font-weight-bolder text-center mb-0'>{item.title}</h5>
+                  <CardText className='font-small-3 text-center mb-0'>{item.subtitle}</CardText>
+                </Media>
+              </Media>
+            </Col>
+          )
+        })
+      }
+    
+    const onChange = e => {
+        if (handleFilter) {
+          handleFilter(e)
+        } else {
+          setSearchTerm(e.target.value)
+        }
+      }
+    
+    return (
+        <div className='d-flex mx-auto' style={{marginTop:'-100px'}}>
+            <Col lg='12'>
+                <Row>
+                <Col lg='3'>
+                </Col>
+                <Col lg='6'>
+        <Card>
+            <CardBody> 
+                <CardTitle>
+                   <h3 className=' font-weight-bolder text-center' >What are you Searching For ?</h3>
+                </CardTitle>
+                <Row>
+                    <Col lg='8'>
+              <Input onChange={e => onChange(e)} placeholder='Ask a question...' />
+                    </Col>
+                    <Col lg='4'>
+                    <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' color='primary'>
+            <Search size={14} />
+          <small className='user-name font-weight-bold h6 ml-1' style={{ color:'black'}}>Search</small> 
+              </Button.Ripple>
+                    </Col>
+                </Row>
+            </CardBody>
+            <hr/>
+            <CardBody className='py-1'>
+        <Row>{renderData()}</Row>
+      </CardBody>
+        </Card>
+        </Col>
+        <Col lg='3'>
+                </Col>
+        </Row>
+       
+        </Col>
+        </div>
+    )
+}
+
+export default SearchCard

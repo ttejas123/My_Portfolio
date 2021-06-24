@@ -19,7 +19,7 @@ import { User, Mail, LogOut, CheckSquare, MessageSquare, Bell, Settings, CreditC
 // ** Default Avatar Image
 import defaultAvatar from '@src/assets/images/avatars/raviKukreja.jpg'
 
-const UserDropdown = () => {
+const LibraryDropDown = () => {
   // ** Store Vars
   const dispatch = useDispatch()
 
@@ -41,7 +41,7 @@ const UserDropdown = () => {
     <UncontrolledDropdown tag='li' className='dropdown-user nav-item'>
       <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
         <div className='user-nav d-sm-flex d-none'>
-          <small className='user-name font-weight-bold h6' style={{ color:'black'}}>About</small> 
+          <span className=' font-weight-bold h6' style={{color:'black'}}>Library</span> 
           {/* {(userData && userData['username']) || 'Ravi Kukreja'}
           <span className='user-status'> {(userData && userData.role) || 'Super Admin'}</span> */}
 
@@ -77,4 +77,4 @@ const UserDropdown = () => {
   )
 }
 
-export default UserDropdown
+export default LibraryDropDown

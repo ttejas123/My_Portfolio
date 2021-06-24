@@ -19,14 +19,14 @@ const themeConfig = {
     navbar: {
       // ? For horizontal menu, navbar type will work for navMenu type
       // type: 'floating', // static , sticky , floating, hidden
-      type: 'hidden', // static , sticky , floating, hidden
+      type: 'sticky', // static , sticky , floating, hidden
 
-      backgroundColor: 'primary' // BS color options [primary, success, etc]
+      backgroundColor: 'white' // BS color options [primary, success, etc]
     },
     footer: {
       type: 'static' // static, sticky, hidden
     },
-    customizer: false,
+    customizer: true,
     scrollTop: true // Enable scroll to top button
   }
 }
