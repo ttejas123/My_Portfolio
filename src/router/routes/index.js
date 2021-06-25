@@ -60,7 +60,28 @@ const Routes = [
     path: '/error',
     component: lazy(() => import('../../views/Error')),
     layout: 'BlankLayout'
+  },
+  {
+    path: '/register',
+    component: lazy(() => import('../../views/register/RegisterV1')),
+    layout: 'BlankLayout',
+    meta: {
+      authRoute: true
+    }
+  },
+  {
+    path: '/log1',
+    component: lazy(() => import('../../views/register/LoginV1')),
+    layout: 'BlankLayout',
+    meta: {
+      authRoute: true
+    }
+  },
+  {
+    path: '/home1',
+    component: lazy(() => import('../../views/Home/home_info_card'))
   }
+
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }
