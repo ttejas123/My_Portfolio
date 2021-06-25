@@ -1,4 +1,4 @@
-import { Card, CardBody, CardTitle,  Row, Col, Media, Input, InputGroup, InputGroupAddon, InputGroupText, Form, CardText, Button } from 'reactstrap'
+import { Card, CardBody, CardTitle,  Row, Col, Media, Input, FormGroup, Label, InputGroupText, Form, CardText, Button } from 'reactstrap'
 import { Search } from 'react-feather'
 import classnames from 'classnames'
 
@@ -61,27 +61,57 @@ const SearchCard = () => {
                 </Col>
                 <Col lg='6'>
         <Card>
-            <CardBody> 
+            {/* <CardBody className='pb-0'> 
                 <CardTitle>
-                   <h3 className=' font-weight-bolder text-center' >What are you Searching For ?</h3>
+                   <h3 className=' font-weight-bolder text-center' >What products do you want to procure today ?</h3>
                 </CardTitle>
                 <Row>
-                <Col lg='2'>
+                <Col lg='1'>
                                 </Col>
-                    <Col lg='6'>
+                    <Col lg='7'>
               <Input onChange={e => onChange(e)} placeholder='Ask a question...' />
                     </Col>
                     <Col lg='4'>
-                    <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' color='primary'>
+                    <Button.Ripple className='mb-1  mr-0 ml-1' color='primary'>
             <Search size={14} />
-          <small className='user-name font-weight-bold h6 ml-1' style={{ color:'black'}}>Search</small> 
+          <small className='user-name font-weight-bold h6 ml-1 h4' style={{ color:'#ffffff'}}>Search</small> 
               </Button.Ripple>
                     </Col>
                 </Row>
-            </CardBody>
-            <hr/>
-            <CardBody className='py-1'>
-        <Row>{renderData()}</Row>
+            </CardBody> */}
+            <hr className='mt-0'/>
+            <CardBody className=''>
+            <CardTitle>
+                   <h3 className=' font-weight-bolder text-center' >What are you looking for ?</h3>
+                </CardTitle>
+            <Row className='px-2'>
+              <Col md='8' sm='6'>
+              <FormGroup>
+          <Input type='text' id='category' placeholder='Product Name'  />
+        </FormGroup>
+              </Col>
+              <Col md='4' sm='6'>
+              <FormGroup>
+          <Input type='text' id='category' placeholder='Qty?'/>
+        </FormGroup>
+              </Col>
+              <Col md='9' sm='6'>
+              <FormGroup className='mt-1'>
+          <Input type='range' id='category' placeholder='Qty?'/>
+          <Label for='default-range' className='d-block'>
+              <span className='d-block mx-auto text-center font-weight-bold h6 font-italic'>
+              Budget / Unit
+              </span>
+              </Label>
+        </FormGroup>
+              </Col>
+              <Col md='3' sm='6'>
+              <Button.Ripple className='mb-1  mr-0 ml-1' color='primary'>
+            <Search size={14} />
+          <small className='user-name font-weight-bold h6 ml-1 h4' style={{ color:'#ffffff'}}>Search</small> 
+              </Button.Ripple>
+              </Col>
+          </Row>
       </CardBody>
         </Card>
         </Col>

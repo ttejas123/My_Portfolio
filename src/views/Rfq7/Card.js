@@ -392,7 +392,7 @@ const direction = 'ltr'
   }
 
   return (
-    <div className='ecommerce-application'>
+    <div className=''>
       <Topbar/>
       <div className='checkout-items list-view' >{products.length ? renderCart() : <h4>Your cart is empty</h4>}</div>
       

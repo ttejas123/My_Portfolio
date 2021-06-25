@@ -15,9 +15,9 @@ const Homepage = () => {
     return (
        <div> 
            <Header/>
-           <UseProf/>
            {/* <CreateCart/> */}
            <SearchCard/>
+           <UseProf/>
            <Testimonals/>
            {/* <Header/> */}
            <Category/>
