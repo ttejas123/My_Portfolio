@@ -81,9 +81,9 @@ const OrdersReceived = ({ kFormatter, warning }) => {
     }
   }
 
-  useEffect(() => {
-    axios.get('/card/card-statistics/orders').then(res => setData(res.data))
-  }, [])
+  // useEffect(() => {
+  //   axios.get('/card/card-statistics/orders').then(res => setData(res.data))
+  // }, []) // Commeted by komal
 
   return data !== null ? (
     <StatsWithAreaChart
