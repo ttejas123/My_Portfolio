@@ -66,7 +66,7 @@ const LayoutWrapper = props => {
       <div className='content-overlay'></div>
       <div className='header-navbar-shadow' />
       <div
-      style={{marginTop:-50}}
+      
         className={classnames({
           'content-wrapper': !appLayout,
           'content-area-wrapper': appLayout,

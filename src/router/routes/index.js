@@ -54,8 +54,7 @@ const Routes = [
   },
   {
     path: '/login', // USE THIS
-    component: lazy(() => import('../../views/Login')),
-    layout: 'BlankLayout'
+    component: lazy(() => import('../../views/Login'))
   },
   {
     path: '/login1',
