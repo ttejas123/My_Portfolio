@@ -40,6 +40,7 @@ import {
 import Left from './left'
 import Right from './main'
 import MainSubMenu from './left/MainSubMenu'
+import Team from './team'
 
 import InfoCard from './dashboardComponent/index'
 
@@ -134,11 +135,9 @@ const toggle1 = tab => setActiveTab(tab)
                         <MainSubMenu />
                       </TabPane>
                       <TabPane tabId='4'>
-                        <Right />
+                        <Team />
                       </TabPane>
-                      <TabPane tabId='5'>
-                        <Right />
-                      </TabPane>
+                      
                       {/* <TabPane tabId='3'>
                         <FromOtherSitesTab />
                       </TabPane> */}
