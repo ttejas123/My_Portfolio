@@ -1,8 +1,13 @@
 import { Card, CardBody, CardTitle,  Row, Col, Media, Input, FormGroup, Label, InputGroupText, Form, CardText, Button } from 'reactstrap'
 import { Search } from 'react-feather'
 import classnames from 'classnames'
+import Nouislider from 'nouislider-react'
+import '@styles/react/libs/noui-slider/noui-slider.scss'
+import { useRTL } from '@hooks/useRTL'
+import { useState } from 'react'
 
 const SearchCard = () => {
+ 
   const cols = { md: '3', sm: '6' }
     const data = [
         {
@@ -97,8 +102,17 @@ const SearchCard = () => {
               </Col>
               <Col md='9' sm='6'>
               <FormGroup className='mt-1'>
-          <Input type='range' id='category' placeholder='Qty?'/>
-          <Label for='default-range' className='d-block'>
+              <Nouislider
+          start={[40, 60]}
+          direction={'ltr'}
+          behaviour={'drag'}
+          connect={true}
+          range={{
+            min: 20,
+            max: 80
+          }}
+        />
+          <Label for='default-range' className='d-block mt-1'>
               <span className='d-block mx-auto text-center font-weight-bold h6 font-italic'>
               Budget / Unit
               </span>
