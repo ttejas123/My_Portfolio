@@ -41,20 +41,26 @@ const Routes = [
     component: lazy(() => import('../../views/search'))
   },
   {
-    path: '/home',
-    component: lazy(() => import('../../views/Home/index.js'))
+    path: '/homes/dashBoard',
+    component: lazy(() => import('../../views/Ddashboard'))
   },
   {
     path: '/create-cart',
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
   },
   {
+    path: '/register',
+    component: lazy(() => import('../../views/register/RegisterV1'))
+  },
+  {
     path: '/login',
     component: lazy(() => import('../../views/Login')),
-    layout: 'BlankLayout',
-    meta: {
-      authRoute: true
-    }
+    layout: 'BlankLayout'
+  },
+  {
+    path: '/login1',
+    component: lazy(() => import('../../views/register/LoginV1')),
+    layout: 'BlankLayout'
   },
   {
     path: '/error',
