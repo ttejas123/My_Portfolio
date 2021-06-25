@@ -41,26 +41,53 @@ const Routes = [
     component: lazy(() => import('../../views/search'))
   },
   {
-    path: '/home',
-    component: lazy(() => import('../../views/Home/index.js'))
+    path: '/homes/dashBoard',
+    component: lazy(() => import('../../views/Ddashboard'))
   },
   {
     path: '/create-cart',
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
   },
   {
-    path: '/login',
+    path: '/register',
+    component: lazy(() => import('../../views/register/RegisterV1'))
+  },
+  {
+    path: '/login', // USE THIS
     component: lazy(() => import('../../views/Login')),
+    layout: 'BlankLayout'
+  },
+  {
+    path: '/login1',
+    component: lazy(() => import('../../views/register/LoginV1')),
+    layout: 'BlankLayout'
+  },
+  {
+    path: '/error',
+    component: lazy(() => import('../../views/Error')),
+    layout: 'BlankLayout'
+  },
+  {
+    path: '/register',
+    component: lazy(() => import('../../views/register/RegisterV1')),
     layout: 'BlankLayout',
     meta: {
       authRoute: true
     }
   },
   {
-    path: '/error',
-    component: lazy(() => import('../../views/Error')),
-    layout: 'BlankLayout'
+    path: '/log1',
+    component: lazy(() => import('../../views/register/LoginV1')),
+    layout: 'BlankLayout',
+    meta: {
+      authRoute: true
+    }
+  },
+  {
+    path: '/home1',
+    component: lazy(() => import('../../views/Home/home_info_card'))
   }
+
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }
