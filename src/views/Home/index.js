@@ -6,12 +6,16 @@ import Category from './categories'
 import Footer from '../Home'
 import Marketting from './marketing'
 import Testimonals from './testimonals'
+import UseProf  from './UseProf'
+    
+
 // import '@styles/base/pages/page-knowledge-base.scss'
 
 const Homepage = () => {
     return (
-       <div>
+       <div> 
            <Header/>
+           <UseProf/>
            {/* <CreateCart/> */}
            <SearchCard/>
            <Testimonals/>

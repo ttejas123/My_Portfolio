@@ -80,9 +80,9 @@ const QuarterlySales = ({ danger }) => {
     }
   }
 
-  useEffect(() => {
-    axios.get('/card/card-statistics/sales').then(res => setData(res.data))
-  }, [])
+  // useEffect(() => {
+  //   axios.get('/card/card-statistics/sales').then(res => setData(res.data))
+  // }, [])// Commented BY komal
 
   return data !== null ? (
     <StatsWithAreaChart

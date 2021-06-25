@@ -52,7 +52,7 @@ const StatisticsCards = () => {
         <Col lg='4' sm='6'>
           <Quaterlysales danger={context.colors.danger.main} />
         </Col>
-        <Col lg='4' sm='6'>
+        <Col lg='4' sm='6'> 
           <Ordersreceived kFormatter={kFormatter} warning={context.colors.warning.main} />
         </Col>
       </Row>
