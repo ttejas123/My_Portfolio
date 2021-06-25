@@ -36,7 +36,7 @@ const OverViewCard = ({ kFormatter }) => {
     })
     return (
         <>
-            <Col md='6' xs='6'>
+            <Col md='6' xs='12'>
                 {/* <OverViewCard kFormatter={kFormatter} /> */}
                 <StatsWithAreaChart
                     icon={<DollarSign size={21} />}
@@ -49,7 +49,7 @@ const OverViewCard = ({ kFormatter }) => {
                     type='area'
                 />
             </Col>
-            <Col md='6' xs='6'>
+            <Col md='6' xs='12'>
                 {/* <OverViewCard kFormatter={kFormatter} /> */}
                 <StatsWithAreaChart
                     icon={<TrendingUp size={21} />}

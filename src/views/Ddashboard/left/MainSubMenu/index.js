@@ -68,12 +68,12 @@ const MainSubMenu = props => {
         <Row>
             <Col md='12' xs='12' lg = '12'>
                 <Row className='match-height'>
-                    <Col md='8' xs='8'>
+                    <Col md='8' xs='12'>
                         <Row>
                             <OverViewCard kFormatter={kFormatter} />
                         </Row>
                     </Col>
-                    <Col md='4' xs='4'>
+                    <Col md='4' xs='12'>
                         {/* <Revenue /> */}
                         <TopProduct data={suggestions} />
 
@@ -81,13 +81,13 @@ const MainSubMenu = props => {
                 </Row>
             </Col>
            
-            <Col md='6' xs='6'>
+            <Col md='6' xs='12'>
             <TopCategory
                     primary={context.colors.primary.main}
                     warning={context.colors.warning.main}
                     danger={context.colors.danger.main} />
             </Col>
-            <Col md='6' xs='6'>
+            <Col md='6' xs='12'>
                
                                     <Revenue/>
 

@@ -18,7 +18,7 @@ const Header = ({ searchTerm, setSearchTerm, handleFilter }) => {
         className='knowledge-base-bg'
         style={{
           backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
-          height: '500px'
+          height: '550px'
         }}
       >
            <Col lg='12' className='mt-5'>

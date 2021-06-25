@@ -34,7 +34,7 @@ $10 discount for your first order</h2>
                                 <Col lg='2'>
                                 </Col>
                     <Col lg='6'>
-              <Input style={{fontSize:'18px', padding:'11px 25px 11px 25px', height: '48px', borderRadius:'48px'}} onChange={e => onChange(e)} placeholder='Enter your email address' />
+              <Input type='email' style={{fontSize:'18px', padding:'11px 25px 11px 25px', height: '48px', borderRadius:'48px'}} placeholder='Enter your email address' />
                     </Col>
                     <Col lg='4'>
                     <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' style={{borderRadius:'48px', color:'#FD8D27'}} color='primary'>

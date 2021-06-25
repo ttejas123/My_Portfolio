@@ -4,16 +4,19 @@ import { Link } from 'react-router-dom'
 import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
-import CollapsData from './collapData.js'
+import Collaps from './collapsMenu'
+import Rights from './Right/index'
+
 import { useRTL } from '@hooks/useRTL'
 
-import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, User } from 'react-feather'
+import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
 import {
   Row,
   Col,
   CardText,
   Button,
   Card,
+  CardBody,
   UncontrolledButtonDropdown,
   DropdownToggle,
   DropdownItem,
@@ -43,8 +46,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-      <h4><b>Links</b></h4>
-      <CollapsData />
+                    <Rights />     
     </>
   )
 }

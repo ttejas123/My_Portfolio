@@ -71,16 +71,16 @@ const NumberInputBasic = () => {
           </h4>
         </div>
       </div>
-      <CardBody className="p-0 m-0 pl-2 pb-1">
+      <div className="p-0 m-0 pl-1 pr-1">
         <Row>
           <Col md='12' xs='12'>
               <h4 className="mt-2 mb-2"><b>Quantity</b></h4>
           </Col>
-          <Col md='11' xs='12'>  
+          <Col md='12' xs='12'>  
             <NumberInput id='basic-number-input' value={count} onChange={count => setCount(count)} />
           </Col>
-          <Col md='11' xs='12'>
-              <div className="p-0 m-0 mb-2 mt-2 d-flex">
+          <Col md='12' xs='12'>
+              <div className=" mb-2 mt-2 d-flex ">
                 <Button.Ripple className='round' style={{width:"50%", marginRight: "10px"}} color='primary' outline>
                    Add To Cart
                 </Button.Ripple>
@@ -91,7 +91,7 @@ const NumberInputBasic = () => {
           </Col>
           
         </Row>
-      </CardBody>
+      </div>
 
       <CardBody className="p-0 m-0 pl-2 pb-3">
         <Row>
