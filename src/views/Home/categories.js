@@ -110,10 +110,6 @@ const Category = () => {
 {
     icon : <ShoppingCart size={40} style={{maxWidth:"30px"}} className='mt-2'/>,
     name : "Clothing"
-},
-{
-    icon : <ShoppingCart size={40} style={{maxWidth:"30px"}} className='mt-2'/>,
-    name : "Clothing"
 }
 ]
 
@@ -132,7 +128,8 @@ const Category = () => {
         // <span>{item.name}</span>
         // </div>
         // </Col>
-        <div style={{width:'14.285%', flexBasis:"14.285%", padding:"0 15px", textAlign:"center"}}>
+        <Col lg='2'>
+        <div style={{textAlign:"center"}}>
             <div style={{width:'90px', height:'90px', position:"relative", backgroundColor:'#f0f2f5', textAlign:"center", verticalAlign:"middle", border:"1px solid #f0f2f5", borderRadius:"70%"}} className='mb-1 d-inline-block'>
             {item.icon}
             </div>
@@ -140,6 +137,7 @@ const Category = () => {
                 {item.name}
             </span>
         </div>
+        </Col>
         )
       })
   }
@@ -175,11 +173,19 @@ const Category = () => {
        <div className='mt-4 mb-2 text-center'>
         <h3 className='font-weight-bold'>Popular Categories</h3>
         <div>
+            <Row>
+                <Col lg='2'>
+                </Col>
+                <Col lg='8'>
             <CardBody>
-            <div style={{width:'1270px', display:'flex' }} className='mx-auto'>
+            <div style={{ }} className='mx-auto'>
+                <Row>
                 {renderCategories()}
+                </Row>
            </div>
             </CardBody>
+            </Col>
+            </Row>
         </div>
         <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' color='#fff'>
           <small className='user-name font-weight-bold h6 ml-1 px-1' style={{ color:'#103178', border:'2px solid #f0f2f5', borderRadius:40, padding:'3px 10px' }}>Show all</small> 
@@ -189,7 +195,11 @@ const Category = () => {
         <h2 style={{fontSize:40}}>Latest Products</h2>
         {/* <CardText>People also search for this items</CardText> */}
       </div>
-              <div style={{width:1270, border:'2px solid #f0f2f5', display:'block', backgroundColor:"#fff" }} className='mx-auto'>
+      <Row>
+                <Col lg='2'>
+                </Col>
+                <Col lg='8' style={{border:'2px solid #f0f2f5', backgroundColor:"#fff" }}>
+              {/* <div style={{width:1270, border:'2px solid #f0f2f5', display:'block', backgroundColor:"#fff" }} className='mx-auto'> */}
       <Swiper {...params}>
         {slides.map(slide => {
           return (
@@ -231,7 +241,9 @@ const Category = () => {
           )
         })}
       </Swiper>
-      </div>
+      </Col>
+      </Row>
+      {/* </div> */}
              
     </Fragment>
   )

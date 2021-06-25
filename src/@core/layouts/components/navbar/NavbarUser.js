@@ -45,7 +45,7 @@ const NavbarUser = props => {
       <ul className='nav navbar-nav align-items-center mx-auto'>
          <IntlDropdown />
         {/* <NotificationDropdown /> */}
-        <ProductDropDown/>
+        <ProductDropDown />
         <CustomerDropDown/>
         <LibraryDropDown/>
         <ResourcesDropDown/>

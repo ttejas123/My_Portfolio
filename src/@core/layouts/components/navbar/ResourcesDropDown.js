@@ -38,7 +38,7 @@ const ResourcesDropDown = () => {
   const userAvatar = defaultAvatar
 
   return (
-    <UncontrolledDropdown tag='li' className='dropdown-user nav-item'>
+    <UncontrolledDropdown tag='li' className='dropdown-user nav-item d-none d-lg-block'>
       <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
         <div className='user-nav d-sm-flex d-none'>
           <span className=' font-weight-bold h6' style={{color:'black'}}>Resources For Human</span> 
