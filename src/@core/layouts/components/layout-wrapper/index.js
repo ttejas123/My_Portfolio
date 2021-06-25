@@ -57,14 +57,16 @@ const LayoutWrapper = props => {
 
   return (
     <div
-      className={classnames('app-content content overflow-hidden', {
+      className={classnames('app-content content overflow-hidden px-0 pt-5', {
         [wrapperClass]: wrapperClass,
         'show-overlay': navbarStore.query.length
-      })}
+      })
+    }
     >
       <div className='content-overlay'></div>
       <div className='header-navbar-shadow' />
       <div
+      style={{marginTop:-50}}
         className={classnames({
           'content-wrapper': !appLayout,
           'content-area-wrapper': appLayout,
