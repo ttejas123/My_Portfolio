@@ -1,13 +1,10 @@
-// import { CardText } from 'reactstrap'
 import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, AtSign, Truck, Pocket, User, Users,
 Image,
 FileText,
 Award,
 UserPlus} from 'react-feather'
-
-import { Nav, NavItem, NavLink, Row, Col, TabContent, TabPane, CardText,
-  Button} from 'reactstrap'
-  import { Link, useHistory } from 'react-router-dom'
+import { CardText, Nav, NavItem, NavLink, Row, Col, TabContent, TabPane } from 'reactstrap'
+import { useState } from 'react'
 
 
 import AppCollapse from '@components/app-collapse'
@@ -94,8 +91,7 @@ const data = [
         <div className="ml-2">Oxygen Concentrators</div><hr />
         <div className="ml-2">Tables And Assistants</div><hr />
         <div className="ml-2">Thermometer</div>
-     </CardText>
-    
+      </CardText>
     )
   },
   {
@@ -103,6 +99,49 @@ const data = [
   }
 ]
 
-const CollapseDefault = () => <AppCollapse data={data} />
+const renderTabs = () => {
+    return dataToRender.map(item => {
+      const IconTag = Icon[item.icon]
+      return (
+        <NavItem key={item.title} tag='li'>
+          <NavLink active={activeTab === item.title} onClick={() => toggleTab(item.title)}>
+            <IconTag size={18} className='mr-1' />
+            {/* <span className='font-weight-bold'>{item.title}</span> */}
+            <span className='font-weight-bold'>{item.title}</span>
 
-export default CollapseDefault
+          </NavLink>
+        </NavItem>
+      )
+    })
+  }
+  const DashboardMenuItem = ({ data }) => {
+    const dataToRender = []
+    const [activeTab, setActiveTab] = useState('Payment')
+    Object.entries(data).forEach(([key, val]) => {
+        dataToRender.push(val)
+      })
+
+  return (
+    <div id='faq-tabs'>
+      <Row>
+        <Col lg='3' md='4' sm='12'>
+          <div className='faq-navigation d-flex justify-content-between flex-column mb-2 mb-md-0'>
+            <Nav tag='ul' className='nav-left' pills vertical>
+              {renderTabs()}
+            </Nav>
+            <img
+              className='img-fluid d-none d-md-block'
+              src={illustration}
+              alt='illustration'
+              style={{
+                transform: 'scaleX(1)'
+              }}
+            />
+          </div>
+        </Col>
+       
+      </Row>
+    </div>
+  )
+  }
+export default DashboardMenuItem

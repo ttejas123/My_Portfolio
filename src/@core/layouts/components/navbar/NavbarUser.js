@@ -35,13 +35,13 @@ const NavbarUser = props => {
           </NavLink>
         </NavItem>
       </ul>
-      <div className='bookmark-wrapper d-flex align-items-center'>
+      {/* <div className='bookmark-wrapper d-flex align-items-center'>
         <NavItem className='d-none d-lg-block'>
           <NavLink className='nav-link-style'>
             <ThemeToggler />
           </NavLink>
         </NavItem>
-      </div>
+      </div> */}
       <ul className='nav navbar-nav align-items-center mx-auto'>
          <IntlDropdown />
         {/* <NotificationDropdown /> */}
@@ -66,12 +66,13 @@ const NavbarUser = props => {
         {/*<LibraryDropDown/>*/}
         {/*<ResourcesDropDown/>*/}
         {/*<UserDropdown />*/}
-              <Button.Ripple tag={Link} to='/login' className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                  <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign In</small> 
-              </Button.Ripple>
-              <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
+        <Button.Ripple tag={Link} to='/login' className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+          <small className='user-name font-weight-bold h6 ' style={{ color:'black'}}>Sign In</small> 
+
+        </Button.Ripple>
+        <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
                   <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
-              </Button.Ripple>
+        </Button.Ripple>
       </ul>
       <div className='bookmark-wrapper d-flex align-items-left'>
         <NavItem className='d-none d-lg-block'>

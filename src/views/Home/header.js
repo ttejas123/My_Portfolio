@@ -13,31 +13,33 @@ const Header = ({ searchTerm, setSearchTerm, handleFilter }) => {
 
   return (
       <>
-    <div id='knowledge-base-search'>
+    <div id='' style={{marginTop:-28}}>
       <div
-        className='knowledge-base-bg'
+        className=''
         style={{
-          backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
-          height: '550px'
+          // backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
+         backgroundColor:'#f8f1e8',
+          backgroundRepeat:'no-repeat',
+          backgroundSize:'cover',
+          marginTop:-5
         }}
       >
-           <Col lg='12' className='mt-5'>
-        <Row className='mt-5'>
-        <Col lg='2'>
+           <Col lg='12' className=''>
+        <Row className=' '>
+        <Col lg='1'>
         </Col>
-        <Col lg='8' className='mt-5'>
+        <Col lg='9' className=''>
         <Row className='' >
-        <Col lg='7' md='6' sm='12'>
-       
-        <CardBody className='px-0 pt-1'>
-          <h1 className='text-primary font-weight-bolder'>Develop engaged & <br/>
-            high-performing teams<br/>
-            even when everyone is remote</h1>
+        <Col lg='8' md='6' sm='12' className='mt-5'>
+        <CardBody className='px-0 pt-1 mt-4'>
+        <Col lg='10' className='px-0'>
+          <h1 style={{fontSize:'40px', lineHeight:'50px', fontWeight:500, color:'black', textAlign:'left'}} className=''>✋🏻 Stop wasting time searching, negotiating & following with your business vendors</h1>
+          </Col>
+          <Col lg='10' className='px-0 py-1'>
           <CardText className='mb-2'>
-            <p className=' h3 mt-1'>Supercharge your managers &
-            <br/>
-keep employees engaged from anywhere</p>
+            <p className=' h3 mt-1' style={{color:'#464c52', fontSize:'22px', lineHeight:'31px', marginTop:20, textAlign:'left'}}>Join Bidoya to streamline all your procurement work and start concentrating on your growth again</p>
           </CardText>
+          </Col>
           <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
           <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Explore Bidoya</small> 
               </Button.Ripple>
@@ -53,8 +55,8 @@ keep employees engaged from anywhere</p>
           </Form> */}
         </CardBody>
         </Col>
-        <Col lg='5' sm='12' md='12'>
-            <img src={MTIMG} alt='logo' height='330' width='450'/>
+        <Col lg='4' sm='12' md='12'>
+            <img src={MTIMG} alt='logo' height='550' width='auto' style={{marginLeft:'-10rem'}}/>
         </Col>
           </Row>
           </Col>

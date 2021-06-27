@@ -5,6 +5,8 @@ import Rating from 'react-rating'
 // ** Third Party Components
 import classnames from 'classnames'
 import CollapsData from './collapData.js'
+import DashboardMenuItem from './DashboardMenuItem.js'
+
 import { useRTL } from '@hooks/useRTL'
 
 import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, User } from 'react-feather'
@@ -45,6 +47,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
     <>
       <h4><b>Links</b></h4>
       <CollapsData />
+      {/* <DashboardMenuItem /> */}
     </>
   )
 }
