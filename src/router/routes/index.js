@@ -4,7 +4,7 @@ import { lazy } from 'react'
 const TemplateTitle = '%s - Bidoya'
 
 // ** Default Route
-const DefaultRoute = '/Rfq7/rfqN'
+const DefaultRoute = '/home'
 
 // ** Merge Routes
 const Routes = [

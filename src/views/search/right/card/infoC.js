@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, Redirect } from 'react-router-dom'
 import NumberInput from '@components/number-input'
 import { Card, Row, Col, CardHeader, CardTitle, CardBody, CardText, Label, Alert, Badge, Button } from 'reactstrap'
 import classnames from 'classnames'
@@ -36,10 +37,12 @@ const NumberInputBasic = props => {
 
   return (
     <div className="pt-1">
-        <h5><b>{props.name}</b></h5>
-        <CardText style={{fontSize:"13px"}} tag='span' className='item-company'>
+        <CardText tag={Link} to='/product/productDetails' >
+            <h5 tag={Link} to='/product/productDetails'><b tag={Link} to='/product/productDetails'>{props.name}</b></h5>
+        </CardText>
+        <CardText style={{fontSize:"13px"}} tag={Link} to='/product/productDetails' className='item-company'>
           By
-          <a className='pl-1 company-name' href='/' onClick={e => e.preventDefault()}>
+          <a className='pl-1 company-name' href='/product/productDetails' onClick={e => e.preventDefault()}>
             {props.brandName}
           </a>
         </CardText>

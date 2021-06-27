@@ -65,10 +65,10 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
           </div>
         </Col>
       </Col>
-      <Col md='6' xs='12'>
+      <Col md='5' xs='12'>
         <InfoC name={props.name} brandName={props.brandName} price={props.price} />
       </Col>
-      <Col md='3' xs='12'>
+      <Col md='4' xs='12'>
         <AddCard price={props.price}  />
       </Col>
       <Prodectmodel open={modal} handleModal={handleModal} className="d-none" />

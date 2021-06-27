@@ -52,7 +52,8 @@ const Details = () => {
 const toggle1 = tab => setActiveTab(tab)
 
   return (
-    <Fragment>
+    <Fragment className="addPadding">
+    
       <div >
 
       </div>
@@ -67,7 +68,7 @@ const toggle1 = tab => setActiveTab(tab)
                     </div>
                     <div className='position-relative'>
                       <div className='profile-img-container d-flex align-items-center'>
-                        <div className='profile' >
+                        <div className='profile ml-md-2 raviImge' >
                           <img className='img-thumbnail img-responsive Col-md-3 ml-md-5 ' src={person} width="180" height="100"  />
                         </div>
                         <div className='profile-title ml-3'>
@@ -85,7 +86,7 @@ const toggle1 = tab => setActiveTab(tab)
                           <div className='profile-tabs d-flex justify-content-between flex-wrap mt-1 mt-md-0'>
                             <Nav className='mb-0 ml-md-5 pl-md-5' pills >
 
-                              <NavItem>
+                              <NavItem className="pl-lg-4">
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
                                   <span className='d-none d-md-block'>Main</span>
                                   <Home className='d-block d-md-none' size={14} />
@@ -120,31 +121,38 @@ const toggle1 = tab => setActiveTab(tab)
           </Row>
         </div>
         <Row>
-            <Col md='3' xs='12'>
-                 <Left />
-            </Col>
-            <Col md='9' xs='12'>
-                    <TabContent activeTab={activeTab}>
-                      <TabPane tabId='1'>
-                        <Right />
-                      </TabPane>
-                      <TabPane tabId='2'>
-                        <MainSubMenu />
-                      </TabPane>
-                      <TabPane tabId='3'>
-                        <MainSubMenu />
-                      </TabPane>
-                      <TabPane tabId='4'>
-                        <Team />
-                      </TabPane>
-                      
-                      {/* <TabPane tabId='3'>
-                        <FromOtherSitesTab />
-                      </TabPane> */}
-                    </TabContent>
-            </Col>
-        </Row>
+          <Col lg="1" xs='12'></Col>
+          <Col lg="10" xs='12'>
+              <Row>
+                  <Col md='3' xs='12'>
+                       <Left />
+                  </Col>
+                  <Col md='9' xs='12'>
+                          <TabContent activeTab={activeTab}>
+                            <TabPane tabId='1'>
+                              <Right />
+                            </TabPane>
+                            <TabPane tabId='2'>
+                              <MainSubMenu />
+                            </TabPane>
+                            <TabPane tabId='3'>
+                              <MainSubMenu />
+                            </TabPane>
+                            <TabPane tabId='4'>
+                              <Team />
+                            </TabPane>
+                            
+                            {/* <TabPane tabId='3'>
+                              <FromOtherSitesTab />
+                            </TabPane> */}
+                          </TabContent>
+                  </Col>
+              </Row>
+          </Col>
+          <Col lg="1" xs='12'></Col>
+      </Row>    
       </div>
+      
     </Fragment>
   )
 }

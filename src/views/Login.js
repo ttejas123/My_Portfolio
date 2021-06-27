@@ -16,7 +16,7 @@ const Login = () => {
   return (
     <div
     className='knowledge-base-bg auth-wrapper auth-v2'
-        style={{
+         style={{
           backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
           height: '100vh'
         }}
@@ -30,7 +30,7 @@ const Login = () => {
         
         <Col lg='1' sm='0'></Col>
         <Col className=' align-items-center px-2 pt-lg-3 pb-lg-3' lg='10' sm='12'>
-         <Row className=' align-items-center  px-2 p-lg-2 sign_info'> 
+         <Row className=' align-items-center  px-2 p-lg-2'> 
           
           <Col className='px-xl-1 mx-auto pt-lg-5 pt-lg-3 pb-5 pb-lg-5 ' md='4' xs='12'>
                 <div className="sign_info_content pt-2 pt-lg-5 pt-lg-0 pl-lg-5">
@@ -41,17 +41,17 @@ const Login = () => {
                                         <li><img src="https://img.icons8.com/material-sharp/16/000000/checkmark--v1.png" /> Free Testing Tools</li>
                                         <li><img src="https://img.icons8.com/material-sharp/16/000000/checkmark--v1.png" /> Unlimited User Accounts</li>
                                     </ul>
-                                    <Link to={`/register`}>
-                                      <Button.Ripple className="btn_three sign_btn_transparent" color='primary' outline>
+                                    
+                                      <Button.Ripple tag={Link} to='/register' color='primary'>
                                         Sign Up
                                       </Button.Ripple>
-                                    </Link>
+                                    
                 </div>
                 
                
           </Col>
 
-          <Col className='px-xl-2 mx-auto' md='5' xs='12'>
+          <Col className='px-xl-2 mx-auto sign_info' md='5' xs='12'>
             <CardTitle tag='h2' className='font-weight-bold mb-1'>
               Welcome to Bidoya!
             </CardTitle>
@@ -76,7 +76,7 @@ const Login = () => {
               <FormGroup>
                 <CustomInput type='checkbox' className='custom-control-Primary' id='remember-me' label='Remember Me' />
               </FormGroup>
-              <Button.Ripple tag={Link} to='/' color='primary' block>
+              <Button.Ripple tag={Link} to='/homes/dashBoard' color='primary' block>
                 Sign in
               </Button.Ripple>
             </Form>
@@ -89,7 +89,7 @@ const Login = () => {
             <div className='divider my-2'>
               <div className='divider-text'>Social Profiles</div>
             </div>
-            <div className='auth-footer-btn d-flex justify-content-center pb-3 pb-lg-0'>
+            <div className='auth-footer-btn d-flex justify-content-center '>
               <Button.Ripple color='facebook'>
                 <Facebook size={14} />
               </Button.Ripple>

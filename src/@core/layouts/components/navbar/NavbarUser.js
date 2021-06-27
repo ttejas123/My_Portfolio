@@ -1,6 +1,6 @@
 // ** Dropdowns Imports
 import { Fragment } from 'react'
-
+import { Link, Redirect } from 'react-router-dom'
 import UserDropdown from './UserDropdown'
 import NotificationDropdown from './NotificationDropdown'
 import IntlDropdown from './IntlDropdown'
@@ -45,16 +45,32 @@ const NavbarUser = props => {
       <ul className='nav navbar-nav align-items-center mx-auto'>
          <IntlDropdown />
         {/* <NotificationDropdown /> */}
-        <ProductDropDown />
-        <CustomerDropDown/>
-        <LibraryDropDown/>
-        <ResourcesDropDown/>
-        <UserDropdown />
-        <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-          <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign In</small> 
+        {/* <ProductDropDown /> */}
+        <Button.Ripple tag={Link} to='/' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Home</small> 
+        </Button.Ripple>
+        <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Search</small> 
+        </Button.Ripple>
+         <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
+        </Button.Ripple>
+        <Button.Ripple tag={Link} to='/product/productDetails' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Product</small> 
+        </Button.Ripple>
+        <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
+        </Button.Ripple>
+
+        {/*<CustomerDropDown/>*/}
+        {/*<LibraryDropDown/>*/}
+        {/*<ResourcesDropDown/>*/}
+        {/*<UserDropdown />*/}
+              <Button.Ripple tag={Link} to='/login' className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                  <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign In</small> 
               </Button.Ripple>
               <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
-          <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
+                  <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
               </Button.Ripple>
       </ul>
       <div className='bookmark-wrapper d-flex align-items-left'>

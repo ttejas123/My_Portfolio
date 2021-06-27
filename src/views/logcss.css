@@ -1,7 +1,7 @@
 .sign_info {
-  border: 20px solid #fff;
+  border: 10px solid #fff;
   background: #fbfbfd;
-  padding: 80px 50px;
+  padding: 30px 0px;
   box-shadow: 0px 50px 100px 0px rgba(12, 0, 46, 0.05);
 }
 
@@ -66,7 +66,8 @@
 
 .sign_btn_transparent {
   display: inline-block;
-  background: transparent;
+  background: #d9b38c;
+  color: black;
   border-color: #5e2ced;
   
 }

@@ -28,12 +28,11 @@ import {
 const Details = () => {
 
   return (
-    <Fragment>
-      <div >
-
+    <Fragment className="ml-lg-5">
+      <div className="ml-lg-1" >
+        <BreadCrumbs className="ml-lg-2" breadCrumbTitle='Search Page' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Search' />
       </div>
-      <BreadCrumbs breadCrumbTitle='Search Page' breadCrumbParent='Home' breadCrumbChild='Shop' breadCrumbActive='Search' />
-      <div >
+      <div className="ml-lg-1 mr-lg-1" >
         <Row>
             <Col md='3' xs='12'>
                 <Card>
@@ -101,7 +100,7 @@ const Details = () => {
                 </CardBody>
                   
                 </Card>
-                <Card>
+                <Card  >
                   <CardBody>
                     <Right />
                   </CardBody>

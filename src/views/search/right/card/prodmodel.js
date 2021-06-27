@@ -2,6 +2,7 @@
 import Avatar from '@components/avatar'
 import Select from 'react-select'
 import Rating from 'react-rating'
+import { Link, Redirect } from 'react-router-dom'
 import AutoG from './autoimg'
 import { useRTL } from '@hooks/useRTL'
 // ** Third Party Components
@@ -99,7 +100,7 @@ const AddNewModal = (prop) => {
                           </Col>
                           <Col md='8' xs='12'>
                               <div className=" d-flex">
-                                <Button.Ripple className='round' style={{width:"100%"}} color='primary' outline>
+                                <Button.Ripple tag={Link} to='/login' className='round' style={{width:"100%"}} color='primary' outline>
                                    Add To Cart
                                 </Button.Ripple>
                               </div> 

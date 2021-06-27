@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, Redirect } from 'react-router-dom'
 import NumberInput from '@components/number-input'
 import { Card, Row, Col, CardHeader, CardTitle, CardBody, CardText, Label, Alert, Badge, Button } from 'reactstrap'
 import classnames from 'classnames'
@@ -81,10 +82,10 @@ const NumberInputBasic = () => {
           </Col>
           <Col md='12' xs='12'>
               <div className=" mb-2 mt-2 d-flex ">
-                <Button.Ripple className='round' style={{width:"50%", marginRight: "10px"}} color='primary' outline>
+                <Button.Ripple tag={Link} to='/login' className='round' style={{width:"50%", marginRight: "10px"}} color='primary' outline>
                    Add To Cart
                 </Button.Ripple>
-                <Button.Ripple className='round' style={{width:"50%"}} color='primary' outline>
+                <Button.Ripple tag={Link} to='/login' className='round' style={{width:"50%"}} color='primary' outline>
                    Create RFQ
                 </Button.Ripple>
               </div> 
