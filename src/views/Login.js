@@ -15,10 +15,11 @@ const Login = () => {
 
   return (
     <div
-    className='knowledge-base-bg auth-wrapper auth-v2'
-         style={{
-          backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
-          height: '100vh'
+    
+    style={{
+          marginTop:-25,
+          backgroundColor:'#f8f1e8',
+          height: '90vh'
         }}
   >
       <Row className='auth-inner m-0 ' >
@@ -90,13 +91,13 @@ const Login = () => {
               <div className='divider-text'>Social Profiles</div>
             </div>
             <div className='auth-footer-btn d-flex justify-content-center '>
-              <Button.Ripple color='facebook'>
+              <Button.Ripple className="mr-1 p-1"  color='facebook'>
                 <Facebook size={14} />
               </Button.Ripple>
-              <Button.Ripple color='twitter'>
+              <Button.Ripple className="mr-1 p-1" color='twitter'>
                 <Twitter size={14} />
               </Button.Ripple>
-              <Button.Ripple color='google'>
+              <Button.Ripple className=" p-1" color='google'>
                 <Mail size={14} />
               </Button.Ripple>
             </div>

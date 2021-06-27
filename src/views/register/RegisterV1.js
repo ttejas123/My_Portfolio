@@ -98,7 +98,10 @@ const RegisterV2 = () => {
 
   return (
 
-    <div className='auth-wrapper auth-v2'>
+    <div style={{
+          marginTop:-25,
+          backgroundColor:'#f8f1e8'
+        }} >
 
       <Row className='auth-inner m-0'>
 
@@ -124,7 +127,7 @@ const RegisterV2 = () => {
         <Col className=' col-pb-1' lg='1' sm='12'>
          
         </Col>
-        <Col className='p-5 col-p-1' lg='4' sm='12'>
+        <Col className='p-lg-5 p-2 col-p-1' lg='4' sm='12'>
           {/* <div className='w-100 d-lg-flex  px-5'>
             <div className='text-center'>
               <h1 className='mt-5'>Pricing Plans</h1>
@@ -132,18 +135,18 @@ const RegisterV2 = () => {
             </div>
           </div> */}
           <CardText>
-            <h3 className='font-weight-normal mt-2'>
+            <h3 className=' d-none d-lg-block font-weight-normal mt-lg-2'>
              {dummyText}
             </h3>
           </CardText>
           <CardText>
-            <h3 className='mt-3 font-weight-bolder strong'>
+            <h3 className=' d-none d-lg-block mt-lg-3 font-weight-bolder strong'>
              Sign up today to get must-read HR stories from. Lattice and other trusted sources as well as profiles and insights from members of Resources for Humans delivered directly to your inbox every week.
             </h3>
           </CardText>
 
         </Col>
-        <Col className='d-flex align-items-center px-2 p-lg-5' lg='6' sm='12'>
+        <Col className='d-flex align-items-center  p-lg-5' lg='6' sm='12'>
           {/* <Row>
         <Col> */}
           <Col  sm='8' md='6' lg='12'>
