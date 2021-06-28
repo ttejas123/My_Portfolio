@@ -116,7 +116,7 @@ const RegisterV2 = () => {
                
             </Col>
             <Col md='5' sm='12' className='text-center'>
-               <img className="img-fluid" src={logo} />
+               <img className="img-fluid" style={{width: "40%"}} src={logo} />
             </Col>
             <Col md='4' sm='12'>
                
@@ -287,9 +287,9 @@ const RegisterV2 = () => {
                       label={<RememberMe />}
                     />
                   </FormGroup>
-                  <Button.Ripple color='primary' block>
+                  <Button.Ripple tag={Link} to='/homes/dashBoard' color='primary' block>
                     Sign up
-            </Button.Ripple>
+                  </Button.Ripple>
                 </Form>
               </CardBody>
             </Card>

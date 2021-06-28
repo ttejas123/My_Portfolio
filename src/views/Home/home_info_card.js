@@ -29,7 +29,7 @@ export default function home_info_card() {
                     <CardBody className='m-0 p-0  '>
                     <Row className='d-flex align-items-center mx-auto' style={{width: "100%"}} >
                         <Col lg='12' xs='12'>
-                            <img className='rounded ' style={{left: "4%", top: "90px", zIndex: "1",  position: "absolute"}} width = "115%" src={mainbg} alt='Card image' />
+                            <img className='rounded backImage' width = "115%" src={mainbg} alt='Card image' />
                         {/* <img className='rounded img-fluid congratulations-img-right' src={selectedImage} alt='Card image' /> */}
                         </Col>
                         <Col lg='12' xs='12'>

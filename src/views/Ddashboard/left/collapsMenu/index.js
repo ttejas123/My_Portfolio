@@ -19,7 +19,9 @@ import {
   UncontrolledButtonDropdown,
   DropdownToggle,
   DropdownItem,
-  DropdownMenu
+  DropdownMenu,
+  ListGroup, ListGroupItem,
+  Badge
 } from 'reactstrap'
 
 import SwiperCore, {
@@ -46,7 +48,30 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
 
     <>
       <h4><b>Links</b></h4>
-      <CollapsData />
+      <div>
+          <ListGroup flush>
+            <ListGroupItem tag={Link} to='/home' className='cursor-pointer'>
+              <span className="mr-1">Home</span>
+              <Badge color='primary' pill>
+                New
+              </Badge>
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/search/searchPage' className='cursor-pointer'>
+              <span className="mr-1">Search Page</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/Rfq7/rfqN' className='cursor-pointer'>
+              <span className="mr-1">RFQ</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/product/productDetails' className='cursor-pointer'>
+              <span className="mr-1">Product Details</span>
+              
+            </ListGroupItem>
+            
+          </ListGroup>
+         
+      </div>
       {/* <DashboardMenuItem /> */}
     </>
   )
