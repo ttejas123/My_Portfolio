@@ -9,9 +9,12 @@ import img1 from '@src/assets/images/elements/marketting-bg.jpg'
 
 export default function Marketting() {
     return (
-        <div id='dashboard-analytics'>
-            <Row className=' mt-4'>
-                <Col lg='1' sm='12'>
+        <div id='dashboard-analytics'
+        style={{backgroundColor:'#ffffff'}}
+        >
+           
+            <Row className=''>
+                {/* <Col lg='1' sm='12'> */}
                     {/* <Card className='card-congratulations'>
                         <CardBody className='text-center'>
                             <img className='congratulations-img-left' src={decorationLeft} alt='decor-left' />
@@ -25,9 +28,9 @@ export default function Marketting() {
                             </div>
                         </CardBody>
                     </Card> */}
-                </Col>
-                <Col lg='10' sm='12' className='pt-5 pl-5 pr-5'>
-                <CardBody>
+                {/* </Col> */}
+                <Col lg='12' sm='12' className='mb-3'>
+                <CardBody className='px-0 py-0'>
                     <section 
                     style={{backgroundImage: `url(${require('@src/assets/images/elements/marketting-bg.jpg').default})`,
                 backgroundPosition:'center center',
@@ -41,20 +44,20 @@ export default function Marketting() {
                             <br/>
 $10 discount for your first order</h2>
 <Row>
-                                <Col lg='3'>
+                                <Col lg='4' md='2' xs='2' className='pr-0'>
                                 </Col>
-                    <Col lg='4'>
+                    <Col lg='3' md='6' xs='5' className='pl-0'>
               <Input type='email' style={{fontSize:'18px', padding:'11px 25px 11px 25px', height: '48px', borderRadius:'48px', backgroundColor:'#f2f2f2', color:'#495057'}} placeholder='Enter your email address' />
                     </Col>
-                    <Col lg='2'>
-                    <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' style={{borderRadius:'48px', color:'#FD8D27'}} color='primary'>
+                    <Col lg='1' md='2' xs='2'>
+                    <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' style={{borderRadius:'48px', color:'#FD8D27'}} color='primary'>
            
           <small className='user-name font-weight-bold h4' style={{ color:'#ffffff'}}>Subscribe</small> 
               </Button.Ripple>
                     </Col>
                 </Row>
                     </section>
-                            <div className=' mt-lg-3'>
+                            <div className=''>
                             {/* <Row>
                                 <Col lg='3'>
                                 </Col>
@@ -73,27 +76,27 @@ $10 discount for your first order</h2>
 
                 </Col>
             </Row>
-            <div style={{backgroundColor:'#ffffff'}}>
-            <hr className='mb-0'/>
-            <Row className='py-1'>
-                <Col lg='4' style={{borderRight:'2px solid #000000'}}>
+            <div className='' style={{backgroundColor:'#ffffff', border:'1px solid #BFBFBF', boxShadow:'inset 0px 0px 10px #aaaaaa'}}>
+            <div className='py-1'>
+            <Row className=''>
+                <Col lg='4' md='4' xs='4' style={{borderRight:'2px solid #000000'}}>
                 <h5 className='user-name mb-0 font-weight-bold text-center'>
                 <ShoppingCart size={18} className='mr-1'/>
                     Trusted Sellers</h5>
                 </Col>
-                <Col lg='4' style={{borderRight:'2px solid #000000'}}>
+                <Col lg='4' md='4' xs='4' style={{borderRight:'2px solid #000000'}}>
                 <h5 className='user-name mb-0 font-weight-bold h5 text-center'>
                 <ShieldOff size={18} className='mr-1'/>
                 Non-Contact Shopping</h5>
                 </Col>
-                <Col lg='4'>
+                <Col lg='4' md='4' xs='4'>
                 <h5 className='user-name mb-0 font-weight-bold h5 text-center'>
                 <DollarSign size={18} className='mr-1'/>
                 Premium Benfits</h5>
                 </Col>
             </Row>
-            <hr className='mt-0 mb-0' />
             </div>
-        </div>
+            </div>        
+            </div>
     )
 }

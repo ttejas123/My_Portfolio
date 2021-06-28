@@ -21,7 +21,7 @@ const Header = ({ searchTerm, setSearchTerm, handleFilter }) => {
          backgroundColor:'#f8f1e8',
           backgroundRepeat:'no-repeat',
           backgroundSize:'cover',
-          marginTop:-5
+          marginTop:-1
         }}
       >
            <Col lg='12' className=''>
@@ -33,11 +33,11 @@ const Header = ({ searchTerm, setSearchTerm, handleFilter }) => {
         <Col lg='8' md='6' sm='12' className='mt-5'>
         <CardBody className='px-0 pt-1 mt-4'>
         <Col lg='10' className='px-0'>
-          <h1 style={{fontSize:'40px', lineHeight:'50px', fontWeight:500, color:'black', textAlign:'left'}} className=''>✋🏻 Stop wasting time searching, negotiating & following with your business vendors</h1>
+          <h1 style={{fontSize:'35px', lineHeight:'45px', fontWeight:400, color:'black', textAlign:'left'}} className=''>✋🏻 Stop wasting time searching, negotiating & following with your business vendors</h1>
           </Col>
           <Col lg='10' className='px-0 py-1'>
           <CardText className='mb-2'>
-            <p className=' h3 mt-1' style={{color:'#464c52', fontSize:'22px', lineHeight:'31px', marginTop:20, textAlign:'left'}}>Join Bidoya to streamline all your procurement work and start concentrating on your growth again</p>
+            <p className=' h3 mt-1' style={{color:'#464c52', fontSize:'22px', lineHeight:'31px', marginTop:20, textAlign:'left', fontWeight:300}}>Join Bidoya to streamline all your procurement work and start concentrating on your growth again</p>
           </CardText>
           </Col>
           <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
@@ -56,7 +56,7 @@ const Header = ({ searchTerm, setSearchTerm, handleFilter }) => {
         </CardBody>
         </Col>
         <Col lg='4' sm='12' md='12'>
-            <img src={MTIMG} alt='logo' height='550' width='auto' style={{marginLeft:'-10rem'}}/>
+            <img src={MTIMG} alt='logo' height='550' width='auto' style={{marginLeft:'-15rem'}}/>
         </Col>
           </Row>
           </Col>

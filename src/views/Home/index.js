@@ -19,9 +19,9 @@ const Homepage = () => {
            <SearchCard/>
            <UseProf/>
            <Testimonals/>
+           <Marketting/>
            {/* <Header/> */}
            <Category/>
-           <Marketting/>
            <Footer/>
        </div>
     )
