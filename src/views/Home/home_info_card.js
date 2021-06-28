@@ -25,32 +25,32 @@ export default function home_info_card() {
 
             <Row>
                 <Col lg='5' sm='12'>
-                <Card className=' m-0  p-0' style={{height: "85vh", backgroundColor:`${color}`}}>  
+                <div className='cardbackgroundImg' style={{backgroundColor:`${color}`}}>  
                     <CardBody className='m-0 p-0  '>
                     <Row className='d-flex align-items-center mx-auto' style={{width: "100%"}} >
                         <Col lg='12' xs='12'>
-                            <img className='rounded backImage' width = "115%" src={mainbg} alt='Card image' />
+                            <img className='rounded backImage' src={mainbg} alt='Card image' />
                         
                         </Col>
                         <Col lg='12' xs='12'>
-                        <img className='rounded shadow bg-black' style={{left: "10%", top: "120px", zIndex: "2",  position: "absolute"}} width = "115%" src={selectedImage} alt='Card image' />
+                        <img className='rounded frntImage'  src={selectedImage} alt='Card image' />
 
                         
                         </Col>
                     </Row>
                     </CardBody>  
-                </Card>
+                </div>
                 </Col>
                 <Col lg='7' sm='12' className=' d-flex align-items-center '>
                     <Row >
                             <Col  lg='5'></Col>
                    
-                            <Col lg='7' sm='12' className=" align-items-center ">
+                            <Col lg='7' sm='12' className="p-4  p-lg-0 align-items-center ">
                                 <div style={{color: 'black'}}>
-                                            <h4 className='mb-lg-2'><b>{subText.subcardText}</b></h4>
-                                            <h1 className='mb-lg-2 details font-weight-bold dark'><b>{subText.subcardDetail}</b></h1>
+                                            <h4 className='mb-2 buttonClasses'><b>{subText.subcardText}</b></h4>
+                                            <h1 className='mb-2 details font-weight-bold dark'><b>{subText.subcardDetail}</b></h1>
                                             <CardText><b>Streamline social monitoring and improve responsiveness with a unified inbox.</b></CardText>
-                                            <div className='mb-lg-3'>
+                                            <div className='mb-3'>
                                                 <div className='cursor-pointer'>
                                                     <span className='flatSuccess mr-1 display-5'> <b>Explore our Engagement features</b></span>
                                                     <ArrowRight style={{color:'#33cc33'}} size={15} />
@@ -95,7 +95,7 @@ export default function home_info_card() {
                                                     </div>
                                                 </Col>
                                                 <Col lg='6' sm='12' >
-                                                    <div className={ selected === 4 ? ("border rounded border-secondary buttonss mb-75") : ("border-none buttonss mb-75")}>
+                                                    <div className={ selected === 4 ? ("border rounded border-secondary buttonss mb-75") : ("border-none buttonss mb-75 ")}>
                                                         <Button.Ripple block className='' color='dark'  onClick={e => {
                                                                 setsubText({ subcardText: 'Sell', subcardDetail: 'Measure Your Performance' })
                                                                 setSelectedImage(decorationRight2) 
