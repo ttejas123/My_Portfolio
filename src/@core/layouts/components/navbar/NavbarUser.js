@@ -52,11 +52,11 @@ const NavbarUser = props => {
         <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Search</small> 
         </Button.Ripple>
+        <Button.Ripple tag={Link} to='/Rfq7/rfqN' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Rfq</small> 
+        </Button.Ripple>
          <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
-        </Button.Ripple>
-        <Button.Ripple tag={Link} to='/product/productDetails' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Product</small> 
         </Button.Ripple>
         <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
