@@ -7,7 +7,7 @@ import Footer from '../Home'
 import Marketting from './marketing'
 import Testimonals from './testimonals'
 import UseProf  from './UseProf'
-    
+import Bbb3 from './home_info_card.js'
 
 // import '@styles/base/pages/page-knowledge-base.scss'
 
@@ -20,6 +20,7 @@ const Homepage = () => {
            <UseProf/>
            <Testimonals/>
            <Marketting/>
+           <Bbb3 />
            {/* <Header/> */}
            <Category/>
            <Footer/>

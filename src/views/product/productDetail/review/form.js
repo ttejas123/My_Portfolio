@@ -31,7 +31,7 @@ const AddNewModal = (prop) => {
     <Modal
       isOpen={prop.open}
       toggle={prop.handleModal}
-      className='sidebar-sm'
+      className='sidebar-sm col-lg-4 col-12'
      
       contentClassName='pt-0'
     >
@@ -42,7 +42,7 @@ const AddNewModal = (prop) => {
             <div className="ps-form--review">
                 <form >
                             <div className="row">
-                                <div className="col-12 col-lg-4">
+                                <div className="col-lg-4 col-12 ">
                                         <label className="ps-form__label">Rating *</label>
                                         <Rating
                                           emptySymbol={<Star size={18} fill='#babfc7' stroke='#babfc7' />}

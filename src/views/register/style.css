@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Benne&family=Playfair+Display:wght@500&family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Benne&family=Patua+One&family=Playfair+Display:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Benne&family=Lora:ital@1&family=Playfair+Display:wght@500&display=swap');
+
 h3{
 /*font-family: 'Lora', serif;*/
 	font-family: 'Raleway', sans-serif;
@@ -39,6 +39,3 @@ h3{
    
 }
 
-img {
-    width: 40%;
-}

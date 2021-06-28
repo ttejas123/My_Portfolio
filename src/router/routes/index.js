@@ -4,7 +4,7 @@ import { lazy } from 'react'
 const TemplateTitle = '%s - Bidoya'
 
 // ** Default Route
-const DefaultRoute = '/Rfq7/rfqN'
+const DefaultRoute = '/home'
 
 // ** Merge Routes
 const Routes = [
@@ -54,8 +54,7 @@ const Routes = [
   },
   {
     path: '/login', // USE THIS
-    component: lazy(() => import('../../views/Login')),
-    layout: 'BlankLayout'
+    component: lazy(() => import('../../views/Login'))
   },
   {
     path: '/login1',
