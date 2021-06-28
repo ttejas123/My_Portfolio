@@ -18,8 +18,7 @@ const Login = () => {
     
     style={{
           marginTop:-25,
-          backgroundColor:'#f8f1e8',
-          height: '90vh'
+          backgroundColor:'#f8f1e8'
         }}
   >
       <Row className='auth-inner m-0 ' >
@@ -52,7 +51,7 @@ const Login = () => {
                
           </Col>
 
-          <Col className='px-xl-2 mx-auto sign_info' md='5' xs='12'>
+          <Col className='px-xl-2 p-2 mx-auto sign_info' md='5' xs='12'>
             <CardTitle tag='h2' className='font-weight-bold mb-1'>
               Welcome to Bidoya!
             </CardTitle>
@@ -87,7 +86,7 @@ const Login = () => {
                 <span>Create your account</span>
               </Link>
             </p>
-            <div className='divider my-2'>
+            <div className='divider '>
               <div className='divider-text'>Social Profiles</div>
             </div>
             <div className='auth-footer-btn d-flex justify-content-center '>
