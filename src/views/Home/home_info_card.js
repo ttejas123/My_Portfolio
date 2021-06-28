@@ -16,7 +16,7 @@ export default function home_info_card() {
     const [selected, setselected] = useState(1)
     return (
         <div style={{
-          marginTop:-25,
+          //marginTop:-25,
           backgroundColor: 'fff'
         }}
         className="homeCard"
@@ -30,12 +30,12 @@ export default function home_info_card() {
                     <Row className='d-flex align-items-center mx-auto' style={{width: "100%"}} >
                         <Col lg='12' xs='12'>
                             <img className='rounded backImage' width = "115%" src={mainbg} alt='Card image' />
-                        {/* <img className='rounded img-fluid congratulations-img-right' src={selectedImage} alt='Card image' /> */}
+                        
                         </Col>
                         <Col lg='12' xs='12'>
                         <img className='rounded shadow bg-black' style={{left: "10%", top: "120px", zIndex: "2",  position: "absolute"}} width = "115%" src={selectedImage} alt='Card image' />
 
-                        {/* <img className='rounded img-fluid congratulations-img-right' src={selectedImage} alt='Card image' /> */}
+                        
                         </Col>
                     </Row>
                     </CardBody>  
