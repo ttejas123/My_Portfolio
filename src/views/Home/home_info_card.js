@@ -19,7 +19,7 @@ export default function home_info_card() {
           //marginTop:-25,
           backgroundColor: 'fff'
         }}
-        className="homeCard pt-2"
+        className="homeCard pt-5"
         >
             {/* dashboard-analytics */}
 

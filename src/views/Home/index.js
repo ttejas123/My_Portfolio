@@ -18,11 +18,11 @@ const Homepage = () => {
            {/* <CreateCart/> */}
            <SearchCard/>
            <UseProf/>
+           <Category/>
+           <Bbb3 />
            <Testimonals/>
            <Marketting/>
-           <Bbb3 />
            {/* <Header/> */}
-           <Category/>
            <Footer/>
        </div>
     )

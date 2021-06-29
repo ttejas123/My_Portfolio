@@ -6,8 +6,8 @@ import NotificationDropdown from './NotificationDropdown'
 import IntlDropdown from './IntlDropdown'
 //import NavbarSearch from './NavbarSearch'
 // ** Third Party Components
-import { Sun, Moon, Menu } from 'react-feather'
-import { NavItem, NavLink, Button } from 'reactstrap'
+import { Sun, Moon, Menu, Search } from 'react-feather'
+import { NavItem, NavLink, Button, FormGroup, Input, Label, Col } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
 import LibraryDropDown from './LibraryDropDown'
@@ -58,6 +58,10 @@ const NavbarUser = props => {
          <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
         </Button.Ripple>
+           {/* <div className='' style={{width:'10%'}}>  
+          <Input type='text' id='category' placeholder='' className='d-inline-block w-5' style={{width:'70%'}}/>
+          <Search className='ml-1'/>
+          </div>  */}
         <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
         </Button.Ripple>
@@ -74,13 +78,6 @@ const NavbarUser = props => {
                   <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
         </Button.Ripple>
       </ul>
-      <div className='bookmark-wrapper d-flex align-items-left'>
-        <NavItem className='d-none d-lg-block'>
-          <NavLink className='nav-link-style'>
-          
-          </NavLink>
-        </NavItem>
-      </div>
     </Fragment>
   )
 }

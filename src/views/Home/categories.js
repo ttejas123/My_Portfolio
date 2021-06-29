@@ -130,7 +130,7 @@ const Category = () => {
         // </Col>
         <Col lg='2'>
         <div style={{textAlign:"center"}}>
-            <div style={{width:'90px', height:'90px', position:"relative", backgroundColor:'#f0f2f5', textAlign:"center", verticalAlign:"middle", border:"1px solid #f0f2f5", borderRadius:"70%"}} className='mb-1 d-inline-block'>
+            <div style={{width:'90px', height:'90px', position:"relative", backgroundColor:'#f1dfcd', textAlign:"center", verticalAlign:"middle", border:"1px solid #f0f2f5", borderRadius:"70%"}} className='mb-1 d-inline-block'>
             {item.icon}
             </div>
             <span style={{lineHeight:'26px', fontSize:16}} className='d-block font-weight-bold text-align-center mb-2'>
@@ -169,8 +169,17 @@ const Category = () => {
   }
 
   return (
-    <Fragment>
-       <div className='mt-4 mb-2 text-center'>
+    <div  style={{
+      // backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
+     backgroundColor:'#f8f1e8'
+    
+    }} 
+    className='pb-5'
+    >
+      <hr/>
+       <div className='mt-4 mb-2 text-center'
+      
+      >
         <h3 className='font-weight-bold'>Popular Categories</h3>
         <div>
             <Row>
@@ -188,7 +197,7 @@ const Category = () => {
             </Row>
         </div>
         <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' color='#fff'>
-          <small className='user-name font-weight-bold h6 ml-1 px-1' style={{ color:'#103178', border:'2px solid #f0f2f5', borderRadius:40, padding:'3px 10px' }}>Show all</small> 
+          <small className='user-name font-weight-bold h6 ml-1 px-1' style={{ color:'#103178', border:'2px solid #5e5873', borderRadius:40, padding:'3px 10px' }}>Show all</small> 
               </Button.Ripple>
       </div>
       <div className='mt-4 mb-2 text-center'>
@@ -244,8 +253,8 @@ const Category = () => {
       </Col>
       </Row>
       {/* </div> */}
-             
-    </Fragment>
+            
+    </div>
   )
 }
 

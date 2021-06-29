@@ -100,7 +100,7 @@ const SearchCard = () => {
           <Input type='text' id='category' placeholder='Qty?'/>
         </FormGroup>
               </Col>
-              <Col md='9' sm='6'>
+              <Col md='8' sm='6'>
               <FormGroup className='mt-1'>
               <Nouislider
           start={[40, 60]}
@@ -119,7 +119,7 @@ const SearchCard = () => {
               </Label>
         </FormGroup>
               </Col>
-              <Col md='3' sm='6'>
+              <Col md='4' sm='6'>
               <Button.Ripple className='mb-1  mr-0 ml-1' color='primary'>
             <Search size={14} />
           <small className='user-name font-weight-bold h6 ml-1 h4' style={{ color:'#ffffff'}}>Search</small> 

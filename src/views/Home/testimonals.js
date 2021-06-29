@@ -39,6 +39,7 @@ export default function Testimonals() {
        <section className='d-block' style={{backgroundColor:'#fefefe'}}>
             <div className='mx-4 pt-5 pb-5'>
                 <Col lg='12'>
+                <hr className='my-0'/>
                     <Row className='match-height mt-5 mb-5'>
                         <Col lg='7'>
                             <Row className='match-height'>

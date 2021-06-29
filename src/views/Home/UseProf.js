@@ -12,7 +12,7 @@ import byjusLogo from '@src/assets/images/logo/blogo.png'
 const UseProf = props => {
     // const context = useContext(ThemeColors)
     return (
-        <div className='mt-1 mb-3'>
+        <div className='mt-5 mb-3'>
             {/* <div className='w-100 text-center'>
                 <p className='mb-2'>Trusted by the world’s fastest growing companies including:</p>
 
@@ -53,11 +53,12 @@ const UseProf = props => {
                         <div className='misc-inner'>
                             <div className='w-100 text-center'>
                                 {/* <span className='text-capitalize'> */}
-                                <h5 className='text-primary'>MOST POPULAR PRODUCT</h5>
+                                <h5 className='text-primary'>BUILT ON TRUST</h5>
                                 {/* </span> */}
-                                <h1 className='mb-1' style={{fontWeight:600}}>25,000+ online businesses use Bidoya to convert visitors into leads and sales.</h1>
-                                <p className=' mb-1 mt-2' style={{textAlign:'center'}}>
-                                    The fastest way to convert visitors into leads and sales on your website is with Social Proof Marketing. That's why 25,000+ businesses use Bidoya.
+                                <h1 className='mb-1' style={{fontWeight:600}}>5,000+ businesses use Bidoya every month for their procurement needs.</h1>
+                                <p className=' mb-2 mt-1 py-2 ' style={{textAlign:'center'}}>
+                                   Whether a small Startup or a large Corporate, Bidoya works hands on with every stake-holder to make sure that we build the best B2B eco-system available in the country. Following is the list of brands who have trusted us
+                                    {/* The fastest way to convert visitors into leads and sales on your website is with Social Proof Marketing. That's why 25,000+ businesses use Bidoya. */}
                                     </p>
                                     {/* <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' style={{color:'#FD8D27'}} color='primary'>
            
@@ -71,8 +72,8 @@ const UseProf = props => {
                 </Col>
             </Row>
             <Row>
-            <Col lg='2'></Col>
-                <Col md='8' xs='12' lg='8'>
+            <Col lg='1'></Col>
+                <Col md='10' xs='12' lg='10'>
                 
                 <Col lg='12'>
                     <Row>
@@ -98,7 +99,7 @@ const UseProf = props => {
                     </Col>
                 </Col>
             </Row>
-               <div className='text-center mt-2'>
+               <div className='text-center mt-2 pt-2'>
             <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1 ml-1' style={{color:'#FD8D27'}} color='primary'>
            
            <small className='user-name font-weight-bold h4' style={{ color:'#ffffff'}}>Learn About Bidoya</small> 
