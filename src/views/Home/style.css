@@ -6,6 +6,10 @@
 	 color:  #33cc33;
 }
 
+.cardbackgroundImg{
+	height: 85vh;
+}
+
 .flatSuccess:hover {
 	border-bottom: 2px solid #33cc33;
 }
@@ -22,9 +26,73 @@
 	padding: 2px;
 }
 
+
 .backImage{
+	display: block;
+	width : 115%;
 	left: 4%; 
 	top: 90px;
 	zIndex: 1;
 	position: absolute;
+}
+
+.frntImage {
+	left: 10%;
+	top: 120px;
+	zIndex: 2;
+	position: absolute; 
+	width : 115%;
+}
+
+
+@media screen and (max-width: 850px) {
+   .buttonClasses{
+	 padding-top: 50px;
+	}
+
+   .backImage {
+
+	    width: 88%;
+   }
+   .frntImage {
+		
+		width : 89%;
+	}
+
+	.cardbackgroundImg{
+		height: 77vh;
+	}
+	
+}
+
+@media screen and (max-width: 660px) {
+   .backImage {
+
+	    width: 90%;
+   }
+   .frntImage {
+		
+		width : 86%;
+	}
+
+	.cardbackgroundImg{
+		height: 64vh;
+	}
+	
+}
+
+@media screen and (max-width: 480px) {
+   .backImage {
+
+	    width: 85%;
+   }
+   .frntImage {
+		
+		width : 86%;
+	}
+
+	.cardbackgroundImg{
+		height: 47vh;
+	}
+	
 }

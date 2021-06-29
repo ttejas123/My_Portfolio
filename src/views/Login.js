@@ -17,10 +17,10 @@ const Login = () => {
     <div
     
     style={{
-          backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
-        
-          backgroundRepeat:'no-repeat',
-          backgroundSize:'cover',
+          // backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
+          // height:"100vh",
+          // backgroundRepeat:'no-repeat',
+          // backgroundSize:'cover',
           marginTop:-25,
           backgroundColor:'#f8f1e8'
         }}
