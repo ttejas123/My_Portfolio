@@ -33,6 +33,10 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
   },
   {
+    path: '/cart-buyer',
+    component: lazy(() => import('../../views/RFQ/cartBuyer.js'))
+  },
+  {
     path: '/product/productDetails',
     component: lazy(() => import('../../views/product/productDetail'))
   },

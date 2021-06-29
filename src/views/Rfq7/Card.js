@@ -6,7 +6,7 @@ import { useRTL } from '@hooks/useRTL'
 import '@styles/react/libs/noui-slider/noui-slider.scss'
 // ** Third Party Components
 import classnames from 'classnames'
-import { X, Heart, Star, Trash, ShoppingCart, Zap } from 'react-feather'
+import { X, Heart, Star, Trash, ShoppingCart, Zap, ChevronDown } from 'react-feather'
 import { Card, CardBody, CardText, CardHeader, Button, Badge, CustomInput, InputGroupAddon, Input, InputGroupText, Row, Col } from 'reactstrap'
 import img1 from '@src/assets/images/elements/nike-basketball-shoes.jpg'
 // ** Styles
@@ -14,11 +14,13 @@ import '@styles/base/pages/app-ecommerce.scss'
 // ** Custom Components
 import NumberInput from '@components/number-input'
 import Topbar from './topbar'
+import { useState } from 'react'
 
 const Cart = props => {
   // ** Props
   const { products, stepper, deleteCartItem, dispatch, addToWishlist, deleteWishlistItem, getCartItems } = props
 
+  const [toggle, setToggle] = useState(false)
   // ** Function to convert Date
   const formatDate = (value, formatting = { month: 'short', day: 'numeric', year: 'numeric' }) => {
     if (!value) return value
@@ -89,11 +91,186 @@ const direction = 'ltr'
     direction
   }
 
+  const renderDetails = () => {
+    return (
+      <Col >
+      <hr/>
+    <Row>
+    <Col lg='12'>
+    <div >
+        <Row>
+          <Col md='4' sm='4'>
+              <CardBody>
+              <span>
+            Buyer (Base Rate + GST = Budget)
+            </span>
+              </CardBody>
+          </Col>
+          <Col md='4' sm='4'>
+          <CardBody>
+          <span>
+          Seller (Base Rate + GST = Quote)
+              </span>
+              </CardBody>
+          </Col>
+          <Col md='4' sm='4'>
+            <CardBody>
+            <span className='mr-1'>
+          Close Negotiation BID CWT652942
+              </span>
+              <CustomInput className='d-inline'  type='checkbox' id='user-3' label='' />
+            </CardBody>
+          </Col>
+        </Row>
+        <Row>
+          <Col md='8' sm='4'>
+            <CardText>
+            <Row>
+              <Col md='6' sm='6'>
+                <CardBody className='pt-0'>
+                <span className='font-weight-bold h5'>
+              5357.14 + 12% = 6000.00
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className='pt-0'>
+                <span className='font-weight-bold h5 d-block mx-auto text-right'>
+              5357.14 + 12% = 6000.00
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='12' sm='12'>
+                <CardBody className='pt-0'>
+                <Nouislider className='slider-success mt-md-1 mt-3 mb-4' {...colorOptions} />
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className='pt-0'>
+                <span className='font-weight-bold h5'>
+                Quantity : 500pcs
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className='pt-0'>
+                <span className='font-weight-bold h5 d-block mx-auto text-right'>
+                Quantity : 500pcs
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className=''>
+                <span className='font-weight-bold h5'>
+                Delivery : 20 days
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className=''>
+                <span className='font-weight-bold h5 d-block mx-auto text-right'>
+                Delivery : 20 days
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className=''>
+                <span className='font-weight-bold h5'>
+                Customization : View
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className=''>
+                <span className='font-weight-bold h5 d-block mx-auto text-right'>
+                Customization : View
+              </span>
+                </CardBody>
+              </Col>
+              <Col md='6' sm='6'>
+                <CardBody className='pt-0'>
+                <span className='font-weight-bold h6' style={{color:'rgb(237 146 32)'}}>
+                Pending Bidoya Approval
+              </span>
+                </CardBody>
+              </Col>
+            </Row>
+            </CardText>
+          </Col>
+          <Col md='4' sm='4'>
+          <CardHeader className='pb-0 pl-0'> 
+    <span className='text-truncate font-weight-bold'>{item.title}</span>
+  </CardHeader>
+  <Row>
+  <Col lg='6' md='6' className='py-1'>
+
+  <div className='d-block my-auto'>
+  <img className='img-fluid d-block mx-auto mt-2' src={item.img} alt={item.title} height='200' width='120'/>
+  </div>
+
+    </Col>
+    <Col lg='6' md='6' className=''>
+  <div className="d-flex justify-content-between mt-3 d-block mx-auto">
+          <div className='font-small-2 font-weight-bold'>
+              <span className='text-truncate font-weight-bold h6'>MRP : </span>
+              </div>
+          <h6 className='mb-1 d-block mx-auto'>{`Rs ${item.mrp} /-`}</h6>
+        </div>
+        <div className="d-flex justify-content-between d-block mx-auto">
+          <div className='font-small-2 font-weight-bold'>
+              <span className='text-truncate font-weight-bold h6'>Offer : </span>
+              </div>
+          <h6 className='mb-1 d-block mx-auto'>{`Rs ${item.offer} /-`}</h6>
+        </div>
+        <div className="d-flex justify-content-between d-block mx-auto">
+          <div className='font-small-2 font-weight-bold'>
+              <span className='text-truncate font-weight-bold h6'>MOQ : </span>
+              </div>
+          <h6 className='mb-1 d-block mx-auto'>{`${item.moq} pcs`}</h6>
+        </div>
+        <div className="d-flex justify-content-between  d-block mx-auto">
+          <div className='font-small-2 font-weight-bold'>
+              <span className='text-truncate font-weight-bold h6'>Delivery : </span>
+              </div>
+          <h6 className='mb-1 d-block mx-auto'>{`${item.delivery} days`}</h6>
+        </div>
+        <div className="d-flex justify-content-between  d-block mx-auto">
+          <div className='font-small-2 font-weight-bold'>
+              <span className='text-truncate font-weight-bold h6'>Inventory : </span>
+              </div>
+          <h6 className='mb-1 d-block mx-auto'>{`${item.inventory} pcs`}</h6>
+        </div>
+        
+    </Col>
+    </Row>
+    <Row>
+    <Col md='12' sm='12'>
+    <a><span className='font-weight-bold h6 d-block mx-auto mb-1' style={{color:'#2876c6'}}>Close Negotiation BID History</span></a>
+  </Col>
+    </Row>
+    <Row>
+    <Col className='d-flex flex-sm-row flex-column mt-2 mb-2' sm='12'>
+    <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' type='submit' color='primary'>
+      Submit
+    </Button.Ripple>
+    <Button.Ripple color='primary'>
+      Order
+    </Button.Ripple>
+  </Col>
+    </Row>
+          </Col>
+        </Row>
+      </div>
+      </Col>
+    </Row>
+  </Col>
+    )
+  }
   // ** Render cart items
   const renderCart = () => {
           return (
             <>
-        <Card>
+        <Card className='mb-2'>
           <div>
              <Row >
                 <Col lg='3' sm='3' xs='6' className="m-0 pl-3 mt-1 mb-1">
@@ -214,178 +391,11 @@ const direction = 'ltr'
               </Row>
           </Card>
           </Col>
-        </Card>
-        <Col>
-        <Row>
-        <Col lg='12'>
-        <Card >
-            <Row>
-              <Col md='4' sm='4'>
-                  <CardBody>
-                  <span>
-                Buyer (Base Rate + GST = Budget)
-                </span>
-                  </CardBody>
-              </Col>
-              <Col md='4' sm='4'>
-              <CardBody>
-              <span>
-              Seller (Base Rate + GST = Quote)
-                  </span>
-                  </CardBody>
-              </Col>
-              <Col md='4' sm='4'>
-                <CardBody>
-                <span className='mr-1'>
-              Close Negotiation BID CWT652942
-                  </span>
-                  <CustomInput className='d-inline'  type='checkbox' id='user-3' label='' />
-                </CardBody>
-              </Col>
-            </Row>
-            <Row>
-              <Col md='8' sm='4'>
-                <CardText>
-                <Row>
-                  <Col md='6' sm='6'>
-                    <CardBody className='pt-0'>
-                    <span className='font-weight-bold h5'>
-                  5357.14 + 12% = 6000.00
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className='pt-0'>
-                    <span className='font-weight-bold h5 d-block mx-auto text-right'>
-                  5357.14 + 12% = 6000.00
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='12' sm='12'>
-                    <CardBody className='pt-0'>
-                    <Nouislider className='slider-success mt-md-1 mt-3 mb-4' {...colorOptions} />
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className='pt-0'>
-                    <span className='font-weight-bold h5'>
-                    Quantity : 500pcs
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className='pt-0'>
-                    <span className='font-weight-bold h5 d-block mx-auto text-right'>
-                    Quantity : 500pcs
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className=''>
-                    <span className='font-weight-bold h5'>
-                    Delivery : 20 days
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className=''>
-                    <span className='font-weight-bold h5 d-block mx-auto text-right'>
-                    Delivery : 20 days
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className=''>
-                    <span className='font-weight-bold h5'>
-                    Customization : View
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className=''>
-                    <span className='font-weight-bold h5 d-block mx-auto text-right'>
-                    Customization : View
-                  </span>
-                    </CardBody>
-                  </Col>
-                  <Col md='6' sm='6'>
-                    <CardBody className='pt-0'>
-                    <span className='font-weight-bold h6' style={{color:'rgb(237 146 32)'}}>
-                    Pending Bidoya Approval
-                  </span>
-                    </CardBody>
-                  </Col>
-                </Row>
-                </CardText>
-              </Col>
-              <Col md='4' sm='4'>
-              <CardHeader className='pb-0 pl-0'> 
-        <span className='text-truncate font-weight-bold'>{item.title}</span>
-      </CardHeader>
-      <Row>
-      <Col lg='6' md='6' className='py-1'>
-    
-      <div className='d-block my-auto'>
-      <img className='img-fluid d-block mx-auto mt-2' src={item.img} alt={item.title} height='200' width='120'/>
-      </div>
-    
-        </Col>
-        <Col lg='6' md='6' className=''>
-      <div className="d-flex justify-content-between mt-3 d-block mx-auto">
-              <div className='font-small-2 font-weight-bold'>
-                  <span className='text-truncate font-weight-bold h6'>MRP : </span>
-                  </div>
-              <h6 className='mb-1 d-block mx-auto'>{`Rs ${item.mrp} /-`}</h6>
-            </div>
-            <div className="d-flex justify-content-between d-block mx-auto">
-              <div className='font-small-2 font-weight-bold'>
-                  <span className='text-truncate font-weight-bold h6'>Offer : </span>
-                  </div>
-              <h6 className='mb-1 d-block mx-auto'>{`Rs ${item.offer} /-`}</h6>
-            </div>
-            <div className="d-flex justify-content-between d-block mx-auto">
-              <div className='font-small-2 font-weight-bold'>
-                  <span className='text-truncate font-weight-bold h6'>MOQ : </span>
-                  </div>
-              <h6 className='mb-1 d-block mx-auto'>{`${item.moq} pcs`}</h6>
-            </div>
-            <div className="d-flex justify-content-between  d-block mx-auto">
-              <div className='font-small-2 font-weight-bold'>
-                  <span className='text-truncate font-weight-bold h6'>Delivery : </span>
-                  </div>
-              <h6 className='mb-1 d-block mx-auto'>{`${item.delivery} days`}</h6>
-            </div>
-            <div className="d-flex justify-content-between  d-block mx-auto">
-              <div className='font-small-2 font-weight-bold'>
-                  <span className='text-truncate font-weight-bold h6'>Inventory : </span>
-                  </div>
-              <h6 className='mb-1 d-block mx-auto'>{`${item.inventory} pcs`}</h6>
-            </div>
-            
-        </Col>
-        </Row>
-        <Row>
-        <Col md='12' sm='12'>
-        <a><span className='font-weight-bold h6 d-block mx-auto mb-1' style={{color:'#2876c6'}}>Close Negotiation BID History</span></a>
-      </Col>
-        </Row>
-        <Row>
-        <Col className='d-flex flex-sm-row flex-column mt-2 mb-2' sm='12'>
-        <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' type='submit' color='primary'>
-          Submit
-        </Button.Ripple>
-        <Button.Ripple color='primary'>
-          Order
-        </Button.Ripple>
-      </Col>
-        </Row>
-              </Col>
-            </Row>
-          </Card>
-          </Col>
-        </Row>
-      </Col>
-  
+        <div className='' >
+        <ChevronDown size={40} className='d-block mx-auto' style={{marginTop:-10, zIndex:1000}} onClick={() => setToggle(!toggle)}/>  
+        </div>
+      {toggle ? renderDetails() : null}
+      </Card>
         </>
         
       )
@@ -395,7 +405,7 @@ const direction = 'ltr'
     <div className=''>
       <Topbar/>
       <div className='checkout-items list-view' >{products.length ? renderCart() : <h4>Your cart is empty</h4>}</div>
-      
+      {renderCart()}
     </div>
   )
 }

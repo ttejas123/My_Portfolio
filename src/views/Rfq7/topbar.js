@@ -274,8 +274,8 @@ const Topbar = props => {
   }
 
   return (
-    <div className='ecommerce-application'>
-      <div className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
+    <div className='ecommerce-application '>
+      <div style={{marginTop:'-1rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
     </div>
   )
 }
