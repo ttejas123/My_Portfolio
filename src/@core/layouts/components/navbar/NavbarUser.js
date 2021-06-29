@@ -1,5 +1,5 @@
 // ** Dropdowns Imports
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import UserDropdown from './UserDropdown'
 import NotificationDropdown from './NotificationDropdown'
@@ -7,14 +7,26 @@ import IntlDropdown from './IntlDropdown'
 //import NavbarSearch from './NavbarSearch'
 // ** Third Party Components
 import { Sun, Moon, Menu, Search } from 'react-feather'
+
 import { NavItem, NavLink, Button, FormGroup, Input, Label, Col } from 'reactstrap'
+
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
+import SearchCardss from './searchC'
 import LibraryDropDown from './LibraryDropDown'
 import ResourcesDropDown from './ResourcesDropDown'
 
 const NavbarUser = props => {
   // ** Props
+  const [modal, setModal] = useState(false)
+      const view = () => {
+            //here we passing id to delete this specific record
+           setModal(true)
+        }
+
+    const handleModal = () => {
+        setModal(!modal)
+    }
   const { skin, setSkin, setMenuVisibility } = props
 
   // ** Function to toggle Theme (Light/Dark)
@@ -65,7 +77,7 @@ const NavbarUser = props => {
         <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
         </Button.Ripple>
-
+        
         {/*<CustomerDropDown/>*/}
         {/*<LibraryDropDown/>*/}
         {/*<ResourcesDropDown/>*/}
@@ -74,10 +86,24 @@ const NavbarUser = props => {
           <small className='user-name font-weight-bold h6 ' style={{ color:'black'}}>Sign In</small> 
 
         </Button.Ripple>
+        <Button.Ripple  className='cursor-pointer d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
+                <Search size={18} />
+        </Button.Ripple>
         <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
                   <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
         </Button.Ripple>
+
       </ul>
+{/*
+      <div className='bookmark-wrapper d-flex align-items-left'>
+        <NavItem className='d-none d-lg-block'>
+          <NavLink className='nav-link-style'>
+          
+          </NavLink>
+        </NavItem>
+      </div>*/}
+      <SearchCardss open={modal} handleModal={handleModal} className="d-none" />
+
     </Fragment>
   )
 }
