@@ -25,6 +25,7 @@ import '@styles/react/libs/flatpickr/flatpickr.scss'
 import NumberInput from '@components/number-input'
 import CardFooter from 'reactstrap/lib/CardFooter'
 import Topbar from './topbar'
+import SubBar from './subBar'
 
 const CreateCart = props => {
   
@@ -275,6 +276,9 @@ const CreateCart = props => {
         <Col>
         <Row>
         <Col lg='12' sm='12'>
+          <Card>
+          <SubBar/>
+          <hr/>
         <CardAction className='text-truncate py-0' title={`Create : Mobile iphone iphone 12 pro max`} actions='remove'>
       <Row>
       <Col lg='9' md='6' className='py-1'>
@@ -395,6 +399,7 @@ const CreateCart = props => {
         </Col>
         </Row>
     </CardAction>
+    </Card>
     </Col>
         </Row>
       </Col>
