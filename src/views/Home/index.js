@@ -13,7 +13,7 @@ import Bbb3 from './home_info_card.js'
 
 const Homepage = () => {
     return (
-       <div> 
+       <div className="bg-white"> 
            <Header/>
            {/* <CreateCart/> */}
            <SearchCard/>

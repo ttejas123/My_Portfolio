@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import { Row, Col, Card, CardHeader, CardTitle, CardBody, Media, CardText, Button, CardImg } from 'reactstrap'
 import Avatar from '@components/avatar'
 import { Award, Check, ArrowRight } from 'react-feather'
-import decorationLeft from './asset/p1.png'
+import decorationLeft from './asset/p5.jpg'
 import mainbg from './asset/blackbg.jpg'
-import decorationRight from './asset/p2.png'
-import decorationRight1 from './asset/p3.png'
-import decorationRight2 from './asset/p4.png'
+import decorationRight from './asset/p6.jpg'
+import decorationRight1 from './asset/p7.jpg'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './style.css'
 export default function home_info_card() {
@@ -20,13 +20,13 @@ export default function home_info_card() {
           backgroundColor: 'fff'
         }}
 
-        className="homeCard pt-5"
+        className="homeCard mt-lg-5  pl-lg-3"
 
         >
             {/* dashboard-analytics */}
 
             <Row>
-                <Col lg='5' sm='12'>
+                <Col lg='5' sm='12' className='pl-lg-4 mb-5 mb-lg-0'>
                     <div className='cardbackgroundImg' style={{backgroundColor:`${color}`}}>  
                         <CardBody className='m-0 p-0  '>
                         <Row className='d-flex align-items-center mx-auto' style={{width: "100%"}} >
@@ -35,7 +35,7 @@ export default function home_info_card() {
                             
                             </Col>
                             <Col lg='12' xs='12'>
-                            <img className='rounded frntImage'  src={selectedImage} alt='Card image' />
+                            <img className='rounded frntImage '  src={selectedImage} alt='Card image' />
 
                             
                             </Col>
@@ -43,23 +43,21 @@ export default function home_info_card() {
                         </CardBody>  
                     </div>
                 </Col>
-                <Col lg='7' sm='12' className=' d-flex align-items-center '>
-                    <Row >
-                            <Col className='m-0 p-0'  lg='6'></Col>
-                   
-                            <Col lg='6' sm='12' className="m-0 p-0 p-4  p-lg-0 align-items-center ">
-                                <div style={{color: 'black'}}>
-                                            <h4 className='mb-2 buttonClasses'><b>{subText.subcardText}</b></h4>
-                                            <h1 className='mb-2 details font-weight-bold dark'><b>{subText.subcardDetail}</b></h1>
-                                            <CardText><b>Streamline social monitoring and improve responsiveness with a unified inbox.</b></CardText>
+
+                <Col lg='7' sm='12' className='buttonClasses d-lg-flex align-items-center '>
+                                <div className='col-0 col-lg-3'></div>
+                                <div className='col-12 col-lg-6'>
+                                       
+                                            <h1 className='mb-2 font-weight-bold dark' style={{fontWeight:600}}><b>{subText.subcardDetail}</b></h1>
+                                            <p>Streamline social monitoring and improve responsiveness with a unified inbox.</p>
                                             <div className='mb-3'>
                                                 <div className='cursor-pointer'>
-                                                    <span className='flatSuccess mr-1 display-5'> <b>Explore our Engagement features</b></span>
+                                                    <span className='flatSuccess mr-1 display-5'> Explore our Engagement features</span>
                                                     <ArrowRight style={{color:'#33cc33'}} size={15} />
                                                 </div>
                                             </div>
-                                            <Row>
-                                                <Col lg='6' md="6" sm='6' >
+                                            <Row className ='align-items-center'>
+                                                <Col lg='4' md='4' sm='12' >
                                                     <div className={ selected === 1 ? ("border rounded border-secondary buttonss mb-1") : ("border-none buttonss mb-1")}>  
                                                         <Button.Ripple block className='' color='dark'  onClick={e => {
                                                                 
@@ -72,7 +70,7 @@ export default function home_info_card() {
                                                         </Button.Ripple>
                                                     </div>
                                                 </Col>
-                                                <Col lg='6' md="6" sm='6' >
+                                                <Col lg='4' md="4" sm='12' >
                                                     <div className={ selected === 2 ? ("border rounded border-secondary buttonss mb-1") : ("border-none buttonss mb-1")}>
                                                         <Button.Ripple block className='' color='dark'  onClick={e => {
                                                                 setsubText({ subcardText: 'Bulk', subcardDetail: 'Reach Your Audience' })
@@ -84,7 +82,7 @@ export default function home_info_card() {
                                                         </Button.Ripple>
                                                     </div>
                                                 </Col>
-                                                <Col lg='6' md="6" sm='6' >
+                                                <Col lg='4' md="4" sm='12' >
                                                     <div className={ selected === 3 ? ("border rounded border-secondary buttonss mb-1") : ("border-none buttonss mb-1")}>
                                                         <Button.Ripple block  className='' color='dark'  onClick={e => {
                                                                 setsubText({ subcardText: 'Buy', subcardDetail: 'Engage Your Community' })
@@ -96,23 +94,10 @@ export default function home_info_card() {
                                                         </Button.Ripple>
                                                     </div>
                                                 </Col>
-                                                <Col lg='6' md="6" sm='6' >
-                                                    <div className={ selected === 4 ? ("border rounded border-secondary buttonss mb-1") : ("border-none buttonss mb-1 ")}>
-                                                        <Button.Ripple block className='' color='dark'  onClick={e => {
-                                                                setsubText({ subcardText: 'Sell', subcardDetail: 'Measure Your Performance' })
-                                                                setSelectedImage(decorationRight2) 
-                                                                setColors('#ff9966')
-                                                                setselected(4)
-                                                            }}>
-                                                                SELL
-                                                        </Button.Ripple>
-                                                    </div>
-                                                </Col>
+                                                
                                             </Row>
                                 </div>   
-                            </Col>
-                    
-                    </Row>
+                           
                 </Col>
             </Row>
         </div>
