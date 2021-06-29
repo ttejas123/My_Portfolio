@@ -29,33 +29,37 @@
 
 .backImage{
 	display: block;
-	width : 115%;
-	left: 4%; 
-	top: 90px;
-	zIndex: 1;
+	width : 105%;
+	height: 52vh;
+	left: 13%; 
+	top: 100px;
+	z-Index: 1;
 	position: absolute;
 }
 
 .frntImage {
-	left: 10%;
-	top: 120px;
-	zIndex: 2;
+	border: 1px solid lightgray;
+	left: 19%;
+	top: 130px;
+	z-Index: 2;
 	position: absolute; 
-	width : 115%;
+	width : 105%;
 }
 
 
 @media screen and (max-width: 850px) {
    .buttonClasses{
-	 padding-top: 50px;
+	 	padding-top: 50px;
 	}
 
    .backImage {
-
-	    width: 88%;
+   	left: 7%;
+		top: 60px;
+	   width: 80%;
    }
    .frntImage {
-		
+		left: 4%;
+		top: 90px;
 		width : 89%;
 	}
 
@@ -67,12 +71,14 @@
 
 @media screen and (max-width: 660px) {
    .backImage {
-
-	    width: 90%;
+   	left: 9%;
+		top: 90px;
+	   width: 80%;
    }
    .frntImage {
-		
-		width : 86%;
+		left: 5%;
+		top: 120px;
+		width : 89%;
 	}
 
 	.cardbackgroundImg{
@@ -83,12 +89,15 @@
 
 @media screen and (max-width: 480px) {
    .backImage {
-
-	    width: 85%;
+   	left: 9%;
+		top: 60px;
+		height: 30vh;
+	   width: 80%;
    }
    .frntImage {
-		
-		width : 86%;
+		left: 5%;
+		top: 80px;
+		width : 89%;
 	}
 
 	.cardbackgroundImg{

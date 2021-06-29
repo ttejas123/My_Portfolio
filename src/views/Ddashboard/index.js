@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { AlignJustify, Rss, Info, Image, Users, Edit, Home, ShoppingCart, Package} from 'react-feather'
 
 // import RelatedProducts from './RelatedProducts'
-
+import Navbarss from './navbar'
 // ** Custom Components
 import BreadCrumbs from '@components/breadcrumbs'
 import img from './assets/b1.jpg'
@@ -52,12 +52,11 @@ const Details = () => {
 const toggle1 = tab => setActiveTab(tab)
 
   return (
-    <Fragment className="addPadding">
+    <Fragment className="addPadding m-0">
     
-      <div >
-
+      <div style={{marginTop:-24}} >
+        <Navbarss />
       </div>
-          <BreadCrumbs breadCrumbTitle='Dashboard' breadCrumbParent='Home' breadCrumbChild='Dashboard' breadCrumbActive='Profile' />
       <div >
       <div id='user-profile'>
         <Row>

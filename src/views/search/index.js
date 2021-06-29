@@ -28,11 +28,12 @@ import {
 const Details = () => {
 
   return (
-    <Fragment className="ml-lg-5">
-      <div className="ml-lg-1" >
-        <BreadCrumbs className="ml-lg-2" breadCrumbTitle='Search Page' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Search' />
+    <Fragment >
+    <div className="ml-lg-4 mr-lg-4">
+      <div className="ml-lg-5" >
+        <BreadCrumbs  breadCrumbTitle='Search Page' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Search' />
       </div>
-      <div className="ml-lg-1 mr-lg-1" >
+      <div className="ml-lg-4 mr-lg-4" >
         <Row>
             <Col md='3' xs='12'>
                 <Card>
@@ -53,10 +54,10 @@ const Details = () => {
                     <div >
                       <div className="ps-categogy__wrapper">
                               <Row>
-                                  <Col md='3' xs='12'>
+                                  <Col md='2' xs='12'>
                                       <div className="ps-categogy__type"> <a href="/search/searchPage"><img src={bar} alt="" /></a><a className="active" href="/search/searchPage"><img src={bar1} alt="" /></a></div>
                                   </Col>
-                                  <Col md='6' xs='12' className='d-flex'> 
+                                  <Col md='7' xs='12' className='d-flex'> 
                                         <Col md='6' xs='12'>    
                                           <div className="ps-categogy__onsale">
                                               <form>
@@ -109,6 +110,7 @@ const Details = () => {
             </Col>
         </Row>
       </div>
+    </div>
     </Fragment>
   )
 }

@@ -1,3 +1,5 @@
+{
+/*
 import { Fragment, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useSkin } from '@hooks/useSkin'
@@ -13,7 +15,7 @@ import CountrySelect from '../../components/register/CountrySelect'
 import StateSelect from '../../components/register/StateSelect'
 import logo from '@src/assets/images/logo/bidoyaLogo.png'
 import { dummyText } from '../../utility/missl'
-
+Please fill the following fields with appropriate information to register a new MartPlace account.
 
 const RegisterV2 = () => {
   const [skin, setSkin] = useSkin()
@@ -108,8 +110,8 @@ const RegisterV2 = () => {
         {/* <div className='misc-inner p-2 p-sm-3'>
       <div className='w-100 text-center'>
         <h2 className='mb-1'>Bid Bulk Buy</h2>
-        </div></div> */}
-      {/* //  d-none d-lg-flex  */}
+        </div></div> 
+      {/* //  d-none d-lg-flex  
         <Col className='pt-5' lg='12' sm='12'>
           <Row>
             <Col md='3' sm='12'>
@@ -133,7 +135,7 @@ const RegisterV2 = () => {
               <h1 className='mt-5'>Pricing Plans</h1>
 
             </div>
-          </div> */}
+          </div> 
           <CardText>
             <h3 className=' d-none d-lg-block font-weight-normal mt-lg-2'>
              {dummyText}
@@ -148,7 +150,7 @@ const RegisterV2 = () => {
         </Col>
         <Col className='d-flex align-items-center  p-lg-5' lg='6' sm='12'>
           {/* <Row>
-        <Col> */}
+        <Col> 
           <Col  sm='8' md='6' lg='12'>
             <Card className='mb-0'>
               <CardBody>
@@ -232,7 +234,7 @@ const RegisterV2 = () => {
              Designation, 
              Country,State,
               City, Pincode,
-              Address,PanCard,Pancard type,Profile Image,GST Number */}
+              Address,PanCard,Pancard type,Profile Image,GST Number 
 
                   <FormGroup>
                     <Label className='form-label TakeFont d-flex' for='register-lusername'>
@@ -297,7 +299,7 @@ const RegisterV2 = () => {
 
         </Col>
         {/* </Row>
-      </Col> */}
+      </Col> 
       <Col md="3" lg='12'>
       </Col>
       </Row>
@@ -306,3 +308,61 @@ const RegisterV2 = () => {
 }
 
 export default RegisterV2
+*/
+}
+
+import { useSkin } from '@hooks/useSkin'
+import Dsdh from './formW.js'
+import { Link, Redirect } from 'react-router-dom'
+import { Facebook, Twitter, Mail, GitHub } from 'react-feather'
+import InputPasswordToggle from '@components/input-password-toggle'
+import { Row, Col, CardTitle, CardText, Form, FormGroup, Label, Input, CustomInput, Button } from 'reactstrap'
+import '@styles/base/pages/page-auth.scss'
+import './logoscss.css'
+import '@styles/base/pages/page-knowledge-base.scss'
+import logo from '@src/assets/images/logo/bidoyaLogo.png'
+const Login = () => {
+  const [skin, setSkin] = useSkin()
+
+  const illustration = skin === 'dark' ? 'login-v2-dark.svg' : 'login-v2.svg',
+    source = require(`@src/assets/images/pages/${illustration}`).default
+
+  return (
+    <div
+    
+    style={{
+          backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
+         
+          backgroundRepeat:'no-repeat',
+          backgroundSize:'cover',
+          marginTop:-24,
+          backgroundColor:'#f8f1e8',
+          height: "90vh"
+
+        }}
+  >
+      <Row className='auth-inner m-0 ' >
+        {/*<Link className='brand-logo pl-lg-3 pt-lg-5' to='/'>
+               
+                   <img width='150' height='45' src={logo} alt='Login V2' />         
+                  <h2 className='brand-text text-primary '></h2>
+                </Link>*/}
+        
+        <Col lg='1' sm='0'></Col>
+        <Col className=' align-items-center px-2 pt-lg-3 pb-lg-3' lg='10' sm='12'>
+         <Row className=' align-items-center  px-2 p-lg-2'> 
+          
+          <Col md='12' xs='12'>
+                <div className="sign_info_content pt-2 pt-lg-5 pt-lg-0 pl-lg-5">
+                   <Dsdh />
+                </div>
+          </Col>
+         </Row>
+        </Col>
+        
+      </Row>
+    </div>
+  )
+}
+
+export default Login
