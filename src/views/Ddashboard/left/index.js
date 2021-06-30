@@ -44,8 +44,8 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
  const [isRtls, setIsRtl] = useRTL()
   return (
     <>
-                <Card>
-                  <CardBody > 
+                <Card className='p-0'>
+                  <CardBody className='p-1' > 
                     <Collaps />
                   </CardBody>
                 </Card>

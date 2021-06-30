@@ -275,15 +275,15 @@ const SubBar = props => {
             <Plus className='' size={18} />
             <span className='font-weight-bold'>Create</span>
           </Button.Ripple>
-          <div className='d-inline-block ml-2 cursor-pointer'>
+          <div className='d-inline-block ml-2 cursor-pointer' style={{marginTop:"10px"}}>
               <Filter size={18} onClick={() => viewF()}/>
               <span onClick={() => viewF()}>Filter(63)</span>
           </div>
-        <div className='d-inline-block ml-2'>
+        <div className='d-inline-block ml-2' style={{marginTop:"10px"}}>
             <span>0</span>
             <Bell size={18} />
         </div>
-        <div className='d-inline-block ml-2'>
+        <div className='d-inline-block ml-2 ' style={{marginTop:"5px"}}>
         <Avatar color={ 'secondary'} className='mr-1' content={'?'}  />
         </div>
       </Col>
