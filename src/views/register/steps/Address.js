@@ -43,15 +43,21 @@ const Address = ({ stepper, type }) => {
             <Input type='text' name={`city-${type}`} id={`city-${type}`} placeholder='Birmingham' />
           </FormGroup>
         </Row>
-        <div className='d-flex justify-content-between'>
-          <Button.Ripple color='primary' className='btn-prev' onClick={() => stepper.previous()}>
-            <ArrowLeft size={14} className='align-middle mr-sm-25 mr-0'></ArrowLeft>
-            <span className='align-middle d-sm-inline-block d-none'>Previous</span>
-          </Button.Ripple>
-          <Button.Ripple color='success' className='btn-submit' onClick={() => alert('submitted')}>
-            Submit
-          </Button.Ripple>
-        </div>
+        <Row >
+            <Col md='5'>
+              <Button.Ripple color='primary' className='btn-prev' onClick={() => stepper.previous()}>
+                <ArrowLeft size={14} className='align-middle mr-sm-25 mr-0'></ArrowLeft>
+                <span className='align-middle d-sm-inline-block d-none'>Previous</span>
+              </Button.Ripple>  
+            </Col>
+            <Col className='ml-2' md='5'>
+              
+                <Button.Ripple color='success' className='btn-submit m-0' onClick={() => alert('submitted')}>
+                  Submit
+                </Button.Ripple>
+              
+            </Col>
+        </Row>
       </Form>
     </Fragment>
   )

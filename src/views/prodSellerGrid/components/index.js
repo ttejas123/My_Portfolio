@@ -7,7 +7,7 @@ import classnames from 'classnames'
 import AutoG from './autoI' 
 import { useRTL } from '@hooks/useRTL'
 
-import { Star, ShoppingCart, Percent, ShoppingBag, Box, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
+import { Star, Edit, Zap, ShoppingCart, Percent, ShoppingBag, Box, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
 import {
   Row,
   Col,
@@ -113,13 +113,20 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
           <Truck size={18} /> <span style={{paddingLeft:"5px"}}>Delivery : 5 days</span>
         </div>
 
-         <hr />
+        <hr />
         
         <div style={{paddingTop: '5px'}}>
           <b>Tag:</b> <span style={{paddingLeft:"5px"}}>Health, Thermometer</span>
         </div>
         <div style={{paddingTop: '5px'}}>
           <b>SKU:</b> <span style={{paddingLeft:"5px"}}>8DJ21A</span>
+        </div>
+
+        <hr />
+
+        <div className='d-flex justify-content-between'>
+          <Button.Ripple><Edit size={14} /><span style={{paddingLeft: "4px"}}>Edit</span></Button.Ripple>
+          <Button.Ripple><Zap size={14} /><span style={{paddingLeft: "4px"}}>RFQ</span></Button.Ripple>
         </div>
         
       </Col>

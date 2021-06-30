@@ -57,8 +57,8 @@ export default function home_info_card() {
                                                 </div>
                                             </div>
                                             <Row className ='align-items-center'>
-                                                <Col lg='4' md='4' sm='12' >
-                                                    <div className={ selected === 1 ? ("border rounded border-secondary buttonss mb-1") : ("border-none buttonss mb-1")}>  
+                                                <Col lg='4' md='4' sm='12' className="sideBorder">
+                                                    <div className={ selected === 1 ? ("border rounded border-secondary buttonss ") : ("border-none buttonss")}>  
                                                         <Button.Ripple block className='' color='dark'  onClick={e => {
                                                                 
                                                                 setsubText({ subcardText: 'Bid', subcardDetail: 'Understand Your Audience' })
@@ -70,8 +70,8 @@ export default function home_info_card() {
                                                         </Button.Ripple>
                                                     </div>
                                                 </Col>
-                                                <Col lg='4' md="4" sm='12' >
-                                                    <div className={ selected === 2 ? ("border rounded border-secondary buttonss mb-1") : ("border-none buttonss mb-1")}>
+                                                <Col lg='4' md="4" sm='12' className="sideBorder" >
+                                                    <div className={ selected === 2 ? ("border rounded border-secondary buttonss") : ("border-none buttonss")}>
                                                         <Button.Ripple block className='' color='dark'  onClick={e => {
                                                                 setsubText({ subcardText: 'Bulk', subcardDetail: 'Reach Your Audience' })
                                                                 setSelectedImage(decorationRight)
@@ -83,7 +83,7 @@ export default function home_info_card() {
                                                     </div>
                                                 </Col>
                                                 <Col lg='4' md="4" sm='12' >
-                                                    <div className={ selected === 3 ? ("border rounded border-secondary buttonss mb-1") : ("border-none buttonss mb-1")}>
+                                                    <div className={ selected === 3 ? ("border rounded border-secondary buttonss ") : ("border-none buttonss")}>
                                                         <Button.Ripple block  className='' color='dark'  onClick={e => {
                                                                 setsubText({ subcardText: 'Buy', subcardDetail: 'Engage Your Community' })
                                                                 setSelectedImage(decorationRight1)  

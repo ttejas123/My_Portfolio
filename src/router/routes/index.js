@@ -13,6 +13,10 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/rfqN'))
   },
   {
+    path: '/Rfq7s/subbar',
+    component: lazy(() => import('../../views/Rfq7/subBar'))
+  },
+  {
     path: '/topbar',
     component: lazy(() => import('../../views/Rfq7/topbar'))
   },
