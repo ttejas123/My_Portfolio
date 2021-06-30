@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import Select from 'react-select'
 import { selectThemeColors, isObjEmpty } from '@utils'
 // ** Third Party Components
+import Pcrt from './pressCreate'
+import Filterss from './filter'
 import classnames from 'classnames'
 import { X, Heart, Star, Trash, Edit, ShoppingCart, Zap, Search, Plus, Filter, Bell, AlignJustify } from 'react-feather'
 import { Card, CardBody, CardText, CardHeader, Button, Label, InputGroup, FormGroup, Input, InputGroupText, Row, Col, UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
@@ -96,6 +98,26 @@ const SubBar = props => {
   const handleBidClick = () => {
     
   }
+
+  const [modal, setModal] = useState(false)
+  const [modalF, setModalF] = useState(false)
+      const view = () => {
+            //here we passing id to delete this specific record
+           setModal(true)
+        }
+
+    const handleModal = () => {
+        setModal(!modal)
+    }
+
+    const viewF = () => {
+            //here we passing id to delete this specific record
+           setModalF(true)
+        }
+
+    const handleModalF = () => {
+        setModalF(!modalF)
+    }
 
   // ** Render cart items
   const renderCart = () => {
@@ -286,7 +308,7 @@ const SubBar = props => {
           )}
       
         <div className='d-inline-block ml-2'>
-            <Filter size={18} />
+            <Filter size={18}/>
             <span>Filter(63)</span>
         </div>
         <div className='d-inline-block ml-2'>
@@ -308,6 +330,8 @@ const SubBar = props => {
   return (
     <div className='ecommerce-application '>
       <div style={{marginTop:'-1rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
+      <Pcrt open={modal} handleModal={handleModal} className="d-none" />
+      <Filterss open={modalF} handleModal={handleModalF} className="d-none" />
     </div>
   )
 }

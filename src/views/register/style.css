@@ -39,3 +39,16 @@ h3{
    
 }
 
+.reMain{
+          background-image: url('@src/assets/images/banner/banner.png');
+          background-repeat:no-repeat;
+          background-size:cover;
+          margin-top:-24px;
+          background-color:#f8f1e8;
+          height: 90vh;
+}
+@media screen and (max-width: 950px) {
+  .reMain{
+    height: 110vh;
+  }
+}

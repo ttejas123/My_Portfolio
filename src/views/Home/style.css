@@ -26,6 +26,9 @@
 	padding: 2px;
 }
 
+.sideBorder{
+   border-right:1px solid #000000;
+}
 
 .backImage{
 	display: block;
@@ -70,6 +73,9 @@
 }
 
 @media screen and (max-width: 660px) {
+	.sideBorder{
+	   border-right:none;
+	}
    .backImage {
    	left: 9%;
 		top: 90px;
