@@ -32,6 +32,26 @@ const CreateCart = props => {
  // const { products, stepper, deleteCartItem, dispatch, addToWishlist, deleteWishlistItem, getCartItems } = props
  const [picker, setPicker] = useState(new Date())
  const [basic, setBasic] = useState(new Date())
+  
+ const optionsInvoiceAddress = [
+  {value: "BSPL Gala 22 JVLR Andheri East", label: "BSPL Gala 22 JVLR Andheri East"},
+  {value: "ACCL Block 22 JVLR Andheri East", label: "ACCL Block 22 JVLR Andheri East"},
+  {value: "RGVL Gala 20 JVLR Andheri East", label: "RGVL Gala 20 JVLR Andheri East"}
+]
+
+const optionsShipToAddress = [
+  {value: "BSPL Gala 22 JVLR Andheri East", label: "BSPL Gala 22 JVLR Andheri East"},
+  {value: "ACCL Block 22 JVLR Andheri East", label: "ACCL Block 22 JVLR Andheri East"},
+  {value: "RGVL Gala 20 JVLR Andheri East", label: "RGVL Gala 20 JVLR Andheri East"}
+]
+
+const initialvalues = {
+  id:1,
+  InvoiceAddress: [{value: "Invoice Address", label: "Invoice Address"}],
+  ShipToAddress: [{value: "Ship To Address", label: "Ship To Address"}]
+}
+const [values, setValues] = useState(initialvalues)
+
  const data = [
      {
          title : "Nike Unisex Black LEBRON XVIII Basketball Shoes",
@@ -173,111 +193,11 @@ const CreateCart = props => {
   return  (
         <div id='dashboard-ecommerce'>
             <Topbar/>
-             {/* <Card>
-<CardBody>
-<Row>
-<Col sm='12'>
-    <Row>
-      <Col md='3' sm='12'>
-          <div className='d-block my-auto'>
-      <img className='img-fluid d-block mx-auto mt-2' src={logo} alt={`logo`} height='200' width='200'/>
-      </div>
-      </Col>
-      <Col md='6' sm='12'>
-          <Row>
-              <Col md='8' sm='6'>
-              <FormGroup>
-          <Input type='text' id='category' placeholder='What are you looking for ?'  />
-        </FormGroup>
-              </Col>
-              <Col md='4' sm='6'>
-              <FormGroup>
-          <Input type='text' id='category' placeholder='Qty?'/>
-        </FormGroup>
-              </Col>
-              <Col md='10' sm='10'>
-              <FormGroup className='mt-1'>
-          <Input type='range' id='category' placeholder='Qty?'/>
-          <Label for='default-range' className='d-block'>
-              <span className='d-block mx-auto text-center font-weight-bold h6 font-italic'>
-              What is the budget per Unit?
-              </span>
-              </Label>
-        </FormGroup>
-              </Col>
-              <Col md='2' sm='2'>
-              <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
-                <Search size={18} />
-        </Button.Ripple>
-              </Col>
-          </Row>
-      </Col>
-
-      <Col md='3' sm='12' >
-          <div  className='d-block mx-auto'>
-          <div>
-      <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link d-block mx-auto' onClick={e => e.preventDefault()}>
-          <div>
-          <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
-          <span className='user-name font-weight-bold ml-2'>{'Rajiv Ajmera'}</span>
-          </div>
-        <span className='user-status'>{'Buyer'}</span>
-      </DropdownToggle>
-      </div>
-      <div className='d-inline'>
-      <Button.Ripple className='' type='submit' color='primary'>
-      <ShoppingCart className='' size={14} />
-      <span className='font-weight-bold' style={{paddingLeft:10}}>Cart</span>
-        </Button.Ripple>
-      </div>
-      <div className='d-inline ml-2'>
-      <Button.Ripple className='' type='submit' color='primary'>
-      <Zap className='' size={18} />
-      <span className='font-weight-bold' style={{paddingLeft:10}}>RFQ</span>
-        </Button.Ripple>
-      </div>
-      </div>
-      </Col>
-      </Row>
-      </Col>
-      </Row>
-      <hr/>
-      <Row className='mt-3'>
-          <Col sm='12'>
-              <Row>
-              <Col md='9' sm='9'>
-              <AlignJustify size={20}/>
-              <div className='d-inline-block'>
-              <Search className='ml-3' size={24} />
-              </div>
-      <span className='font-weight-bold h3 ml-2' style={{color : '#827071'}}>SEARCH RESULT</span>
-      </Col>
-     
-      <Col md='3' sm='3' >
-        <div className='d-inline-block ml-2'>
-            <Filter size={18} />
-            <span>Filter(63)</span>
-        </div>
-        <div className='d-inline-block ml-2'>
-            <span>0</span>
-            <Bell size={18} />
-        </div>
-        <div className='d-inline-block ml-2'>
-        <Avatar color={ 'secondary'} className='mr-1' content={'?'}  />
-        </div>
-        
-      </Col>
-              </Row>
-          </Col>
-      </Row>
-      </CardBody>
-
-        </Card>  */}
         <Col>
         <Row>
         <Col lg='12' sm='12'>
           <Card>
-          <SubBar/>
+          <SubBar rfq='true' buttons='true' createBtn='true'/>
           <hr/>
         <CardAction className='text-truncate py-0' title={`Create : Mobile iphone iphone 12 pro max`} actions='remove'>
       <Row>
@@ -310,13 +230,51 @@ const CreateCart = props => {
          <Col md='3' sm='12'>
         <FormGroup>
           {/* <Label for='budgetPerUnit'>Invoice Address</Label> */}
-          <Input type='text' id='budgetPerUnit' placeholder='Invoice Address' />
+          <Select
+                      id='State'
+                      className='react-select'
+                      classNamePrefix='select'
+                      isClearable={false}
+                      options={optionsInvoiceAddress}
+                      theme={selectThemeColors}
+                      value={values.InvoiceAddress[0]}
+                      onChange={data => {
+        
+        
+                                         setValues(
+                                                  {
+                                                     ...values,
+                                                     InvoiceAddress : data
+                                                  } 
+                                          )
+                                        }
+                                }
+                    />
         </FormGroup>
       </Col>  
       <Col md='3' sm='12'>
         <FormGroup>
           {/* <Label for='quantity'>Ship To Address</Label> */}
-          <Input type='text' id='quantity' placeholder='Ship To Address' />
+          <Select
+                      id='State'
+                      className='react-select'
+                      classNamePrefix='select'
+                      isClearable={false}
+                      options={optionsShipToAddress}
+                      theme={selectThemeColors}
+                      value={values.ShipToAddress[0]}
+                      onChange={data => {
+        
+        
+                                         setValues(
+                                                  {
+                                                     ...values,
+                                                     ShipToAddress : data
+                                                  } 
+                                          )
+                                        }
+                                }
+                    />
         </FormGroup>
       </Col>  
       <Col md='3' sm='12'>

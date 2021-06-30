@@ -383,7 +383,7 @@ const Topbar = props => {
   // ** Render cart items
   const renderCart = () => {
       return (
-        <Card className='mb-2' style={{marginTop:'-1.rem'}}>
+        <Card style={{marginTop:'-1.8rem'}} className='mb-sm-2 '>
 <CardBody className='pb-0'>
 <Row> 
           <Col lg='10' sm='12' className='pl-2'>
@@ -409,10 +409,11 @@ const Topbar = props => {
                     </FormGroup>
                   </Col>
                   <Col md='3' sm='6'>
-                      <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
+                  <Search size={30} className='mr-1 ' />
+                      {/* <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
                         <Search size={13} className='mr-1' />
                         <span>Search</span>
-                      </Button.Ripple>
+                      </Button.Ripple> */}
                   </Col>
                   
               </Row>
