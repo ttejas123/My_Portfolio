@@ -1,0 +1,31 @@
+<svg width="87" height="55" viewBox="0 0 87 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.1" x="7.00098" y="3" width="52" height="52" rx="5" fill="black"/>
+<rect y="53" width="87" height="2" fill="black"/>
+<path d="M13 28H24V54H13V28Z" stroke="black" stroke-width="2"/>
+<rect x="3" y="45" width="10" height="9" stroke="black" stroke-width="2"/>
+<path d="M24 28H24.346L31 43.2092V54H24V28Z" stroke="black" stroke-width="2"/>
+<rect x="44" y="23" width="2" height="8" fill="black"/>
+<rect x="55" y="20" width="2" height="4" fill="black"/>
+<rect x="55" y="2" width="2" height="18" fill="black"/>
+<rect x="53" y="16" width="2" height="4" fill="black"/>
+<rect x="57" y="16" width="2" height="4" fill="black"/>
+<rect x="45" y="20" width="2" height="4" fill="black"/>
+<rect x="65" y="20" width="2" height="4" fill="black"/>
+<rect x="55" y="23" width="2" height="8" fill="black"/>
+<rect x="47" y="32" width="2" height="12" fill="black"/>
+<rect x="53" y="32" width="2" height="12" fill="black"/>
+<rect x="46" y="44" width="2" height="11" fill="black"/>
+<rect x="52" y="44" width="2" height="11" fill="black"/>
+<rect x="66" y="23" width="2" height="8" fill="black"/>
+<rect x="45" y="23" width="22" height="2" fill="black"/>
+<rect x="45" y="20" width="22" height="2" fill="black"/>
+<rect x="53" y="30" width="16" height="2" fill="black"/>
+<rect x="42" y="30" width="7" height="2" fill="black"/>
+<rect x="42" y="43" width="18" height="2" fill="black"/>
+<rect x="42" y="30" width="2" height="15" fill="black"/>
+<rect x="58" y="30" width="2" height="15" fill="black"/>
+<rect x="41" y="43" width="2" height="12" fill="black"/>
+<rect x="58" y="44" width="2" height="11" fill="black"/>
+<rect x="68" y="30" width="2" height="25" fill="black"/>
+<circle cx="12.5" cy="8.5" r="7.5" stroke="black" stroke-width="2"/>
+</svg>

@@ -1,15 +1,17 @@
 // ** Dropdowns Imports
 import { Fragment, useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
+import { isUserLoggedIn } from '@utils'
+import {getStatus} from '../../../../views/isLoggedIn'
 import UserDropdown from './UserDropdown'
 import NotificationDropdown from './NotificationDropdown'
 import IntlDropdown from './IntlDropdown'
 import Avatar from '@components/avatar'
 //import NavbarSearch from './NavbarSearch'
 // ** Third Party Components
-import { Sun, Moon, Menu, Search } from 'react-feather'
+import { Sun, Moon, Menu, Search, Bell } from 'react-feather'
 import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
-import { NavItem, NavLink, Button, FormGroup, Input, Label, Col, DropdownToggle } from 'reactstrap'
+import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, DropdownToggle } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
 import SearchCardss from './searchC'
@@ -90,18 +92,27 @@ const NavbarUser = props => {
         <Button.Ripple  className='cursor-pointer d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
                 <Search size={18} />
         </Button.Ripple>
-        <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
-                  <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
-        </Button.Ripple>
 
-        <div className=''>
-           <div>
-           <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
-           <span className='user-name font-weight-bold ml-2'>{'Rajiv Ajmera'} <br/> {'Buyer'} </span>
-           </div>
-         {/* <span className='user-status'>{'Buyer'}</span> */}
-       </div>
+        {  getStatus() ?  (<span>
+               <Bell size={30} className='mr-1'/>
+          <Badge pill color='danger' className='badge-up'>
+          5
+         </Badge>
+            </span>) : null}
 
+          {getStatus() ? (
+             <div className=''>
+          <div>    
+          <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
+          <span className='user-name font-weight-bold ml-2'>{'Rajiv Ajmera'} <br/> {'Buyer'} </span>
+          </div>
+        {/* <span className='user-status'>{'Buyer'}</span> */}
+      </div>
+) : (
+  <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
+  <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
+</Button.Ripple>
+)}
       </ul>
 {/*
       <div className='bookmark-wrapper d-flex align-items-left'>

@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom'
 import { Facebook, Twitter, Mail, GitHub } from 'react-feather'
 import InputPasswordToggle from '@components/input-password-toggle'
 import { Row, Col, CardTitle, CardText, Form, FormGroup, Label, Input, CustomInput, Button } from 'reactstrap'
+import {editStatus} from './isLoggedIn'
 import '@styles/base/pages/page-auth.scss'
 import './logcss.css'
 import '@styles/base/pages/page-knowledge-base.scss'
@@ -80,7 +81,7 @@ const Login = () => {
               <FormGroup>
                 <CustomInput type='checkbox' className='custom-control-Primary' id='remember-me' label='Remember Me' />
               </FormGroup>
-              <Button.Ripple tag={Link} to='/homes/dashBoard' color='primary' block>
+              <Button.Ripple tag={Link} to='/homes/dashBoard' color='primary' block onClick={() => editStatus('true')}>
                 Sign in
               </Button.Ripple>
             </Form>
