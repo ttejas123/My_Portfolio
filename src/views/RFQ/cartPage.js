@@ -247,7 +247,6 @@ const CartBuyer = () => {
           <div className='d-flex mt-md-0 mt-1'>
             <Link to={`/master/branda/add`}>
                 <Button className='ml-2' color='primary' onClick={handleModal}>
-                                        <Zap size={15} />
                                         <span className='align-middle ml-50'>Submit</span>
                 </Button>
             </Link>   

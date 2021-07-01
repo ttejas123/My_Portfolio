@@ -14,7 +14,7 @@ import { handleLogout } from '@store/actions/auth'
 
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
-import { User, Mail, LogOut, CheckSquare, MessageSquare, Bell, Settings, CreditCard, HelpCircle, Power, ChevronDown } from 'react-feather'
+import { User, Mail, LogOut, CheckSquare, MessageSquare, Bell, Settings, CreditCard, HelpCircle, Power, ChevronDown, AlignJustify, Codepen, Circle, AlertCircle } from 'react-feather'
 
 // ** Default Avatar Image
 import defaultAvatar from '@src/assets/images/avatars/raviKukreja.jpg'
@@ -51,26 +51,18 @@ const ProductDropDown = () => {
       </DropdownToggle>
       <DropdownMenu right>
         
-        <DropdownItem tag={Link} to='/PReviewsle'>
-              <User size={14} className='mr-75' />
-              <span className='align-middle'>Profile</span>
+        <DropdownItem tag={Link} to='/search/searchPage'>
+              <AlignJustify size={14} className='mr-75' />
+              <span className='align-middle'>List</span>
         </DropdownItem>
         
-        <DropdownItem tag={Link} to='#'>
-          <Bell size={14} className='mr-75' />
-          <span className='align-middle'>Notification</span>
+        <DropdownItem tag={Link} to='/search-grid'>
+          <Codepen size={14} className='mr-75' />
+          <span className='align-middle'>Grid</span>
         </DropdownItem>
-        <DropdownItem tag={Link} to='#'>
-          <CheckSquare size={14} className='mr-75' />
-          <span className='align-middle'>Report</span>
-        </DropdownItem>
-        <DropdownItem tag={Link} to='#'>
-          <MessageSquare size={14} className='mr-75' />
-          <span className='align-middle'>Status</span>
-        </DropdownItem>
-        <DropdownItem tag={Link} to='#'>
-          <LogOut size={14} className='mr-75' />
-          <span className='align-middle'>Logout</span>
+        <DropdownItem tag={Link} to='/product/productDetails'>
+          <AlertCircle size={14} className='mr-75' />
+          <span className='align-middle'>Detail</span>
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>

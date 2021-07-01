@@ -14,6 +14,7 @@ import '@styles/base/pages/page-auth.scss'
 import './logcss.css'
 import '@styles/base/pages/page-knowledge-base.scss'
 import logo from '@src/assets/images/logo/bidoyaLogo.png'
+import { editStatus } from './isLoggedIn'
 const Login = () => {
   const usDispatch = useDispatch()
   const [skin, setSkin] = useSkin()
@@ -89,7 +90,7 @@ const Login = () => {
                 <CustomInput type='checkbox' className='custom-control-Primary' id='remember-me' label='Remember Me' />
               </FormGroup>
 
-              <Button.Ripple tag={Link} to='/homes/dashBoard' onClick={() => { usDispatch(SignIn()) } } color='primary' block>
+              <Button.Ripple tag={Link} to='/homes/dashBoard' onClick={() => { editStatus('true') } } color='primary' block>
 
                 Sign in
               </Button.Ripple>

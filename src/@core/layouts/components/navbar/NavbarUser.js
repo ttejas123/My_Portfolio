@@ -24,10 +24,7 @@ import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
 
 
 const NavbarUser = props => {
-  // ** Props
-  const data = useSelector(state => { console.log('status', state.loginOut) })
-  useSelector(state => { console.log('status', state.loginOut) })
-  console.log('status1', data)
+  console.log(getStatus())
   const [modal, setModal] = useState(false)
       const view = () => {
             //here we passing id to delete this specific record
@@ -68,18 +65,26 @@ const NavbarUser = props => {
       <ul className='nav navbar-nav align-items-center mx-auto'>
          <IntlDropdown />
         {/* <NotificationDropdown /> */}
-       
-        <Button.Ripple tag={Link} to='/' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        <div style={{paddingTop:'7px'}}>
         <ProductDropDown />
-        </Button.Ripple>
-        <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        </div>
+        {/* <Button.Ripple tag={Link} to='/' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Home</small> 
+        </Button.Ripple> */}
+        {/* <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Search</small> 
+        </Button.Ripple> */}
+        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
         </Button.Ripple>
         <Button.Ripple tag={Link} to='/Rfq7/rfqN' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Rfq</small> 
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Bid</small> 
         </Button.Ripple>
-         <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
+        <div style={{paddingTop:'7px'}} className='ml-2' >
+        <CustomerDropDown/>
+        </div>
+        <Button.Ripple tag={Link} to='/aboutUs' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>About Us</small> 
         </Button.Ripple>
            {/* <div className='' style={{width:'10%'}}>  
           <Input type='text' id='category' placeholder='' className='d-inline-block w-5' style={{width:'70%'}}/>
@@ -88,8 +93,6 @@ const NavbarUser = props => {
         <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
         </Button.Ripple>
-        
-        {/*<CustomerDropDown/>*/}
         {/*<LibraryDropDown/>*/}
         {/*<ResourcesDropDown/>*/}
         {/*<UserDropdown />*/}
