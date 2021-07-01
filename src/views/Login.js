@@ -3,9 +3,13 @@ import { Link, Redirect } from 'react-router-dom'
 import { Facebook, Twitter, Mail, GitHub } from 'react-feather'
 import InputPasswordToggle from '@components/input-password-toggle'
 import { Row, Col, CardTitle, CardText, Form, FormGroup, Label, Input, CustomInput, Button } from 'reactstrap'
+
 import { useSelector, useDispatch } from 'react-redux'
 import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
 
+// =======
+// import {editStatus} from './isLoggedIn'
+// >>>>>>> 3d2af2d69a22b8c7b24db8c5ac7659b354ff02d4
 import '@styles/base/pages/page-auth.scss'
 import './logcss.css'
 import '@styles/base/pages/page-knowledge-base.scss'
@@ -84,7 +88,9 @@ const Login = () => {
               <FormGroup>
                 <CustomInput type='checkbox' className='custom-control-Primary' id='remember-me' label='Remember Me' />
               </FormGroup>
+
               <Button.Ripple tag={Link} to='/homes/dashBoard' onClick={() => { usDispatch(SignIn()) } } color='primary' block>
+
                 Sign in
               </Button.Ripple>
             </Form>
