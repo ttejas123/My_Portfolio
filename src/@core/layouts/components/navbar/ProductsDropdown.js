@@ -41,13 +41,13 @@ const ProductDropDown = () => {
     <UncontrolledDropdown tag='li' className='dropdown-user nav-item d-none d-lg-block'>
       <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
         <div className='user-nav d-sm-flex d-none'>
-          <small className=' font-weight-bold h6' style={{color:'black'}}>Products</small> 
+          <small className=' font-weight-bold h6' style={{color:'black'}}>Search</small> 
           {/* {(userData && userData['username']) || 'Ravi Kukreja'}
           <span className='user-status'> {(userData && userData.role) || 'Super Admin'}</span> */}
 
         </div>
         {/* <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' /> */}
-        <ChevronDown className='mr-1' size={15}/>
+        <ChevronDown className='' size={15}/>
       </DropdownToggle>
       <DropdownMenu right>
         

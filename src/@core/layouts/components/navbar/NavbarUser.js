@@ -25,7 +25,9 @@ import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
 
 const NavbarUser = props => {
   // ** Props
-  const data = useSelector(state => { console.log(state.loginOut) })
+  const data = useSelector(state => { console.log('status', state.loginOut) })
+  useSelector(state => { console.log('status', state.loginOut) })
+  console.log('status1', data)
   const [modal, setModal] = useState(false)
       const view = () => {
             //here we passing id to delete this specific record
@@ -66,9 +68,9 @@ const NavbarUser = props => {
       <ul className='nav navbar-nav align-items-center mx-auto'>
          <IntlDropdown />
         {/* <NotificationDropdown /> */}
-        {/* <ProductDropDown /> */}
+       
         <Button.Ripple tag={Link} to='/' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Home</small> 
+        <ProductDropDown />
         </Button.Ripple>
         <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Search</small> 
