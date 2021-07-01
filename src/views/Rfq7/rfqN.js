@@ -10,6 +10,7 @@ import {
   DropdownItem,
   Input,
   Label,
+
   Row,
   Col,
   Badge, UncontrolledDropdown
@@ -18,7 +19,7 @@ import {
 import Select from 'react-select'
 // ** React Imports
 import { Fragment, useEffect, useRef, useState, forwardRef  } from 'react'
-
+import SubBar from './subBar' 
 // ** Custom Components
 import Wizard from '@components/wizard'
 import BreadCrumbs from '@components/breadcrumbs'
@@ -29,7 +30,7 @@ import '@styles/base/pages/app-ecommerce.scss'
 import Cards from './Card'
 
 // ** Third Party Components
-import { ShoppingCart, Home, CreditCard } from 'react-feather'
+import { ShoppingCart, Home, CreditCard, XCircle } from 'react-feather'
 import { selectThemeColors } from '@utils'
 // ** Store & Actions
 
@@ -59,12 +60,34 @@ const Checkout = () => {
   // }, [])
 
   return (
-     <Fragment>    
-      <Cards
-            stepper={stepper}
-            products={products}
-          />
-  </Fragment>
+      <div style={{marginTop:'-1rem'}}>
+        <div className="mb-1">
+              <SubBar />
+        </div>
+       
+           <div className="mb-2 text-right ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3">
+              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill >
+                Marketing<XCircle size={30} style={{color:"#ff6666", marginLeft:"5px"}} />
+              </Badge>
+              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill >
+                200 Units<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
+              </Badge>
+              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill>
+                30 Days<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
+              </Badge>
+              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill>
+                Pending<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
+              </Badge>
+              
+            </div>
+        
+        <div className='ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3'>  
+          <Cards
+                stepper={stepper}
+                products={products}
+              />
+        </div> 
+      </div>  
   )
 }
 export default Checkout

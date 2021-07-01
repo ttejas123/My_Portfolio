@@ -271,13 +271,13 @@ const SubBar = props => {
             </FormGroup> 
       </Col>
       <Col md='4' sm='12' className='d-flex align-items-start justify-content-end'>
-          <Button.Ripple className='ml-3' onClick={() => view()} color='primary'>
+          <Button.Ripple className='ml-3 d-flex' onClick={() => view()} color='primary'>
             <Plus className='' size={18} />
             <span className='font-weight-bold'>Create</span>
           </Button.Ripple>
           <div className='d-inline-block ml-2 cursor-pointer' style={{marginTop:"10px"}}>
               <Filter size={18} onClick={() => viewF()}/>
-              <span onClick={() => viewF()}>Filter(63)</span>
+              <span onClick={() => viewF()}>(63)</span>
           </div>
         <div className='d-inline-block ml-2' style={{marginTop:"10px"}}>
             <span>0</span>
@@ -296,7 +296,7 @@ const SubBar = props => {
   }
 
   return (
-    <div className='ecommerce-application '>
+    <div className=' '>
       <div style={{marginTop:'-1rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
       <Pcrt open={modal} handleModal={handleModal} className="d-none" />
       <Filterss open={modalF} handleModal={handleModalF} className="d-none" />

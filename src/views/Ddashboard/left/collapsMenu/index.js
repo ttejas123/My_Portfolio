@@ -72,10 +72,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
               <span >Seller Product Grid</span>
               
             </ListGroupItem>
-            <ListGroupItem tag={Link} to='/seller/productGrid' className='cursor-pointer'>
-              <span >Seller Product Grid</span>
-              
-            </ListGroupItem>
+            
             <ListGroupItem tag={Link} to='/Rfq7s/subbar' className='cursor-pointer'>
               <span >Create and Filter RFQ</span>
               
