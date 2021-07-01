@@ -21,8 +21,16 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/topbar'))
   },
   {
-    path: '/serach-grid',
-    component: lazy(() => import('../../views/Rfq7/searchGrid.js'))
+    path: '/search-grid',
+    component: lazy(() => import('../../views/RFQ/searchGrid'))
+  },
+  {
+    path: '/cart-search',
+    component: lazy(() => import('../../views/RFQ/cartSearch.js'))
+  },
+  {
+    path: '/invoice-to-select',
+    component: lazy(() => import('../../views/RFQ/invoiceToSelect.js'))
   },
   {
     path: '/temp',

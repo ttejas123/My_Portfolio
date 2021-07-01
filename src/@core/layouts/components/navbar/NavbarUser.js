@@ -4,12 +4,12 @@ import { Link, Redirect } from 'react-router-dom'
 import UserDropdown from './UserDropdown'
 import NotificationDropdown from './NotificationDropdown'
 import IntlDropdown from './IntlDropdown'
+import Avatar from '@components/avatar'
 //import NavbarSearch from './NavbarSearch'
 // ** Third Party Components
 import { Sun, Moon, Menu, Search } from 'react-feather'
-
-import { NavItem, NavLink, Button, FormGroup, Input, Label, Col } from 'reactstrap'
-
+import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
+import { NavItem, NavLink, Button, FormGroup, Input, Label, Col, DropdownToggle } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
 import SearchCardss from './searchC'
@@ -28,6 +28,7 @@ const NavbarUser = props => {
         setModal(!modal)
     }
   const { skin, setSkin, setMenuVisibility } = props
+  const userAvatar = defaultAvatar
 
   // ** Function to toggle Theme (Light/Dark)
   const ThemeToggler = () => {
@@ -92,6 +93,14 @@ const NavbarUser = props => {
         <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
                   <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
         </Button.Ripple>
+
+        <div className=''>
+           <div>
+           <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
+           <span className='user-name font-weight-bold ml-2'>{'Rajiv Ajmera'} <br/> {'Buyer'} </span>
+           </div>
+         {/* <span className='user-status'>{'Buyer'}</span> */}
+       </div>
 
       </ul>
 {/*

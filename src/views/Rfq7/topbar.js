@@ -383,7 +383,7 @@ const Topbar = props => {
   // ** Render cart items
   const renderCart = () => {
       return (
-        <Card style={{marginTop:'-1.8rem'}} className='mb-sm-2 '>
+        <Card style={{marginTop:'-2rem'}} className='mb-sm-2 '>
 <CardBody className='pb-0'>
 <Row> 
           <Col lg='10' sm='12' className='pl-2'>
