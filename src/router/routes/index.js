@@ -93,6 +93,10 @@ const Routes = [
   {
     path: '/home1',
     component: lazy(() => import('../../views/Home/home_info_card'))
+  },
+  {
+    path: '/edit_customization',
+    component: lazy(() => import('../../views/Rfq7/Customization_Edit'))
   }
 
 ]
