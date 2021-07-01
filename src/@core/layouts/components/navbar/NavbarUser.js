@@ -16,8 +16,14 @@ import SearchCardss from './searchC'
 import LibraryDropDown from './LibraryDropDown'
 import ResourcesDropDown from './ResourcesDropDown'
 
+//redux
+import { useSelector, useDispatch } from 'react-redux'
+import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
+
+
 const NavbarUser = props => {
   // ** Props
+  const data = useSelector(state => { console.log(state.loginOut) })
   const [modal, setModal] = useState(false)
       const view = () => {
             //here we passing id to delete this specific record

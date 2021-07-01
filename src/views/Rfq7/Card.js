@@ -10,7 +10,8 @@ import AutoG from './autoG'
 import classnames from 'classnames'
 import { X, Heart, Star, Trash, ShoppingCart, Zap, ChevronDown, Box, DollarSign, MapPin, Calendar, FileText } from 'react-feather'
 import { Card, CardBody, CardText, CardHeader, Button, Badge, CustomInput, InputGroupAddon, Input, InputGroupText, Row, Col } from 'reactstrap'
-import img1 from '@src/assets/images/elements/nike-basketball-shoes.jpg'
+import img11 from '@src/assets/images/elements/nike-basketball-shoes.jpg'
+import img22 from '@src/assets/images/logo/sh3.jpg'
 // ** Styles
 import '@styles/base/pages/app-ecommerce.scss'
 // ** Custom Components
@@ -59,7 +60,8 @@ const Cart = props => {
     const item = {
       
         title : "Nike Unisex Black LEBRON XVIII Basketball Shoes",
-        img : img1,
+        img1 : img11,
+        img2 : img22,
         mrp : "2000",
         offer : "1000",
         moq : "100",
@@ -69,7 +71,7 @@ const Cart = props => {
   }
 
   const item1 = {
-    image: img1,
+    image: img11,
     name:"Tejas Thakare",
    brand:"Pravin",
    price:2000,
@@ -108,7 +110,7 @@ const direction = 'ltr'
     const [OpenStyle, setOpenStyle] = useState(false)
           return (
             <>
-        <Card style={OpenStyle ? ({marginBottom:"2px" }) : ({marginBottom:"10px" })}>
+        <Card className='shadow' style={OpenStyle ? ({marginBottom:"0px" }) : ({marginBottom:"10px" })}>
           <div>
              <Row >
                 <Col lg='3' sm='3' xs='6' className="m-0 pl-3 mt-1 mb-1">
@@ -239,32 +241,33 @@ const direction = 'ltr'
         </div>
     </Card>
        
-        <Col className={OpenStyle ? ("d-block") : ("d-none")}>
-          <Card className='mb-0 mb-1'>               
+        <Col className={OpenStyle ? ("d-block ") : ("d-none")}>
+          <Card className='shadow-none' style={OpenStyle ? ({marginBottom:"0px" }) : ({marginBottom:"0px" })}>               
                   <Row>
                   <Col lg='12'>
                   <div >
                       <Row>
-                        <Col md='4' sm='4'>
+                        <Col md='8' sm='4'>
+                          <div className='d-flex justify-content-between'>  
                             <CardBody>
-                            <span>
-                          Buyer (Base Rate + GST = Budget)
-                          </span>
+                                  <span>
+                                    Buyer (Base Rate + GST = Budget)
+                                  </span>
                             </CardBody>
-                        </Col>
-                        <Col md='4' sm='4'>
-                        <CardBody>
-                        <span>
-                        Seller (Base Rate + GST = Quote)
-                            </span>
+                            <CardBody>
+                                  <span>
+                                    Seller (Base Rate + GST = Quote)
+                                  </span>
                             </CardBody>
+                          </div>
                         </Col>
+
                         <Col md='4' sm='4'>
                           <CardBody>
-                          <span className='mr-1'>
-                        Close Negotiation BID CWT652942
-                            </span>
-                            <CustomInput className='d-inline'  type='checkbox' id='user-3' label='' />
+                              <span className='mr-1'>
+                                Close Negotiation BID CWT652942
+                              </span>
+                              <CustomInput className='d-inline'  type='checkbox' id='user-3' label='' />
                           </CardBody>
                         </Col>
                       </Row>
@@ -351,7 +354,7 @@ const direction = 'ltr'
                 <Col lg='6' md='6' className='py-1'>
 
                 <div className='d-block my-auto'>
-                <img className='img-fluid d-block mx-auto mt-2' src={item.img} alt={item.title} height='200' width='120'/>
+                <img className='img-fluid d-block mx-auto mt-2' src={item.img1} alt={item.title} height='200' width='120'/>
                 </div>
 
                   </Col>
@@ -411,7 +414,7 @@ const direction = 'ltr'
                   </Row>
               </Card>
 
-          <Card className='mb-0 mb-1'>               
+          <Card className='shadow-none mb-1'>               
                   <Row>
                   <Col lg='12'>
                   <div >
@@ -522,7 +525,7 @@ const direction = 'ltr'
                 <Col lg='6' md='6' className='py-1'>
 
                 <div className='d-block my-auto'>
-                <img className='img-fluid d-block mx-auto mt-2' src={item.img} alt={item.title} height='200' width='120'/>
+                <img className='img-fluid d-block mx-auto mt-2' src={item.img2} alt={item.title} height='200' width='120'/>
                 </div>
 
                   </Col>

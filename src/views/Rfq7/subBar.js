@@ -295,12 +295,11 @@ const SubBar = props => {
               </Row>
           ) : null}
       </Col>
-
       <Col md={props.search ? '3' : '4'} sm='12' className='d-flex align-items-start justify-content-end'>
           {props.createBtn ? (
-            <Button.Ripple className='ml-3' type='submit' color='primary'>
-            <Plus className='' size={18} />
-            <span className='font-weight-bold'>Create</span>
+              <Button.Ripple className='ml-3 d-flex' onClick={() => view()} color='primary'>
+                <Plus className='' size={18} />
+                <span className='font-weight-bold'>Create</span>
               </Button.Ripple>
           ) : (
               <div className='py-2'>
@@ -308,23 +307,11 @@ const SubBar = props => {
               </div>
           )}
       
-        <div className='d-inline-block ml-2'>
-            <Filter size={18}/>
-            <span>Filter(63)</span>
-        </div>
-        <div className='d-inline-block ml-2'>
-{/*=======
-      <Col md='4' sm='12' className='d-flex align-items-start justify-content-end'>
-          <Button.Ripple className='ml-3 d-flex' onClick={() => view()} color='primary'>
-            <Plus className='' size={18} />
-            <span className='font-weight-bold'>Create</span>
-          </Button.Ripple>
-          <div className='d-inline-block ml-2 cursor-pointer' style={{marginTop:"10px"}}>
+        <div className='d-inline-block ml-2 cursor-pointer' style={{marginTop:"10px"}}>
               <Filter size={18} onClick={() => viewF()}/>
               <span onClick={() => viewF()}>(63)</span>
           </div>
         <div className='d-inline-block ml-2' style={{marginTop:"10px"}}>
->>>>>>> Tejas*/}
             <span>0</span>
             <Bell size={18} />
         </div>
@@ -341,7 +328,7 @@ const SubBar = props => {
   }
 
   return (
-    <div className=' '>
+    <div className='ecommerce-application '>
       <div style={{marginTop:'-1rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
       <Pcrt open={modal} handleModal={handleModal} className="d-none" />
       <Filterss open={modalF} handleModal={handleModalF} className="d-none" />

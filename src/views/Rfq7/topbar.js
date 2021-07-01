@@ -98,12 +98,7 @@ const Topbar = props => {
   // ** Render cart items
   const renderCart = () => {
       return (
-{/*<<<<<<< HEAD
-        <Card style={{marginTop:'-2rem'}} className='mb-sm-2 '>
-<CardBody className='pb-0'>
-<Row> 
-          <Col lg='10' sm='12' className='pl-2'>
-=======*/}
+
         <Card className='mb-0 mb-1' style={{marginTop:'-1rem'}}>
         <CardBody className='pb-0'>
         <Row> 
@@ -130,7 +125,7 @@ const Topbar = props => {
                           </Label>
                     </FormGroup>
                   </Col>
-<<<<<<< HEAD
+
                   <Col md='3' sm='6'>
                   <Search size={30} className='mr-1 ' />
                       {/* <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
