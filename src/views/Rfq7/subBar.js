@@ -315,7 +315,7 @@ const SubBar = props => {
             <span>0</span>
             <Bell size={18} />
         </div>
-        <div className='d-inline-block ml-2'>
+        <div className='d-inline-block ml-2 ' style={{marginTop:"5px"}}>
         <Avatar color={ 'secondary'} className='mr-1' content={'?'}  />
         </div>
       </Col>
