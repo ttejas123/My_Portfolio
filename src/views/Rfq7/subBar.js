@@ -210,7 +210,7 @@ const SubBar = props => {
            <Col md='3' sm='12'>
            <AlignJustify size={20}/>
            <Search className='ml-3' size={24} />
-   <span className='font-weight-bold h3' style={{color : '#827071'}}>Search Result</span>
+   <span className='font-weight-bold h3' style={{color : '#827071', paddingTop:10, marginLeft:'1rem'}}>Search Result</span>
    </Col>
       ) : null}
       
@@ -329,7 +329,7 @@ const SubBar = props => {
 
   return (
     <div >
-      <div  style={{marginTop: '-rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
+      <div className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
       <Pcrt open={modal} handleModal={handleModal} className="d-none" />
       <Filterss open={modalF} handleModal={handleModalF} className="d-none" />
     </div>

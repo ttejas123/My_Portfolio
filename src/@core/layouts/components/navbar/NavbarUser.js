@@ -120,7 +120,7 @@ const NavbarUser = props => {
           </NavLink>
         </NavItem>
       </div>*/}
-        {  getStatus() ?  (<span className='pt-1'>
+        {  getStatus() ?  (<span className='pt-75'>
                <Bell size={30} className='mr-1'/>
           {/* <Badge pill color='danger' className='badge-up'>
           5
@@ -130,8 +130,8 @@ const NavbarUser = props => {
           {getStatus() ? (
              <div className=''>
           <div>    
-          <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
-          <span className='user-name font-weight-bold ml-2'>{'Rajiv Ajmera'} <br/> {'Buyer'} </span>
+          <Avatar img={userAvatar} imgHeight='30' imgWidth='30' status='online' />
+          <span className='user-name font-weight-bold ml-2' style={{fontSize:'12px'}}><br/> {'Buyer'} </span>
           </div>
         {/* <span className='user-status'>{'Buyer'}</span> */}
       </div>

@@ -5,7 +5,7 @@ import useC from '../../assets/images/logo/useC.jpg'
 import { useRTL } from '@hooks/useRTL'
 import '@styles/react/libs/noui-slider/noui-slider.scss'
 // ** Third Party Components
-
+import SubBar from './subBar'
 import AutoG from './autoG'
 import classnames from 'classnames'
 import { X, Heart, Star, Trash, ShoppingCart, Zap, ChevronDown, Box, DollarSign, MapPin, Calendar, FileText } from 'react-feather'
@@ -593,7 +593,9 @@ const direction = 'ltr'
   return (
   <>
     <div className=''>
-      <Topbar />
+      <div className="mb-1">
+              <SubBar className='mb-2' rfq="true" buttons='true' createBtn='true' />
+      </div>
       <div className='checkout-items list-view' >
           { 
             render.map((val) => {
