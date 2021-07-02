@@ -329,7 +329,7 @@ const SubBar = props => {
 
   return (
     <div >
-      <div  style={{marginTop: '-2rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
+      <div className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
       <Pcrt open={modal} handleModal={handleModal} className="d-none" />
       <Filterss open={modalF} handleModal={handleModalF} className="d-none" />
     </div>
