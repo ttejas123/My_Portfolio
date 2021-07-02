@@ -25,6 +25,12 @@ import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
 
 const NavbarUser = props => {
   console.log(getStatus())
+
+  // ** Props
+  let data
+  useSelector(state => { data = state.loginOut.flag }) 
+  console.log(data)
+
   const [modal, setModal] = useState(false)
       const view = () => {
             //here we passing id to delete this specific record

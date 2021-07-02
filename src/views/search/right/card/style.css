@@ -3,8 +3,11 @@
     }
 .searchCon {
     display: none;
+    position: absolute;
 }
-
+.imageSection{
+    width: 120%;
+}
 .imageSection:hover .searchCon { 
     display: inline-block;
 }

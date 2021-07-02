@@ -73,10 +73,32 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
               
             </ListGroupItem>
             
-            <ListGroupItem tag={Link} to='/Rfq7s/subbar' className='cursor-pointer'>
-              <span >Create and Filter RFQ</span>
+            <ListGroupItem tag={Link} to='/search-grid' className='cursor-pointer'>
+              <span >Search Grid</span>
               
             </ListGroupItem>
+            <ListGroupItem tag={Link} to='/cart-search' className='cursor-pointer'>
+              <span >Cart Search</span>
+              
+            </ListGroupItem>
+            
+            <ListGroupItem tag={Link} to='/invoice-to-select' className='cursor-pointer'>
+              <span >Invoice Select</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/create-cart' className='cursor-pointer'>
+              <span >Create Cart</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/cart-buyer' className='cursor-pointer'>
+              <span >Cart Buyer</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/cart-page' className='cursor-pointer'>
+              <span >Cart Page</span>
+              
+            </ListGroupItem>
+            
           </ListGroup>
          
       </div>

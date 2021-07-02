@@ -38,7 +38,7 @@ const Details = () => {
             <Col md='3' xs='12'>
                 <Card>
                   <CardBody className='d-flex'>
-                    <h1><b>Diagnosis</b></h1><p>(31)</p>
+                    <h1><b>Filter</b></h1><p>(31)</p>
                     
                   </CardBody>
                    <CardBody>
