@@ -3,7 +3,7 @@ import AppCollapse from '@components/app-collapse'
 
 const data = [
   {
-    title: <b>Diagnosis</b>,
+    title: <b>Shoes</b>,
     content: (
       <CardText className='mb-0'>
         <div className="ml-2">Biopsy Tools</div><hr />
@@ -17,7 +17,7 @@ const data = [
     )
   },
   {
-    title: <b>Equipment</b>,
+    title: <b>T-Shirts & Polos</b>,
     content: (
       <CardText className='mb-0'>
         <div className="ml-2">Biopsy Tools</div><hr />
@@ -31,7 +31,7 @@ const data = [
     )
   },
   {
-    title: <b>Higiene</b>,
+    title: <b>Jeans</b>,
     content: (
       <CardText className='mb-0'>
         <div className="ml-2">Biopsy Tools</div><hr />
@@ -45,7 +45,7 @@ const data = [
     )
   },
   {
-    title: <b>Tools</b>,
+    title: <b>Kurta</b>,
     content: (
       <CardText className='mb-0'>
         <div className="ml-2">Biopsy Tools</div><hr />
@@ -59,7 +59,7 @@ const data = [
     )
   },
   {
-    title: <b>Wound Care</b>,
+    title: <b>Frame</b>,
     content: (
       <CardText className='mb-0'>
         <div className="ml-2">Biopsy Tools</div><hr />

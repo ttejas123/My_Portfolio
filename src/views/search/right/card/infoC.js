@@ -37,8 +37,8 @@ const NumberInputBasic = props => {
 
   return (
     <div className="pt-1">
-        <CardText tag={Link} to='/product/productDetails' >
-            <h5 tag={Link} to='/product/productDetails'><b tag={Link} to='/product/productDetails'>{props.name}</b></h5>
+        <CardText  tag={Link} to='/product/productDetails' >
+            <h5 className="Col-5 text-truncate" tag={Link} to='/product/productDetails'><b tag={Link} to='/product/productDetails'>{props.name}</b></h5>
         </CardText>
         <CardText style={{fontSize:"13px"}} tag={Link} to='/product/productDetails' className='item-company'>
           By
