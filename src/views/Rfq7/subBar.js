@@ -122,7 +122,7 @@ const SubBar = props => {
   // ** Render cart items
   const renderCart = () => {
       return (
-        <Card className='mb-0'>
+        <Card className='mb-0 shadow-none'>
 <CardBody className='py-0'>
 {/* <Row></Row> */}
 {/* <Col sm='12'>
@@ -328,8 +328,8 @@ const SubBar = props => {
   }
 
   return (
-    <div className=''>
-      <div style={{marginTop:''}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
+    <div >
+      <div  style={{marginTop: '-rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
       <Pcrt open={modal} handleModal={handleModal} className="d-none" />
       <Filterss open={modalF} handleModal={handleModalF} className="d-none" />
     </div>
