@@ -11,50 +11,14 @@
 
 .form-control {
   outline: none;
-  height: 50px;
+  
   font-size: 14px;
-  padding: 0 20px;
+  
   border: none;
-  height: 50px;
-  border-radius: 0;
+
+ 
   border: 1px solid #ddd;
-  transition: all .4s ease;
-  box-shadow: 0 0 0 transparent;
+  
+  
   background-color: transparent;
-}
-
-.ps-form--review .ps-form__input, .ps-form--review .ps-form__textarea {
-  color: #5b6c8f;
-  background-color: #f0f2f5;
-  font-size: 16px;
-  padding: 9px 15px;
-  border-radius: 40px;
-  border-color: #f0f2f5;
-}
-
-.ps-form--review .ps-form__label {
-  color: #103178;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.ps-form--review .ps-form__input {
-  height: 46px;
-}
-
-.ps-btn, button.ps-btn {
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 50px;
-  box-shadow: none;
-  margin-top: 10px;
-  text-shadow: none;
-  cursor: pointer;
-  text-align: center;
-  padding: 10px 25px;
-  line-height: 24px;
-  display: inline-block;
-  width: 50%;
 }
