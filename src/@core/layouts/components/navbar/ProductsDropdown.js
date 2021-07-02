@@ -21,6 +21,41 @@ import defaultAvatar from '@src/assets/images/avatars/raviKukreja.jpg'
 
 const ProductDropDown = () => {
   // ** Store Vars
+  const menuModifiers = {
+    setMaxHeight: {
+      enabled: true,
+      fn: data => {
+        const pageHeight = window.innerHeight,
+          ddTop = data.instance.reference.getBoundingClientRect().top,
+          ddHeight = data.popper.height
+        let maxHeight, stylesObj
+
+        // ** Calculate and set height
+        if (pageHeight - ddTop - ddHeight - 28 < 1) {
+          maxHeight = pageHeight - ddTop - 25
+          stylesObj = {
+            maxHeight,
+            overflowY: 'auto'
+          }
+        }
+
+        const ddRef = data.instance.popper.getBoundingClientRect()
+
+        // ** If there is not space left to open sub menu open it to the right
+        if (ddRef.left + ddRef.width - (window.innerWidth - 16) >= 0) {
+          data.instance.popper.closest('.dropdown').classList.add('openLeft')
+        }
+
+        return {
+          ...data,
+          styles: {
+            ...stylesObj
+          }
+        }
+      }
+    }
+  }
+
   const dispatch = useDispatch()
 
   // ** State
@@ -49,7 +84,7 @@ const ProductDropDown = () => {
         {/* <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' /> */}
         <ChevronDown className='' size={15}/>
       </DropdownToggle>
-      <DropdownMenu right>
+      <DropdownMenu tag='ul' modifiers={menuModifiers}>
         
         <DropdownItem tag={Link} to='/search/searchPage'>
               <AlignJustify size={14} className='mr-75' />
