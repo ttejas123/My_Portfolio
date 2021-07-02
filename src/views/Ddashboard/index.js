@@ -54,7 +54,7 @@ const toggle1 = tab => setActiveTab(tab)
   return (
     <Fragment className="addPadding m-0">
     
-      <div className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
+      <div style={{marginTop:"-1rem"}} className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
         <BreadCrumbs  breadCrumbTitle='Dashboard' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Dashboard' />
       </div>
       <div >
@@ -67,10 +67,10 @@ const toggle1 = tab => setActiveTab(tab)
                     </div>
                     <div className='position-relative'>
                       <div className='profile-img-container d-flex align-items-center'>
-                        <div className='profile ml-md-0 raviImge' >
-                          <img className='img-thumbnail img-responsive Col-md-3 ml-md-5 ' src={person} width="180" height="100"  />
+                        <div className='profile ml-md-0 pl-lg-1 raviImge' >
+                          <img className='img-thumbnail img-responsive Col-md-3 ml-md-5 ' src={person} width="160" height="100"  />
                         </div>
-                        <div className='profile-title' style={{marginLeft:"30px"}}>
+                        <div className='profile-title' style={{marginLeft:"35px"}}>
                           <h2 className='text-white'><b>Ravi Kukreja</b></h2>
                           <p className='text-white'><b>Bidoya, pvt.</b></p>
                         </div>

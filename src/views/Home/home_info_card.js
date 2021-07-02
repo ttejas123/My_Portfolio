@@ -12,7 +12,7 @@ import './style.css'
 export default function home_info_card() {
     const [subText, setsubText] = useState({subcardText:'Listening', subcardDetail:'Understand Your Audience'})
     const [selectedImage, setSelectedImage] = useState(decorationLeft)
-    const [color, setColors] = useState('#ffff66')
+    const [color, setColors] = useState('#f4efec')
     const [selected, setselected] = useState(1)
     return (
         <div style={{
@@ -64,7 +64,7 @@ export default function home_info_card() {
                                                                 
                                                                 setsubText({ subcardText: 'Bid', subcardDetail: 'Understand Your Audience' })
                                                                 setSelectedImage(decorationLeft)  
-                                                                setColors('#ffff66')
+                                                                setColors('#f4efec')
                                                                 setselected(1)
                                                             }}>
                                                             <Archive size={14} />     BID
@@ -76,7 +76,7 @@ export default function home_info_card() {
                                                         <Button.Ripple style={selected === 2 ? ({backgroundColor: "#ffccff"}) : ({backgroundColor:"#f2f2f2"})} block className='buttonHover' color='light'  onClick={e => {
                                                                 setsubText({ subcardText: 'Bulk', subcardDetail: 'Reach Your Audience' })
                                                                 setSelectedImage(decorationRight)
-                                                                setColors('#00cc00')
+                                                                setColors('#f4d9d0')
                                                                 setselected(2) 
                                                             }}>
                                                             <Package size={14} />    BULK
@@ -88,7 +88,7 @@ export default function home_info_card() {
                                                         <Button.Ripple style={selected === 3 ? ({backgroundColor: "#ffccff"}) : ({backgroundColor:"#f2f2f2"})} block className='buttonHover' color='light'  onClick={e => {
                                                                 setsubText({ subcardText: 'Buy', subcardDetail: 'Engage Your Community' })
                                                                 setSelectedImage(decorationRight1)  
-                                                                setColors('#0033cc')
+                                                                setColors('#f4e3c9')
                                                                 setselected(3)
                                                             }}>
                                                             <ShoppingBag size={14} />     BUY
