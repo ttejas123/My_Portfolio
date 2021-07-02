@@ -49,7 +49,8 @@ const CustomerDropDown = () => {
         {/* <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' /> */}
         <ChevronDown className='mr-1' size={15}/>
       </DropdownToggle>
-      <DropdownMenu right>
+
+      <DropdownMenu right style={{marginTop: "-0.1rem"}}>
         
         <DropdownItem tag={Link} to='/cart-buyer'>
               <AlignJustify size={14} className='mr-75' />
