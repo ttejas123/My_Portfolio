@@ -11,7 +11,7 @@ import { isUserLoggedIn } from '@utils'
 // ** Store & Actions
 import { useDispatch } from 'react-redux'
 import { handleLogout } from '@store/actions/auth'
-
+import '..//../../../views/logcss.css'
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
 import { User, Mail, LogOut, CheckSquare, MessageSquare, Bell, Settings, CreditCard, HelpCircle, Power, ChevronDown, AlignJustify, Codepen, Circle, AlertCircle } from 'react-feather'
@@ -84,8 +84,7 @@ const ProductDropDown = () => {
         {/* <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' /> */}
         <ChevronDown className='' size={15}/>
       </DropdownToggle>
-      <DropdownMenu tag='ul' modifiers={menuModifiers}>
-        
+      <DropdownMenu direction='' style={{left : "0px !important"}}>
         <DropdownItem tag={Link} to='/search/searchPage'>
               <AlignJustify size={14} className='mr-75' />
               <span className='align-middle'>List</span>
