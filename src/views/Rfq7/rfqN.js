@@ -60,12 +60,12 @@ const Checkout = () => {
   // }, [])
 
   return (
-      <div style={{marginTop:'-1rem'}}>
+      <div  >
         <div className="mb-1">
               <SubBar rfq="true" buttons='true' createBtn='true' />
         </div>
        
-           <div className="mb-2 text-right ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3">
+           <div className="mb-3 text-right ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3">
               <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill >
                 Marketing<XCircle size={30} style={{color:"#ff6666", marginLeft:"5px"}} />
               </Badge>
@@ -81,7 +81,7 @@ const Checkout = () => {
               
             </div>
         
-        <div className='ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3'>  
+        <div  className='ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3'>  
           <Cards
                 stepper={stepper}
                 products={products}
