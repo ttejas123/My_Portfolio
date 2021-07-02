@@ -73,7 +73,7 @@ const ProductDropDown = () => {
   const userAvatar = defaultAvatar
 
   return (
-    <UncontrolledDropdown tag='li' className='dropdown-user nav-item d-none d-lg-block'>
+    <UncontrolledDropdown tag='li' className='dropdown-user-left nav-item d-none d-lg-block'>
       <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
         <div className='user-nav d-sm-flex d-none'>
           <small className=' font-weight-bold h6' style={{color:'black'}}>Search</small> 
@@ -84,7 +84,7 @@ const ProductDropDown = () => {
         {/* <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' /> */}
         <ChevronDown className='' size={15}/>
       </DropdownToggle>
-      <DropdownMenu direction='' style={{left : "0px !important"}}>
+      <DropdownMenu >
         <DropdownItem tag={Link} to='/search/searchPage'>
               <AlignJustify size={14} className='mr-75' />
               <span className='align-middle'>List</span>

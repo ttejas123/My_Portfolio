@@ -110,11 +110,21 @@ const NavbarUser = props => {
                 <Search size={18} />
         </Button.Ripple>
 
-        {  getStatus() ?  (<span>
+      
+      </ul>
+{/*
+      <div className='bookmark-wrapper d-flex align-items-left'>
+        <NavItem className='d-none d-lg-block'>
+          <NavLink className='nav-link-style'>
+          
+          </NavLink>
+        </NavItem>
+      </div>*/}
+        {  getStatus() ?  (<span className='pt-1'>
                <Bell size={30} className='mr-1'/>
-          <Badge pill color='danger' className='badge-up'>
+          {/* <Badge pill color='danger' className='badge-up'>
           5
-         </Badge>
+         </Badge> */}
             </span>) : null}
 
           {getStatus() ? (
@@ -130,15 +140,6 @@ const NavbarUser = props => {
   <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
 </Button.Ripple>
 )}
-      </ul>
-{/*
-      <div className='bookmark-wrapper d-flex align-items-left'>
-        <NavItem className='d-none d-lg-block'>
-          <NavLink className='nav-link-style'>
-          
-          </NavLink>
-        </NavItem>
-      </div>*/}
       <SearchCardss open={modal} handleModal={handleModal} className="d-none" />
 
     </Fragment>

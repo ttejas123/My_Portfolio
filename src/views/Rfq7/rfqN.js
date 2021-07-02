@@ -60,8 +60,8 @@ const Checkout = () => {
   // }, [])
 
   return (
-      <div style={{marginTop:'-1rem'}}>
-        <div className="mb-1">
+      <div style={{marginTop:'-2rem'}}>
+        <div className="mb-1" style={{marginTop:'-2rem'}}>
               <SubBar rfq="true" buttons='true' createBtn='true' />
         </div>
        
