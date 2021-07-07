@@ -46,7 +46,6 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
             <div class="card border">
               <div class="card-body">
                 <p class="card-text">{props.review}</p>
-                <h4 class="card-title"><b>{props.name}</b></h4>
                 <Rating
                       emptySymbol={<Star size={18} fill='#babfc7' stroke='#babfc7' />}
                       fullSymbol={<Star size={18}  fill='orange' stroke='orange'/>} /*fill=2 stroke=2*/

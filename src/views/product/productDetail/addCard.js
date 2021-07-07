@@ -35,7 +35,7 @@ const NumberInputBasic = () => {
 
 
   return (
-    <Card style={{backgroundColor:" #f2f2f2"}}>
+    <Card className='m-0' style={{backgroundColor:" #f2f2f2"}}>
       <CardHeader>
         <Badge color='light-danger'>
           OUT OF STOCK
