@@ -22,8 +22,10 @@ import '@styles/base/pages/app-ecommerce.scss'
 // ** Custom Components
 import NumberInput from '@components/number-input'
 import CardFooter from 'reactstrap/lib/CardFooter'
+import SubBar from './subBar'
+import Topbar from './topbar'
 
-const Topbar = props => {
+const SearchGrid = props => {
   
  // const { products, stepper, deleteCartItem, dispatch, addToWishlist, deleteWishlistItem, getCartItems } = props
 
@@ -182,106 +184,10 @@ const Topbar = props => {
 
   return  (
         <div id='dashboard-ecommerce'>
-             <Card>
-<CardBody>
-<Row>
-<Col sm='12'>
-    <Row>
-      <Col md='3' sm='12'>
-          <div className='d-block my-auto'>
-      <img className='img-fluid d-block mx-auto mt-2' src={item.image} alt={item.name} height='200' width='200'/>
-      </div>
-      </Col>
-      <Col md='6' sm='12'>
-          <Row>
-              <Col md='8' sm='6'>
-              <FormGroup>
-          <Input type='text' id='category' placeholder='What are you looking for ?'  />
-        </FormGroup>
-              </Col>
-              <Col md='4' sm='6'>
-              <FormGroup>
-          <Input type='text' id='category' placeholder='Qty?'/>
-        </FormGroup>
-              </Col>
-              <Col md='10' sm='10'>
-              <FormGroup className='mt-1'>
-          <Input type='range' id='category' placeholder='Qty?'/>
-          <Label for='default-range' className='d-block'>
-              <span className='d-block mx-auto text-center font-weight-bold h6 font-italic'>
-              What is the budget per Unit?
-              </span>
-              </Label>
-        </FormGroup>
-              </Col>
-              <Col md='2' sm='2'>
-              <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
-                <Search size={18} />
-        </Button.Ripple>
-              </Col>
-          </Row>
-      </Col>
-
-      <Col md='3' sm='12' >
-          <div  className='d-block mx-auto'>
-          <div>
-      <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link d-block mx-auto' onClick={e => e.preventDefault()}>
-          <div>
-          <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
-          <span className='user-name font-weight-bold ml-2'>{'Rajiv Ajmera'}</span>
-          </div>
-        <span className='user-status'>{'Buyer'}</span>
-      </DropdownToggle>
-      </div>
-      <div className='d-inline'>
-      <Button.Ripple className='' type='submit' color='primary'>
-      <ShoppingCart className='' size={14} />
-      <span className='font-weight-bold' style={{paddingLeft:10}}>Cart</span>
-        </Button.Ripple>
-      </div>
-      <div className='d-inline ml-2'>
-      <Button.Ripple className='' type='submit' color='primary'>
-      <Zap className='' size={18} />
-      <span className='font-weight-bold' style={{paddingLeft:10}}>RFQ</span>
-        </Button.Ripple>
-      </div>
-      </div>
-      </Col>
-      </Row>
-      </Col>
-      </Row>
-      <hr/>
-      <Row className='mt-3'>
-          <Col sm='12'>
-              <Row>
-              <Col md='9' sm='9'>
-              <AlignJustify size={20}/>
-              <div className='d-inline-block'>
-              <Search className='ml-3' size={24} />
-              </div>
-      <span className='font-weight-bold h3 ml-2' style={{color : '#827071'}}>SEARCH RESULT</span>
-      </Col>
-     
-      <Col md='3' sm='3' >
-        <div className='d-inline-block ml-2'>
-            <Filter size={18} />
-            <span>Filter(63)</span>
-        </div>
-        <div className='d-inline-block ml-2'>
-            <span>0</span>
-            <Bell size={18} />
-        </div>
-        <div className='d-inline-block ml-2'>
-        <Avatar color={ 'secondary'} className='mr-1' content={'?'}  />
-        </div>
-        
-      </Col>
-              </Row>
-          </Col>
-      </Row>
-      </CardBody>
-        </Card> 
-        <Col>
+  
+        <Topbar/>
+        <SubBar search='true'/>
+        <Col className='mt-3'>
         <Row>
         {renderProducts()}
         </Row>
@@ -309,4 +215,4 @@ const Topbar = props => {
   
 }
 
-export default Topbar
+export default SearchGrid

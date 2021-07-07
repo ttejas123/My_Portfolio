@@ -1,23 +1,36 @@
 // ** Dropdowns Imports
 import { Fragment, useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
+import { isUserLoggedIn } from '@utils'
+import {getStatus} from '../../../../views/isLoggedIn'
 import UserDropdown from './UserDropdown'
 import NotificationDropdown from './NotificationDropdown'
 import IntlDropdown from './IntlDropdown'
+import Avatar from '@components/avatar'
 //import NavbarSearch from './NavbarSearch'
 // ** Third Party Components
-import { Sun, Moon, Menu, Search } from 'react-feather'
-
-import { NavItem, NavLink, Button, FormGroup, Input, Label, Col } from 'reactstrap'
-
+import { Sun, Moon, Menu, Search, Bell } from 'react-feather'
+import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
+import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, DropdownToggle } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
 import SearchCardss from './searchC'
 import LibraryDropDown from './LibraryDropDown'
 import ResourcesDropDown from './ResourcesDropDown'
 
+//redux
+import { useSelector, useDispatch } from 'react-redux'
+import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
+
+
 const NavbarUser = props => {
+  console.log(getStatus())
+
   // ** Props
+  let data
+  useSelector(state => { data = state.loginOut.flag }) 
+  console.log(data)
+
   const [modal, setModal] = useState(false)
       const view = () => {
             //here we passing id to delete this specific record
@@ -28,6 +41,7 @@ const NavbarUser = props => {
         setModal(!modal)
     }
   const { skin, setSkin, setMenuVisibility } = props
+  const userAvatar = defaultAvatar
 
   // ** Function to toggle Theme (Light/Dark)
   const ThemeToggler = () => {
@@ -57,18 +71,26 @@ const NavbarUser = props => {
       <ul className='nav navbar-nav align-items-center mx-auto'>
          <IntlDropdown />
         {/* <NotificationDropdown /> */}
-        {/* <ProductDropDown /> */}
-        <Button.Ripple tag={Link} to='/' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        <div style={{paddingTop:'7px'}}>
+        <ProductDropDown />
+        </div>
+        {/* <Button.Ripple tag={Link} to='/' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Home</small> 
-        </Button.Ripple>
-        <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        </Button.Ripple> */}
+        {/* <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Search</small> 
+        </Button.Ripple> */}
+        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
         </Button.Ripple>
         <Button.Ripple tag={Link} to='/Rfq7/rfqN' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Rfq</small> 
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Bid</small> 
         </Button.Ripple>
-         <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
+        <div style={{paddingTop:'7px'}} className='ml-2' >
+        <CustomerDropDown/>
+        </div>
+        <Button.Ripple tag={Link} to='/aboutUs' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>About Us</small> 
         </Button.Ripple>
            {/* <div className='' style={{width:'10%'}}>  
           <Input type='text' id='category' placeholder='' className='d-inline-block w-5' style={{width:'70%'}}/>
@@ -77,8 +99,6 @@ const NavbarUser = props => {
         <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
         </Button.Ripple>
-        
-        {/*<CustomerDropDown/>*/}
         {/*<LibraryDropDown/>*/}
         {/*<ResourcesDropDown/>*/}
         {/*<UserDropdown />*/}
@@ -89,10 +109,8 @@ const NavbarUser = props => {
         <Button.Ripple  className='cursor-pointer d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
                 <Search size={18} />
         </Button.Ripple>
-        <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
-                  <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
-        </Button.Ripple>
 
+      
       </ul>
 {/*
       <div className='bookmark-wrapper d-flex align-items-left'>
@@ -102,6 +120,26 @@ const NavbarUser = props => {
           </NavLink>
         </NavItem>
       </div>*/}
+        {  getStatus() ?  (<span className='pt-75'>
+               <Bell size={30} className='mr-1'/>
+          {/* <Badge pill color='danger' className='badge-up'>
+          5
+         </Badge> */}
+            </span>) : null}
+
+          {getStatus() ? (
+             <div className=''>
+          <div>    
+          <Avatar img={userAvatar} imgHeight='30' imgWidth='30' status='online' />
+          <span className='user-name font-weight-bold ml-2' style={{fontSize:'12px'}}><br/> {'Buyer'} </span>
+          </div>
+        {/* <span className='user-status'>{'Buyer'}</span> */}
+      </div>
+) : (
+  <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
+  <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
+</Button.Ripple>
+)}
       <SearchCardss open={modal} handleModal={handleModal} className="d-none" />
 
     </Fragment>

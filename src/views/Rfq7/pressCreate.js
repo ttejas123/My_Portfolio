@@ -176,7 +176,7 @@ const AddNewModal = (prop) => {
             <Row className='DropDowns'>
               
               <Col md='4' sm='12'>
-              {catI !== null ? (<img className='w-25 mb-1' src={catI} alt="Category" />) : (null)}
+              {catI !== null ? (<div > <img style={{width: "50px"}} className='mb-1' src={catI} alt="Category" /> </div>) : (null)}
                 
                 <FormGroup>
                         
@@ -203,7 +203,7 @@ const AddNewModal = (prop) => {
               </Col>
               <Col md='4' sm='12'>
                 <FormGroup>
-                      {subcatI !== null ? (<img className='w-25 mb-1' src={subcatI} alt="Category" />) : (null)} 
+                      {subcatI !== null ? (<img style={{width: "50px"}} className='mb-1' src={subcatI} alt="Category" />) : (null)} 
                       <Select
                         id='State'
                         className='react-select'
@@ -226,7 +226,7 @@ const AddNewModal = (prop) => {
                 </FormGroup> 
               </Col>
               <Col md='4' sm='12'>
-                {productI !== null ? (<img className='w-25 mb-1' src={productI} alt="Category" />) : (null)}
+                {productI !== null ? (<img style={{width: "50px"}} className='mb-1' src={productI} alt="Category" />) : (null)}
                 <FormGroup>
                         
                       <Select

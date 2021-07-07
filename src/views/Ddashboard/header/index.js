@@ -50,7 +50,7 @@ const toggle1 = tab => setActiveTab(tab)
                     <div className='position-relative'>
                       <div className='profile-img-container d-flex align-items-center'>
                         <div className='profile' style={{ justifyContent: "bottom", alignItems: "bottom"}}>
-                          <img style={{ backgroundPosition: "center", marginLeft: "58px", position: "relative", maxHeight: "220px", minWidth: "250px"}} className='img-fluid img-thumbnail' src={person}  />
+                          <img style={{ backgroundPosition: "center", marginLeft: "58px", position: "relative", maxHeight: "210px", minWidth: "250px"}} className='img-fluid img-thumbnail' src={person}  />
                         </div>
                         <div className='profile-title ml-3'>
                           <h2 className='text-white'>Ravi Kukreja</h2>

@@ -63,6 +63,8 @@ const SubBar = props => {
     {value: "Polo", label: "Polo"}
   ]
 
+  const buttons = true
+  
   const optionsProduct = [
     {value: "iphone 12 pro max", label: "iphone 12 pro max"},
     {value: "Oneplus 108cm", label: "Telivision"},
@@ -120,7 +122,7 @@ const SubBar = props => {
   // ** Render cart items
   const renderCart = () => {
       return (
-        <Card className='mb-0'>
+        <Card className='mb-0 shadow-none'>
 <CardBody className='py-0'>
 {/* <Row></Row> */}
 {/* <Col sm='12'>
@@ -190,100 +192,132 @@ const SubBar = props => {
       <Row className='mt-1'>
           <Col sm='12'>
               <Row>
-              <Col md='2' sm='12'>
-              <AlignJustify size={20}/>
-              <Zap className='ml-3' size={24} />
-      <span className='font-weight-bold h3' style={{color : '#827071'}}>RFQ</span>
-      </Col>
-      <Col md='2' sm='12'>
-      <FormGroup>
-              
-            <Select
-              id='State'
-              className='react-select'
-              classNamePrefix='select'
-              isClearable={false}
-              options={optionsCategory}
-              theme={selectThemeColors}
-              value={values.Category[0]}
-              onChange={data => {
+                  {props.rfq ? (
+                      <Col md='2' sm='12'>
+                      <AlignJustify size={20}/>
+                      <Zap className='ml-3' size={24} />
+              <span className='font-weight-bold h3' style={{color : '#827071'}}>RFQ</span>
+              </Col>
+                  ) : null}
+              {props.cart ? (
+                  <Col md='2' sm='12'>
+                  <AlignJustify size={20}/>
+                  <ShoppingCart className='ml-3' size={24} />
+          <span className='font-weight-bold h3 ml-1' style={{color : '#827071'}}>Cart</span>
+          </Col>
+              ) : null}
+      {props.search ? (
+           <Col md='3' sm='12'>
+           <AlignJustify size={20}/>
 
+           <Search className='ml-3' size={24} />
+   <span className='font-weight-bold h3' style={{color : '#827071', paddingTop:10, marginLeft:'1rem'}}>Search Result</span>
 
-                                 setValues(
-                                          {
-                                             ...values,
-                                             State : data
-                                          } 
-                                  )
+   </Col>
+      ) : null}
+      
+      <Col md='6' lg='6'>
+          {props.buttons ? (
+              <Row>
+              <Col md='4' sm='12'>
+              <FormGroup>
+                      
+                    <Select
+                      id='State'
+                      className='react-select'
+                      classNamePrefix='select'
+                      isClearable={false}
+                      options={optionsCategory}
+                      theme={selectThemeColors}
+                      value={values.Category[0]}
+                      onChange={data => {
+        
+        
+                                         setValues(
+                                                  {
+                                                     ...values,
+                                                     State : data
+                                                  } 
+                                          )
+                                        }
                                 }
-                        }
-            />
-            </FormGroup> 
-      </Col>
-      <Col md='2' sm='12'>
-      <FormGroup>
-              
-            <Select
-              id='State'
-              className='react-select'
-              classNamePrefix='select'
-              isClearable={false}
-              options={optionsSubCategory}
-              theme={selectThemeColors}
-              value={values.SubCategory[0]}
-              onChange={data => {
-
-
-                                 setValues(
-                                          {
-                                             ...values,
-                                             State : data
-                                          } 
-                                  )
+                    />
+                    </FormGroup> 
+              </Col>
+              <Col md='4' sm='12'>
+              <FormGroup>
+                      
+                    <Select
+                      id='State'
+                      className='react-select'
+                      classNamePrefix='select'
+                      isClearable={false}
+                      options={optionsSubCategory}
+                      theme={selectThemeColors}
+                      value={values.SubCategory[0]}
+                      onChange={data => {
+        
+        
+                                         setValues(
+                                                  {
+                                                     ...values,
+                                                     State : data
+                                                  } 
+                                          )
+                                        }
                                 }
-                        }
-            />
-            </FormGroup> 
-      </Col>
-      <Col md='2' sm='12'>
-      <FormGroup>
-              
-            <Select
-              id='State'
-              className='react-select'
-              classNamePrefix='select'
-              isClearable={false}
-              options={optionsProduct}
-              theme={selectThemeColors}
-              value={values.Product[0]}
-              onChange={data => {
-
-
-                                 setValues(
-                                          {
-                                             ...values,
-                                             State : data
-                                          } 
-                                  )
+                    />
+                    </FormGroup> 
+              </Col>
+              <Col md='4' sm='12'>
+              <FormGroup>
+                      
+                    <Select
+                      id='State'
+                      className='react-select'
+                      classNamePrefix='select'
+                      isClearable={false}
+                      options={optionsProduct}
+                      theme={selectThemeColors}
+                      value={values.Product[0]}
+                      onChange={data => {
+        
+        
+                                         setValues(
+                                                  {
+                                                     ...values,
+                                                     State : data
+                                                  } 
+                                          )
+                                        }
                                 }
-                        }
-            />
-            </FormGroup> 
+                    />
+                    </FormGroup> 
+              </Col>
+              </Row>
+          ) : null}
       </Col>
-      <Col md='4' sm='12' className='d-flex align-items-start justify-content-end'>
-          <Button.Ripple className='ml-3' onClick={() => view()} color='primary'>
-            <Plus className='' size={18} />
-            <span className='font-weight-bold'>Create</span>
-          </Button.Ripple>
-          <div className='d-inline-block ml-2 cursor-pointer'>
+      <Col md={props.search ? '3' : '4'} sm='12' className='d-flex align-items-start justify-content-end'>
+          {props.createBtn ? (
+              <Button.Ripple className='ml-3 d-flex' onClick={() => view()} color='primary'>
+                <Plus className='' size={18} />
+                <span className='font-weight-bold'>Create</span>
+              </Button.Ripple>
+          ) : (
+              <div className='py-2'>
+
+              </div>
+          )}
+      
+        <div className='d-inline-block ml-2 cursor-pointer' style={{marginTop:"10px"}}>
               <Filter size={18} onClick={() => viewF()}/>
-              <span onClick={() => viewF()}>Filter(63)</span>
+              <span onClick={() => viewF()}>(63)</span>
           </div>
-        <div className='d-inline-block ml-2'>
+        <div className='d-inline-block ml-2' style={{marginTop:"10px"}}>
             <span>0</span>
             <Bell size={18} />
         </div>
-        <div className='d-inline-block ml-2'>
+        <div className='d-inline-block ml-2 ' style={{marginTop:"5px"}}>
         <Avatar color={ 'secondary'} className='mr-1' content={'?'}  />
         </div>
       </Col>
@@ -296,8 +330,8 @@ const SubBar = props => {
   }
 
   return (
-    <div className='ecommerce-application '>
-      <div style={{marginTop:'-1rem'}} className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
+    <div >
+      <div className='checkout-items list-view' >{1 ? renderCart() : <h4>Your cart is empty</h4>}</div>
       <Pcrt open={modal} handleModal={handleModal} className="d-none" />
       <Filterss open={modalF} handleModal={handleModalF} className="d-none" />
     </div>

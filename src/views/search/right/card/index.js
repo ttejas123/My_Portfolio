@@ -55,12 +55,12 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
     <Row className="border m-0 p-0">
       <Col className='d-flex align-items-center justify-content-center' md='3' xs='12'>
         <Col sm='12' >
-          <div className="d-flex imageSection">
+          <div className=" imageSection">
             <div className="searchCon" onClick={() => view()}>
               <li className="d-inline-block rounded-circle border"><img style={{borderRadius: "50%", position: "relative", cursor: "pointer", padding: "3px"}} src="https://img.icons8.com/fluent-systems-filled/18/000000/search.png"/></li >
             </div>
 
-            <img className="img-fluid" src={props.image} alt="Product Page" />
+            <img className="img-fluid" style={{width:"130%", height:"35vh"}} src={props.image} alt="Product Page" />
             
           </div>
         </Col>

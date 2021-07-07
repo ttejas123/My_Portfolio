@@ -33,13 +33,12 @@ const Details = () => {
   // }, [])
 
   return (
-    <Fragment>
-      <div >
+    <Fragment >
+      <div style={{marginTop:"-1rem"}} className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
 
-        
+        <BreadCrumbs breadCrumbTitle='Product Details' breadCrumbParent='Equipment' breadCrumbChild='Digital' breadCrumbActive='Thermometer X30-Pro' />
       </div>
-      <BreadCrumbs breadCrumbTitle='Product Details' breadCrumbParent='Equipment' breadCrumbChild='Digital' breadCrumbActive='Thermometer X30-Pro' />
-      <div >
+      <div className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
        
           <Card>
             <CardBody>

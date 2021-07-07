@@ -1,6 +1,6 @@
 // ** React Imports
 import { useContext } from 'react'
-
+import { Link } from 'react-router-dom'
 // ** Third Party Components
 import ReactCountryFlag from 'react-country-flag'
 import { UncontrolledDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -35,10 +35,12 @@ const IntlDropdown = () => {
           countryCode='us'
           svg
         /> */}
-        <div className='d-inline-block '>
+         <Link to='/home'>
+        <div className='d-inline-block' style={{paddingTop:'7px'}}>
       <img className='mb-1' src={logo} alt={"Logo"} height='25' width='25'/>
       </div>
         <span className='font-weight-bold mr-1 h2 ' style={{marginLeft:5, fontWeight:1500, color:'black'}}>Bidoya</span>
+        </Link>
       </DropdownToggle>
     </UncontrolledDropdown>
   )

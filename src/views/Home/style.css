@@ -22,6 +22,14 @@
 	background-color: white;
 }
 
+.buttonHover{
+  text-align: left;
+}
+
+.buttonHover:hover{
+  background-color: ;
+}
+
 .buttonss{
 	padding: 2px;
 }

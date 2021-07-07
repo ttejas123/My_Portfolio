@@ -160,7 +160,7 @@ const VerticalLayout = props => {
           `header-navbar navbar align-items-center ${navbarClasses[navbarType] || 'floating-nav'} navbar-shadow`
         )}
       >
-        <div className='navbar-container d-flex content'>
+        <div className='navbar-container d-flex content py-0'>
           {navbar ? navbar : <NavbarComponent setMenuVisibility={setMenuVisibility} skin={skin} setSkin={setSkin} />}
         </div>
       </Navbar>

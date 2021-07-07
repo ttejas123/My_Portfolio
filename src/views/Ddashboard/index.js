@@ -54,8 +54,8 @@ const toggle1 = tab => setActiveTab(tab)
   return (
     <Fragment className="addPadding m-0">
     
-      <div style={{marginTop:-24}} >
-        <Navbarss />
+      <div style={{marginTop:"-1rem"}} className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
+        <BreadCrumbs  breadCrumbTitle='Dashboard' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Dashboard' />
       </div>
       <div >
       <div id='user-profile'>
@@ -67,10 +67,10 @@ const toggle1 = tab => setActiveTab(tab)
                     </div>
                     <div className='position-relative'>
                       <div className='profile-img-container d-flex align-items-center'>
-                        <div className='profile ml-md-2 raviImge' >
-                          <img className='img-thumbnail img-responsive Col-md-3 ml-md-5 ' src={person} width="180" height="100"  />
+                        <div className='profile ml-md-0 pl-lg-1 raviImge' >
+                          <img className='img-thumbnail img-responsive Col-md-3 ml-md-5 ' src={person} width="160" height="100"  />
                         </div>
-                        <div className='profile-title ml-3'>
+                        <div className='profile-title' style={{marginLeft:"35px"}}>
                           <h2 className='text-white'><b>Ravi Kukreja</b></h2>
                           <p className='text-white'><b>Bidoya, pvt.</b></p>
                         </div>
@@ -81,9 +81,9 @@ const toggle1 = tab => setActiveTab(tab)
                         <Button color='' className='btn-icon navbar-toggler' onClick={toggle}>
                           <AlignJustify size={21} />
                         </Button>
-                        <Collapse className='pl-md-5' isOpen={isOpen} navbar>
+                        <Collapse className='pl-md-0' isOpen={isOpen} navbar>
                           <div className='profile-tabs d-flex justify-content-between flex-wrap mt-1 mt-md-0'>
-                            <Nav className='mb-0 ml-md-5 pl-md-5' pills >
+                            <Nav className='mb-0 ml-md-0 pl-md-4' pills >
 
                               <NavItem className="pl-lg-4">
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
@@ -119,14 +119,12 @@ const toggle1 = tab => setActiveTab(tab)
             </Col>
           </Row>
         </div>
-        <Row>
-          <Col lg="1" xs='12'></Col>
-          <Col lg="10" xs='12'>
-              <Row>
-                  <Col md='3' xs='12'>
+        <Row className="ml-lg-5 mr-lg-5 pl-lg-2 pr-lg-2">
+          
+                  <Col md='2' xs='12'>
                        <Left />
                   </Col>
-                  <Col md='9' xs='12'>
+                  <Col md='10' xs='12'>
                           <TabContent activeTab={activeTab}>
                             <TabPane tabId='1'>
                               <Right />
@@ -146,9 +144,7 @@ const toggle1 = tab => setActiveTab(tab)
                             </TabPane> */}
                           </TabContent>
                   </Col>
-              </Row>
-          </Col>
-          <Col lg="1" xs='12'></Col>
+              
       </Row>    
       </div>
       
@@ -157,16 +153,3 @@ const toggle1 = tab => setActiveTab(tab)
 }
 
 export default Details
-
-       
-                // <Col md='9' xs='12'>
-                //          {/* <Row> */}
-                //          <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
-                //          {/* <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> */}
-           
-                //         { <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
-                //         <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/>
-                //         <InfoCard cols={{ xl: '4', sm: '12', md:'4', xs:'12' }}/> }
-                //          {/* </Row> */}
-                        
-                // </Col>

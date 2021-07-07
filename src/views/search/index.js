@@ -29,7 +29,7 @@ const Details = () => {
 
   return (
     <Fragment >
-    <div className="ml-lg-4 mr-lg-4">
+    <div style={{marginTop:"-1rem"}} className="ml-lg-4 mr-lg-4">
       <div className="ml-lg-5" >
         <BreadCrumbs  breadCrumbTitle='Search Page' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Search' />
       </div>
@@ -38,7 +38,7 @@ const Details = () => {
             <Col md='3' xs='12'>
                 <Card>
                   <CardBody className='d-flex'>
-                    <h1><b>Diagnosis</b></h1><p>(31)</p>
+                    <h1><b>Filter</b></h1><p>(31)</p>
                     
                   </CardBody>
                    <CardBody>

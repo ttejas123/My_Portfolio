@@ -33,6 +33,7 @@ import {
 } from 'reactstrap'
 import CardBody from 'reactstrap/lib/CardBody'
 import Topbar from '../Rfq7/topbar'
+import SubBar from '../Rfq7/subBar'
 
 // ** Bootstrap Checkbox Component
 const BootstrapCheckbox = forwardRef(({ onClick, ...rest }, ref) => (
@@ -241,9 +242,12 @@ const CartBuyer = () => {
           </Col>
         </Row> */}
         <Topbar/>
-        <CardAction color='primary' inverse className='text-truncate py-0'  actions='remove' >
+        <Card>
+        <SubBar cart='true' buttons='true'/>
+        <hr className='mb-0'/>
+        <CardAction color='primary' inverse className='text-truncate py-0'  actions='remove'>
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom pt-0'>
-          <CardTitle tag='h4'>MOQ 200 X Rs. 2000-5000 x</CardTitle>
+          <CardTitle tag='h4'>Home Decor Wall Hanging Painting (18)</CardTitle>
           <div className='d-flex mt-md-0 mt-1'>
             <Link to={`/master/branda/add`}>
                 <Button className='ml-2' color='primary' onClick={handleModal}>
@@ -267,6 +271,7 @@ const CartBuyer = () => {
           selectableRowsComponent={BootstrapCheckbox}
         />
         </CardAction>
+        </Card>
         </Fragment>
   )
 }

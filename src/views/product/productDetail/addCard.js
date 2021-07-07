@@ -81,7 +81,7 @@ const NumberInputBasic = () => {
             <NumberInput id='basic-number-input' value={count} onChange={count => setCount(count)} />
           </Col>
           <Col md='12' xs='12'>
-              <div className=" mb-2 mt-2 d-flex ">
+              <div className=" mb-0 mt-2 d-flex justify-content-between ">
                 <Button.Ripple tag={Link} to='/login' className='round' style={{width:"50%", marginRight: "10px"}} color='primary' outline>
                    Add To Cart
                 </Button.Ripple>
@@ -94,17 +94,9 @@ const NumberInputBasic = () => {
         </Row>
       </div>
 
-      <CardBody className="p-0 m-0 pl-2 pb-3">
-        <Row>
-
-          <Col md='6' xs='6'>
-              <a>Add to wishlist</a>
-          </Col>
-          <Col md='6' xs='6'>  
-              <a>Add to Compare</a>
-          </Col>
-          
-        </Row>
+      <CardBody className="d-flex justify-content-between">
+        <a style={{fontSize: "12px"}}>Add to wishlist</a>
+        <a style={{fontSize: "12px"}}>Add to Compare</a>
       </CardBody>
     </Card>
   )

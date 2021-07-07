@@ -14,7 +14,7 @@ import { handleLogout } from '@store/actions/auth'
 
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
-import { User, Mail, LogOut, CheckSquare, MessageSquare, Bell, Settings, CreditCard, HelpCircle, Power, ChevronDown } from 'react-feather'
+import { User, Mail, LogOut, CheckSquare, MessageSquare, Bell, Settings, CreditCard, HelpCircle, Box, ChevronDown, AlignJustify, ShoppingCart } from 'react-feather'
 
 // ** Default Avatar Image
 import defaultAvatar from '@src/assets/images/avatars/raviKukreja.jpg'
@@ -38,10 +38,10 @@ const CustomerDropDown = () => {
   const userAvatar = defaultAvatar
 
   return (
-    <UncontrolledDropdown tag='li' className='dropdown-user nav-item d-none d-lg-block'>
+    <UncontrolledDropdown tag='li' className='dropdown-user-left nav-item d-none d-lg-block'>
       <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
         <div className='user-nav d-sm-flex d-none'>
-          <span className=' font-weight-bold h6' style={{color:'black'}}>Customer</span> 
+          <span className=' font-weight-bold h6' style={{color:'black'}}>Cart</span> 
           {/* {(userData && userData['username']) || 'Ravi Kukreja'}
           <span className='user-status'> {(userData && userData.role) || 'Super Admin'}</span> */}
 
@@ -49,28 +49,21 @@ const CustomerDropDown = () => {
         {/* <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' /> */}
         <ChevronDown className='mr-1' size={15}/>
       </DropdownToggle>
-      <DropdownMenu right>
+
+      <DropdownMenu style={{marginTop: "-0.1rem"}}>
         
-        <DropdownItem tag={Link} to='/PReviewsle'>
-              <User size={14} className='mr-75' />
-              <span className='align-middle'>Profile</span>
+        <DropdownItem tag={Link} to='/cart-buyer'>
+              <AlignJustify size={14} className='mr-75' />
+              <span className='align-middle'>List</span>
         </DropdownItem>
         
-        <DropdownItem tag={Link} to='#'>
-          <Bell size={14} className='mr-75' />
-          <span className='align-middle'>Notification</span>
+        <DropdownItem tag={Link} to='/cart-page'>
+          <ShoppingCart size={14} className='mr-75' />
+          <span className='align-middle'>Buyer Cart</span>
         </DropdownItem>
-        <DropdownItem tag={Link} to='#'>
-          <CheckSquare size={14} className='mr-75' />
-          <span className='align-middle'>Report</span>
-        </DropdownItem>
-        <DropdownItem tag={Link} to='#'>
-          <MessageSquare size={14} className='mr-75' />
-          <span className='align-middle'>Status</span>
-        </DropdownItem>
-        <DropdownItem tag={Link} to='#'>
-          <LogOut size={14} className='mr-75' />
-          <span className='align-middle'>Logout</span>
+        <DropdownItem tag={Link} to='/create-cart'>
+          <Box size={14} className='mr-75' />
+          <span className='align-middle'>Create</span>
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>

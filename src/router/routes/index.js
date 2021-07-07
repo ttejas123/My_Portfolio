@@ -21,8 +21,16 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/topbar'))
   },
   {
-    path: '/serach-grid',
-    component: lazy(() => import('../../views/Rfq7/searchGrid.js'))
+    path: '/search-grid',
+    component: lazy(() => import('../../views/RFQ/searchGrid'))
+  },
+  {
+    path: '/cart-search',
+    component: lazy(() => import('../../views/RFQ/cartSearch.js'))
+  },
+  {
+    path: '/invoice-to-select',
+    component: lazy(() => import('../../views/RFQ/invoiceToSelect.js'))
   },
   {
     path: '/temp',
@@ -33,12 +41,20 @@ const Routes = [
     component: lazy(() => import('../../views/Home/index.js'))
   },
   {
+    path: '/aboutUs',
+    component: lazy(() => import('../../views/AboutUs/index.js'))
+  },
+  {
     path: '/create-cart',
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
   },
   {
     path: '/cart-buyer',
     component: lazy(() => import('../../views/RFQ/cartBuyer.js'))
+  },
+  {
+    path: '/cart-page',
+    component: lazy(() => import('../../views/RFQ/cartPage.js'))
   },
   {
     path: '/product/productDetails',

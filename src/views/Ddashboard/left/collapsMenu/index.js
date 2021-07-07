@@ -57,15 +57,45 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
               </Badge>
             </ListGroupItem>
             <ListGroupItem tag={Link} to='/search/searchPage' className='cursor-pointer'>
-              <span className="mr-1">Search Page</span>
+              <span >Search Page</span>
               
             </ListGroupItem>
             <ListGroupItem tag={Link} to='/Rfq7/rfqN' className='cursor-pointer'>
-              <span className="mr-1">RFQ</span>
+              <span >RFQ</span>
               
             </ListGroupItem>
             <ListGroupItem tag={Link} to='/product/productDetails' className='cursor-pointer'>
-              <span className="mr-1">Product Details</span>
+              <span >Product Details</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/seller/productGrid' className='cursor-pointer'>
+              <span >Seller Product Grid</span>
+              
+            </ListGroupItem>
+            
+            <ListGroupItem tag={Link} to='/search-grid' className='cursor-pointer'>
+              <span >Search Grid</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/cart-search' className='cursor-pointer'>
+              <span >Cart Search</span>
+              
+            </ListGroupItem>
+            
+            <ListGroupItem tag={Link} to='/invoice-to-select' className='cursor-pointer'>
+              <span >Invoice Select</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/create-cart' className='cursor-pointer'>
+              <span >Create Cart</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/cart-buyer' className='cursor-pointer'>
+              <span >Cart Buyer</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/cart-page' className='cursor-pointer'>
+              <span >Cart Page</span>
               
             </ListGroupItem>
             

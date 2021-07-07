@@ -19,13 +19,20 @@
     left: auto !important;
   }
 }
-
-.dropdown-user {
+.dropdown-user-left {
   .dropdown-menu {
-    left: auto !important;
+     left: 0% !important;
     right: 0;
   }
 }
+
+.dropdown-user {
+  .dropdown-menu {
+     left: auto !important;
+    right: 0;
+  }
+}
+
 
 // Global
 .dropdown-menu {
