@@ -53,6 +53,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
                 />
               </div>
             </div>
+            
     )
 }
 
