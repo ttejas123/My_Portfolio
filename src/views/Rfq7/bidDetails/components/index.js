@@ -18,6 +18,8 @@ import {
   DropdownItem,
   DropdownMenu,
   Label,
+  FormGroup,
+  CustomInput,
   Input
 } from 'reactstrap'
 
@@ -71,7 +73,13 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-    <h4>Air Jordan 300xs Shoes with korean style</h4>
+    <Col lg='9' className='p-0 d-lg-flex justify-content-between'>
+      <h4>Air Jordan 300xs Shoes with korean style</h4>
+      <div className='d-lg-flex text-right'>
+        <div className='mr-1'><b>Created Date:</b> 22-08-20</div>
+        <div><b>End Date :</b> 22-08-21</div>
+      </div>
+    </Col>
     <Row>    
       <Col className='d-flex align-items-center m-0 p-0' md='5' xs='12'>
         
@@ -122,21 +130,19 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
 
           <Col md='5' xs='12' className={edits  ? ("d-none") : ("d-block")}> 
             <div >
-              <Label><b>Enter MRP</b></Label><br />
-              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" placeholder="MRP" />
+              <Label>Enter Rate:-</Label><br />
+              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" />
             </div>
 
             <div style={{paddingTop: '5px'}}>
-              <Label><b>Enter MOQ</b></Label><br />
-              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" placeholder="Quantity" />
+              <Label>Enter Quantity:-</Label><br />
+              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" />
             </div>
 
             <div style={{paddingTop: '5px'}}>
-              <Label><b>Delivery Date</b></Label><br />
-              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" placeholder="Date" />
+              <Label>Delivery Date:-</Label><br />
+              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" />
             </div>
-
-            
           </Col>
         </Row>
         <hr />
@@ -147,13 +153,19 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
         <div style={{paddingTop: '5px'}}>
           <b>SKU:</b> <span style={{paddingLeft:"5px"}}>8DJ21A</span>
         </div>
+        <div style={{paddingTop: '5px'}}>
+          <b>Bill To:</b> <span style={{paddingLeft:"5px"}}>Navi Mumbai, Airoli, sector-15</span>
+        </div>
+        <div style={{paddingTop: '5px'}}>
+          <b>Ship to:</b> <span style={{paddingLeft:"5px"}}>Multiple</span>
+        </div>
 
         <hr />
 
         <div className=''>
-          <Button.Ripple className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
-          <Button.Ripple className='mr-1' onClick={ () => setedit(!edits)}><Edit size={14} /><span style={{paddingLeft: "4px"}}>Edit</span></Button.Ripple>
-          <Button.Ripple className='mr-1'><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
+          <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
+          <Button.Ripple color='primary' className='mr-1' onClick={ () => setedit(!edits)}><Edit size={14} /><span style={{paddingLeft: "4px"}}>Edit</span></Button.Ripple>
+          <Button.Ripple color='danger' className='mr-1'><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
         </div>
       </Col>
 
@@ -161,7 +173,27 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
           <CardText>
             Add your Required Customization
           </CardText>
-          <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Textarea' />
+          <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Customization' />
+          <div className={edits  ? ("d-none") : ("d-block")}> 
+            <div >
+              <Label>Billing Address:-</Label><br />
+              <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Billing Address' />
+            </div>
+
+            <div style={{paddingTop: '5px'}}>
+              <Label>Shipping Address:-</Label><br />
+              <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Shipping Address' />
+            </div>
+            <div className='divider ' style={{marginBottom: '7px'}}>
+              <div className='divider-text'>or</div>
+            </div>
+            <div style={{paddingTop: '5px'}}>
+               <FormGroup>
+                <Label for='exampleCustomFileBrowser'>Import Shipping Address</Label>
+                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+              </FormGroup>
+            </div>
+          </div>
       </Col>
       
     </Row>

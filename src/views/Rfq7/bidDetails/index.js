@@ -23,7 +23,7 @@ const [size, setSize] = useState([1, 2, 3, 4])
     <Fragment>
 
       <div className='pl-5 ml-5'>
-        <BreadCrumbs breadCrumbTitle='Bid Detail' breadCrumbParent='Home' breadCrumbChild='Bid List' breadCrumbActive='Bid Details' />
+        <BreadCrumbs breadCrumbTitle='Bid Create' breadCrumbParent='Home' breadCrumbChild='Bid Create' breadCrumbActive='Bid Details' />
       </div>
       <Row>
         <Col lg='1'></Col>
