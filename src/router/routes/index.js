@@ -113,6 +113,10 @@ const Routes = [
   {
     path: '/edit_customization',
     component: lazy(() => import('../../views/Rfq7/Customization_Edit'))
+  },
+  {
+    path: '/notification/all',
+    component: lazy(() => import('../../views/Notification/All'))
   }
 
 ]
