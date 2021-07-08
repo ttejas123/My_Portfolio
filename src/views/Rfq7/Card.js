@@ -594,7 +594,7 @@ const direction = 'ltr'
   <>
     <div className=''>
       <div className="mb-1">
-              <SubBar className='mb-2' rfq="true" buttons='true' createBtn='true' />
+              <SubBar className='' rfq="true" createBtn='true' />
       </div>
       <div className='checkout-items list-view' >
           { 

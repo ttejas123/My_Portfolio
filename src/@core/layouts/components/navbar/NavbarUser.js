@@ -62,7 +62,7 @@ const NavbarUser = props => {
         </NavItem>
       </ul>
       {/* <div className='bookmark-wrapper d-flex align-items-center'>
-        <NavItem className='d-none d-lg-block'>
+        <NavItem className='d-none d-lg-block '>
           <NavLink className='nav-link-style'>
             <ThemeToggler />
           </NavLink>
@@ -74,29 +74,29 @@ const NavbarUser = props => {
         <div style={{paddingTop:'7px'}}>
         <ProductDropDown />
         </div>
-        {/* <Button.Ripple tag={Link} to='/' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        {/* <Button.Ripple tag={Link} to='/' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Home</small> 
         </Button.Ripple> */}
-        {/* <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        {/* <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Search</small> 
         </Button.Ripple> */}
-        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
         </Button.Ripple>
-        <Button.Ripple tag={Link} to='/Rfq7/rfqN' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        <Button.Ripple tag={Link} to='/Rfq7/rfqN' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Bid</small> 
         </Button.Ripple>
-        <div style={{paddingTop:'7px'}} className='ml-2' >
+        <div style={{paddingTop:'7px'}} className='ml-lg-2' >
         <CustomerDropDown/>
         </div>
-        <Button.Ripple tag={Link} to='/aboutUs' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        <Button.Ripple tag={Link} to='/aboutUs' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>About Us</small> 
         </Button.Ripple>
            {/* <div className='' style={{width:'10%'}}>  
           <Input type='text' id='category' placeholder='' className='d-inline-block w-5' style={{width:'70%'}}/>
           <Search className='ml-1'/>
           </div>  */}
-        <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+        <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
         </Button.Ripple>
         {/*<LibraryDropDown/>*/}
@@ -106,7 +106,7 @@ const NavbarUser = props => {
           <small className='user-name font-weight-bold h6 ' style={{ color:'black'}}>Sign In</small> 
 
         </Button.Ripple>
-        <Button.Ripple  className='cursor-pointer d-none d-lg-block mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
+        <Button.Ripple  className='cursor-pointer d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
                 <Search size={18} />
         </Button.Ripple>
 
@@ -114,7 +114,7 @@ const NavbarUser = props => {
       </ul>
 {/*
       <div className='bookmark-wrapper d-flex align-items-left'>
-        <NavItem className='d-none d-lg-block'>
+        <NavItem className='d-none d-lg-block '>
           <NavLink className='nav-link-style'>
           
           </NavLink>

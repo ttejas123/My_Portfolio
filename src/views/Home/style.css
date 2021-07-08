@@ -117,5 +117,18 @@
 	.cardbackgroundImg{
 		height: 47vh;
 	}
+
+	.subbarCreateSection{
+		align-items: center !important;
+		justify-content: left !important;
+	}
 	
 }
+
+@media screen and (max-width: 767px) {
+	 .subbarCreateSection{
+		 align-items: center !important;
+		 justify-content: left !important;
+	 }
+	 
+ }
