@@ -110,7 +110,7 @@ const direction = 'ltr'
     const [OpenStyle, setOpenStyle] = useState(false)
           return (
             <>
-        <Card className='shadow' style={OpenStyle ? ({marginBottom:"0px" }) : ({marginBottom:"10px" })}>
+        <Card className='shadow' style={OpenStyle ? ({marginBottom:"10px" }) : ({marginBottom:"10px" })}>
           <div>
              <Row >
                 <Col lg='3' sm='3' xs='6' className="m-0 pl-3 mt-1 mb-1">
@@ -236,12 +236,13 @@ const direction = 'ltr'
                 </Row>
               </Card>
           </Col>
-        <div className='' >
-        <ChevronDown size={40} className='d-block mx-auto' style={{marginTop:-10, zIndex:1000}} onClick={() => setOpenStyle(!OpenStyle)}/>  
-        </div>
+          <Button.Ripple tag={Link} to='/rfq/rfqN/bidDetails' className='d-none d-lg-block m-0 p-0 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <ChevronDown  size={40} className='d-block mx-auto' style={{marginTop:-10, zIndex:1000}}/>
+        </Button.Ripple>
+        
     </Card>
        
-        <Col className={OpenStyle ? ("d-block ") : ("d-none")}>
+        <Col className={OpenStyle ? ("d-none ") : ("d-none")}>
           <Card className='shadow-none' style={OpenStyle ? ({marginBottom:"0px" }) : ({marginBottom:"0px" })}>               
                   <Row>
                   <Col lg='12'>

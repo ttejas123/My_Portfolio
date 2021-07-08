@@ -144,8 +144,10 @@ const SubBar = props => {
       {props.search ? (
            <Col md='3' sm='6'>
            <AlignJustify size={20}/>
+
            <Search className='ml-3' size={24} />
    <span className='font-weight-bold h3' style={{color : '#827071', paddingTop:10, marginLeft:'1rem'}}>Search Result</span>
+
    </Col>
       ) : null}
       

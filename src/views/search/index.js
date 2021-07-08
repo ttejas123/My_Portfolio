@@ -29,7 +29,7 @@ const Details = () => {
 
   return (
     <Fragment >
-    <div className="ml-lg-4 mr-lg-4">
+    <div style={{marginTop:"-1rem"}} className="ml-lg-4 mr-lg-4">
       <div className="ml-lg-5" >
         <BreadCrumbs  breadCrumbTitle='Search Page' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Search' />
       </div>

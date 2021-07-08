@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Card, CardHeader, CardTitle, CardBody } from 'reactstrap'
-import img1 from '@src/assets/images/logo/p3.jpg'
-import img2 from '@src/assets/images/logo/p2.jpg'
-import img3 from '@src/assets/images/logo/product.jpg'
+import img1 from '@src/assets/images/logo/ss3.jpg'
+import img2 from '@src/assets/images/logo/ss2.jpg'
+import img3 from '@src/assets/images/logo/ss5.jpg'
 // import img4 from '@src/assets/images/logo/p.jpg'
-import img4 from '@src/assets/images/logo/p4.jpg'
+import img4 from '@src/assets/images/logo/ss4.jpg'
 //import img5 from '@src/assets/images/logo/p4.jpg'
 
 

@@ -54,28 +54,15 @@ const toggle1 = tab => setActiveTab(tab)
   return (
     <Fragment className="addPadding m-0">
     
-      <div className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
+      <div style={{marginTop:"-1rem"}} className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
         <BreadCrumbs  breadCrumbTitle='Dashboard' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Dashboard' />
       </div>
-      <div >
-      <div id='user-profile'>
+      <div  >
+      <div className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" id='user-profile'>
         <Row>
           <Col md='12' xs='12'>   
                 <Card className='profile-header mb-2'>
-                    <div className="bannerss">
-                      <CardImg src={img}  className="img-fluid center-block center ssssss" alt='User Profile Image' top />
-                    </div>
-                    <div className='position-relative'>
-                      <div className='profile-img-container d-flex align-items-center'>
-                        <div className='profile ml-md-0 raviImge' >
-                          <img className='img-thumbnail img-responsive Col-md-3 ml-md-5 ' src={person} width="180" height="100"  />
-                        </div>
-                        <div className='profile-title' style={{marginLeft:"30px"}}>
-                          <h2 className='text-white'><b>Ravi Kukreja</b></h2>
-                          <p className='text-white'><b>Bidoya, pvt.</b></p>
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div className='profile-header-nav'>
                       <Navbar className='justify-content-end justify-content-md-between w-100' expand='md' light>
                         <Button color='' className='btn-icon navbar-toggler' onClick={toggle}>
@@ -83,9 +70,9 @@ const toggle1 = tab => setActiveTab(tab)
                         </Button>
                         <Collapse className='pl-md-0' isOpen={isOpen} navbar>
                           <div className='profile-tabs d-flex justify-content-between flex-wrap mt-1 mt-md-0'>
-                            <Nav className='mb-0 ml-md-0 pl-md-4' pills >
+                            <Nav className='mb-0 ml-md-0 ' pills >
 
-                              <NavItem className="pl-lg-4">
+                              <NavItem style={{paddingLeft: '5px'}}>
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
                                   <span className='d-none d-md-block'>Main</span>
                                   <Home className='d-block d-md-none' size={14} />
