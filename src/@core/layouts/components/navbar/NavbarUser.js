@@ -69,7 +69,7 @@ const NavbarUser = props => {
         </NavItem>
       </div> */}
       <ul className='nav navbar-nav align-items-center mx-auto'>
-         <IntlDropdown />
+         <IntlDropdown /> 
         {/* <NotificationDropdown /> */}
         <div style={{paddingTop:'7px'}}>
         <ProductDropDown />
@@ -122,6 +122,7 @@ const NavbarUser = props => {
       </div>*/}
         {  getStatus() ?  (<span className='pt-75'>
                <Bell size={30} className='mr-1'/>
+               {/* <NotificationDropdown></NotificationDropdown> */}
           {/* <Badge pill color='danger' className='badge-up'>
           5
          </Badge> */}
