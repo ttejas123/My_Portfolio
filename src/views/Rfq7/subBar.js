@@ -12,7 +12,7 @@ import { Card, CardBody, CardText, CardHeader, Button, Label, InputGroup, FormGr
 import logo from '@src/assets/images/logo/bidoyaLogo.png'
 import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
 import Avatar from '@components/avatar'
-
+import '../Home/style.css'
 // ** Styles
 import '@styles/base/pages/app-ecommerce.scss'
 // ** Custom Components
@@ -124,90 +124,25 @@ const SubBar = props => {
       return (
         <Card className='mb-0 shadow-none'>
 <CardBody className='py-0'>
-{/* <Row></Row> */}
-{/* <Col sm='12'>
-    <Row>
-      <Col md='3' sm='12'>
-          <div className='d-block my-auto'>
-      <img className='img-fluid d-block mx-auto mt-2' src={item.image} alt={item.name} height='200' width='200'/>
-      </div>
-      </Col>
-      <Col md='6' sm='12'>
-          <Row>
-              <Col md='8' sm='6'>
-              <FormGroup>
-          <Input type='text' id='category' placeholder='What are you looking for ?'  />
-        </FormGroup>
-              </Col>
-              <Col md='4' sm='6'>
-              <FormGroup>
-          <Input type='text' id='category' placeholder='Qty?'/>
-        </FormGroup>
-              </Col>
-              <Col md='10' sm='6'>
-              <FormGroup className='mt-1'>
-          <Input type='range' id='category' placeholder='Qty?'/>
-          <Label for='default-range' className='d-block'>
-              <span className='d-block mx-auto text-center font-weight-bold h6 font-italic'>
-              What is the budget per Unit?
-              </span>
-              </Label>
-        </FormGroup>
-              </Col>
-              <Col md='2' sm='6'>
-              <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
-                <Search size={18} />
-        </Button.Ripple>
-              </Col>
-          </Row>
-      </Col>
-
-      <Col md='3' sm='12'>
-          <div className=''>
-      <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link d-block mx-auto' onClick={e => e.preventDefault()}>
-          <div>
-          <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' />
-          <span className='user-name font-weight-bold ml-2'>{'Rajiv Ajmera'}</span>
-          </div>
-        <span className='user-status'>{'Buyer'}</span>
-      </DropdownToggle>
-      </div>
-      <div className='d-inline'>
-      <Button.Ripple className='' type='submit' color='primary'>
-      <ShoppingCart className='' size={14} />
-      <span className='font-weight-bold' style={{paddingLeft:10}}>Cart</span>
-        </Button.Ripple>
-      </div>
-      <div className='d-inline ml-2'>
-      <Button.Ripple className='' type='submit' color='primary'>
-      <Zap className='' size={18} />
-      <span className='font-weight-bold' style={{paddingLeft:10}}>RFQ</span>
-        </Button.Ripple>
-      </div>
-      </Col>
-      </Row>
-      </Col>
-      </Row>
-      <hr/> */}
       <Row className='mt-1'>
           <Col sm='12'>
               <Row>
                   {props.rfq ? (
-                      <Col md='2' sm='12'>
+                      <Col md='2' sm='6'>
                       <AlignJustify size={20}/>
                       <Zap className='ml-3' size={24} />
               <span className='font-weight-bold h3' style={{color : '#827071'}}>RFQ</span>
               </Col>
                   ) : null}
               {props.cart ? (
-                  <Col md='2' sm='12'>
+                  <Col md='2' sm='6'>
                   <AlignJustify size={20}/>
                   <ShoppingCart className='ml-3' size={24} />
           <span className='font-weight-bold h3 ml-1' style={{color : '#827071'}}>Cart</span>
           </Col>
               ) : null}
       {props.search ? (
-           <Col md='3' sm='12'>
+           <Col md='3' sm='6'>
            <AlignJustify size={20}/>
 
            <Search className='ml-3' size={24} />
@@ -216,7 +151,7 @@ const SubBar = props => {
    </Col>
       ) : null}
       
-      <Col md='6' lg='6'>
+      <Col md='6' lg='6' sm={props.buttons ? '12' : '0'}>
           {props.buttons ? (
               <Row>
               <Col md='4' sm='12'>
@@ -297,9 +232,9 @@ const SubBar = props => {
               </Row>
           ) : null}
       </Col>
-      <Col md={props.search ? '3' : '4'} sm='12' className='d-flex align-items-start justify-content-end'>
+      <Col md={props.search ? '3' : '4'} sm='12' className='d-flex align-items-start justify-content-end subbarCreateSection pb-1'>
           {props.createBtn ? (
-              <Button.Ripple className='ml-3 d-flex' onClick={() => view()} color='primary'>
+              <Button.Ripple className=' d-flex' onClick={() => view()} color='primary'>
                 <Plus className='' size={18} />
                 <span className='font-weight-bold'>Create</span>
               </Button.Ripple>

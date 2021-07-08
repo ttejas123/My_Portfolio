@@ -9,6 +9,14 @@ const DefaultRoute = '/home'
 // ** Merge Routes
 const Routes = [
   {
+    path: '/table/tables',
+    component: lazy(() => import('@src/views/invoice/list'))
+  },
+  {
+    path: '/tabless/tables1ss',
+    component: lazy(() => import('@src/views/invoice/list/dummyTable'))
+  },
+  {
     path: '/Rfq7/rfqN',
     component: lazy(() => import('../../views/Rfq7/rfqN'))
   },
@@ -61,8 +69,28 @@ const Routes = [
     component: lazy(() => import('../../views/product/productDetail'))
   },
   {
+    path: '/corporate/team',
+    component: lazy(() => import('../../views/Corporate/teamNDrights'))
+  },
+  {
+    path: '/corporate/role',
+    component: lazy(() => import('../../views/Corporate/teamNDrights/roles'))
+  },
+  {
+    path: '/corporate/signup',
+    component: lazy(() => import('../../views/Corporate/copSignup'))
+  },
+  {
+    path: '/corporate/signin',
+    component: lazy(() => import('../../views/Corporate/copSignin'))
+  },
+  {
     path: '/seller/productGrid',
     component: lazy(() => import('../../views/prodSellerGrid'))
+  },
+  {
+    path: '/rfq/rfqN/bidDetails',
+    component: lazy(() => import('../../views/Rfq7/bidDetails'))
   },
   {
     path: '/search/searchPage',
@@ -75,6 +103,18 @@ const Routes = [
   {
     path: '/create-cart',
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
+  },
+  {
+    path: '/seller/seller-edit',
+    component: lazy(() => import('../../views/Seller/SellerEdit'))
+  },
+  {
+    path: '/seller/create-product',
+    component: lazy(() => import('../../views/Seller/Products/productsNav'))
+  },
+  {
+    path: '/buyer/buyer-edit',
+    component: lazy(() => import('../../views/Buyer/BuyerEdit'))
   },
   {
     path: '/register',

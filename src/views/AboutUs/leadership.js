@@ -20,17 +20,17 @@ const Leadership = props => {
             <div className='w-100 text-center'>
             <p className=' mt-1 pb-1 ' style={{textAlign:'center'}}>
                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia commodo tristique. Cras rutrum sapien non augue venenatis blandit. Praesent ac ante eu lorem
-                                    {/* The fastest way to convert visitors into leads and sales on your website is with Social Proof Marketing. That's why 25,000+ businesses use Bidoya. */}
+                                    {/* The fastest way to convert visitors into leads and sales on your website is with Social Proof Marketing. That's why 125,000+ businesses use Bidoya. */}
                                     </p>
                                     </div>
                                     </div>
                                     </div>
                     <Row className=''>   
-                        <Col lg='2'>
+                        <Col lg='2' sm='2' md='2' xs='2'>
                         </Col>             
-                <Col lg='8'>
+                <Col lg='8' md='8' sm='8' xs='8'>
                     <Row>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>
@@ -44,7 +44,7 @@ const Leadership = props => {
           </CardBody>
         </Card>
                         </Col>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>
@@ -58,7 +58,7 @@ const Leadership = props => {
           </CardBody>
         </Card>
                         </Col>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>
@@ -72,7 +72,7 @@ const Leadership = props => {
           </CardBody>
         </Card>
                         </Col>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>
@@ -86,7 +86,7 @@ const Leadership = props => {
           </CardBody>
         </Card>
                         </Col>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>
@@ -100,7 +100,7 @@ const Leadership = props => {
           </CardBody>
         </Card>
                         </Col>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>
@@ -114,7 +114,7 @@ const Leadership = props => {
           </CardBody>
         </Card>
                         </Col>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>
@@ -128,7 +128,7 @@ const Leadership = props => {
           </CardBody>
         </Card>
                         </Col>
-                        <Col md='2' xs='2' lg='3'>
+                        <Col md='6' xs='12' lg='3'>
                         <Card>
           <CardImg top src={googleLogo} alt='Card cap' />
           <CardBody className='' style={{paddingLeft:'0.5rem'}}>

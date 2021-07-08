@@ -66,24 +66,6 @@ const SearchCard = () => {
                 </Col>
                 <Col lg='6'>
         <Card>
-            {/* <CardBody className='pb-0'> 
-                <CardTitle>
-                   <h3 className=' font-weight-bolder text-center' >What products do you want to procure today ?</h3>
-                </CardTitle>
-                <Row>
-                <Col lg='1'>
-                                </Col>
-                    <Col lg='7'>
-              <Input onChange={e => onChange(e)} placeholder='Ask a question...' />
-                    </Col>
-                    <Col lg='4'>
-                    <Button.Ripple className='mb-1  mr-0 ml-1' color='primary'>
-            <Search size={14} />
-          <small className='user-name font-weight-bold h6 ml-1 h4' style={{ color:'#ffffff'}}>Search</small> 
-              </Button.Ripple>
-                    </Col>
-                </Row>
-            </CardBody> */}
             <hr className='mt-0'/>
             <CardBody className=''>
             <CardTitle>
@@ -92,7 +74,7 @@ const SearchCard = () => {
             <Row className='px-2'>
               <Col md='8' sm='6'>
               <FormGroup>
-          <Input type='text' id='category' placeholder='Product Name'  />
+          <Input type='text' id='category' placeholder='Catalogue'  />
         </FormGroup>
               </Col>
               <Col md='4' sm='6'>

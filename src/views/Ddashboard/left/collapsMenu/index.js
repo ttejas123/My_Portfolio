@@ -47,7 +47,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-      <h4><b>Links</b></h4>
+      <h4><b>Dashboard</b></h4>
       <div>
           <ListGroup flush>
             <ListGroupItem tag={Link} to='/home' className='cursor-pointer'>

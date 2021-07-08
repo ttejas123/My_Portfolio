@@ -13,6 +13,8 @@ import { ThemeContext } from './utility/context/ThemeColors'
 // ** Spinner (Splash Screen)
 import Spinner from './@core/components/spinner/Fallback-spinner'
 
+// ** Fake Database
+import './@fake-db'
 // ** Ripple Button
 import './@core/components/ripple-button'
 

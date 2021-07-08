@@ -4,7 +4,6 @@ import { useState, useEffect, Fragment } from 'react'
 import Select from 'react-select'
 import { selectThemeColors, isObjEmpty } from '@utils'
 import CardAction from '@components/card-actions'
-
 // ** Third Party Components
 import classnames from 'classnames'
 import Flatpickr from 'react-flatpickr'
@@ -203,21 +202,21 @@ const [values, setValues] = useState(initialvalues)
       <Row>
       <Col lg='9' md='6' className='py-1'>
     <Row>
-        <Col md='1' sm='1'>
+        <Col md='1' sm='0' xs='0'>
         </Col>
-         <Col md='3' sm='12'>
+         <Col md='3' sm='11' xs='11' className='ml-1'>
         <FormGroup>
           <Label for='budgetPerUnit'>Budget Per Unit</Label>
           <Input type='text' id='budgetPerUnit' placeholder='Rs. 5000' />
         </FormGroup>
       </Col>  
-      <Col md='3' sm='12'>
+      <Col md='3' sm='11' xs='11' className='ml-1'>
         <FormGroup>
           <Label for='quantity'>Quantity</Label>
           <Input type='text' id='quantity' placeholder='500 units' />
         </FormGroup>
       </Col>  
-      <Col md='3' sm='12'>
+      <Col md='3' sm='11' xs='11' className='ml-1'>
         <FormGroup>
           <Label for='days'>Days</Label>
           <Input type='text' id='days' placeholder='120 days' />
@@ -227,7 +226,7 @@ const [values, setValues] = useState(initialvalues)
     <Row>
         <Col md='1' sm='1'>
         </Col>
-         <Col md='3' sm='12'>
+         <Col md='3' sm='11' xs='11' className='ml-1'>
         <FormGroup>
           {/* <Label for='budgetPerUnit'>Invoice Address</Label> */}
           <Select
@@ -252,7 +251,7 @@ const [values, setValues] = useState(initialvalues)
                     />
         </FormGroup>
       </Col>  
-      <Col md='3' sm='12'>
+      <Col md='3' sm='11' xs='11' className='ml-1'>
         <FormGroup>
           {/* <Label for='quantity'>Ship To Address</Label> */}
           <Select
@@ -277,7 +276,7 @@ const [values, setValues] = useState(initialvalues)
                     />
         </FormGroup>
       </Col>  
-      <Col md='3' sm='12'>
+      <Col md='3' sm='11' xs='11' className='ml-1'>
         <FormGroup  className='mb-0 mt-1'>
           <Label for='days'><span className='h6 ' style={{paddingTop:5}}>+ Add Ship To Address</span></Label>
          {/* <Input type='text' id='days' placeholder='120 days' /> */}
@@ -287,7 +286,7 @@ const [values, setValues] = useState(initialvalues)
     <Row>
         <Col md='1' sm='1'>
         </Col>
-         <Col md='10' sm='12'>
+         <Col md='10' sm='11' xs='11' className='ml-1'>
         <FormGroup>
           <Label for='budgetPerUnit'>Customization : <span style={{color:'#2876c6'}}>if required</span></Label>
           <Input type='textarea' id='budgetPerUnit' placeholder='Invoice Address' />
@@ -297,18 +296,18 @@ const [values, setValues] = useState(initialvalues)
         </Col>
         <Col lg='3' md='6' className=''>
      <Row>
-         <Col md='12' sm='12'>
+         <Col md='12' sm='12' xs='11' className='ml-1'>
              <span className='h4'>RFQ CLOSING</span>
          </Col>
      </Row>
      <Row>
-         <Col md='6' sm='5'>
+         <Col md='6' sm='5' className='ml-1'>
          <Fragment>
          <Label for='default-picker'>Date</Label>
       <Flatpickr className='form-control' value={picker} onChange={date => setPicker(date)} id='default-picker' />
         </Fragment>
          </Col>
-         <Col md='4' sm='5'>
+         <Col md='4' sm='5' className='ml-1'>
          <Fragment>
          <Label id='timepicker'>Time</Label>
       <Flatpickr
@@ -327,7 +326,7 @@ const [values, setValues] = useState(initialvalues)
          </Col>
      </Row>
      <Row>
-         <Col md='6' sm='6'>
+         <Col md='6' sm='6' className='ml-1'>
              <CardBody className='px-0'>
              <Button.Ripple color='secondary' outline>
              <div>
@@ -345,11 +344,11 @@ const [values, setValues] = useState(initialvalues)
          </Col>
      </Row>
      <Row>
-     <Col className='d-flex flex-sm-row flex-column mt-1' sm='12'>
-        <Button.Ripple className='mb-1 mr-0 mr-sm-1' type='submit' color='primary'>
+     <Col className='d-flex flex-sm-row flex-column mt-1' sm='12' xs='11'>
+        <Button.Ripple className='mb-1 mr-0 mr-sm-1 ml-lg-1' type='submit' color='primary'>
           Submit
         </Button.Ripple>
-        <Button.Ripple className='mb-1 mr-0 mr-sm-1' color='secondary' outline>
+        <Button.Ripple className='mb-1 mr-0 mr-sm-1 ml-lg-1' color='secondary' outline>
           Reset
         </Button.Ripple>
       </Col>

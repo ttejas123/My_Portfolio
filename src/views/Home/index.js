@@ -23,7 +23,6 @@ const Homepage = () => {
            <Testimonals/>
            <Marketting/>
            {/* <Header/> */}
-           <Footer/>
        </div>
     )
 }

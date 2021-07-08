@@ -54,7 +54,7 @@ import { Row, Col, CardBody } from 'reactstrap'
 import Avatar from '@components/avatar'
 import logo from '@src/assets/images/logo/logo.jpg'
 
-const Footer = () => {
+const OurFooter = () => {
   return (
     <div className='pt-5'   style={{
       // backgroundImage: `url(${require('@src/assets/images/banner/banner.png').default})`,
@@ -238,4 +238,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default OurFooter

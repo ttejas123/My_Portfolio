@@ -87,12 +87,13 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
 
     <>
     <Row>
-      <Col className='d-flex align-items-center justify-content-center m-0 p-0  mb-md-0 w-100' md='6' xs='12'>
-        <Col sm='9' className='m-0 p-0'>
+      <Col className='d-flex justify-content-center m-0 p-0  mb-md-0 ' md='5' xs='12'>
+        <Col sm='11' className='m-0 p-0'>
           <AutoG isRtl={isRtls} />
         </Col>
       </Col>
-      <Col md='3' xs='12'>
+
+      <Col md='4' xs='12'>
         <h4>Digital Thermometer X30-Pro</h4>
         <CardText tag='span' className='item-company'>
           By
@@ -148,7 +149,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
           <b>SKU:</b> <span style={{paddingLeft:"5px"}}>8DJ21A</span>
         </div>
 
-        <div className='auth-footer-btn d-flex justify-content-left mt-1 mb-1'>
+        <div className='auth-footer-btn d-flex justify-content-left mt-1 '>
               <Button.Ripple className='mr-1' style={{padding:"10px"}} color='facebook'>
                 <Facebook size={15} />
               </Button.Ripple>
