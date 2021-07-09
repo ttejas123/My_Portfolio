@@ -2,7 +2,8 @@
 const initialState = {
   events: [],
   selectedEvent: {},
-  selectedCalendars: ['Personal', 'Business', 'Family', 'Holiday', 'ETC']
+  selectedCalendars: ['payment','bid','profile']
+  
 }
 
 const notificationReducer = (state = initialState, action) => {
