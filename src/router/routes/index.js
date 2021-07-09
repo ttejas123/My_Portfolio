@@ -9,7 +9,7 @@ const DefaultRoute = '/home'
 // ** Merge Routes
 const Routes = [
   {
-    path: '/table/tables',
+    path: '/bids/response',
     component: lazy(() => import('@src/views/invoice/list'))
   },
   {
@@ -89,7 +89,7 @@ const Routes = [
     component: lazy(() => import('../../views/prodSellerGrid'))
   },
   {
-    path: '/rfq/rfqN/bidDetails',
+    path: '/bid/bidCreate',
     component: lazy(() => import('../../views/Rfq7/bidDetails'))
   },
   {
@@ -110,7 +110,7 @@ const Routes = [
   },
   {
     path: '/seller/create-product',
-    component: lazy(() => import('../../views/Seller/Products/productsNav'))
+    component: lazy(() => import('../../views/Seller/Products/CreateProduct'))
   },
   {
     path: '/buyer/buyer-edit',

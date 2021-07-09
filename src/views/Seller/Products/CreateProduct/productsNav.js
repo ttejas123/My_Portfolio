@@ -12,9 +12,9 @@ import { Card, CardHeader, CardTitle, Row, Col, Nav, NavItem, NavLink, TabConten
 import '@styles/react/apps/app-users.scss'
 import '@styles/react/libs/swiper/swiper.scss'
 import { useRTL } from '@hooks/useRTL'
-import ByUserTab from './CreateProduct/byUser'
-import FromExcelSheetTab from './CreateProduct/importFromExcel'
-import AsinImportTab from './CreateProduct/asinImport'
+import ByUserTab from './byUser'
+import FromExcelSheetTab from './importFromExcel'
+import AsinImportTab from './asinImport'
 const ProductNav = () => {
   // ** States & Vars
   const [activeTab, setActiveTab] = useState('1')

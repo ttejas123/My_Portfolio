@@ -69,14 +69,16 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
   return (
 
     <>
-     <h4 className='pl-1'>Digital Thermometer X30-Pro</h4>
+    <CardText  tag={Link} to='/product/productDetails' >
+            <h4 className="Col-5 text-truncate" tag={Link} to='/product/productDetails'>Men's Bouncer-01 Sports,Walking,Gym</h4>
+    </CardText>
     <Row>    
-      <Col className='d-flex align-items-center m-0 p-0' md='7' xs='12'>
+      <Col className='d-flex align-items-center m-0 p-0' md='12' xs='12'>
         
           <AutoG isRtl={isRtls} />
 
       </Col>
-      <Col md='5' xs='12'>
+      <Col md='12' xs='12'>
         
         <div className='  mt-1'>
           <ul className='unstyled-list list-inline '>
@@ -96,13 +98,15 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
         </div>
 
         <hr />
-
+        <div >
+          <span style={{paddingLeft:"5px"}}>MRP :₹ 1500 - 3400</span>
+        </div>
         <div style={{paddingTop: '5px'}}>
-          <Percent size={18} /> <span style={{paddingLeft:"5px"}}>Offer : 5%</span>
+          <Percent size={18} /> <span style={{paddingLeft:"5px"}}>Offer : 5% - 7%</span>
         </div>
 
         <div style={{paddingTop: '5px'}}>
-          <Box size={18} /> <span style={{paddingLeft:"5px"}}>MOQ : 100 Pcs</span>
+          <Box size={18} /> <span style={{paddingLeft:"5px"}}>MOQ : 100 -150 Pcs</span>
         </div>
 
         <div style={{paddingTop: '5px'}}>
@@ -110,14 +114,10 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
         </div>
 
         <div style={{paddingTop: '5px'}}>
-          <Truck size={18} /> <span style={{paddingLeft:"5px"}}>Delivery : 5 days</span>
+          <Truck size={18} /> <span style={{paddingLeft:"5px"}}>Delivery : 5 - 7 days</span>
         </div>
 
         <hr />
-        
-        <div style={{paddingTop: '5px'}}>
-          <b>Tag:</b> <span style={{paddingLeft:"5px"}}>Health, Thermometer</span>
-        </div>
         <div style={{paddingTop: '5px'}}>
           <b>SKU:</b> <span style={{paddingLeft:"5px"}}>8DJ21A</span>
         </div>
@@ -126,7 +126,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
 
         <div className='d-flex justify-content-between'>
           <Button.Ripple><Edit size={14} /><span style={{paddingLeft: "4px"}}>Edit</span></Button.Ripple>
-          <Button.Ripple><Zap size={14} /><span style={{paddingLeft: "4px"}}>RFQ</span></Button.Ripple>
+          <Button.Ripple tag={Link} to="/bid/bidCreate"><Zap size={14} /><span style={{paddingLeft: "4px"}}>Create Bid</span></Button.Ripple>
         </div>
         
       </Col>
