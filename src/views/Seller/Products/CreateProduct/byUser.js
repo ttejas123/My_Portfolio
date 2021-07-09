@@ -1,28 +1,75 @@
 // ** React Imports
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import Uppy from '@uppy/core'
 import thumbnailGenerator from '@uppy/thumbnail-generator'
 import { DragDrop } from '@uppy/react'
+import AutoComplete from '@components/autocomplete'
 // ** Custom Components
+import { toast } from 'react-toastify'
 import Avatar from '@components/avatar'
 import Select from 'react-select'
 import { selectThemeColors, isObjEmpty } from '@utils'
-
+import WarehouseAddressCard from './warehouseCard'
 
 import 'uppy/dist/uppy.css'
 import '@uppy/status-bar/dist/style.css'
 import '@styles/react/libs/file-uploader/file-uploader.scss'
 
 // ** Third Party Components
-import { Box,  AtSign } from 'react-feather'
+import { Box,  AtSign, Aperture, Check } from 'react-feather'
 import { Media, Row, Col, Button, Form, Input, Label, FormGroup, Table, CustomInput, Card, CardHeader, CardTitle, CardBody } from 'reactstrap'
 
+const ErrorToast = () => (
+  <Fragment>
+   <div className='toastify-header'>
+      <div className='title-wrapper'>
+        <Avatar size='sm' color='success' icon={<Check size={12} />} />
+        <h6 className='toast-title'>Success!</h6>
+      </div>
+      <small className='text-muted'>Just now</small>
+    </div>
+    <div className='toastify-body'>
+      <span role='img' aria-label='toast-text'>
+        Thanks for Submitting, We will verify your product within 48 hrs
+      </span>
+    </div>
+  </Fragment>
+)
+
 const ByUserTab = () => {
+  const WarehouseAddress = {
+    title : '1',
+    shopName: "Eagles",
+    shopNumber: "A/35, 0/4",
+    streetName: "sector-15",
+    pincode: 400708,
+    state: "Maharashtra",
+    city: "Airoli",
+    country: "India"
+  }
     const optionCategory = [
         {value: "Electronics", label: "Electronics", id:0},
         {value: "Clothing", label: "clothing", id:1},
         {value: "Footwear", label: "Footwear", id:2}
       ]
+      const [suggestions] = useState([
+        {
+          title: 'Electronics'
+        },
+        {
+          title: 'Clothing'
+        },
+        {
+          title: 'Footwear'
+        },
+        {
+          title: 'Stationery'
+        },
+        {
+          title: 'Handmade'
+        }
+      ])
+    
     const optionBrandSelection = [
         {value: "Google", label: "Google"},
         {value: "Amazon", label: "Amazon"},
@@ -231,7 +278,7 @@ const ByUserTab = () => {
           <Col md='4' sm='12'>
       <FormGroup>
               <Label for='Category'>Category</Label>
-            <Select
+            {/* <Select
               id='Category'
               className='react-select'
               classNamePrefix='select'
@@ -252,10 +299,20 @@ const ByUserTab = () => {
                                 //   )
                                 }
                         }
+            /> */}
+            <AutoComplete
+              suggestions={suggestions}
+              className='form-control'
+              filterKey='title'
+              suggestionLimit={4}
+              placeholder="Search Category"
+              onChange = {() => {
+                setFields(true)
+              }}
             />
             </FormGroup> 
       </Col>
-      <Col md='4' sm='12'>
+      {/* <Col md='4' sm='12'>
       <FormGroup>
               <Label for='SubCategory'>Sub Category</Label>
             <Select
@@ -278,12 +335,12 @@ const ByUserTab = () => {
                         }
             />
             </FormGroup> 
-            </Col>
+            </Col> */}
             </Row>
             {
                 fields ? (
                     <Row>
-                    <Col sm='12'>
+                    <Col sm='12' className='mt-2'>
                   <h4 className='d-block mb-1'>
                     <Box size={20} className='mr-50' />
                     <span className='align-middle'>General Information</span>
@@ -313,7 +370,7 @@ const ByUserTab = () => {
                   <Input type='text' id='hsnCode' placeholder='HSN Code' defaultValue={userData && userData.hsnCode} />
                 </FormGroup>
               </Col>
-              <Col md='4' sm='12'>
+              {/* <Col md='4' sm='12'>
                 <FormGroup>
                   <Label for='sGstNumber'>SGST (%)</Label>
                   <Input type='text' id='sGstNumber' placeholder='SGST (%)' defaultValue={userData && userData.gstNumber} />
@@ -324,35 +381,17 @@ const ByUserTab = () => {
                   <Label for='cGstNumber'>CGST (%)</Label>
                   <Input type='text' id='cGstNumber' placeholder='CGST (%)' defaultValue={userData && userData.gstNumber} />
                 </FormGroup>
-              </Col>
+              </Col> */}
               <Col md='4' sm='12'>
                 <FormGroup>
-                  <Label for='iGstNumber'>IGST (%)</Label>
-                  <Input type='text' id='iGstNumber' placeholder='IGST (%)' defaultValue={userData && userData.gstNumber} />
+                  <Label for='gstNumber'>GST (%)</Label>
+                  <Input type='text' id='gstNumber' placeholder='GST (%)' defaultValue={userData && userData.gstNumber} />
                 </FormGroup>
               </Col>
               <Col md='4' sm='12'>
                 <FormGroup>
                   <Label for='mrp'>MRP</Label>
                   <Input type='text' id='mrp' placeholder='Mrp' defaultValue={userData && userData.mrp} />
-                </FormGroup>
-              </Col>
-              <Col md='4' sm='12'>
-                <FormGroup>
-                  <Label for='moq'>MOQ</Label>
-                  <Input type='text' id='moq' placeholder='MOQ' defaultValue={userData && userData.mrp} />
-                </FormGroup>
-              </Col>
-              <Col md='4' sm='12'>
-                <FormGroup>
-                  <Label for='rate'>Rate</Label>
-                  <Input type='text' id='rate' placeholder='Rate' defaultValue={userData && userData.mrp} />
-                </FormGroup>
-              </Col>
-              <Col md='4' sm='12'>
-                <FormGroup>
-                  <Label for='lead'>Lead</Label>
-                  <Input type='text' id='lead' placeholder='lead' defaultValue={userData && userData.mrp} />
                 </FormGroup>
               </Col>
                     <Col md='4' sm='12'>
@@ -388,6 +427,32 @@ const ByUserTab = () => {
                   <Input type='textarea' id='description' placeholder='Description' defaultValue={userData && userData.description} />
                 </FormGroup>
               </Col>
+              <Col sm='12' className='mb-2 mt-2'>
+                  <h4 className='d-block mb-1'>
+                    < Aperture size={20} className='mr-50' />
+                    <span className='align-middle'>Bid Details</span>
+                  </h4>
+                  <Row>
+                  <Col md='4' sm='12'>
+                <FormGroup>
+                  <Label for='moq'>MOQ</Label>
+                  <Input type='text' id='moq' placeholder='MOQ' defaultValue={userData && userData.mrp} />
+                </FormGroup>
+              </Col>
+              <Col md='4' sm='12'>
+                <FormGroup>
+                  <Label for='rate'>Rate</Label>
+                  <Input type='text' id='rate' placeholder='Rate' defaultValue={userData && userData.mrp} />
+                </FormGroup>
+              </Col>
+              <Col md='4' sm='12'>
+                <FormGroup>
+                  <Label for='lead'>Lead</Label>
+                  <Input type='text' id='lead' placeholder='lead' defaultValue={userData && userData.mrp} />
+                </FormGroup>
+              </Col>
+                  </Row>
+              </Col> 
               <Col sm='12'>
                   <h4 className='d-block mb-1'>
                     < AtSign size={20} className='mr-50' />
@@ -427,6 +492,66 @@ const ByUserTab = () => {
                         </Col>
                   </Row>
               </Col> 
+              <Col sm='12' className='mb-2 mt-2'>
+                  <h4 className='d-block mb-1'>
+                    < Aperture size={20} className='mr-50' />
+                    <span className='align-middle'>Value Added Services</span>
+                  </h4>
+                  <Row>
+                        <Col md='4' sm='12'>
+                        <FormGroup >
+                                    <CustomInput  type='checkbox' id='isSamplingAvailable' label='Is Sampling Available' />
+                            </FormGroup>
+                        </Col>
+                        <Col md='4' sm='12'>
+                            <FormGroup >
+                                    <CustomInput  type='checkbox' id='isCustomizationAvailable' label='Is Customization Available' />
+                            </FormGroup> 
+                        </Col>
+                  </Row>
+              </Col> 
+              <Col sm='12' className='mb-2 mt-2'>
+                  <h4 className='d-block mb-1'>
+                    < Aperture size={20} className='mr-50' />
+                    <span className='align-middle'>Inventory</span>
+                  </h4>
+                  <Row>
+                  <Col md='4' sm='12'>
+                    <FormGroup>
+                      <Label for='inventory'>Total Inventory</Label>
+                      <Input type='text' id='inventory' placeholder='Inventory' defaultValue={userData && userData.gstNumber} />
+                    </FormGroup>
+                  </Col>     
+                  </Row>
+                  <CardBody>
+                <Row>
+                  <Col md='3' sm='12'>
+                    <FormGroup>
+                          <WarehouseAddressCard Address={WarehouseAddress}/>
+                      <Input type='text' id='inventory' placeholder='Inventory' defaultValue={userData && userData.gstNumber} />
+                    </FormGroup>
+                  </Col>   
+                  <Col md='3' sm='12'>
+                    <FormGroup>
+                          <WarehouseAddressCard Address={WarehouseAddress}/>
+                      <Input type='text' id='inventory' placeholder='Inventory' defaultValue={userData && userData.gstNumber} />
+                    </FormGroup>
+                  </Col>   
+                  <Col md='3' sm='12'>
+                    <FormGroup>
+                          <WarehouseAddressCard Address={WarehouseAddress}/>
+                      <Input type='text' id='inventory' placeholder='Inventory' defaultValue={userData && userData.gstNumber} />
+                    </FormGroup>
+                  </Col>   
+                  <Col md='3' sm='12'>
+                    <FormGroup>
+                          <WarehouseAddressCard Address={WarehouseAddress}/>
+                      <Input type='text' id='inventory' placeholder='Inventory' defaultValue={userData && userData.gstNumber} />
+                    </FormGroup>
+                  </Col>   
+                  </Row>
+                  </CardBody>  
+              </Col> 
                   <Col sm='12'>
                   <h4 className='d-block mb-1'>
                     <Box size={20} className='mr-50' />
@@ -462,7 +587,7 @@ const ByUserTab = () => {
               </CardBody>
               </Col>
                     <Col className='d-flex flex-sm-row flex-column mt-2' sm='12'>
-                      <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' type='submit' color='primary'>
+                      <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' type='submit' color='primary' onClick={() => toast.error(<ErrorToast />, { hideProgressBar: true })}>
                         Save Changes
                       </Button.Ripple>
                       <Button.Ripple color='secondary' outline>

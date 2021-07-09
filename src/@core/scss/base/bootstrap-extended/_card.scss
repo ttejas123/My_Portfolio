@@ -4,8 +4,10 @@
   box-shadow: $box-shadow;
   transition: all 0.3s ease-in-out, background 0s, color 0s, border-color 0s;
   .card {
-    box-shadow: none !important;
+    box-shadow: $box-shadow;
+    // box-shadow: none !important;
   }
+ 
   .card-title {
     font-weight: 500;
     font-size: 1.285rem;

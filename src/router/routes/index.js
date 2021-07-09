@@ -110,7 +110,7 @@ const Routes = [
   },
   {
     path: '/seller/create-product',
-    component: lazy(() => import('../../views/Seller/Products/productsNav'))
+    component: lazy(() => import('../../views/Seller/Products/CreateProduct'))
   },
   {
     path: '/buyer/buyer-edit',
