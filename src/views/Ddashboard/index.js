@@ -48,7 +48,7 @@ import InfoCard from './dashboardComponent/index'
 const Details = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
-   const [activeTab, setActiveTab] = useState('1')
+  const [activeTab, setActiveTab] = useState('1')
 const toggle1 = tab => setActiveTab(tab)
 
   return (
@@ -126,9 +126,6 @@ const toggle1 = tab => setActiveTab(tab)
                               <Team />
                             </TabPane>
                             
-                            {/* <TabPane tabId='3'>
-                              <FromOtherSitesTab />
-                            </TabPane> */}
                           </TabContent>
                   </Col>
               

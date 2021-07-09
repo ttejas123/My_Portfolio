@@ -21,13 +21,9 @@ const Details = () => {
 const [size, setSize] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
   return (
     <Fragment>
-
-      <div className='pl-5 ml-5'>
-        <BreadCrumbs breadCrumbTitle='Product Seller Gride' breadCrumbParent='Seller' breadCrumbChild='Product' breadCrumbActive='Product Grid' />
-      </div>
       <Row>
-        <Col lg='1'></Col>
-        <Col lg='10'>
+       
+        <Col lg='12'>
           <Row>
             {size.map((val) => {
                 return (
@@ -43,7 +39,7 @@ const [size, setSize] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
             })}          
           </Row>
         </Col>
-        <Col lg='1'></Col>
+        
       </Row>
     </Fragment>
   )

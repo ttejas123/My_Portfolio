@@ -28,6 +28,8 @@ import {
   Edit,
   Trash,
   Copy,
+  Check,
+  X,
   CheckCircle,
   Save,
   ArrowDownCircle,
@@ -71,48 +73,70 @@ export const columns = [
       return (
         <div className='align-items-center'>
           <div className='d-flex flex-column'>
-            <h6 className='user-name text-truncate mb-0 w-75 text-truncate'>{name}</h6>
+            <div className='user-name text-truncate mb-0 w-75 text-truncate'>{name}</div>
           </div>
         </div>
       )
     }
   },
   {
-    name: 'Series',
+    name: 'SKU ID',
     minWidth: '150px',
-    selector: 'Series',
+    selector: 'SKU_ID',
     sortable: true,
     cell: row => {
-      const name = row.client ? row.client.name : 'John Doe',
-        email = row.client ? row.client.companyEmail : 'johnDoe@email.com'
       return (
-        <Badge color='light-success' pill>
-          {row.Series}
-        </Badge>
+        <div>
+          {row.SKU_ID}
+        </div>
       )
     }
   },
   {
-    name: 'Brand',
+    name: 'Lead Time',
     minWidth: '150px',
-    selector: 'brand',
+    selector: 'Lead_time',
     sortable: true,
     cell: row => {
-      const name = row.brand ? row.brand : 'No Brand!!'
       return (
         <div className='align-items-center'>
           <div className='d-flex flex-column'>
-            <h6 className='user-name text-truncate mb-0'>{name}</h6>
+            <div className='user-name text-truncate mb-0'>{row.Lead_time}</div>
           </div>
         </div>
       )
     }
   },
   {
-    name: 'Thumbnail',
-    minWidth: '170px',
+    name: 'Rate',
+    minWidth: '150px',
     selector: 'client',
     sortable: true,
+    cell: row => {
+      return (
+        <div className=' align-items-center'>
+          <div className='user-name text-truncate mb-0'> ₹{row.Rate}</div>
+        </div>
+      )
+    }
+  },
+  {
+    name: 'MOQ',
+    minWidth: '150px',
+    selector: 'MOQ',
+    sortable: true
+  },
+  {
+    name: 'BUIN',
+    selector: 'BUIN',
+    sortable: true,
+    minWidth: '150px'
+  },
+  {
+    name: 'Photo',
+    selector: 'releaseDate',
+    sortable: false,
+    minWidth: '200px',
     cell: row => {
       const avatar = row.avatar1 ? row.avatar1 : Gal
       return (
@@ -123,50 +147,39 @@ export const columns = [
     }
   },
   {
-    name: 'Project Lead',
-    minWidth: '250px',
-    selector: 'client',
+    name: 'Customization',
+    selector: 'balance',
     sortable: true,
+    minWidth: '150px',
     cell: row => {
-      const name = row.client ? row.client.name : 'John Doe',
-        email = row.client ? row.client.companyEmail : 'johnDoe@email.com'
       return (
-        <div className='d-flex justify-content-left align-items-center'>
-          {renderClient(row)}
-          <div className='d-flex flex-column'>
-            <h6 className='user-name text-truncate mb-0'>{name}</h6>
-            <small className='text-truncate text-muted mb-0'>{email}</small>
-          </div>
-        </div>
+         <Check className='ml-1' size={18} />
       )
     }
   },
   {
-    name: 'Total',
-    selector: 'total',
+    name: 'Inspection',
+    selector: 'balance',
     sortable: true,
     minWidth: '150px',
-    cell: row => <span>${row.total || 0}</span>
+    cell: row => {
+      return row.inspection === 0 ? (
+        <Check className='ml-1' size={18} />
+      ) : (
+        <X className='ml-1' size={18}/>
+      )
+    }
   },
   {
-    name: 'release date',
-    selector: 'releaseDate',
-    sortable: true,
-    minWidth: '200px',
-    cell: row => row.releaseDate
-  },
-  {
-    name: 'Project Status',
+    name: 'Sampling',
     selector: 'balance',
     sortable: true,
     minWidth: '164px',
     cell: row => {
-      return row.balance !== 0 ? (
-        <span>{row.balance}</span>
+      return row.sampling === true ? (
+        <Check className='ml-1' size={18} />
       ) : (
-        <Badge color='light-success' pill>
-          Paid
-        </Badge>
+        <X className='ml-1' size={18}/>
       )
     }
   },
@@ -177,11 +190,8 @@ export const columns = [
     sortable: true,
     cell: row => (
       <div className='column-action d-flex align-items-center'>
-        <Send size={17} id={`send-tooltip-${row.id}`} />
-        <UncontrolledTooltip placement='top' target={`send-tooltip-${row.id}`}>
-          Send Mail
-        </UncontrolledTooltip>
-        <Link to={`/apps/invoice/preview/${row.id}`} id={`pw-tooltip-${row.id}`}>
+      
+        <Link to={`/rfq/rfqN/bidDetails`} id={`pw-tooltip-${row.id}`}>
           <Eye size={17} className='mx-1' />
         </Link>
         <UncontrolledTooltip placement='top' target={`pw-tooltip-${row.id}`}>
@@ -192,10 +202,7 @@ export const columns = [
             <MoreVertical size={17} className='cursor-pointer' />
           </DropdownToggle>
           <DropdownMenu right>
-            <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
-              <Download size={14} className='mr-50' />
-              <span className='align-middle'>Download</span>
-            </DropdownItem>
+            
             <DropdownItem tag={Link} to={`/apps/invoice/edit/${row.id}`} className='w-100'>
               <Edit size={14} className='mr-50' />
               <span className='align-middle'>Edit</span>
@@ -212,10 +219,7 @@ export const columns = [
               <Trash size={14} className='mr-50' />
               <span className='align-middle'>Delete</span>
             </DropdownItem>
-            <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
-              <Copy size={14} className='mr-50' />
-              <span className='align-middle'>Duplicate</span>
-            </DropdownItem>
+            
           </DropdownMenu>
         </UncontrolledDropdown>
       </div>
