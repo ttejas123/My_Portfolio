@@ -51,11 +51,11 @@ const NumberInputBasic = props => {
           </Col>
           <Col md='12' xs='12'>
               <div className="p-0 m-0 mb-2 mt-2 d-flex">
-                <Button.Ripple tag={Link} to='/login' className='round' style={{width:"50%", marginRight: "10px"}} color='primary' outline>
+                <Button.Ripple tag={Link} to='/login' className='round' style={{width:"50%", marginRight: "10px", fontSize: '11px'}} color='primary' outline>
                    Add To Cart
                 </Button.Ripple>
-                <Button.Ripple tag={Link} to='/login' className='round' style={{width:"50%"}} color='primary' outline>
-                   Create RFQ
+                <Button.Ripple tag={Link} to='/bid/bidCreate' className='round' style={{width:"50%", fontSize: '11px'}} color='primary' outline>
+                   Create Bid
                 </Button.Ripple>
               </div> 
           </Col>

@@ -27,16 +27,16 @@ const SwiperAutoplay = ({ isRtl }) => {
       <CardBody className='m-0 p-0'>
         <Swiper  dir={isRtl ? 'rtl' : 'ltr'} {...params}>
           <SwiperSlide>
-            <img src={img1} alt='swiper 1' className='img-fluid m-0 p-0' />
+            <img src={img1} style={{height: '50vh', width: '100%'}} alt='swiper 1' className='img-fluid m-0 p-0' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={img2} alt='swiper 2' className='img-fluid m-0 p-0' />
+            <img src={img2} style={{height: '50vh', width: '100%'}} alt='swiper 2' className='img-fluid m-0 p-0' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={img3} alt='swiper 3' className='img-fluid m-0 p-0' />
+            <img src={img3} style={{height: '50vh', width: '100%'}} alt='swiper 3' className='img-fluid m-0 p-0' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={img4} alt='swiper 4' className='img-fluid m-0 p-0' />
+            <img src={img4} style={{height: '50vh', width: '100%'}} alt='swiper 4' className='img-fluid m-0 p-0' />
           </SwiperSlide>
          
         </Swiper>
