@@ -6,7 +6,7 @@ const data = {
     {
       id: 4987,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -14,7 +14,7 @@ const data = {
       inspection:true,
       sampling: true,
       brand: "Nike",
-      releaseDate: '13 Dec 2019',
+      releaseDate: '5 days',
       client: {
         address: '7777 Mendez Plains',
         company: 'Hall-Robbins PLC',
@@ -34,7 +34,7 @@ const data = {
     {
       id: 4988,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -62,7 +62,7 @@ const data = {
     {
       id: 4989,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -90,7 +90,7 @@ const data = {
     {
       id: 4990,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -118,7 +118,7 @@ const data = {
     {
       id: 4991,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -146,7 +146,7 @@ const data = {
     {
       id: 4992,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -174,7 +174,7 @@ const data = {
     {
       id: 4993,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -202,7 +202,7 @@ const data = {
     {
       id: 4994,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -230,7 +230,7 @@ const data = {
     {
       id: 4995,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -258,7 +258,7 @@ const data = {
     {
       id: 4996,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -286,7 +286,7 @@ const data = {
     {
       id: 4997,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -314,7 +314,7 @@ const data = {
     {
       id: 4998,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -342,7 +342,7 @@ const data = {
     {
       id: 4999,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -370,7 +370,7 @@ const data = {
     {
       id: 5000,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -398,7 +398,7 @@ const data = {
     {
       id: 5001,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -426,7 +426,7 @@ const data = {
     {
       id: 5002,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -454,7 +454,7 @@ const data = {
     {
       id: 5003,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -482,7 +482,7 @@ const data = {
     {
       id: 5004,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -510,7 +510,7 @@ const data = {
     {
       id: 5005,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -538,7 +538,7 @@ const data = {
     {
       id: 5006,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -566,7 +566,7 @@ const data = {
     {
       id: 5007,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -594,7 +594,7 @@ const data = {
     {
       id: 5008,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -622,7 +622,7 @@ const data = {
     {
       id: 5009,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -650,7 +650,7 @@ const data = {
     {
       id: 5010,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -678,7 +678,7 @@ const data = {
     {
       id: 5011,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -706,7 +706,7 @@ const data = {
     {
       id: 5012,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -734,7 +734,7 @@ const data = {
     {
       id: 5013,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -762,7 +762,7 @@ const data = {
     {
       id: 5014,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -790,7 +790,7 @@ const data = {
     {
       id: 5015,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -818,7 +818,7 @@ const data = {
     {
       id: 5016,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -846,7 +846,7 @@ const data = {
     {
       id: 5017,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -874,7 +874,7 @@ const data = {
     {
       id: 5018,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -902,7 +902,7 @@ const data = {
     {
       id: 5019,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -930,7 +930,7 @@ const data = {
     {
       id: 5020,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -958,7 +958,7 @@ const data = {
     {
       id: 5021,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -986,7 +986,7 @@ const data = {
     {
       id: 5022,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1014,7 +1014,7 @@ const data = {
     {
       id: 5023,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1042,7 +1042,7 @@ const data = {
     {
       id: 5024,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1070,7 +1070,7 @@ const data = {
     {
       id: 5025,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1098,7 +1098,7 @@ const data = {
     {
       id: 5026,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1126,7 +1126,7 @@ const data = {
     {
       id: 5027,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1154,7 +1154,7 @@ const data = {
     {
       id: 5028,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1182,7 +1182,7 @@ const data = {
     {
       id: 5029,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1210,7 +1210,7 @@ const data = {
     {
       id: 5030,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1238,7 +1238,7 @@ const data = {
     {
       id: 5031,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1266,7 +1266,7 @@ const data = {
     {
       id: 5032,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1294,7 +1294,7 @@ const data = {
     {
       id: 5033,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1322,11 +1322,11 @@ const data = {
     {
       id: 5034,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
-      custom:true,
+      custom:false,
       inspection:true,
       sampling: true,
       brand: "Canvas",
@@ -1350,7 +1350,7 @@ const data = {
     {
       id: 5035,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '7 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
@@ -1378,11 +1378,11 @@ const data = {
     {
       id: 5036,
       SKU_ID: "#sku5643",
-      Lead_time: '13 Dec 2019',
+      Lead_time: '5 days',
       Rate: '5000',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
-      custom:true,
+      custom:false,
       inspection:true,
       sampling: true,
       brand: "Nike",

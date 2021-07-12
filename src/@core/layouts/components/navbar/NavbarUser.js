@@ -14,6 +14,7 @@ import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
 import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, DropdownToggle } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
+import MissL from './missL'
 import SearchCardss from './searchC'
 import LibraryDropDown from './LibraryDropDown'
 import ResourcesDropDown from './ResourcesDropDown'
@@ -61,25 +62,14 @@ const NavbarUser = props => {
           </NavLink>
         </NavItem>
       </ul>
-      {/* <div className='bookmark-wrapper d-flex align-items-center'>
-        <NavItem className='d-none d-lg-block '>
-          <NavLink className='nav-link-style'>
-            <ThemeToggler />
-          </NavLink>
-        </NavItem>
-      </div> */}
+      
       <ul className='nav navbar-nav align-items-center mx-auto'>
          <IntlDropdown />
-        {/* <NotificationDropdown /> */}
+       
         <div style={{paddingTop:'7px'}}>
         <ProductDropDown />
         </div>
-        {/* <Button.Ripple tag={Link} to='/' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Home</small> 
-        </Button.Ripple> */}
-        {/* <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Search</small> 
-        </Button.Ripple> */}
+       
         <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
         </Button.Ripple>
@@ -87,7 +77,7 @@ const NavbarUser = props => {
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Bid</small> 
         </Button.Ripple>
         <div style={{paddingTop:'7px'}} className='ml-lg-2' >
-        <CustomerDropDown/>
+            <CustomerDropDown/>
         </div>
         <Button.Ripple tag={Link} to='/aboutUs' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>About Us</small> 
@@ -109,6 +99,9 @@ const NavbarUser = props => {
         <Button.Ripple  className='cursor-pointer d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
                 <Search size={18} />
         </Button.Ripple>
+        <div style={{paddingTop:'7px'}} className='ml-lg-2' >
+            <MissL/>
+        </div>
 
       
       </ul>
@@ -136,8 +129,8 @@ const NavbarUser = props => {
         {/* <span className='user-status'>{'Buyer'}</span> */}
       </div>
 ) : (
-  <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
-  <small className='user-name font-weight-bold h6' style={{ color:'black'}}>Request a demo</small> 
+  <Button.Ripple style={{fontSize: "5px"}} className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
+  <small className='user-name font-weight-bold h6' style={{ color:'black', fontSize: "12px"}}>Request a demo</small> 
 </Button.Ripple>
 )}
       <SearchCardss open={modal} handleModal={handleModal} className="d-none" />
