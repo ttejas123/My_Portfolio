@@ -6,7 +6,7 @@ import {
   Col
 } from 'reactstrap'
 import {
- 
+  fetchEvents,
   updateFilter,
   updateAllFilters
 
@@ -16,40 +16,24 @@ import Content from './Content'
 
 import BreadCrumbs from '@components/breadcrumbs'
 
-import '@styles/react/libs/swiper/swiper.scss'
+// ** Store & Actions
+import { useSelector, useDispatch } from 'react-redux'
 
+import '@styles/react/libs/swiper/swiper.scss'
+import {
+  getNotifications
+} from './store/actions'
 
 const Notifications = () => {
+    // ** Variables
+    const dispatch = useDispatch()
+    const store = useSelector(state => state.notifications)
+     // ** Fetch Events On Mount
+  useEffect(() => {
+    console.log("the store is", store)
+    dispatch(getNotifications(store.selectedNotification))
+  }, [])
   return (
-    // <div className='ecommerce-application'>
-    //    <div className="ml-lg-5" >
-    //       <BreadCrumbs breadCrumbTitle='Notifications' />
-    //     </div>
-    //     <div className="ml-lg-4 mr-lg-4" >
-    //       <Row>
-    //         <Col md='3' xs='12'>
-    //           <Card>
-    //             <CardBody>
-    //             <Filters updateFilter={updateFilter}
-    //               updateAllFilters={updateAllFilters}
-
-    //             />
-    //             </CardBody>
-    //           </Card>
-    //         </Col>
-
-    //         <Col md='9' xs='12'>
-    //           <Card  >
-    //             <CardBody>
-    //               <Content />
-    //             </CardBody>
-
-    //           </Card>
-    //         </Col>
-    //       </Row>
-    //     </div>
-      
-    //   </div>
     
     <Fragment >
       <div style={{ marginTop: "-1rem" }} className="ml-lg-4 mr-lg-4">
@@ -61,7 +45,9 @@ const Notifications = () => {
             <Col md='3' xs='12'>
               <Card>
                 <CardBody>
-                  <Filters />
+                  <Filters store={store}
+                    dispatch={dispatch}
+                    updateFilter={updateFilter} />
                 </CardBody>
               </Card>
             </Col>
@@ -69,7 +55,12 @@ const Notifications = () => {
             <Col md='9' xs='12'>
               <Card  >
                 <CardBody>
-                  <Content />
+                  <Content store={store}
+                    dispatch={dispatch}
+                  />
+                  {/* {
+                  store.events.length ? <>YES </> : <>NO </> 
+                  } */}
                 </CardBody>
 
               </Card>

@@ -2,24 +2,26 @@
 const initialState = {
   events: [],
   selectedEvent: {},
-  selectedCalendars: ['payment','bid','profile']
+  selectedNotification: ['Payment', 'Bid', 'Profile', 'Order']
   
 }
 
 const notificationReducer = (state = initialState, action) => {
   switch (action.type) {
-  
+    case 'FETCH_EVENTS':
+      console.log("the evenuts of action ", action)
+      return { ...state, events: action.data.events }
     case 'UPDATE_EVENT':
       return { ...state }
     case 'UPDATE_FILTERS':
       // ** Updates Filters based on action filter
-      const filterIndex = state.selectedCalendars.findIndex(i => i === action.filter)
-      if (state.selectedCalendars.includes(action.filter)) {
-        state.selectedCalendars.splice(filterIndex, 1)
+      const filterIndex = state.selectedNotification.findIndex(i => i === action.filter)
+      if (state.selectedNotification.includes(action.filter)) {
+        state.selectedNotification.splice(filterIndex, 1)
       } else {
-        state.selectedCalendars.push(action.filter)
+        state.selectedNotification.push(action.filter)
       }
-      if (state.selectedCalendars.length === 0) {
+      if (state.selectedNotification.length === 0) {
         state.events.length = 0
       }
       return { ...state }
@@ -28,11 +30,11 @@ const notificationReducer = (state = initialState, action) => {
       const value = action.value
       let selected = []
       if (value === true) {
-        selected = ['Personal', 'Business', 'Family', 'Holiday', 'ETC']
+        selected = ['Payment', 'Bid', 'Profile', 'Order']
       } else {
         selected = []
       }
-      return { ...state, selectedCalendars: selected }
+      return { ...state, selectedNotification: selected }
 
     default:
       return state

@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+import { Bell, X, Check, AlertTriangle, Package, User, DollarSign, Gift} from 'react-feather'
+import {
+       Media
+  } from 'reactstrap'
 // ** Filter Events
 const notificationsArray = [
   {
@@ -18,7 +22,7 @@ const notificationsArray = [
     {
       avatarIcon: <DollarSign size={14} />,
       color: 'light-success',
-      type :'payment',
+      type :'Payment',
       isRead : true,
 
       subtitle: '03 March 21 5:00 PM',
@@ -31,7 +35,7 @@ const notificationsArray = [
     {
       avatarIcon: <User size={14} />,
       color: 'light-success',
-      type :'profile',
+      type :'Profile',
       isRead : true,
       subtitle: '03 March 21 5:00 PM',
       title: (
@@ -42,7 +46,7 @@ const notificationsArray = [
     },
     {
       avatarIcon: <Package size={14} />,
-      type :'bid',
+      type :'Bid',
       color: 'light-danger',
       isRead : true,
       subtitle: '03 March 21 5:00 PM',
@@ -56,7 +60,7 @@ const notificationsArray = [
     {
       avatarIcon: <DollarSign size={14} />,
       color: 'light-success',
-      type :'payment',
+      type :'Payment',
       isRead : false,
 
       subtitle: '03 March 21 5:00 PM',
@@ -69,7 +73,7 @@ const notificationsArray = [
     {
       avatarIcon: <User size={14} />,
       color: 'light-success',
-      type :'profile',
+      type :'Profile',
       subtitle: '03 March 21 5:00 PM',
       isRead : false,
 
@@ -82,7 +86,7 @@ const notificationsArray = [
     {
       avatarIcon: <Gift size={14} />,
       color: 'light-success',
-      type :'offer',
+      type :'Offer',
       isRead : false,
 
       subtitle: '03 March 21 5:00 PM',
@@ -93,17 +97,29 @@ const notificationsArray = [
       )
     }
 ]
-const data1 = {
-  products: obk,
-  total: obk.length
+
+export const getNotifications = params => {
+  console.log("the paramts is", params)
+  return dispatch => {
+    const filters = notificationsArray.filter(event => params.includes(event.type))
+    console.log("the notificationsArray ", filters)
+    const data1 = {
+      events: filters,
+      total: notificationsArray.length
+    }
+    dispatch({ type: 'FETCH_EVENTS', data:data1, params })
+
+  }
+  
 }
 export const updateFilter = filter => {
+  console.log("FIlter is updateing ", filter)
   return (dispatch, getState) => {
     dispatch({
       type: 'UPDATE_FILTERS',
       filter
     })
-    dispatch(fetchEvents(getState().calendar.selectedCalendars))
+    dispatch(getNotifications(getState().notifications.selectedNotification))
   }
 }
 
@@ -114,6 +130,6 @@ export const updateAllFilters = value => {
       type: 'UPDATE_ALL_FILTERS',
       value
     })
-    dispatch(fetchEvents(getState().calendar.selectedCalendars))
+    dispatch(fetchEvents(getState().calendar.selectedNotification))
   }
 }

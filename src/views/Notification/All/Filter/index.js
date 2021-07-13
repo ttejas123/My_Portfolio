@@ -3,9 +3,13 @@ import {  CustomInput } from 'reactstrap'
 
 const Filters = props => {
     // ** Array of brands
-    const { updateFilter, updateAllFilters } = props
-
+    const {
+      updateFilter,
+      store,
+      dispatch
+    } = props
   const brands = [
+    
     {
       title: 'All',
       total: 746
@@ -67,9 +71,12 @@ const Filters = props => {
                     <CustomInput
                       type='checkbox'
                       id={brand.title}
+                      key={brand.title}
                       label={brand.title}
-                      defaultChecked={brand.checked}
-                    //   onChange={e => updateAllFilters(e.target.checked)}
+                      // defaultChecked={brand.checked}
+                      checked={store.selectedNotification.includes(brand.title)}
+                      // onChange={e => updateFilter(e.target.checked)}
+                      onChange={e => dispatch(updateFilter(brand.title))}
 
                       
                     />
