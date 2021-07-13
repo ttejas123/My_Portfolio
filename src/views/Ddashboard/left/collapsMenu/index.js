@@ -98,7 +98,22 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
               <span >Cart Page</span>
               
             </ListGroupItem>
-            
+            <ListGroupItem tag={Link} to='/buyer/buyer-edit' className='cursor-pointer'>
+              <span >Buyer Profile Edit</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/seller/seller-edit' className='cursor-pointer'>
+              <span >Seller Profile Edit</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/seller/create-product' className='cursor-pointer'>
+              <span >Seller Create Product</span>
+              
+            </ListGroupItem>
+            <ListGroupItem tag={Link} to='/seller/my-products' className='cursor-pointer'>
+              <span >My Products</span>
+              
+            </ListGroupItem>
           </ListGroup>
          
       </div>

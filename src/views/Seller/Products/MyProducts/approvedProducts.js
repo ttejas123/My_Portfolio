@@ -3,6 +3,7 @@ import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 // ** React Imports
 import { Fragment, useState, forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import Avatar from '@components/avatar'
 // ** Table Data & Columns
 import { data } from './data'
@@ -11,7 +12,7 @@ import Select from 'react-select'
 import ReactPaginate from 'react-paginate'
 import DataTable from 'react-data-table-component'
 import { selectThemeColors } from '@utils'
-import { ChevronDown, Share, Printer, File, Grid, Copy, Plus, MoreVertical, Edit, FileText, Archive, Trash, Eye  } from 'react-feather'
+import { ChevronDown, Share, Printer, File, Grid, Copy, Plus, MoreVertical, Edit, FileText, Archive, Trash, Eye, Check, X  } from 'react-feather'
 import {
   Card,
   CardHeader,
@@ -83,13 +84,13 @@ const renderProduct = row => {
     )
 }
 
-const AddFromExisting = () => {
+const ApprovedProducts = () => {
   // ** States
   const [formModal, setFormModal] = useState(false)
   const [modal, setModal] = useState(false)
   const [currentPage, setCurrentPage] = useState(0)
   const [searchValue, setSearchValue] = useState('')
-  const [selectedProduct, setselectedProduct] = useState({})
+  const [selectedProduct, setselectedProduct] = useState('')
   const [filteredData, setFilteredData] = useState([])
   const [currentId, setCurrentId] = useState('')
   const [Filter, setFilter] = useState('')
@@ -181,6 +182,44 @@ const AddFromExisting = () => {
             style : tempStyle
         },
         {
+            name: 'Rate',
+            selector: 'rate',
+            sortable: true,
+            minWidth: '50px',
+            style : tempStyle
+        },
+        {
+            name: 'Inventory',
+            selector: 'inventory',
+            sortable: true,
+            minWidth: '50px',
+            style : tempStyle
+        },
+        {
+            name: 'Customization Available',
+            selector: 'customizationAvailable',
+            sortable: true,
+            minWidth: '50px',
+            style : tempStyle,
+            cell: row => (
+                <div className='d-flex justify-content-left align-items-center '>
+                 {row.customizationAvailable === 'yes' ? <Check/> : <X/>}
+                </div>
+              )
+        },
+        {
+            name: 'Sampling Available',
+            selector: 'samplingAvailable',
+            sortable: true,
+            minWidth: '50px',
+            style : tempStyle,
+            cell: row => (
+                <div className='d-flex justify-content-left align-items-center '>
+                  {row.samplingAvailable === 'yes' ? <Check/> : <X/>}
+                </div>
+              )
+        },
+        {
             name: 'Image',
             selector: 'Image',
             sortable: false,
@@ -195,34 +234,35 @@ const AddFromExisting = () => {
                 </div>
               </div>
             )
-          },
-          {
-            name: 'Actions',
-            allowOverflow: true,
-            style : tempStyle,
-            cell: row => {
-              return (
-                <div className='d-flex'>
-                    <div className='pr-1' tag='span'>
-                    <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' type='submit' color='danger' onClick={ () => {
-                        setFormModal(!formModal)
-                        setselectedProduct(row)
-                        console.log('row', row)
-                        }}>
-                        Report
-                      </Button.Ripple>
-                    </div>
-
-                <div>
-                  <Eye size={25} onClick={ () => { 
-                                      setCurrentId(row.id)
-                                      setModal(true)
-                                       } }/>
-                                       </div>
-                </div>
-              )
-            }
           }
+        //   {
+        //     name: 'Actions',
+        //     allowOverflow: true,
+        //     style : tempStyle,
+        //     minWidth : '80px',
+        //     cell: row => {
+        //       return (
+        //         <div className='d-flex'>
+        //             <div className='pr-1' tag='span'>
+        //             <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' type='submit' color='danger' onClick={ () => {
+        //                 setFormModal(!formModal)
+        //                 setselectedProduct(row.product_name)
+        //                 console.log('row', row)
+        //                 }}>
+        //                 Report
+        //               </Button.Ripple>
+        //             </div>
+
+        //         <div>
+        //           <Eye size={25} onClick={ () => { 
+        //                               setCurrentId(row.id)
+        //                               setModal(true)
+        //                                } }/>
+        //                                </div>
+        //         </div>
+        //       )
+        //     }
+        //   }
     ]
 
 
@@ -300,49 +340,7 @@ const AddFromExisting = () => {
 
   return (
     <Fragment>
-         <Modal isOpen={formModal} toggle={() => setFormModal(!formModal)} className='modal-dialog-centered'>
-          <ModalHeader toggle={() => setFormModal(!formModal)}>Report Product</ModalHeader>
-          <ModalBody>
-              <CardBody className='px-0'>
-          <h4>
-          <img src={selectedProduct.image} width='30' height='30' className='h-25 w-10 mr-1' />
-              {selectedProduct.product_name}</h4>
-          </CardBody>
-            <FormGroup>
-              <Label for='suggestedValue'>
-                  What do you have issue with</Label>
-              <div style={{zIndex:1000, position:'relative'}}>
-              <Select
-                isClearable={false}
-                theme={selectThemeColors}
-                className='react-select'
-                classNamePrefix='select'
-                options={optionReportReasons}
-                value={values.reportReason}
-                onChange={data => {
-                  setValues(
-                           {
-                              ...values,
-                              reportReason : data
-                           } 
-                   )
-                 }
-         }
-              />
-              </div>
-            </FormGroup>
-            <FormGroup>
-              <Label for='suggestedValue'>Suggested Value:</Label>
-              <Input type='textarea' id='suggestedValue' placeholder='suggestedValue' />
-            </FormGroup>
-          </ModalBody>
-          <ModalFooter>
-            <Button color='primary' onClick={() => setFormModal(!formModal)}>
-              Submit
-            </Button>{' '}
-          </ModalFooter>
-        </Modal>
-      <Card>
+      {/* <Card>
         <CardHeader>
           <CardTitle tag='h4'>Search Filter</CardTitle>
         </CardHeader>
@@ -411,14 +409,19 @@ const AddFromExisting = () => {
               </Col>
           </Row>
         </CardBody>
-      </Card>
-
+      </Card> */}
+<CardBody>
       <Card>
 
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Result</CardTitle>
+          <CardTitle tag='h4'>Approved Products</CardTitle>
           <div className='d-flex mt-md-0 mt-1'>
-          
+            <Link to={`create-product`}>
+              <Button className='ml-2' color='primary' >
+                                          <Plus size={15} />
+                                          <span className='align-middle ml-50'>Add Product</span>
+              </Button>
+            </Link>
           </div>
         </CardHeader>
         
@@ -453,8 +456,9 @@ const AddFromExisting = () => {
         />
         
       </Card>
+      </CardBody>
     </Fragment>
   )
 }
 
-export default AddFromExisting
+export default ApprovedProducts
