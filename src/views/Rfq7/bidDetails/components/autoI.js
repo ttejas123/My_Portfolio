@@ -27,16 +27,16 @@ const SwiperAutoplay = ({ isRtl }) => {
       <CardBody className='m-0 p-0'>
         <Swiper  dir={isRtl ? 'rtl' : 'ltr'} {...params}>
           <SwiperSlide>
-            <img style={{height: '70vh', width: '100%'}} src={img1} alt='swiper 1' className='img-fluid  m-0 p-0' />
+            <img style={{height: '58vh', width: '100%'}} src={img1} alt='swiper 1' className='img-fluid  m-0 p-0' />
           </SwiperSlide>
           <SwiperSlide>
-            <img style={{height: '70vh', width: '100%'}} src={img2} alt='swiper 2' className='img-fluid m-0 p-0' />
+            <img style={{height: '58vh', width: '100%'}} src={img2} alt='swiper 2' className='img-fluid m-0 p-0' />
           </SwiperSlide>
           <SwiperSlide>
-            <img style={{height: '70vh', width: '100%'}} src={img3} alt='swiper 3' className='img-fluid m-0 p-0' />
+            <img style={{height: '58vh', width: '100%'}} src={img3} alt='swiper 3' className='img-fluid m-0 p-0' />
           </SwiperSlide>
           <SwiperSlide>
-            <img style={{height: '70vh', width: '100%'}} src={img4} alt='swiper 4' className='img-fluid m-0 p-0' />
+            <img style={{height: '58vh', width: '100%'}} src={img4} alt='swiper 4' className='img-fluid m-0 p-0' />
           </SwiperSlide>
          
         </Swiper>

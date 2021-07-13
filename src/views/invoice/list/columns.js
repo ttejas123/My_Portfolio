@@ -152,8 +152,10 @@ export const columns = [
     sortable: true,
     minWidth: '150px',
     cell: row => {
-      return (
-         <Check className='ml-1' size={18} />
+      return row.custom === true ? (
+        <Check className='ml-1' size={18} />
+      ) : (
+        <X className='ml-1' size={18}/>
       )
     }
   },

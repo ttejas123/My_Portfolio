@@ -3,10 +3,10 @@ import { Card, CardTitle, CardText, CardBody, Row, Col } from 'reactstrap'
 
 const WarehouseAddressCard = (props) => {
   return (
-    <Card className=''>
-      <CardBody>
-        <Row>
-          <Col xs='12'>
+    <div className='' >
+      <CardBody >
+        <Row >
+          <Col xs='12' style={{boxShadow:'0 4px 24px 0 rgb(34 41 47 / 10%)'}} className='py-1'>
             <CardTitle tag='h4'>{`Warehouse # ${props.Address.title}`}</CardTitle>
             <hr />
             <div className="d-flex justify-content-between">
@@ -32,7 +32,7 @@ const WarehouseAddressCard = (props) => {
           </Col>
         </Row>
       </CardBody>
-    </Card>
+    </div>
   )
 }
 

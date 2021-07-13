@@ -6,7 +6,7 @@ import Rating from 'react-rating'
 import classnames from 'classnames'
 import AutoG from './autoI' 
 import { useRTL } from '@hooks/useRTL'
-
+import Modelsss from './formModel'
 import { Star, Edit, Zap, Trash2, ShoppingCart, Percent, ShoppingBag, Box, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket } from 'react-feather'
 import {
   Row,
@@ -39,7 +39,15 @@ import image from '@src/assets/images/avatars/1-small.png'
 const Product = props => {
   // ** Props
   //const { data, deleteWishlistItem, dispatch, addToWishlist, getProduct, productId, addToCart } = props
+  const [modal, setModal] = useState(false)
+      const view = () => {
+            //here we passing id to delete this specific record
+           setModal(true)
+        }
 
+    const handleModal = () => {
+        setModal(!modal)
+    }
 SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow, Autoplay, Lazy, Virtual])
  const colorsData = ["primary", "success", "warning", "danger", "info"]
   // ** Renders color options
@@ -76,8 +84,8 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
     <Col lg='12' className='p-0 d-lg-flex justify-content-between'>
       <h4>Air Jordan 300xs Shoes with korean style</h4>
       <div className='d-lg-flex text-right'>
-        <div className='mr-1'><b>Created Date:</b> 22-08-20</div>
-        <div><b>End Date :</b> 22-08-21</div>
+        <div className='mr-lg-1'><b>Created Date:</b> <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '58%'}} type="text" /></div>
+        <div className='mb-xs-1'><b>End Date :</b> <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '58%'}} type="text" /></div>
       </div>
     </Col>
     <Row>    
@@ -111,7 +119,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
             </div>
 
             <div style={{paddingTop: '5px'}}>
-              <Percent size={18} /> <span style={{paddingLeft:"5px"}}>Offer : 5% - 7%</span>
+              <Percent size={18} /> <span style={{paddingLeft:"5px"}}>Offer : 5 - 7</span>
             </div>
 
             <div style={{paddingTop: '5px'}}>
@@ -156,44 +164,58 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
           <b>Ship to:</b> <span style={{paddingLeft:"5px"}}>Multiple</span>
         </div>
 
+        <Button.Ripple block color='primary' ><span style={{paddingLeft: "4px"}}>Select from Cart (20 Products)</span></Button.Ripple>
+
 
         <hr />
-
-        <div className=''>
-          <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
-          <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Reset</span></Button.Ripple>
-          <Button.Ripple color='danger' className='mr-1'><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
-        </div>
       </Col>
 
-      <Col md='4' xs='12'>
+      <Col md='4' xs='12' className=''>
+        <div className='mt-lg-5 pt-lg-5'>
           <CardText>
             Add your Required Customization
           </CardText>
-          <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Customization' />
+          <Input className='col-md-12' type='textarea' name='text' id='exampleText' rows='3' placeholder='Customization' />
           <div className={edits  ? ("d-block") : ("d-block")}> 
             
-        <div >
-              <Label>Billing Address:-</Label><br />
-              <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Billing Address' />
-        </div>
-
-        <div style={{paddingTop: '5px'}}>
-              <Label>Shipping Address:-</Label><br />
-              <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Shipping Address' />
-        </div>
             <div className='divider ' style={{marginBottom: '7px'}}>
               <div className='divider-text'>or</div>
             </div>
             <div style={{paddingTop: '5px'}}>
                <FormGroup>
-                <Label for='exampleCustomFileBrowser'>Import Shipping Address</Label>
-                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                <CustomInput
+                  inline
+                  type='checkbox'
+                  id='exampleCustomCheckbox5'
+                  label='Sampling'
+                />
               </FormGroup>
             </div>
           </div>
+        </div>
       </Col>
-      
+    </Row>
+    <Row className='pl-0 '>
+        <Col md='8' className='d-lg-flex pl-0'>
+          <div  className='col-md-4'>
+                <Label>Billing Address:-</Label><br />
+                <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Billing Address' />
+          </div>
+
+          <div className='col-md-4' >
+                <Label>Shipping Address:-</Label><br />
+                <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Shipping Address' />
+          </div>
+          <div className='pt-lg-5 mt-lg-1'>
+            <Button.Ripple color='primary' onClick={() => view()}><span style={{paddingLeft: "4px"}}>Add More</span></Button.Ripple>
+          </div>
+        </Col>
+        <Col md='4' className='pl-lg-5 pt-lg-5 mt-lg-1'>
+            <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
+            <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Reset</span></Button.Ripple>
+            <Button.Ripple color='danger' ><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
+        </Col>
+        <Modelsss open={modal} handleModal={handleModal} />
     </Row>
     </>
   )

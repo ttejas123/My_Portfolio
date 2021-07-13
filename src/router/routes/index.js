@@ -109,6 +109,10 @@ const Routes = [
     component: lazy(() => import('../../views/Seller/SellerEdit'))
   },
   {
+    path: '/seller/my-products',
+    component: lazy(() => import('../../views/Seller/Products/MyProducts'))
+  },
+  {
     path: '/seller/create-product',
     component: lazy(() => import('../../views/Seller/Products/CreateProduct'))
   },
@@ -117,8 +121,16 @@ const Routes = [
     component: lazy(() => import('../../views/Buyer/BuyerEdit'))
   },
   {
+    path: '/rights/teamr',
+    component: lazy(() => import('../../views/rights'))
+  },
+  {
     path: '/register',
     component: lazy(() => import('../../views/register/RegisterV1'))
+  },
+  {
+    path: '/my-profile',
+    component: lazy(() => import('../../views/MyProfile'))
   },
   {
     path: '/login', // USE THIS

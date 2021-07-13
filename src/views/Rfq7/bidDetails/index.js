@@ -22,7 +22,7 @@ const [size, setSize] = useState([1, 2, 3, 4])
   return (
     <Fragment>
 
-      <div className='pl-lg-4 ml-lg-3'>
+      <div className='pl-lg-4 ml-lg-3' style={{marginTop: '-1rem'}}>
         <BreadCrumbs breadCrumbTitle='Bid Create' breadCrumbParent='Home' breadCrumbChild='Bid Create' breadCrumbActive='Bid Details' />
       </div>
       <Row>
