@@ -30,8 +30,7 @@ const Login = () => {
          
           backgroundRepeat:'no-repeat',
           backgroundSize:'cover',
-          marginTop:-25,
-          backgroundColor:'#f8f1e8'
+          marginTop:-25
         }}
   >
       <Row className='auth-inner m-0 ' >

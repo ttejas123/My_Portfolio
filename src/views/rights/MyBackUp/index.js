@@ -3,16 +3,12 @@ import { useEffect, Fragment, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AlignJustify, Rss, Info, Image, Users, Edit, Home, ShoppingCart, Package} from 'react-feather'
 
-// import RelatedProducts from './RelatedProducts'
-import Navbarss from './navbar'
 // ** Custom Components
 import BreadCrumbs from '@components/breadcrumbs'
-import img from './assets/b1.jpg'
 import person from '@src/assets/images/avatars/raviKukreja.jpg'
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
 import '@styles/react/pages/page-profile.scss'
-import './style.css'
 import {
   Row,
   Card, CardBody,
@@ -32,38 +28,24 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap'
-
-// import RelatedProducts from './RelatedProducts'
-
-// ** Custom Components
-
-import Left from './left'
-import Right from './main'
-import MainSubMenu from './left/MainSubMenu'
-import Team from './team'
-
-import InfoCard from './dashboardComponent/index'
-
+import Backup from './Components/backup'
+import Audits from './Components/audit'
 
 const Details = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   const [activeTab, setActiveTab] = useState('1')
-const toggle1 = tab => setActiveTab(tab)
+  const toggle1 = tab => setActiveTab(tab)
 
   return (
-    <Fragment className="addPadding m-0">
-    
-      <div style={{marginTop:"-1rem"}} className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" >
-        <BreadCrumbs  breadCrumbTitle='Dashboard' breadCrumbParent='Main' breadCrumbChild='Home' breadCrumbActive='Dashboard' />
-      </div>
+   
       <div  >
-      <div className="ml-lg-4 mr-lg-5 pl-lg-3 pr-lg-3" id='user-profile'>
+      <div className="" id='user-profile'>
         <Row>
           <Col md='12' xs='12'>   
                 <Card className='profile-header mb-2'>
                     
-                    <div className='profile-header-nav'>
+                    <div className='navbar-toggler '>
                       <Navbar className='justify-content-end justify-content-md-between w-100' expand='md' light>
                         <Button color='' className='btn-icon navbar-toggler' onClick={toggle}>
                           <AlignJustify size={21} />
@@ -74,26 +56,14 @@ const toggle1 = tab => setActiveTab(tab)
 
                               <NavItem style={{paddingLeft: '5px'}}>
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
-                                  <span className='d-none d-md-block'>Main</span>
+                                  <span className='d-none d-md-block'>Backup</span>
                                   <Home className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
                               <NavItem>
                                 <NavLink className='font-weight-bold' active={activeTab === '2'} onClick={() => toggle1('2')}>
-                                  <span className='d-none d-md-block'>Purchase</span>
+                                  <span className='d-none d-md-block'>Audit Trail</span>
                                   <ShoppingCart className='d-block d-md-none' size={14} />
-                                </NavLink>
-                              </NavItem>
-                              <NavItem>
-                                <NavLink className='font-weight-bold' active={activeTab === '3'} onClick={() => toggle1('3')}>
-                                  <span className='d-none d-md-block'>Sale</span>
-                                  <Package className='d-block d-md-none' size={14} />
-                                </NavLink>
-                              </NavItem>
-                              <NavItem>
-                                <NavLink className='font-weight-bold' active={activeTab === '4'} onClick={() => toggle1('4')}>
-                                  <span className='d-none d-md-block'>Team</span>
-                                  <Users className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
                             </Nav>
@@ -106,33 +76,20 @@ const toggle1 = tab => setActiveTab(tab)
             </Col>
           </Row>
         </div>
-        <Row className="ml-lg-5 mr-lg-5 pl-lg-2 pr-lg-2">
-          
-                  <Col md='2' xs='12'>
-                       <Left />
-                  </Col>
-                  <Col md='10' xs='12'>
+        <Row >
+                  <Col md='12' xs='12'>
                           <TabContent activeTab={activeTab}>
                             <TabPane tabId='1'>
-                              <Right />
+                              <Backup /> 
                             </TabPane>
                             <TabPane tabId='2'>
-                              <MainSubMenu />
+                              <Audits />
                             </TabPane>
-                            <TabPane tabId='3'>
-                              <MainSubMenu />
-                            </TabPane>
-                            <TabPane tabId='4'>
-                              <Team />
-                            </TabPane>
-                            
                           </TabContent>
-                  </Col>
-              
-      </Row>    
+                  </Col>    
+        </Row>    
       </div>
-      
-    </Fragment>
+
   )
 }
 

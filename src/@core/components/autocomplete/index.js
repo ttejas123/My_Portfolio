@@ -36,6 +36,7 @@ const Autocomplete = props => {
   const onSuggestionItemClick = (url, e) => {
     setActiveSuggestion(0)
     setShowSuggestions(false)
+    props.userssValue(filteredData[activeSuggestion][props.filterKey])
     setUserInput(filteredData[activeSuggestion][props.filterKey])
     if (url !== undefined && url !== null) {
       history.push(url)
@@ -314,7 +315,11 @@ const Autocomplete = props => {
             props.onChange(e)
           }
         }}
-        onKeyDown={e => onKeyDown(e)}
+        onKeyDown={e => {
+         onKeyDown(e)
+         
+         }
+        }
         value={userInput}
         className={`autocomplete-search ${props.className ? props.className : ''}`}
         placeholder={props.placeholder}

@@ -22,15 +22,14 @@ const [size, setSize] = useState([1, 2, 3, 4])
   return (
     <Fragment>
 
-      <div className='pl-5 ml-5'>
+      <div className='pl-lg-4 ml-lg-3' style={{marginTop: '-1rem'}}>
         <BreadCrumbs breadCrumbTitle='Bid Create' breadCrumbParent='Home' breadCrumbChild='Bid Create' breadCrumbActive='Bid Details' />
       </div>
       <Row>
-        <Col lg='1'></Col>
-        <Col lg='10'>
+        
+        <Col className='pl-lg-4 ml-lg-4' lg='11'>
           <Row>
-            {size.map((val) => {
-                return (
+            
                   <Col lg="12" >
                     <Card>
                       <CardBody>
@@ -39,11 +38,10 @@ const [size, setSize] = useState([1, 2, 3, 4])
                       
                     </Card>
                   </Col>
-                  )
-            })}          
+                        
           </Row>
         </Col>
-        <Col lg='1'></Col>
+        
       </Row>
     </Fragment>
   )

@@ -1,5 +1,5 @@
 // ** React Imports
-import { useState, useEffect } from 'react'
+import { useState, useEffect, forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 
 // ** Table Columns
@@ -9,7 +9,7 @@ import { columns } from './columns'
 import ReactPaginate from 'react-paginate'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
-import { Button, Label, Input, CustomInput, Row, Col, Card } from 'reactstrap'
+import { Button, Label, Input, CustomInput, Row, Col, Card, FormGroup } from 'reactstrap'
 
 // ** Store & Actions
 import { getData } from '../store/actions'
@@ -19,8 +19,22 @@ import { useDispatch, useSelector } from 'react-redux'
 import '@styles/react/apps/app-invoice.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
-const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage }) => {
+const InvoiceList = () => {
+  const dispatch = useDispatch()
+  const store = useSelector(state => {
+    console.log(state)
+    return state.invoice
+  })
+
+  const [value, setValue] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
+  const [statusValue, setStatusValue] = useState('')
+  const [rowsPerPage, setRowsPerPage] = useState(10)
+  const [model, setModel] = useState(false)
+
+  const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage }) => {
   return (
+    <>
     <div className='invoice-list-table-header w-100 py-2'>
       <Row>
         <Col lg='6' className='d-flex align-items-center px-0 px-lg-1'>
@@ -55,35 +69,98 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
               type='text'
               value={value}
               onChange={e => handleFilter(e.target.value)}
-              placeholder='Search Invoice'
+              placeholder='Search'
             />
           </div>
-          <Input className='w-auto ' type='select' value={statusValue} onChange={handleStatusValue}>
-            <option value=''>Select Brand</option>
-            <option value='Guccie'>Guccie</option>
-            <option value='Canvas'>Canvas</option>
-            <option value='Nike'>Nike</option>
-            <option value='Bata'>Bata</option>
-            
-          </Input>
+          
         </Col>
       </Row>
     </div>
+    <div className={model ? ('invoice-list-table-header w-100 py-2') : ('d-none')} >
+      <Row>
+        <Col sm='3'>
+              <FormGroup>
+                <Label for='EmailVertical'>Name</Label>
+                <Input type='text' disabled name='Name' id='NameVertical' placeholder='Name' />
+              </FormGroup>
+        </Col>
+        <Col sm='3'>
+              <FormGroup>
+                <Label for='EmailVertical'>SKU ID</Label>
+                <Input type='text' disabled name='Name' id='NameVertical' placeholder='SKU ID' />
+              </FormGroup>
+        </Col>
+        <Col sm='3'>
+              <FormGroup>
+                <Label for='EmailVertical'>Lead Time</Label>
+                <Input type='datepicker' name='Name' id='NameVertical' placeholder='Lead Time' />
+              </FormGroup>
+        </Col>
+        <Col sm='3'>
+              <FormGroup>
+                <Label for='EmailVertical'>Rate</Label>
+                <Input type='text' name='Name' id='NameVertical' placeholder='Rate' />
+              </FormGroup>
+        </Col>
+        <Col sm='3'>
+              <FormGroup>
+                <Label for='EmailVertical'>MOQ</Label>
+                <Input type='text' name='Name' id='NameVertical' placeholder='MOQ' />
+              </FormGroup>
+        </Col>
+        <Col sm='3'>
+              <FormGroup>
+                <Label for='EmailVertical'>Customization</Label>
+                <Input type='textarea' name='Name' id='NameVertical' placeholder='Required Customization' />
+              </FormGroup>
+        </Col>
+        <Col sm='2'>
+              <FormGroup>
+                
+                <CustomInput
+                  type='checkbox'
+                  className='custom-control-Primary'
+                  id='Primary'
+                  label='Sampling'
+                  defaultChecked
+                  inline
+                />
+              </FormGroup>
+        </Col>
+        <Col sm='2'>
+              <FormGroup>
+                
+                <CustomInput
+            type='checkbox'
+            className='custom-control-Primary'
+            id='Primary'
+            label='Inspection'
+            defaultChecked
+            inline
+          />
+              </FormGroup>
+        </Col>
+        
+      </Row>
+    </div>
+    </>
   )
 }
 
-const InvoiceList = () => {
-  const dispatch = useDispatch()
-  const store = useSelector(state => {
-    console.log(state)
-    return state.invoice
-  })
-
-  const [value, setValue] = useState('')
-  const [currentPage, setCurrentPage] = useState(1)
-  const [statusValue, setStatusValue] = useState('')
-  const [rowsPerPage, setRowsPerPage] = useState(10)
-
+  const BootstrapCheckbox = forwardRef(({ onClick, ...rest }, ref) => {
+      if (rest.name === "select-all-rows" && rest.checked === true) {
+        setModel(true)
+      } else if (rest.name === "select-all-rows" && rest.checked === false) {
+        setModel(false)
+      }
+      return (
+        <div className='custom-control custom-checkbox'>
+          <input type='checkbox' className='custom-control-input' ref={ref} {...rest} />
+          <label className='custom-control-label' onClick={onClick} />
+        </div>
+      )
+    }
+  )
   useEffect(() => {
     console.log(getData)
     dispatch(
@@ -197,6 +274,8 @@ const InvoiceList = () => {
           <DataTable
             noHeader
             pagination
+            selectableRows
+            selectableRowsComponent={BootstrapCheckbox}
             paginationServer
             subHeader={true}
             columns={columns}
