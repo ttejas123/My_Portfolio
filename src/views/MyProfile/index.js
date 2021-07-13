@@ -34,6 +34,8 @@ import image from '@src/assets/images/avatars/1-small.png'
 import MyGalleryTab from './myGallery'
 import MyKyc from './MyKyc'
 import MyWarehouses from './MyWarehouses'
+import PersonalKyc from './MyKyc/personal'
+import TeamKyc from './TeamKyc'
 
 const MyProducts = props => {
 
@@ -66,16 +68,19 @@ const toggle1 = tab => setActiveTab(tab)
             <ListGroupItem  className='cursor-pointer'  onClick={() => toggle1('2')}>
               <span >My Kyc</span> 
             </ListGroupItem>
-            <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('3')}>
+            <ListGroupItem  className='cursor-pointer'  onClick={() => toggle1('3')}>
+              <span >Team Kyc</span> 
+            </ListGroupItem>
+            <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('4')}>
               <span >My Rewards</span>  
             </ListGroupItem>  
-             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('4')}>
+             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('5')}>
               <span >My Support</span>  
             </ListGroupItem>  
-             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('5')}>
+             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('6')}>
               <span >My Commissions</span>  
             </ListGroupItem> 
-             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('6')}>
+             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('7')}>
               <span >My Warehouses</span>  
             </ListGroupItem>             
           </ListGroup>
@@ -91,7 +96,10 @@ const toggle1 = tab => setActiveTab(tab)
                 <MyGalleryTab isRtl={isRtl} />
               </TabPane>
               <TabPane tabId='2'>
-              <MyKyc/>
+              <PersonalKyc/>
+                   </TabPane>
+                   <TabPane tabId='3'>
+              <TeamKyc/>
                    </TabPane>
               <TabPane tabId='6'>
               <MyWarehouses/>

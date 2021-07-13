@@ -271,7 +271,7 @@ const WarehouseList = () => {
 
   return (
     <Fragment>
-      <Card>
+      {/* <Card>
         <CardHeader>
           <CardTitle tag='h4'>Search Filter</CardTitle>
           <Link  to={`/add-warehouse`}>
@@ -333,12 +333,12 @@ const WarehouseList = () => {
             </Col>
           </Row>
         </CardBody>
-      </Card>
+      </Card> */}
 
-      <Card>
+      <Card className='mx-1'>
 
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Warehouse List</CardTitle>
+          <CardTitle tag='h4'>My Warehouses</CardTitle>
           <div className='d-flex mt-md-0 mt-1'>
             
           </div>

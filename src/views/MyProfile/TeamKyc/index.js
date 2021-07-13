@@ -12,10 +12,9 @@ import { Card, CardHeader, CardTitle, Row, Col, Nav, NavItem, NavLink, TabConten
 import '@styles/react/apps/app-users.scss'
 import '@styles/react/libs/swiper/swiper.scss'
 import { useRTL } from '@hooks/useRTL'
-import WarehouseList from './warehouseList'
-import AddWarehouse from './addWarehouse'
-// import PersonalKyc from './personal.js'
-const MyWarehouses = () => {
+import CorporateKyc from './corporateKyc.js'
+import UploadDocuments from './uploadDocuemnts.js'
+const TeamKyc = () => {
   // ** States & Vars
   const [activeTab, setActiveTab] = useState('1')
 
@@ -39,22 +38,22 @@ const MyWarehouses = () => {
             <Nav pills className='mb-0'>
               <NavItem>
                 <NavLink className='ml-2 my-2' active={activeTab === '1'} onClick={() => toggle('1')}>
-                  <span className='align-middle d-none d-sm-block'>Listing</span>
+                  <span className='align-middle d-none d-sm-block'>Corporate Kyc</span>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className='ml-2 my-2' active={activeTab === '2'} onClick={() => toggle('2')}>
-                  <span className='align-middle d-none d-sm-block'>Add Wareshouse</span>
+                  <span className='align-middle d-none d-sm-block'>Upload Documents</span>
                 </NavLink>
               </NavItem>
             </Nav>
         </Card>
             <TabContent activeTab={activeTab}>
               <TabPane tabId='1'>
-              <WarehouseList/>
+                <CorporateKyc/>
               </TabPane>
               <TabPane tabId='2'>
-              <AddWarehouse/>
+             <UploadDocuments/>
               </TabPane>
             </TabContent>
          
@@ -62,4 +61,4 @@ const MyWarehouses = () => {
     </Row>
   )
 }
-export default MyWarehouses
+export default TeamKyc

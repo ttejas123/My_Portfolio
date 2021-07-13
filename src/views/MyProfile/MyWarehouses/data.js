@@ -25,7 +25,7 @@ import reethika  from '../../../assets/images/logo/reethika.jpg'
 //expot data
 export const wareHouseData = [
       {
-        name : "Warehouse1",
+        name : "Subprabath",
         address : "address1",
         city : "Mumbai",
         state : "Maharashtra",
@@ -35,7 +35,7 @@ export const wareHouseData = [
         createdDate : "22-04-2000"
       },
       {
-        name : "Warehouse2",
+        name : "Geeks",
         address : "address2",
         city : "Hyderabad",
         state : "Telangana",
@@ -44,7 +44,7 @@ export const wareHouseData = [
         id: 2,
         createdDate : "21-04-2000"
       },
-      {name : "Warehouse3",
+      {name : "Techie",
       address : "address3",
       city : "Bangalore",
       state : "Karnataka",
@@ -54,7 +54,7 @@ export const wareHouseData = [
       createdDate : "31-04-3000"
       },
       {
-        name : "Warehouse4",
+        name : "Grid",
         address : "address4",
         city : "Pune",
         state : "Maharashtra",
