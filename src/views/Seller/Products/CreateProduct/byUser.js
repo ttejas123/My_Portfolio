@@ -226,6 +226,9 @@ const ByUserTab = () => {
   }
 
 
+  const handleFilter = e => {
+    
+  }
   // Image Upload section
   const [previewArr, setPreviewArr] = useState([])
 
@@ -285,7 +288,7 @@ const ByUserTab = () => {
               isClearable={false}
               options={optionCategory}
               theme={selectThemeColors}
-              value={values.Category[0]}
+              value={values.Category}
               onChange={data => {
 
                                 setSubCategoryOptions(data)
@@ -306,9 +309,8 @@ const ByUserTab = () => {
               filterKey='title'
               suggestionLimit={4}
               placeholder="Search Category"
-              onChange = {() => {
-                setFields(true)
-              }}
+              onChange = {() => setFields(true)}
+              userssValue={(e) => handleFilter(e)} 
             />
             </FormGroup> 
       </Col>

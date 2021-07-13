@@ -7,9 +7,10 @@ import UserDropdown from './UserDropdown'
 import NotificationDropdown from './NotificationDropdown'
 import IntlDropdown from './IntlDropdown'
 import Avatar from '@components/avatar'
+import Profile from './profile'
 //import NavbarSearch from './NavbarSearch'
 // ** Third Party Components
-import { Sun, Moon, Menu, Search, Bell } from 'react-feather'
+import { Sun, Moon, Menu, Search, Bell, Home, Package, Book, ShoppingCart } from 'react-feather'
 import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
 import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, DropdownToggle } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
@@ -64,75 +65,48 @@ const NavbarUser = props => {
       </ul>
       
       <ul className='nav navbar-nav align-items-center mx-auto'>
-         <IntlDropdown />
+        <IntlDropdown />
+        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <Home className='' size={17} style={{marginRight:'3px'}} /><small className='user-name h6' style={{ color:'black'}}>Dashboard</small> 
+        </Button.Ripple>
+
+        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <Package className='' size={17} style={{marginRight:'3px'}} /><small className='user-name h6' style={{ color:'black'}}>Product</small> 
+        </Button.Ripple>
        
         <div style={{paddingTop:'7px'}}>
-        <ProductDropDown />
+            <ProductDropDown />
         </div>
-       
-        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Dashboard</small> 
-        </Button.Ripple>
-        <Button.Ripple tag={Link} to='/Rfq7/rfqN' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Bid</small> 
-        </Button.Ripple>
-        <div style={{paddingTop:'7px'}} className='ml-lg-2' >
-            <CustomerDropDown/>
-        </div>
-        <Button.Ripple tag={Link} to='/aboutUs' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>About Us</small> 
-        </Button.Ripple>
-           {/* <div className='' style={{width:'10%'}}>  
-          <Input type='text' id='category' placeholder='' className='d-inline-block w-5' style={{width:'70%'}}/>
-          <Search className='ml-1'/>
-          </div>  */}
-        <Button.Ripple tag={Link} to='/register' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <small className='user-name font-weight-bold h6 ml-2' style={{ color:'black'}}>Sign Up</small> 
-        </Button.Ripple>
-        {/*<LibraryDropDown/>*/}
-        {/*<ResourcesDropDown/>*/}
-        {/*<UserDropdown />*/}
-        <Button.Ripple tag={Link} to='/login' className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-          <small className='user-name font-weight-bold h6 ' style={{ color:'black'}}>Sign In</small> 
 
+        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                <Book className='' size={17} style={{marginRight:'3px'}} /><small className='user-name h6' style={{ color:'black'}}>Reports</small> 
         </Button.Ripple>
+
         <Button.Ripple  className='cursor-pointer d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
                 <Search size={18} />
         </Button.Ripple>
+       
+        <Button.Ripple  className='cursor-pointer d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
+                <Bell size={18} />
+        </Button.Ripple>
+
+        <Profile />
+
         <div style={{paddingTop:'7px'}} className='ml-lg-2' >
             <MissL/>
         </div>
 
+        <div tag='a' className='nav-link position-relative'>
+            <ShoppingCart size={18} className='ficon' />
+            
+              <Badge pill color='primary' className='badge-up'>
+                5
+              </Badge>
+           
+        </div>
+
       
       </ul>
-{/*
-      <div className='bookmark-wrapper d-flex align-items-left'>
-        <NavItem className='d-none d-lg-block '>
-          <NavLink className='nav-link-style'>
-          
-          </NavLink>
-        </NavItem>
-      </div>*/}
-        {  getStatus() ?  (<span className='pt-75'>
-               <Bell size={30} className='mr-1'/>
-          {/* <Badge pill color='danger' className='badge-up'>
-          5
-         </Badge> */}
-            </span>) : null}
-
-          {getStatus() ? (
-             <div className=''>
-          <div>    
-          <Avatar img={userAvatar} imgHeight='30' imgWidth='30' status='online' />
-          <span className='user-name font-weight-bold ml-2' style={{fontSize:'12px'}}><br/> {'Buyer'} </span>
-          </div>
-        {/* <span className='user-status'>{'Buyer'}</span> */}
-      </div>
-) : (
-  <Button.Ripple style={{fontSize: "5px"}} className='mb-1 mb-sm-0 mr-0 mr-sm-1' color='success'>
-  <small className='user-name font-weight-bold h6' style={{ color:'black', fontSize: "12px"}}>Request a demo</small> 
-</Button.Ripple>
-)}
       <SearchCardss open={modal} handleModal={handleModal} className="d-none" />
 
     </Fragment>
