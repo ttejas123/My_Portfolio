@@ -28,6 +28,8 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap'
+import Backup from './Components/backup'
+import Audits from './Components/audit'
 
 const Details = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -54,23 +56,16 @@ const Details = () => {
 
                               <NavItem style={{paddingLeft: '5px'}}>
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
-                                  <span className='d-none d-md-block'>Main</span>
+                                  <span className='d-none d-md-block'>Backup</span>
                                   <Home className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
                               <NavItem>
                                 <NavLink className='font-weight-bold' active={activeTab === '2'} onClick={() => toggle1('2')}>
-                                  <span className='d-none d-md-block'>Purchase</span>
+                                  <span className='d-none d-md-block'>Audit Trail</span>
                                   <ShoppingCart className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
-                              <NavItem>
-                                <NavLink className='font-weight-bold' active={activeTab === '3'} onClick={() => toggle1('3')}>
-                                  <span className='d-none d-md-block'>Sale</span>
-                                  <Package className='d-block d-md-none' size={14} />
-                                </NavLink>
-                              </NavItem>
-                              
                             </Nav>
                             
                           </div>
@@ -82,16 +77,13 @@ const Details = () => {
           </Row>
         </div>
         <Row >
-                  <Col md='10' xs='12'>
+                  <Col md='12' xs='12'>
                           <TabContent activeTab={activeTab}>
                             <TabPane tabId='1'>
-                              Tejas 
+                              <Backup /> 
                             </TabPane>
                             <TabPane tabId='2'>
-                              Vijay
-                            </TabPane>
-                            <TabPane tabId='3'>
-                              Thakare
+                              <Audits />
                             </TabPane>
                           </TabContent>
                   </Col>    

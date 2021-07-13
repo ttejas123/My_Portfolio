@@ -9,6 +9,10 @@ import person from '@src/assets/images/avatars/raviKukreja.jpg'
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
 import '@styles/react/pages/page-profile.scss'
+import About from './Components/about.js'
+import Members from './Components/members.js'
+import Roless from './Components/roleRights.js'
+
 import {
   Row,
   Card, CardBody,
@@ -36,14 +40,14 @@ const Details = () => {
   const toggle1 = tab => setActiveTab(tab)
 
   return (
-    
+   
       <div  >
-      <div>
+      <div className="" id='user-profile'>
         <Row>
           <Col md='12' xs='12'>   
                 <Card className='profile-header mb-2'>
                     
-                    <div className='navbar-toggler'>
+                    <div className='navbar-toggler '>
                       <Navbar className='justify-content-end justify-content-md-between w-100' expand='md' light>
                         <Button color='' className='btn-icon navbar-toggler' onClick={toggle}>
                           <AlignJustify size={21} />
@@ -54,22 +58,11 @@ const Details = () => {
 
                               <NavItem style={{paddingLeft: '5px'}}>
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
-                                  <span className='d-none d-md-block'>Main</span>
+                                  <span className='d-none d-md-block'>My Rights</span>
                                   <Home className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
-                              <NavItem>
-                                <NavLink className='font-weight-bold' active={activeTab === '2'} onClick={() => toggle1('2')}>
-                                  <span className='d-none d-md-block'>Purchase</span>
-                                  <ShoppingCart className='d-block d-md-none' size={14} />
-                                </NavLink>
-                              </NavItem>
-                              <NavItem>
-                                <NavLink className='font-weight-bold' active={activeTab === '3'} onClick={() => toggle1('3')}>
-                                  <span className='d-none d-md-block'>Sale</span>
-                                  <Package className='d-block d-md-none' size={14} />
-                                </NavLink>
-                              </NavItem>
+                              
                               
                             </Nav>
                             
@@ -81,24 +74,18 @@ const Details = () => {
             </Col>
           </Row>
         </div>
-        <Row>
-                  <Col md='10' xs='12'>
+        <Row >
+                  <Col md='12' xs='12'>
                           <TabContent activeTab={activeTab}>
+                            
                             <TabPane tabId='1'>
-                              Tejas 
-                            </TabPane>
-                            <TabPane tabId='2'>
-                              Vijay
-                            </TabPane>
-                            <TabPane tabId='3'>
-                              Thakare
+                              <Roless />
                             </TabPane>
                           </TabContent>
                   </Col>    
         </Row>    
       </div>
-      
-    
+
   )
 }
 
