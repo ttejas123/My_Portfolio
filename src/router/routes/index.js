@@ -125,6 +125,10 @@ const Routes = [
     component: lazy(() => import('../../views/rights'))
   },
   {
+    path: '/profile/rewards',
+    component: lazy(() => import('../../views/MyRewards'))
+  },
+  {
     path: '/register',
     component: lazy(() => import('../../views/register/RegisterV1'))
   },

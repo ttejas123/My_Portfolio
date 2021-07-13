@@ -76,27 +76,33 @@ const ProductDropDown = () => {
     <UncontrolledDropdown tag='li' className='dropdown-user-left nav-item d-none d-lg-block'>
       <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
         <div className='user-nav d-sm-flex d-none'>
-          <small className=' font-weight-bold h6' style={{color:'black'}}>Search</small> 
-          {/* {(userData && userData['username']) || 'Ravi Kukreja'}
-          <span className='user-status'> {(userData && userData.role) || 'Super Admin'}</span> */}
+          <small className=' font-weight-bold h6' style={{color:'black'}}>Transactions</small> 
 
         </div>
-        {/* <Avatar img={userAvatar} imgHeight='40' imgWidth='40' status='online' /> */}
+        
         <ChevronDown className='' size={15}/>
       </DropdownToggle>
       <DropdownMenu  style={{marginTop: "-0.1rem"}}>
         <DropdownItem tag={Link} to='/search/searchPage'>
               <AlignJustify size={14} className='mr-75' />
-              <span className='align-middle'>List</span>
+              <span className='align-middle'>Bid</span>
         </DropdownItem>
         
         <DropdownItem tag={Link} to='/search-grid'>
           <Codepen size={14} className='mr-75' />
-          <span className='align-middle'>Grid</span>
+          <span className='align-middle'>Orders</span>
         </DropdownItem>
         <DropdownItem tag={Link} to='/product/productDetails'>
           <AlertCircle size={14} className='mr-75' />
-          <span className='align-middle'>Detail</span>
+          <span className='align-middle'>Payments</span>
+        </DropdownItem>
+        <DropdownItem tag={Link} to='/search-grid'>
+          <Codepen size={14} className='mr-75' />
+          <span className='align-middle'>Rewards</span>
+        </DropdownItem>
+        <DropdownItem tag={Link} to='/product/productDetails'>
+          <AlertCircle size={14} className='mr-75' />
+          <span className='align-middle'>Sponsorships</span>
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
