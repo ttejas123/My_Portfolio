@@ -39,10 +39,12 @@ const UserDropdown = () => {
   return (
     <UncontrolledDropdown tag='li' className='dropdown-user nav-item'>
       <DropdownToggle href='/' tag='a' className='nav-link dropdown-user-link' onClick={e => e.preventDefault()}>
-        <div className='user-nav d-sm-flex d-none'>
-          <span className='user-name font-weight-bold'>{(userData && userData['username']) || 'Rony Buk'}</span>
-          <span className='user-status'>{(userData && userData.role) || 'Buyer'}</span>
-        </div>
+        {/*
+              <div className='user-nav d-sm-flex d-none'>
+                  <span className='user-name font-weight-bold'>{(userData && userData['username']) || 'Rony Buk'}</span>
+                  <span className='user-status'>{(userData && userData.role) || 'Buyer'}</span>
+                </div>
+              */}
         <Avatar img={userAvatar} imgHeight='35' imgWidth='35' status='online' />
       </DropdownToggle>
       <DropdownMenu right>

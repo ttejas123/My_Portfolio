@@ -148,7 +148,7 @@ const NotificationDropdown = () => {
   return (
     <UncontrolledDropdown tag='li' className='dropdown-notification nav-item mr-25'>
       <DropdownToggle tag='a' className='nav-link' href='/' onClick={e => e.preventDefault()}>
-        <Bell size={21} />
+        <Bell size={18} />
         <Badge pill color='danger' className='badge-up'>
           5
         </Badge>
