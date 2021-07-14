@@ -539,21 +539,21 @@ const dashboard2 = [
                   <TabPane tabId='10'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Product Changes
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='11'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Commission Changes
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='12'>
                       <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          VAS
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
@@ -563,7 +563,7 @@ const dashboard2 = [
                   <TabPane tabId='14'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          POC
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
@@ -579,14 +579,14 @@ const dashboard2 = [
                   <TabPane tabId='18'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          WareHouse List
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='19'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Warehouse Add Form
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
@@ -599,77 +599,77 @@ const dashboard2 = [
                   <TabPane tabId='22'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Rating And Reviews
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='23'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          My Team (Or About Team Section)
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='24'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Team Members
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='25'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Rights Management
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='26'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Rights Request Form
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='27'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Role Listing And Creation Page
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='28'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          List Of BackUp
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='29'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Audit Trails of Backup Account
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='30'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          Add Backup Account
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='31'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='32'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Chupa chups topping bonbon. Jelly-o toffee I love. Sweet I love wafer I love wafer.
+                          SiteMap
                         </div>
                       </UncontrolledAlert>
                   </TabPane>
