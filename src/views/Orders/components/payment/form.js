@@ -44,6 +44,32 @@ const RequestChange = (prop) => {
     {value: "user3456", label: "Bat"}
   ]
 
+    const optionCat = [
+    {value: "user1212", label: "Telecom"},
+    {value: "user1231", label: "Electronics"},
+    {value: "user1234", label: "Hardware"},
+    {value: "user2345", label: "Shopping Goods"},
+    {value: "user3456", label: "Specialty Goods"},
+    {value: "user2345", label: "Footballs"},
+    {value: "user3456", label: "Bat"}
+  ]
+
+  const optionSubCat = [
+    {value: "user1212", label: "Mobile"},
+    {value: "user1231", label: "T-shirt"},
+    {value: "user1234", label: "Watchs"},
+    {value: "user2345", label: "Glass Covers"},
+    {value: "user3456", label: "Tang Tops"},
+    {value: "user2345", label: "Footballs"},
+    {value: "user3456", label: "Bat"}
+  ]
+
+  const optionPosi = [
+    {value: "user1212", label: "Search"},
+    {value: "user1231", label: "Banner"},
+    {value: "user1234", label: "List"}
+  ]
+
   //for other input
   const handleInputeChange = (event) => {
     const {name, value} = event.target
@@ -77,7 +103,7 @@ const RequestChange = (prop) => {
       <Row>
       
         <Col sm='12' className="pl-5 pt-2">
-          <h2 className="mb-1">Request Change In Commission Form</h2>
+          <h2 className="mb-1">Add Sponsor Key</h2>
         </Col>
       
       <CardBody className='pl-3 pt-2'>
@@ -87,7 +113,7 @@ const RequestChange = (prop) => {
 
             <Col md='6' sm='12'>
               <FormGroup>
-                <Label for='allocate'>Select Category</Label>
+                <Label for='allocate'>Select Product</Label>
                 <Select
                   id='allocate'
                   className='react-select'
@@ -109,42 +135,84 @@ const RequestChange = (prop) => {
               </FormGroup>
             </Col>
 
-             <Col md='6' sm='12'>
+            <Col md='6' sm='12'>
               <FormGroup>
-                <Label for='amount'>Default Commission</Label>
-                <InputGroup>
-                  
-                  <Input name="amount" type="number" onChange={handleInputeChange} id='amount' value={values.amount} />
-                </InputGroup>
+                <Label for='category'>Select Category</Label>
+                <Select
+                  id='category'
+                  className='react-select'
+                  classNamePrefix='select'
+                  isClearable={false}
+                  options={optionCat}
+                  theme={selectThemeColors}
+                  value={values.cat}
+                  onChange={data => {
+                                     setValues(
+                                              {
+                                                 ...values,
+                                                 cat : data
+                                              } 
+                                      )
+                                    }
+                            }
+                />
               </FormGroup>
             </Col>
-            
+
+            <Col md='6' sm='12'>
+              <FormGroup>
+                <Label for='subcategory'>Select SubCategory</Label>
+                <Select
+                  id='subcategory'
+                  className='react-select'
+                  classNamePrefix='select'
+                  isClearable={false}
+                  options={optionSubCat}
+                  theme={selectThemeColors}
+                  value={values.subcat}
+                  onChange={data => {
+                                     setValues(
+                                              {
+                                                 ...values,
+                                                 subcat : data
+                                              } 
+                                      )
+                                    }
+                            }
+                />
+              </FormGroup>
+            </Col>
+
+            <Col md='6' sm='12'>
+              <FormGroup>
+                <Label for='position'>Add possition</Label>
+                <Select
+                  id='position'
+                  className='react-select'
+                  classNamePrefix='select'
+                  isClearable={false}
+                  options={optionPosi}
+                  theme={selectThemeColors}
+                  value={values.posi}
+                  onChange={data => {
+                                     setValues(
+                                              {
+                                                 ...values,
+                                                 posi : data
+                                              } 
+                                      )
+                                    }
+                            }
+                />
+              </FormGroup>
+            </Col>
+
             <Col md='6' sm='12'>
               <FormGroup>
                 <Label for='amount'>Your Comment</Label>
                 <InputGroup>
                   
                   <Input name="amount" type="textarea" onChange={handleInputeChange} id='amount' placeholder='Write Your Comment' value={values.amount} />
-                </InputGroup>
-              </FormGroup>
-            </Col>
-
-            <Col md='6' sm='12'>
-              <FormGroup>
-                <Label for='amount'>Approximate Turnover Expected</Label>
-                <InputGroup>
-                  
-                  <Input name="amount" type="number" onChange={handleInputeChange} id='amount' value={values.turnover} />
-                </InputGroup>
-              </FormGroup>
-            </Col>
-
-            <Col md='6' sm='12'>
-              <FormGroup>
-                <Label for='amount'> Current Company Revenue</Label>
-                <InputGroup>
-                  
-                  <Input name="amount" type="textarea" onChange={handleInputeChange} id='amount' value={values.revenu} />
                 </InputGroup>
               </FormGroup>
             </Col>

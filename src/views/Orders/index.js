@@ -35,7 +35,8 @@ import {
   UncontrolledAlert,
   NavLink
 } from 'reactstrap'
-
+import DataTable from './components/payment/datatable'
+import SForm from './components/payment/form'
 
 // ** Custom Components
 const Details = () => {
@@ -300,11 +301,7 @@ const Bid = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='7'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Audit Trail of Payments
-                        </div>
-                      </UncontrolledAlert>
+                     <DataTable />
                   </TabPane>
                   <TabPane tabId='8'>
                      <UncontrolledAlert color='primary'>
