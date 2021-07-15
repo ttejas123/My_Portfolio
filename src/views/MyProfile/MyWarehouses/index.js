@@ -13,6 +13,7 @@ import '@styles/react/apps/app-users.scss'
 import '@styles/react/libs/swiper/swiper.scss'
 import { useRTL } from '@hooks/useRTL'
 import WarehouseList from './warehouseList'
+import AddWarehouse from './addWarehouse'
 // import PersonalKyc from './personal.js'
 const MyWarehouses = () => {
   // ** States & Vars
@@ -53,7 +54,7 @@ const MyWarehouses = () => {
               <WarehouseList/>
               </TabPane>
               <TabPane tabId='2'>
-              <WarehouseList/>
+              <AddWarehouse/>
               </TabPane>
             </TabContent>
          

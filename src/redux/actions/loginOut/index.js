@@ -5,6 +5,13 @@ export const SignIn = () => {
     }
 }
 
+export const SearhPrp = () => {
+
+    return {
+        type: "SearchProp"
+    }
+}
+
 export const SignOut = () => {
     return {
         type: "SignOut"

@@ -12,20 +12,22 @@ import Profile from './profile'
 // ** Third Party Components
 import { Sun, Moon, Menu, Search, Bell, Home, Package, Book, ShoppingCart } from 'react-feather'
 import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
-import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, DropdownToggle } from 'reactstrap'
+import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, Row, DropdownToggle, UncontrolledDropdown } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
 import MissL from './missL'
 import SearchCardss from './searchC'
 import LibraryDropDown from './LibraryDropDown'
 import ResourcesDropDown from './ResourcesDropDown'
+import './style.css'
 
 //redux
 import { useSelector, useDispatch } from 'react-redux'
-import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
+import { SearhPrp } from '@src/redux/actions/loginOut/index.js'
 
 
 const NavbarUser = props => {
+  const usDispatch = useDispatch()
   console.log(getStatus())
 
   // ** Props
@@ -36,11 +38,13 @@ const NavbarUser = props => {
   const [modal, setModal] = useState(false)
       const view = () => {
             //here we passing id to delete this specific record
-           setModal(true)
+           //setModal(true)
+           usDispatch(SearhPrp())
         }
 
     const handleModal = () => {
-        setModal(!modal)
+        usDispatch(SearhPrp())
+        //setModal(!modal)
     }
   const { skin, setSkin, setMenuVisibility } = props
   const userAvatar = defaultAvatar
@@ -56,57 +60,67 @@ const NavbarUser = props => {
 
   return (
     <Fragment>
-      <ul className='navbar-nav d-xl-none d-flex align-items-center'>
+    <ul className='navbar-nav d-xl-none d-flex align-items-center'>
         <NavItem className='mobile-menu mr-auto'>
           <NavLink className='nav-menu-main menu-toggle hidden-xs is-active' onClick={() => setMenuVisibility(true)}>
             <Menu className='ficon' />
           </NavLink>
         </NavItem>
       </ul>
-      
-      <ul className='nav navbar-nav align-items-center mx-auto'>
+
+    <ul className='nav navbar-nav' style={{marginTop: '5px'}} >
+     
+      <div className='d-flex ml-lg-0  pl-lg-0'>
         <IntlDropdown />
-        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <Home className='' size={17} style={{marginRight:'3px'}} /><small className='user-name h6' style={{ color:'black'}}>Dashboard</small> 
-        </Button.Ripple>
+      </div>
+      <div className=" d-flex ">
+            <Button.Ripple style={{marginLeft: '5rem'}} tag={Link} to='/Homes/Dashboards' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                    <Home className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Dashboard</small> 
+            </Button.Ripple>
 
-        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <Package className='' size={17} style={{marginRight:'3px'}} /><small className='user-name h6' style={{ color:'black'}}>Product</small> 
-        </Button.Ripple>
-       
-        <div style={{paddingTop:'7px'}}>
-            <ProductDropDown />
-        </div>
+            <Button.Ripple tag={Link} to='/Homes/Products' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                    <Package className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Product</small> 
+            </Button.Ripple>
 
-        <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                <Book className='' size={17} style={{marginRight:'3px'}} /><small className='user-name h6' style={{ color:'black'}}>Reports</small> 
-        </Button.Ripple>
-
-        <Button.Ripple  className='cursor-pointer d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
-                <Search size={18} />
-        </Button.Ripple>
-       
-        <Button.Ripple  className='cursor-pointer d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={() => view()} color='#fff'>
-                <Bell size={18} />
-        </Button.Ripple>
-
-        <Profile />
-
-        <div style={{paddingTop:'7px'}} className='ml-lg-2' >
-            <MissL/>
-        </div>
-
-        <div tag='a' className='nav-link position-relative'>
-            <ShoppingCart size={18} className='ficon' />
-            
-              <Badge pill color='primary' className='badge-up'>
-                5
-              </Badge>
            
-        </div>
+            <small className='user-name h6' style={{ color:'black'}}><ProductDropDown /></small> 
+           
 
-      
-      </ul>
+            <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                    <Book className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Reports</small> 
+            </Button.Ripple>
+        {/*
+            <div style={{paddingTop:'7px'}} className='ml-lg-2' >
+                    <MissL/>
+                </div>
+              */
+        }
+      </div>
+
+      <div className='d-flex navbarLeftMwnu' style={{marginLeft: '24rem'}}>
+          <div className='cursor-pointer d-none d-lg-block'  style={{marginRight: '20px', marginTop: '9px'}} onClick={() => view()} color='#fff'>
+                <Search size={20} />
+          </div>
+       
+          <div  style={{marginRight: '15px', marginTop: '10px'}}  className='cursor-pointer d-none d-lg-block' color='#fff'>
+                <NotificationDropdown />
+          </div>
+
+          <div  style={{marginRight: '15px', marginTop: '10px'}}  className='cursor-pointer d-none d-lg-block' color='#fff'>
+            <UncontrolledDropdown tag='li' className='dropdown-notification nav-item mr-25'>
+              <DropdownToggle tag='a' className='nav-link' >
+                <ShoppingCart size={18} />
+                <Badge pill color='success' className='badge-up'>
+                 5
+                </Badge>
+              </DropdownToggle>
+            </UncontrolledDropdown>
+          </div>
+          <Profile />
+        
+      </div>
+    </ul>
+
       <SearchCardss open={modal} handleModal={handleModal} className="d-none" />
 
     </Fragment>

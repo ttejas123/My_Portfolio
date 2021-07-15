@@ -1,5 +1,6 @@
 const initData = {
-     flag: false
+     flag: false,
+     searchProps: false
 }
 const todoReducer = (state = initData, action) => {
 
@@ -16,6 +17,13 @@ const todoReducer = (state = initData, action) => {
             return {
                 ...state,
                 flag: false
+            }
+
+        case "SearchProp": 
+  
+            return {
+                ...state,
+                searchProps: (!state.searchProps)
             }
         default: return state
     } 
