@@ -115,6 +115,8 @@ const PersonalKyc = () => {
         time: '24 hours',
         revenue: '891.2',
         sales: '68',
+        uploadedBy : 'Tejas Thakare',
+        uploadedDate : '01-04-2021',
         id : 1
       },
       {
@@ -130,6 +132,8 @@ const PersonalKyc = () => {
         revenue: '668.51',
         sales: '97',
         salesUp: true,
+        uploadedBy : 'Komal Kamble',
+        uploadedDate : '02-04-2021',
         id : 2
       },
       {
@@ -145,6 +149,8 @@ const PersonalKyc = () => {
         revenue: '522.29',
         sales: '62',
         salesUp: true,
+        uploadedBy : 'Pravin Poshmani',
+        uploadedDate : '01-04-2021',
         id : 3
       }
     ]
@@ -206,6 +212,18 @@ const PersonalKyc = () => {
                   {row.approved === 'yes' ? <Check/> : <X/>}
                 </div>
               )
+      },
+      {
+        name: 'Uploaded By',
+        selector: 'uploadedBy',
+        sortable: false,
+        minWidth: '250px'
+      },
+      {
+        name: 'Uploaded Date',
+        selector: 'uploadedDate',
+        sortable: false,
+        minWidth: '250px'
       }
       // {
       //   name: 'Actions',

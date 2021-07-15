@@ -10,7 +10,7 @@ import '@styles/react/libs/tables/react-dataTable-component.scss'
 import { Fragment, useState, forwardRef } from 'react'
 import { selectThemeColors } from '@utils'
 // ** Table Data & Columns
-import { wareHouseData } from './data'
+import { ProductsIssuedData } from './data'
 import Select from 'react-select'
 
 // ** Add New Modal Component
@@ -72,7 +72,7 @@ const optionState = [
     {value: "Other Corporate", label: "Other Corporate"}
   ]
 
-const WarehouseList = () => {
+const ProductsIssued = () => {
   const statusObj = {
         pending: 'light-secondary',
         approved: 'light-success',
@@ -106,74 +106,59 @@ const WarehouseList = () => {
   }
 
   //columns
-  const columns = [
-        {
-          name: 'Name',
-          selector: 'name',
-          sortable: false,
-          minWidth: '50px'
-        },
-        {
-            name: 'Gst Number',
-            selector: 'gstNumber',
-            sortable: false,
-            minWidth: '50px'
-          },
-        {
-          name: 'Address',
-          selector: 'address',
-          sortable: false,
-          minWidth: '150px'
-        },
-        {
-          name: 'State',
-          selector: 'state',
-          sortable: true,
-          minWidth: '150px'
-        },
-        {
-            name: 'PinCode',
-            selector: 'pinCode',
-            sortable: true,
-            minWidth: '150px'
-          },
-        {
-            name: 'Created By',
-            selector: 'createdBy',
-            sortable: false,
-            minWidth: '150px'
-          },
-        {
-          name: 'Created Date',
-          selector: 'createdDate',
-          sortable: false,
-          minWidth: '150px'
-        },
-        {
-          name: 'Actions',
-          allowOverflow: true,
-          cell: row => {
-            return (
-              <div className='d-flex'>
-                <UncontrolledDropdown>
-                  <DropdownToggle className='pr-1' tag='span'>
-                    <Trash size={15} onClick={e => {
-                                                                                    e.preventDefault()
-                                                                                    deleteCountry(row.id)
-                                                                                  } }/>
-                  </DropdownToggle>
-                </UncontrolledDropdown>
-                <Link  to={`/edit-warehouse/${row.id}`}>
-                  <Edit size={15} >
-                 
-                                     </Edit></Link>
-              </div>
-            )
-          }
-        }
-    ]
-
-
+   
+const columns = [
+  {
+    name: 'Product Name',
+    selector: 'productName',
+    sortable: true,
+    minWidth: '50px'
+  },
+  {
+    name: 'Issued Date',
+    selector: 'issuedDate',
+    sortable: true,
+    minWidth: '180px'
+  },
+  {
+    name: 'Quantity',
+    selector: 'quantity',
+    sortable: true,
+    minWidth: '180px'
+  },
+  {
+    name: 'Issued By',
+    selector: 'issuedBy',
+    sortable: true,
+    minWidth: '180px'
+  }
+//   {
+//     name: 'Actions',
+//     allowOverflow: true,
+//     cell: row => {
+//       return (
+//         <div className='d-flex'>
+//           <UncontrolledDropdown>
+//             <DropdownToggle className='pr-1' tag='span'>
+//               <Trash size={15} onClick={e => {
+//                                                                               e.preventDefault()
+//                                                                               // deleteCountry(row.id)
+//                                                                             } }/>
+//             </DropdownToggle>
+//           </UncontrolledDropdown>
+//           <Link  to={`/edit-product/${row.id}`}><Edit  
+//             size={15} 
+//             onClick={ () => { 
+//                               setCurrentId(row.id)
+//                               setModal(true)
+//                                } }>
+//                                  <Link to='/edit-product'/>
+//                                </Edit></Link>
+//         </div>
+//       )
+//     }
+//   }
+]
   // ** Function to handle Modal toggle
   const handleModal = () => {
     setModal(!modal)
@@ -249,7 +234,7 @@ const WarehouseList = () => {
       nextLabel=''
       forcePage={currentPage}
       onPageChange={page => handlePagination(page)}
-      pageCount={searchValue.length ? filteredData.length / 7 : wareHouseData.length / 7 || 1}
+      pageCount={searchValue.length ? filteredData.length / 7 : ProductsIssuedData.length / 7 || 1}
       breakLabel='...'
       pageRangeDisplayed={2}
       marginPagesDisplayed={2}
@@ -338,7 +323,7 @@ const WarehouseList = () => {
       <Card className='mx-1'>
 
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>My Warehouses</CardTitle>
+          <CardTitle tag='h4'>Products Issued</CardTitle>
           <div className='d-flex mt-md-0 mt-1'>
             
           </div>
@@ -370,7 +355,7 @@ const WarehouseList = () => {
           sortIcon={<ChevronDown size={10} />}
           paginationDefaultPage={currentPage + 1}
           paginationComponent={CustomPagination}
-          data={searchValue.length ? filteredData : wareHouseData}
+          data={searchValue.length ? filteredData : ProductsIssuedData}
           selectableRowsComponent={BootstrapCheckbox}
         />
         
@@ -380,4 +365,4 @@ const WarehouseList = () => {
   )
 }
 
-export default WarehouseList
+export default ProductsIssued

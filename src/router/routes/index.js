@@ -147,8 +147,11 @@ const Routes = [
   },
   {
     path: '/site-map',
-    component: lazy(() => import('../../views/SiteMap')),
-    layout: 'BlankLayout'
+    component: lazy(() => import('../../views/SiteMap'))
+  },
+  {
+    path: '/sales-order',
+    component: lazy(() => import('../../views/Orders'))
   },
   {
     path: '/error',

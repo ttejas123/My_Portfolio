@@ -31,13 +31,9 @@ import SwiperCore, {
 } from 'swiper'
 
 import image from '@src/assets/images/avatars/1-small.png'
-import MyKyc from './MyKyc'
-import MyWarehouses from './MyWarehouses'
-import PersonalKyc from './MyKyc/personal'
-import TeamKyc from './TeamKyc'
-import MyGallery from './MyGallery'
-
-const MyProducts = props => {
+import SalesOrder from '../Orders/salesOrder'
+import ProductsIssued from './productIssued'
+const Orders = props => {
 
 SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow, Autoplay, Lazy, Virtual])
 const [isOpen, setIsOpen] = useState(false)
@@ -56,33 +52,18 @@ const toggle1 = tab => setActiveTab(tab)
           <Col md='2' xs='12'>
           <Card className='p-0'>
                   <CardBody className='p-1' >
-          <h4><b>My Profile</b></h4>
+          <h4><b>Orders</b></h4>
       <div>
           <ListGroup flush>
             <ListGroupItem className='cursor-pointer'  onClick={() => toggle1('1')}>
-              <span className="mr-1">My Gallery</span>
+              <span className="mr-1">Sales Order</span>
               {/* <Badge color='primary' pill>
                 New
               </Badge> */}
             </ListGroupItem>
             <ListGroupItem  className='cursor-pointer'  onClick={() => toggle1('2')}>
-              <span >My Kyc</span> 
+              <span >Product Issued</span> 
             </ListGroupItem>
-            <ListGroupItem  className='cursor-pointer'  onClick={() => toggle1('3')}>
-              <span >Team Kyc</span> 
-            </ListGroupItem>
-            <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('4')}>
-              <span >My Rewards</span>  
-            </ListGroupItem>  
-             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('5')}>
-              <span >My Support</span>  
-            </ListGroupItem>  
-             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('6')}>
-              <span >My Commissions</span>  
-            </ListGroupItem> 
-             <ListGroupItem  className='cursor-pointer' onClick={() => toggle1('7')}>
-              <span >My Warehouses</span>  
-            </ListGroupItem>             
           </ListGroup>
          
       </div>
@@ -92,18 +73,11 @@ const toggle1 = tab => setActiveTab(tab)
           <Col md='10' xs='12'>
                   <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                {/* <ByUserTab/> */}
-            <MyGallery/>
+               <SalesOrder/>
               </TabPane>
               <TabPane tabId='2'>
-              <PersonalKyc/>
+              <ProductsIssued/>
                    </TabPane>
-                   <TabPane tabId='3'>
-              <TeamKyc/>
-                   </TabPane>
-              <TabPane tabId='7'>
-              <MyWarehouses/>
-              </TabPane>
                   </TabContent>
           </Col>
       
@@ -113,4 +87,4 @@ const toggle1 = tab => setActiveTab(tab)
   )
 }
 
-export default MyProducts
+export default Orders

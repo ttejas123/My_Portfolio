@@ -32,7 +32,10 @@ export const wareHouseData = [
         country : "India",
         isBidoyasWarehouse : "Yes",
         id: 1,
-        createdDate : "22-04-2000"
+        pinCode : '502982',
+        gstNumber : 'G11023',
+        createdBy : 'Himanshu Chanda',
+        createdDate : "22-04-2020"
       },
       {
         name : "Geeks",
@@ -42,7 +45,10 @@ export const wareHouseData = [
         country : "India",
         isBidoyasWarehouse : "No",
         id: 2,
-        createdDate : "21-04-2000"
+        pinCode : '602982',
+        gstNumber : 'G11022',
+        createdBy : 'Himanshu Chanda',
+        createdDate : "21-04-2020"
       },
       {name : "Techie",
       address : "address3",
@@ -51,7 +57,10 @@ export const wareHouseData = [
       country : "India",
       isBidoyasWarehouse : "No",
       id: 3,
-      createdDate : "31-04-3000"
+      pinCode : '701982',
+      gstNumber : 'G11021',
+      createdBy : 'Komal Kamble',
+      createdDate : "31-04-2020"
       },
       {
         name : "Grid",
@@ -61,6 +70,9 @@ export const wareHouseData = [
         country : "India",
         isBidoyasWarehouse : "No",
         id: 4,
-        createdDate : "41-04-4000"
+        pinCode : '401982',
+        gstNumber : 'G11020',
+        createdBy : 'Himanshu Chanda',
+        createdDate : "31-04-2020"
       }
 ]
