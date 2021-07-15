@@ -47,7 +47,9 @@ const Notifications = () => {
                 <CardBody>
                   <Filters store={store}
                     dispatch={dispatch}
-                    updateFilter={updateFilter} />
+                    updateFilter={updateFilter}
+                    updateAllFilters={updateAllFilters} />
+                    
                 </CardBody>
               </Card>
             </Col>

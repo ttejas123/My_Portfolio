@@ -45,7 +45,7 @@ const Content = props => {
               
                 </div>
               )
-            }) : []}
+            }) :   <div className='media-list'>No Notification here</div>}
             {/* </PerfectScrollbar> */}
          
            </>

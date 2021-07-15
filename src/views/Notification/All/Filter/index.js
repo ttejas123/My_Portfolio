@@ -5,15 +5,16 @@ const Filters = props => {
     // ** Array of brands
     const {
       updateFilter,
+      updateAllFilters,
       store,
       dispatch
     } = props
   const brands = [
     
-    {
-      title: 'All',
-      total: 746
-    },
+    // {
+    //   title: 'All',
+    //   total: 746
+    // },
     {
       title: 'Bid',
       total: 633,
@@ -63,7 +64,14 @@ const Filters = props => {
         <>
         <h4 className="mt-2 mb-2"><b>Filters</b></h4>
         <div className='brands ml-2' >
-            
+        <CustomInput
+            type='checkbox'
+            className='mb-1'
+            label='View All'
+            id='view-all'
+            checked={store.selectedNotification.length === brands.length}
+            onChange={e => dispatch(updateAllFilters(e.target.checked))}
+          />
             <ul className='list-unstyled brand-list' style={{height: "250px", overflowY : "auto"}}>
               {brands.map(brand => {
                 return (

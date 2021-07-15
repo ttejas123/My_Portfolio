@@ -2,7 +2,7 @@
 const initialState = {
   events: [],
   selectedEvent: {},
-  selectedNotification: ['Payment', 'Bid', 'Profile', 'Order']
+  selectedNotification: ['Bid', 'Payment', 'Profile', 'Order']
   
 }
 
@@ -30,7 +30,7 @@ const notificationReducer = (state = initialState, action) => {
       const value = action.value
       let selected = []
       if (value === true) {
-        selected = ['Payment', 'Bid', 'Profile', 'Order']
+        selected = ['Bid', 'Payment', 'Profile', 'Order']
       } else {
         selected = []
       }
