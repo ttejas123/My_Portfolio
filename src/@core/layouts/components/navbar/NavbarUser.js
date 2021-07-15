@@ -68,7 +68,7 @@ const NavbarUser = props => {
         </NavItem>
       </ul>
 
-    <ul className='nav navbar-nav' style={{marginTop: '5px'}} >
+    <ul className='nav navbar-nav' style={{marginTop: '8px'}} >
      
       <div className='d-flex ml-lg-0  pl-lg-0'>
         <IntlDropdown />

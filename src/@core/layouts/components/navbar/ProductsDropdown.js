@@ -126,7 +126,9 @@ const ProductDropDown = () => {
                
             </Submenu>
           </Link>
-          <Item onClick={() => handleClick('Option 1')}>Sponsership</Item>
+          <Link to='/Homes/Sponsorship'>
+            <Item>Sponsership</Item>
+          </Link>
         </Menu>
       
     </div>
