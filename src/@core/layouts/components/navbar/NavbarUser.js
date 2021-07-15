@@ -12,20 +12,22 @@ import Profile from './profile'
 // ** Third Party Components
 import { Sun, Moon, Menu, Search, Bell, Home, Package, Book, ShoppingCart } from 'react-feather'
 import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
-import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, DropdownToggle, UncontrolledDropdown } from 'reactstrap'
+import { NavItem, NavLink, Button, FormGroup, Badge, Label, Col, Row, DropdownToggle, UncontrolledDropdown } from 'reactstrap'
 import ProductDropDown from './ProductsDropdown'
 import CustomerDropDown from './CustomerDroDown'
 import MissL from './missL'
 import SearchCardss from './searchC'
 import LibraryDropDown from './LibraryDropDown'
 import ResourcesDropDown from './ResourcesDropDown'
+import './style.css'
 
 //redux
 import { useSelector, useDispatch } from 'react-redux'
-import { SignIn, SignOut } from '@src/redux/actions/loginOut/index.js'
+import { SearhPrp } from '@src/redux/actions/loginOut/index.js'
 
 
 const NavbarUser = props => {
+  const usDispatch = useDispatch()
   console.log(getStatus())
 
   // ** Props
@@ -36,11 +38,13 @@ const NavbarUser = props => {
   const [modal, setModal] = useState(false)
       const view = () => {
             //here we passing id to delete this specific record
-           setModal(true)
+           //setModal(true)
+           usDispatch(SearhPrp())
         }
 
     const handleModal = () => {
-        setModal(!modal)
+        usDispatch(SearhPrp())
+        //setModal(!modal)
     }
   const { skin, setSkin, setMenuVisibility } = props
   const userAvatar = defaultAvatar
@@ -64,36 +68,36 @@ const NavbarUser = props => {
         </NavItem>
       </ul>
 
-    <ul className='nav navbar-nav' >
-      
-      <div className='d-flex ml-lg-2  pl-lg-3'>
+    <ul className='nav navbar-nav' style={{marginTop: '5px'}} >
+     
+      <div className='d-flex ml-lg-0  pl-lg-0'>
         <IntlDropdown />
+      </div>
+      <div className=" d-flex ">
             <Button.Ripple style={{marginLeft: '5rem'}} tag={Link} to='/Homes/Dashboards' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                     <Home className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Dashboard</small> 
             </Button.Ripple>
 
-            <Button.Ripple tag={Link} to='/search/searchPage' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+            <Button.Ripple tag={Link} to='/Homes/Products' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                     <Package className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Product</small> 
             </Button.Ripple>
 
-            <Button.Ripple className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
-                    <small className='user-name h6' style={{ color:'black'}}><ProductDropDown /></small> 
-            </Button.Ripple>
+           
+            <small className='user-name h6' style={{ color:'black'}}><ProductDropDown /></small> 
+           
 
             <Button.Ripple tag={Link} to='/homes/dashBoard' className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                     <Book className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Reports</small> 
             </Button.Ripple>
-
         {/*
             <div style={{paddingTop:'7px'}} className='ml-lg-2' >
                     <MissL/>
                 </div>
               */
         }
-        
       </div>
 
-      <div className='d-flex' style={{marginLeft: '26rem'}}>
+      <div className='d-flex navbarLeftMwnu' style={{marginLeft: '24rem'}}>
           <div className='cursor-pointer d-none d-lg-block'  style={{marginRight: '20px', marginTop: '9px'}} onClick={() => view()} color='#fff'>
                 <Search size={20} />
           </div>
@@ -116,6 +120,7 @@ const NavbarUser = props => {
         
       </div>
     </ul>
+
       <SearchCardss open={modal} handleModal={handleModal} className="d-none" />
 
     </Fragment>

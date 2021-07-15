@@ -16,7 +16,7 @@ import { handleLogout } from '@store/actions/auth'
 // import '..//../../../views/logcss.css'
 // ** Third Party Components
 import { UncontrolledDropdown, Button, Card, CardBody, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
-import { User, Mail, LogOut, CheckSquare, MessageSquare, Bell, Settings, CreditCard, HelpCircle, Power, ChevronDown, AlignJustify, Codepen, Circle, Check, AlertCircle } from 'react-feather'
+import { User, Mail, LogOut, DollarSign, CheckSquare, MessageSquare, Bell, Settings, CreditCard, HelpCircle, Power, ChevronDown, AlignJustify, Codepen, Circle, Check, AlertCircle } from 'react-feather'
 
 // ** Default Avatar Image
 import defaultAvatar from '@src/assets/images/avatars/raviKukreja.jpg'
@@ -95,10 +95,10 @@ const ProductDropDown = () => {
   return (
     <div>
 
-        <span className='h6' onClick={show}>
-          Transaction
-        </span>
-        <Menu style={{marginTop : '2.1rem'}} id='submenu_id'>
+        <Button.Ripple onClick={show} className='d-none d-lg-block  mb-1 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+                    <DollarSign className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Transaction</small> 
+        </Button.Ripple>
+        <Menu style={{marginTop : '2.6rem'}} id='submenu_id'>
           <Link to='/Homes/bid'>
             <Submenu className='m-0 p-0' label='Bid'>
             
@@ -108,12 +108,12 @@ const ProductDropDown = () => {
             
             </Submenu>
           </Link>
-          <Link to='/Homes/rewards'>
+          <Link to='/Homes/Orders'>
             <Submenu label='Orders'>
               
                 <Link to='/Homes/Orders'><Item>Purchase Order</Item></Link>
-                <Link to='/Homes/Orders'><Item>My Bids</Item></Link>
-                <Link to='/Homes/Orders'><Item >New Leads</Item></Link>
+                <Link to='/Homes/Orders'><Item>Sales Orders</Item></Link>
+                <Link to='/Homes/Orders'><Item >Product Issues</Item></Link>
              
             </Submenu>
           </Link>
