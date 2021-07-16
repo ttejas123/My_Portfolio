@@ -1,6 +1,6 @@
 // ** React Imports
 import { Fragment } from 'react'
-
+import { Link } from 'react-router-dom'
 // ** Custom Components
 import Avatar from '@components/avatar'
 
@@ -153,8 +153,8 @@ const NotificationDropdown = () => {
           </DropdownItem>
         </li>
         {renderNotificationItems()}
-            <li className='dropdown-menu-footer'>
-                  <Button.Ripple color='primary' block>
+            <li  className='dropdown-menu-footer'>
+                  <Button.Ripple tag={Link} to='/Homes/Notifications' color='primary' block>
                     Read all notifications
                   </Button.Ripple>
             </li> 

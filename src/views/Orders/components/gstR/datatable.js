@@ -92,28 +92,25 @@ const DataTableWithButtons = () => {
   const [suggestions, setSuggestions] = useState([
     
         {
-          title: 'Tejas'
+          title: '#Bid3432'
         },
         {
-          title: 'Pravin'
+          title: '#Bid4432'
         },
         {
-          title: 'Komal'
+          title: '#Bid3442'
         },
         {
-          title: 'Harpriya'
+          title: '#Bid3452'
         },
         {
-          title: 'Sneha'
+          title: '#Bid3433'
         },
         {
-          title: 'Vijay'
+          title: '#Bid6432'
         },
         {
-          title: 'Vanita'
-        },
-        {
-          title: 'Dhavde'
+          title: '#Bid7432'
         }
   ])
 
@@ -126,18 +123,17 @@ const DataTableWithButtons = () => {
           minWidth: '150px'
         },
         {
-          name: 'Name',
+          name: 'Product',
           minWidth: '150px',
           selector: 'Name',
           sortable: true,
           cell: row => (
             <div className='d-flex justify-content-left align-items-center'>
-              {renderClient(row)}
+              
               <div className='d-flex flex-column'>
                 
                   <span className='font-weight-bold'>{row.name}</span>
-                  <small className='text-truncate text-muted mb-0'>@{row.name}</small>
-                
+                  
               </div>
             </div>
           )
@@ -149,7 +145,7 @@ const DataTableWithButtons = () => {
           minWidth: '150px'
         },
         {
-          name: 'Amount Paid',
+          name: 'Price Paid',
           selector: 'budget',
           sortable: true,
           minWidth: '150px',
@@ -171,14 +167,20 @@ const DataTableWithButtons = () => {
           }
         },
         {
-          name: 'Invoice',
-          selector: 'invoice',
+          name: 'SGST',
+          selector: 'SGST',
           sortable: true,
           minWidth: '150px'
         },
         {
-          name: 'Expected Date',
-          selector: 'Date',
+          name: 'IGST',
+          selector: 'IGST',
+          sortable: true,
+          minWidth: '150px'
+        },
+        {
+          name: 'CGST',
+          selector: 'CGST',
           sortable: true,
           minWidth: '150px'
         }
@@ -206,10 +208,10 @@ const DataTableWithButtons = () => {
       updatedData = data.filter(item => {
         
         const startsWith =
-          item.name.toLowerCase().startsWith(value.toLowerCase()) 
+          item.Bid.toLowerCase().startsWith(value.toLowerCase()) 
           
         const includes =
-          item.name.toLowerCase().includes(value.toLowerCase())
+          item.Bid.toLowerCase().includes(value.toLowerCase())
                    
         if (startsWith) {
           return startsWith
@@ -283,7 +285,7 @@ const DataTableWithButtons = () => {
       <Card>
       
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Pending Payments</CardTitle>
+          <CardTitle tag='h4'>GST Report</CardTitle>
         </CardHeader>
 
         <Row className='justify-content-end mx-0'>
@@ -298,7 +300,7 @@ const DataTableWithButtons = () => {
                 onChange={(e) => handleFilter(e.target.value)}
                 userssValue={(e) => handleFilter(e)} 
                 filterHeaderKey='groupTitle'
-                placeholder="Backup"
+                placeholder="Bid Id"
               />
             </Col>
           </Row>

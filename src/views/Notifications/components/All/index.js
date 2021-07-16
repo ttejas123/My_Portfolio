@@ -36,11 +36,8 @@ const Notifications = () => {
   return (
     
     <Fragment >
-      <div style={{ marginTop: "-1rem" }} className="ml-lg-4 mr-lg-4">
-        <div className="ml-lg-5" >
-          <BreadCrumbs breadCrumbTitle='Notifications' />
-        </div>
-        <div className="ml-lg-4 mr-lg-4" >
+      <div>
+       
           <Row>
 
             <Col md='12' xs='12'>
@@ -66,8 +63,7 @@ const Notifications = () => {
               </Card>
             </Col>
           </Row>
-        </div>
-      
+        
       </div>
     </Fragment>
   )

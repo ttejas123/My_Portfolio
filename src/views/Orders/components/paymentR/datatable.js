@@ -177,7 +177,13 @@ const DataTableWithButtons = () => {
           minWidth: '150px'
         },
         {
-          name: 'Expected Date',
+          name: 'mode of payment',
+          selector: 'modeOfP',
+          sortable: true,
+          minWidth: '150px'
+        },
+        {
+          name: 'Payment Date',
           selector: 'Date',
           sortable: true,
           minWidth: '150px'
@@ -283,7 +289,7 @@ const DataTableWithButtons = () => {
       <Card>
       
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Pending Payments</CardTitle>
+          <CardTitle tag='h4'>Payment Report</CardTitle>
         </CardHeader>
 
         <Row className='justify-content-end mx-0'>
@@ -298,7 +304,7 @@ const DataTableWithButtons = () => {
                 onChange={(e) => handleFilter(e.target.value)}
                 userssValue={(e) => handleFilter(e)} 
                 filterHeaderKey='groupTitle'
-                placeholder="Backup"
+                placeholder="Search User"
               />
             </Col>
           </Row>

@@ -35,7 +35,7 @@ import {
   UncontrolledAlert,
   NavLink
 } from 'reactstrap'
-
+import Notification from './components/All'
 
 // ** Custom Components
 const Details = () => {
@@ -101,11 +101,7 @@ const Bid = [
             <Col md='10' xs='12'>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Listing
-                        </div>
-                      </UncontrolledAlert>
+                    <Notification />
                   </TabPane>
                   <TabPane tabId='2'>
                     <UncontrolledAlert color='primary'>

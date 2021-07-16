@@ -37,22 +37,8 @@ import {
 } from 'reactstrap'
 
 
-// import Left from './components/mydashboard/left/MainSubMenu'
-// import Main from './components/mydashboard/main/index.js'
-
-// import BidCash from './components/rewards/bidcash'
-// import BidCoin from './components/rewards/bidcoin'
-
-// import Myprofile from './components/myprofile'
-// import Mygallery from './components/mygallery'
-// import Support from './components/support'
-// import Mycommision from './components/mycommision'
-// import Warehouse from './components/warehouse'
-// import Myratingsreviews from './components/myratingreviews'
-// import Temrights from './components/teamrights'
-// import Backups from './components/backups'
-// import Sitemap from './components/sitemap'
-
+import List from './components/PI/List'
+import AcceptReject from './components/PI/acceptReject'
 
 // ** Custom Components
 const Details = () => {
@@ -122,7 +108,7 @@ const PI = [
                         <Nav className='mb-0 ml-md-0 cursor-pointer'>
                           <NavItem style={{paddingLeft: '5px'}}>
                             <NavLink className='font-weight-bold'>
-                              <span className='d-none d-md-block'>Accepted</span>
+                              <span className='d-none d-md-block'>Accepted/Rejected</span>
                               <Home className='d-block d-md-none' size={14} />
                             </NavLink>
                           </NavItem>
@@ -278,18 +264,10 @@ const Customizations = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='7'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Purchase Intent List
-                        </div>
-                      </UncontrolledAlert>
+                     <List />
                   </TabPane>
                   <TabPane tabId='8'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Purchase Intent Accepted
-                        </div>
-                      </UncontrolledAlert>
+                     <AcceptReject />
                   </TabPane>
                   <TabPane tabId='9'>
                      <UncontrolledAlert color='primary'>
