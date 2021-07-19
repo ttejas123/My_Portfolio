@@ -1,13 +1,13 @@
 // ** React Imports
 import { Fragment } from 'react'
-
+import { Link } from 'react-router-dom'
 // ** Custom Components
 import Avatar from '@components/avatar'
 
 // ** Third Party Components
 import classnames from 'classnames'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { Bell, X, Check, AlertTriangle } from 'react-feather'
+import { Bell, X, Package, Check, DollarSign, AlertTriangle } from 'react-feather'
 import {
   Button,
   Badge,
@@ -24,30 +24,30 @@ const NotificationDropdown = () => {
   const notificationsArray = [
     {
       //img: require('@src/assets/images/portrait/small/avatar-s-15.jpg').default,
-      avatarContent: 'TT',
+      avatarIcon: <Package size={14} />,
       color: 'light-success',
-      subtitle: 'Won the monthly best seller badge.',
+      subtitle: '5 Bid Registration',
       title: (
         <Media tag='p' heading>
-          <span className='font-weight-bolder'>Congratulation Ravi</span>winner!
+          <span className='font-weight-bolder'>Bids Registration</span>
         </Media>
       )
     },
     {
       //img: require('@src/assets/images/portrait/small/avatar-s-3.jpg').default,
-      avatarContent: 'SN',
+      avatarContent: <DollarSign size={14} />,
       color: 'light-success',
-      subtitle: 'You have 10 unread messages.',
+      subtitle: '10 Emails Of Transaction Completed',
       title: (
         <Media tag='p' heading>
-          <span className='font-weight-bolder'>New message</span>&nbsp;received
+          <span className='font-weight-bolder'>3 Transaction</span>&nbsp;received
         </Media>
       )
     },
     {
-      avatarContent: 'MD',
+      avatarContent: <Package size={14} />,
       color: 'light-danger',
-      subtitle: 'MD Inc. order updated',
+      subtitle: '2 New Orders Are Placed',
       title: (
         <Media tag='p' heading>
           <span className='font-weight-bolder'>New Orders</span>&nbsp;checkout
@@ -55,19 +55,9 @@ const NotificationDropdown = () => {
       )
     },
     {
-      avatarIcon: <X size={14} />,
-      color: 'light-danger',
-      subtitle: 'USA Server is down due to hight CPU usage',
-      title: (
-        <Media tag='p' heading>
-          <span className='font-weight-bolder'>Server down</span>&nbsp;registered
-        </Media>
-      )
-    },
-    {
       avatarIcon: <Check size={14} />,
       color: 'light-success',
-      subtitle: 'Last month sales report generated',
+      subtitle: '3 Sales report are generated',
       title: (
         <Media tag='p' heading>
           <span className='font-weight-bolder'>Sales report</span>&nbsp;generated
@@ -77,7 +67,7 @@ const NotificationDropdown = () => {
     {
       avatarIcon: <AlertTriangle size={14} />,
       color: 'light-warning',
-      subtitle: 'You Missed This awasome Offer',
+      subtitle: '3 Offers Are Misted',
       title: (
         <Media tag='p' heading>
           <span className='font-weight-bolder'>Offer Missed</span>&nbsp;usage
@@ -151,7 +141,7 @@ const NotificationDropdown = () => {
         <Bell size={18} />
         <Badge pill color='danger' className='badge-up'>
           5
-        </Badge>
+        </Badge> 
       </DropdownToggle>
       <DropdownMenu tag='ul' right className='dropdown-menu-media mt-0'>
         <li className='dropdown-menu-header'>
@@ -163,11 +153,11 @@ const NotificationDropdown = () => {
           </DropdownItem>
         </li>
         {renderNotificationItems()}
-        {/* <li className='dropdown-menu-footer'>
-                  <Button.Ripple color='primary' block>
+            <li  className='dropdown-menu-footer'>
+                  <Button.Ripple tag={Link} to='/Homes/Notifications' color='primary' block>
                     Read all notifications
                   </Button.Ripple>
-            </li> */}
+            </li> 
       </DropdownMenu>
     </UncontrolledDropdown>
   )

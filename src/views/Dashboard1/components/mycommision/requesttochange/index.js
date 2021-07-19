@@ -77,7 +77,7 @@ const RequestChange = (prop) => {
       <Row>
       
         <Col sm='12' className="pl-5 pt-2">
-          <h2 className="mb-1">VAS Transaction Add</h2>
+          <h2 className="mb-1">Request Change In Commission Form</h2>
         </Col>
       
       <CardBody className='pl-3 pt-2'>

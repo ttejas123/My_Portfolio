@@ -129,6 +129,9 @@ import {
 import SalesOrder from './salesOrder'
 import ProductsIssued from './productIssued'
 
+import DataTable from './components/payment/datatable'
+import DataTable1 from './components/paymentR/datatable'
+import DataTable2 from './components/gstR/datatable'
 
 // ** Custom Components
 const Details = () => {
@@ -417,25 +420,13 @@ const Bid = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='7'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Audit Trail of Payments
-                        </div>
-                      </UncontrolledAlert>
+                     <DataTable />
                   </TabPane>
                   <TabPane tabId='8'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Pending Payments
-                        </div>
-                      </UncontrolledAlert>
+                     <DataTable1 />
                   </TabPane>
                   <TabPane tabId='9'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Payment Report
-                        </div>
-                      </UncontrolledAlert>
+                     <DataTable2 />
                   </TabPane>
                   <TabPane tabId='10'>
                      <UncontrolledAlert color='primary'>

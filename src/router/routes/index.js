@@ -213,6 +213,18 @@ const Routes = [
   {
     path: '/home1',
     component: lazy(() => import('../../views/Home/home_info_card'))
+  },
+  {
+    path: '/edit_customization',
+    component: lazy(() => import('../../views/Rfq7/Customization_Edit'))
+  },
+  {
+    path: '/notification/all',
+    component: lazy(() => import('../../views/Notification/All'))
+  },
+  {
+    path: '/order/purchase_intent/all',
+    component: lazy(() => import('../../views/PurchaseIntent/'))
   }
 
 ]

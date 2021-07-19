@@ -47,6 +47,16 @@ import Myprofile from './components/myprofile'
 import Mygallery from './components/mygallery'
 import Support from './components/support'
 
+import MyBackup from './components/teamrights/MyBackUp'
+import MyRights from './components/teamrights/MyRights'
+
+import About from './components/teamrights/MyTeam/Components/about.js'
+import Members from './components/teamrights/MyTeam/Components/members.js'
+import Roless from './components/teamrights/MyTeam/Components/roleRights.js'
+
+import BackupList from './components/teamrights/MyBackUp/Components/backup'
+import BackupAudits from './components/teamrights/MyBackUp/Components/audit'
+
 import DefaultCom from './components/mycommision/default'
 import SpecializedCom from './components/mycommision/specialized'
 import RequestChange from './components/mycommision/requesttochange/index'
@@ -604,25 +614,13 @@ const dashboard2 = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='23'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          My Team (Or About Team Section)
-                        </div>
-                      </UncontrolledAlert>
+                     <About />
                   </TabPane>
                   <TabPane tabId='24'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Team Members
-                        </div>
-                      </UncontrolledAlert>
+                    <Members />
                   </TabPane>
                   <TabPane tabId='25'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Rights Management
-                        </div>
-                      </UncontrolledAlert>
+                    <Roless />
                   </TabPane>
                   <TabPane tabId='26'>
                      <UncontrolledAlert color='primary'>
@@ -646,23 +644,15 @@ const dashboard2 = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='29'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Audit Trails of Backup Account
-                        </div>
-                      </UncontrolledAlert>
+                     <BackupList />
                   </TabPane>
                   <TabPane tabId='30'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Add Backup Account
-                        </div>
-                      </UncontrolledAlert>
+                     <BackupAudits />
                   </TabPane>
                   <TabPane tabId='31'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          
+                          BackUp Account Add [From Date - to Date] (With Role And Rights are included)
                         </div>
                       </UncontrolledAlert>
                   </TabPane>

@@ -149,6 +149,7 @@ const Router = () => {
                             layout={DefaultLayout}
                             transition={transition}
                             setTransition={setTransition}
+                            className=''
                             /* Conditional props */
                             /*eslint-disable */
                             {...(route.appLayout

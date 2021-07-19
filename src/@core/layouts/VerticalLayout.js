@@ -1,7 +1,7 @@
 // ** React Imports
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-
+import { Card, CardBody, CardText, Navbar, CardHeader, Button, Label, InputGroup, FormGroup, Input, InputGroupText, Row, Col, UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
 // ** Store & Actions
 import { useSelector, useDispatch } from 'react-redux'
 import { handleMenuCollapsed, handleContentWidth, handleMenuHidden } from '@store/actions/layout'
@@ -10,8 +10,6 @@ import { handleMenuCollapsed, handleContentWidth, handleMenuHidden } from '@stor
 import classnames from 'classnames'
 import { ArrowUp } from 'react-feather'
 import ScrollToTop from 'react-scroll-up'
-import { Navbar, Button } from 'reactstrap'
-
 // ** Configs
 import themeConfig from '@configs/themeConfig'
 
@@ -19,6 +17,7 @@ import themeConfig from '@configs/themeConfig'
 import Customizer from '@components/customizer'
 import FooterComponent from './components/footer'
 import NavbarComponent from './components/navbar'
+import TopbarNav from './components/navbar/topbarOn'
 import SidebarComponent from './components/menu/vertical-menu'
 
 // ** Custom Hooks
@@ -47,6 +46,11 @@ const VerticalLayout = props => {
   const [isMounted, setIsMounted] = useState(false)
   const [menuVisibility, setMenuVisibility] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [dataSearchs, setdatasearch] = useState(false)
+  const dds = useSelector(state => { 
+    return (state.loginOut.searchProps)
+  })
+  console.log(dds)
 
   // ** Store Vars
   const dispatch = useDispatch()
@@ -157,13 +161,18 @@ const VerticalLayout = props => {
         dark={skin === 'dark' || bgColorCondition}
         color={bgColorCondition ? navbarColor : undefined}
         className={classnames(
-          `header-navbar navbar align-items-center ${navbarClasses[navbarType] || 'floating-nav'} navbar-shadow`
+          `d-flex flex-column mb-0 header-navbar navbar align-items-center ${navbarClasses[navbarType] || 'floating-nav'} navbar-shadow`
         )}
       >
-        <div className='navbar-container d-flex content py-0'>
+        <div className=' mb-0 navbar-container content py-0'>
           {navbar ? navbar : <NavbarComponent setMenuVisibility={setMenuVisibility} skin={skin} setSkin={setSkin} />}
         </div>
+
+        <div className={dds === true ? ('d-block p-0') : ('d-none p-0')} style={{margin: '0rem'}}>
+              <TopbarNav />
+        </div>
       </Navbar>
+
       {children}
 
       {/* Vertical Nav Menu Overlay */}

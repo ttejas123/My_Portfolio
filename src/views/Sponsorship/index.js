@@ -35,7 +35,8 @@ import {
   UncontrolledAlert,
   NavLink
 } from 'reactstrap'
-
+import DataTable from './components/Skey/datatable'
+import SForm from './components/Skey/form'
 
 // ** Custom Components
 const Details = () => {
@@ -109,11 +110,7 @@ const Bid = [
             <Col md='10' xs='12'>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Sponsorship Listing
-                        </div>
-                      </UncontrolledAlert>
+                    <DataTable />
                   </TabPane>
                   <TabPane tabId='2'>
                     <UncontrolledAlert color='primary'>
@@ -123,11 +120,7 @@ const Bid = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='3'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Sponsorship Add
-                        </div>
-                      </UncontrolledAlert>
+                     <SForm />
                   </TabPane>
                 </TabContent>
             </Col>
