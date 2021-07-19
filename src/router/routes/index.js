@@ -101,6 +101,34 @@ const Routes = [
     component: lazy(() => import('../../views/Ddashboard'))
   },
   {
+    path: '/Homes/Dashboards',
+    component: lazy(() => import('../../views/Dashboard1'))
+  },
+  {
+    path: '/Homes/Bid',
+    component: lazy(() => import('../../views/bid'))
+  },
+  {
+    path: '/Homes/Orders',
+    component: lazy(() => import('../../views/Orders'))
+  },
+  {
+    path: '/Homes/Products',
+    component: lazy(() => import('../../views/Products'))
+  },
+  {
+    path: '/Homes/Rewards',
+    component: lazy(() => import('../../views/Rewards'))
+  },
+  {
+    path: '/Homes/Sponsorship',
+    component: lazy(() => import('../../views/Sponsorship'))
+  },
+  {
+    path: '/Homes/Notifications',
+    component: lazy(() => import('../../views/Notifications'))
+  },
+  {
     path: '/create-cart',
     component: lazy(() => import('../../views/Rfq7/createCart.js'))
   },
@@ -141,6 +169,10 @@ const Routes = [
     component: lazy(() => import('../../views/Login'))
   },
   {
+    path: '/order-details', // USE THIS
+    component: lazy(() => import('../../views/Orders/orderDetailsView/orderDetails'))
+  },
+  {
     path: '/login1',
     component: lazy(() => import('../../views/register/LoginV1')),
     layout: 'BlankLayout'
@@ -152,6 +184,14 @@ const Routes = [
   {
     path: '/sales-order',
     component: lazy(() => import('../../views/Orders'))
+  },
+  {
+    path: '/raise-redressal',
+    component: lazy(() => import('../../views/MyProfile/Redressal/raiseRedressal'))
+  },
+  {
+    path: '/redressal-list',
+    component: lazy(() => import('../../views/MyProfile/Redressal/redressalList'))
   },
   {
     path: '/error',
@@ -178,3 +218,11 @@ const Routes = [
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }
+
+// /bids/response
+// /profile/rewards
+// /rights/teamr
+// /bid/bidCreate
+
+// Approximate turnover expected => 500cd
+// current company revenu => 453cr
