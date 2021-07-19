@@ -1,6 +1,7 @@
 import { Card, CardBody, CardTitle,  Row, Col, Media, Input, FormGroup, Label, InputGroupText, Form, CardText, Button } from 'reactstrap'
 import { Search } from 'react-feather'
 import classnames from 'classnames'
+import { Link } from 'react-router-dom'
 import Nouislider from 'nouislider-react'
 import '@styles/react/libs/noui-slider/noui-slider.scss'
 import { useRTL } from '@hooks/useRTL'
@@ -102,9 +103,9 @@ const SearchCard = () => {
         </FormGroup>
               </Col>
               <Col md='4' sm='6'>
-              <Button.Ripple className='mb-1  mr-0 ml-1' color='primary'>
-            <Search size={14} />
-          <small className='user-name font-weight-bold h6 ml-1 h4' style={{ color:'#ffffff'}}>Search</small> 
+              <Button.Ripple tag={Link} to='/search/searchPage' className='mb-1  mr-0 ml-1' color='primary'>
+                    <Search size={14} />
+                  <small className='user-name font-weight-bold h6 ml-1 h4' style={{ color:'#ffffff'}}>Search</small> 
               </Button.Ripple>
               </Col>
           </Row>
