@@ -29,8 +29,9 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap'
-import AcceptedList from './Accepted'
-import RejectedList from './Rejected'
+
+import CreateRole from './components/Creating'
+import ListOfRole from './components/Listing'
 const Details = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
@@ -56,14 +57,18 @@ const Details = () => {
 
                               <NavItem style={{paddingLeft: '5px'}}>
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
-                                  <span className='d-none d-md-block'>Accepted</span>
+                                  <span className='d-none d-md-block'>Listing</span>
                                   <Home className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
+                              
+                            </Nav>
+
+                            <Nav className='mb-0 ml-md-0 ' pills >
 
                               <NavItem style={{paddingLeft: '5px'}}>
                                 <NavLink className='font-weight-bold' active={activeTab === '2'} onClick={() => toggle1('2')}>
-                                  <span className='d-none d-md-block'>Rejected</span>
+                                  <span className='d-none d-md-block'>Create</span>
                                   <Home className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
@@ -82,10 +87,10 @@ const Details = () => {
                   <Col md='12' xs='12'>
                           <TabContent activeTab={activeTab}>
                             <TabPane tabId='1'>
-                              <AcceptedList /> 
+                              <ListOfRole />
                             </TabPane>
                             <TabPane tabId='2'>
-                              <RejectedList />
+                              <CreateRole /> 
                             </TabPane>
                           </TabContent>
                   </Col>    

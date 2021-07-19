@@ -53,7 +53,8 @@ import MyRights from './components/teamrights/MyRights'
 import About from './components/teamrights/MyTeam/Components/about.js'
 import Members from './components/teamrights/MyTeam/Components/members.js'
 import Roless from './components/teamrights/MyTeam/Components/roleRights.js'
-
+import RoleCreateNList from './components/teamrights/RoleListingNCre'
+import RightRequestList from './components/teamrights/requestList'
 import BackupList from './components/teamrights/MyBackUp/Components/backup'
 import BackupAudits from './components/teamrights/MyBackUp/Components/audit'
 
@@ -64,7 +65,7 @@ import RequestChange from './components/mycommision/requesttochange/index'
 import Warehouse from './components/warehouse'
 import Myratingsreviews from './components/myratingreviews'
 import Temrights from './components/teamrights'
-import Backups from './components/backups'
+import Backups from './components/backups/addBackup'
 import Sitemap from './components/sitemap'
 
 
@@ -399,6 +400,16 @@ const dashboard2 = [
                         <Nav className='mb-0 ml-md-0 cursor-pointer'>
                           <NavItem style={{paddingLeft: '5px'}}>
                             <NavLink className='font-weight-bold'>
+                              <span className='d-none d-md-block'>Request List</span>
+                              <Home className='d-block d-md-none' size={14} />
+                            </NavLink>
+                          </NavItem>
+                        </Nav>
+                      </ListGroupItem>
+                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '29' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('29')}>
+                        <Nav className='mb-0 ml-md-0 cursor-pointer'>
+                          <NavItem style={{paddingLeft: '5px'}}>
+                            <NavLink className='font-weight-bold'>
                               <span className='d-none d-md-block'>Role Listing and creation page</span>
                               <Home className='d-block d-md-none' size={14} />
                             </NavLink>
@@ -412,7 +423,7 @@ const dashboard2 = [
     title: (<> <Tool size={17} style={{marginRight:"1px"}} /> Backup </>),
     content: (
                     <ListGroup flush className='m-0 p-0'>
-                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '29' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('29')}>
+                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '30' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('30')}>
                         <Nav className='mb-0 ml-md-0 cursor-pointer' >
                           <NavItem style={{paddingLeft: '5px'}}>
                             <NavLink className='font-weight-bold'>
@@ -422,7 +433,7 @@ const dashboard2 = [
                           </NavItem>
                         </Nav>
                       </ListGroupItem>
-                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '30' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('30')}>
+                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '31' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('31')}>
                         <Nav className='mb-0 ml-md-0 cursor-pointer'>
                           <NavItem style={{paddingLeft: '5px'}}>
                             <NavLink className='font-weight-bold'>
@@ -432,7 +443,7 @@ const dashboard2 = [
                           </NavItem>
                         </Nav>
                       </ListGroupItem>
-                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '31' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('31')}>
+                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '32' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('32')}>
                         <Nav className='mb-0 ml-md-0 cursor-pointer'>
                           <NavItem style={{paddingLeft: '5px'}}>
                             <NavLink className='font-weight-bold'>
@@ -476,7 +487,7 @@ const dashboard2 = [
                     <div className='border-bottom'><AppCollapse data={dashboard2} /></div>
                     <ListGroup  flush>
 
-                      <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} style={activeTab === '32' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('32')}>
+                      <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} style={activeTab === '33' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('33')}>
                          <Nav className='mb-0 ml-md-0 pl-0  ' >
                           <NavItem >
                             <NavLink className='font-weight-bold  d-flex'>
@@ -637,26 +648,21 @@ const dashboard2 = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='28'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          List Of BackUp
-                        </div>
-                      </UncontrolledAlert>
+                     <RightRequestList />
                   </TabPane>
                   <TabPane tabId='29'>
-                     <BackupList />
+                     <RoleCreateNList />
                   </TabPane>
                   <TabPane tabId='30'>
-                     <BackupAudits />
+                     <BackupList />
                   </TabPane>
                   <TabPane tabId='31'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          BackUp Account Add [From Date - to Date] (With Role And Rights are included)
-                        </div>
-                      </UncontrolledAlert>
+                     <BackupAudits />
                   </TabPane>
                   <TabPane tabId='32'>
+                     <Backups />
+                  </TabPane>
+                  <TabPane tabId='33'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
                           SiteMap
@@ -676,3 +682,25 @@ const dashboard2 = [
 }
 
 export default Details
+
+
+// 1. right request +>
+//   a. login User (disabled)
+//   b. super user (disabled)
+//   c. Date  (disabled)
+//   d. right table (editable) 
+//   on Submit(popup of successful)
+
+// 2. rights approval form 
+//     same as right request
+
+// 3. incoming request list
+//     1. user 2. role 3. no of rights
+
+// 4. role name descript righstable
+
+// 5. name date (disable) 
+//    user select, rights, resne for request
+
+// 6. name, date, exesting bidcoin(only show )
+//    no of bid

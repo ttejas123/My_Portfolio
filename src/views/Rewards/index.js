@@ -35,7 +35,8 @@ import {
   UncontrolledAlert,
   NavLink
 } from 'reactstrap'
-
+import BidCashRquest from './components/bidCash'
+import BidCoinRquest from './components/bidCoin' 
 
 // ** Custom Components
 const Details = () => {
@@ -160,11 +161,7 @@ const bidCash = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='2'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Request Form
-                        </div>
-                      </UncontrolledAlert>
+                    <BidCoinRquest />
                   </TabPane>
                   <TabPane tabId='3'>
                      <UncontrolledAlert color='primary'>
@@ -181,11 +178,7 @@ const bidCash = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='5'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                           Request Form
-                        </div>
-                      </UncontrolledAlert>
+                     <BidCashRquest />
                   </TabPane>
                   <TabPane tabId='6'>
                      <UncontrolledAlert color='primary'>
