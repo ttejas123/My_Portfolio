@@ -27,6 +27,7 @@ export const data = [
         customizationAvailable : 'yes',
         reason : 'Price is fake',
         id: 1,
+        quantity : '100',
         status : 'pending'
     },
       {
@@ -44,6 +45,7 @@ export const data = [
         customizationAvailable : 'yes',
         reason : 'Price is fake',
         id: 2,
+        quantity : '120',
         status : 'pending'
       },
     // },
@@ -62,7 +64,8 @@ export const data = [
     //     customizationAvailable : 'yes',
     //     reason : 'Price is fake',
     //     id: 3,
-    //     status : 'pending'
+    // quantity : '100',//     
+    // status : 'pending'
     // },
     //   {
     //     product_name: "Men's Regular Fit T-Shirt",
@@ -79,7 +82,8 @@ export const data = [
     //     customizationAvailable : 'yes',
     //     reason : 'Price is fake',
     //     id: 4,
-    //     status : 'appproval'
+    // quantity : '100',//     
+    // status : 'appproval'
     // },
     //   {
     //     product_name: "Hornbull Gift Hamper for Men | Brown Wallet and Brown Belt Men's Combo Gift Set | Leather Wallets for Men | Men's Wallet",
@@ -96,7 +100,8 @@ export const data = [
     //     customizationAvailable : 'yes',
     //     reason : 'Price is fake',
     //     id: 5,
-    //     status : 'pending'
+    // quantity : '100',//     
+    // status : 'pending'
     // },
     //   {
     //     product_name: "Men's Regular Fit",
@@ -113,7 +118,8 @@ export const data = [
     //     customizationAvailable : 'yes',
     //     reason : 'Price is fake',
     //     id: 6,
-    //     status : 'pending'
+    // quantity : '100',//     
+    // status : 'pending'
     // },
     //   {
     //     product_name: "Kraasa Sports Shoes for Men | Latest Stylish Casual Sneakers for Men",
@@ -130,7 +136,8 @@ export const data = [
     //     customizationAvailable : 'yes',
     //     reason : 'Price is fake',
     //     id: 7,
-    //     status : 'approved'
+    // quantity : '100',//     
+    // status : 'approved'
     // },
       {
         product_name: "Latest Stylish Casual Sneakers for Men",
@@ -147,6 +154,7 @@ export const data = [
         customizationAvailable : 'yes',
         reason : 'Price is fake',
         id: 8,
+        quantity : '150',
         status : 'pending'
     },
       {
@@ -159,6 +167,7 @@ export const data = [
         image: img1,
         Cost: 600,
         id: 9,
+        quantity : '50',
         status : 'approval'
       }
 ]

@@ -34,7 +34,7 @@ import BillingAddress from './billingAddress'
 import OrderedProducts from './orderedProducts'
 import ActionSection from './ActionSection'
 
-const EcommerceDashboard = () => {
+const OrderDetails = () => {
   const cols = { md: '3', sm: '6' }
   const ShoopingAddre = {
     shopName: "Shivshakti so, CHS",
@@ -131,23 +131,23 @@ const EcommerceDashboard = () => {
         <OrderInfo/>
         </Col>
         <Row className='match-height'>
-    <Col md='3' sm='12'>
+    <Col md='6' sm='12'>
         <OrderBidInfo/>
         </Col>
-        <Col md='3' sm='12'>
+        <Col md='6' sm='12'>
         <Address title="Shipping Address" Address={ShoopingAddre}/>
         </Col>
-        <Col md='3' sm='12'>
+        <Col md='6' sm='12'>
         <BillingAddress title="Billing Address" Address={BillAddre}/>
         </Col>
-        <Col md='3' sm='12'>
+        <Col md='6' sm='12'>
         <OrderDocuments/>
         </Col>
-        <Col md='12' sm='12'>
+        <Col md='12' sm='12' className='px-0'>
         <OrderedProducts/>
         </Col>
     </Row>
-    <Col md='12' sm='12'>
+    <Col md='12' sm='12' className='px-0'>
        <ActionSection/>
         </Col>
         {/* <Row>
@@ -190,4 +190,4 @@ const EcommerceDashboard = () => {
   )
 }
 
-export default EcommerceDashboard
+export default OrderDetails

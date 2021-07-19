@@ -119,6 +119,13 @@ const OrderedProducts = () => {
           sortable: true,
           minWidth: '50px',
           style : tempStyle
+        },
+        {
+          name: 'Quantity',
+          selector: 'quantity',
+          sortable: true,
+          minWidth: '50px',
+          style : tempStyle
         }
     ]
 
@@ -197,7 +204,6 @@ const OrderedProducts = () => {
         <DataTable
           noHeader
           pagination
-          selectableRows
           dense='true'
           columns={columns}
           paginationPerPage={5}
@@ -206,7 +212,6 @@ const OrderedProducts = () => {
           paginationDefaultPage={currentPage + 1}
           paginationComponent={CustomPagination}
           data={searchValue.length ? filteredData : data}
-          selectableRowsComponent={BootstrapCheckbox}
         />
         
       </Card>

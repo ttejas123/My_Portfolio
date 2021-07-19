@@ -29,6 +29,7 @@ const RatingAndReview = ({ filledColor, dir }) => {
                   <Label for='review'>Review</Label>
                   <Input type='textarea' id='review' placeholder='Feedback...' />
                 </FormGroup>
+               
           </Col>
           <Col lg='2' md='2' sm='0' xs='0'>
           </Col>
@@ -47,6 +48,10 @@ const RatingAndReview = ({ filledColor, dir }) => {
                 </FormGroup>
           </Col>
         </Row>
+        <FormGroup className='mt-1'>
+                  <Label for='additionalFeedback'>Additional Feedback ( For Bidoya )</Label>
+                  <Input type='textarea' id='additionalFeedback' placeholder='Feedback...' />
+                </FormGroup>
       </CardBody>
     </Card>
   )

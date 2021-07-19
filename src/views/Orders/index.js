@@ -132,6 +132,7 @@ import ProductsIssued from './productIssued'
 import DataTable from './components/payment/datatable'
 import DataTable1 from './components/paymentR/datatable'
 import DataTable2 from './components/gstR/datatable'
+import OrderDetails from './orderDetailsView/orderDetails'
 
 // ** Custom Components
 const Details = () => {
@@ -406,11 +407,7 @@ const Bid = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='5'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Tracker
-                        </div>
-                      </UncontrolledAlert>
+                    <OrderDetails/>
                   </TabPane>
                   <TabPane tabId='6'>
                      <UncontrolledAlert color='primary'>

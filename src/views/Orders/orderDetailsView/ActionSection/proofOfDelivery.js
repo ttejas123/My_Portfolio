@@ -46,7 +46,7 @@ const ProofOfDelivery = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Upload Proof Of Payment</CardTitle>
+        <CardTitle tag='h4'>Upload Proof Of Delivery</CardTitle>
       </CardHeader>
       <CardBody>
       <Row>
