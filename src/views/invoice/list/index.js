@@ -22,7 +22,6 @@ import '@styles/react/libs/tables/react-dataTable-component.scss'
 const InvoiceList = () => {
   const dispatch = useDispatch()
   const store = useSelector(state => {
-    console.log(state)
     return state.invoice
   })
 
@@ -162,7 +161,6 @@ const InvoiceList = () => {
     }
   )
   useEffect(() => {
-    console.log(getData)
     dispatch(
       getData({
         page: currentPage,

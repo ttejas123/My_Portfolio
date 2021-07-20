@@ -367,10 +367,10 @@ const data = {
 // ------------------------------------------------
 // GET: Return products
 // ------------------------------------------------
+
 mock.onGet('/apps/ecommerce/products').reply(config => {
   // eslint-disable-next-line object-curly-newline
   const { q = '', sortBy = 'featured', perPage = 9, page = 1 } = config.params
-
   const queryLowered = q.toLowerCase()
 
   const filteredData = data.products.filter(product => product.name.toLowerCase().includes(queryLowered))
@@ -473,6 +473,7 @@ mock.onGet('/apps/ecommerce/cart').reply(() => {
 // ------------------------------------------------
 // POST: Add Item in user Cart
 // ------------------------------------------------
+
 mock.onPost('/apps/ecommerce/cart').reply(config => {
   // Get product from post data
   const { productId } = JSON.parse(config.data)
