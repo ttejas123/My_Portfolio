@@ -50,7 +50,6 @@ const VerticalLayout = props => {
   const dds = useSelector(state => { 
     return (state.loginOut.searchProps)
   })
-  console.log(dds)
 
   // ** Store Vars
   const dispatch = useDispatch()
