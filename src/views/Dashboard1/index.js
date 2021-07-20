@@ -57,6 +57,8 @@ import RoleCreateNList from './components/teamrights/RoleListingNCre'
 import RightRequestList from './components/teamrights/requestList'
 import BackupList from './components/teamrights/MyBackUp/Components/backup'
 import BackupAudits from './components/teamrights/MyBackUp/Components/audit'
+import RightReqform from './components/teamrights/reqResForm/request'
+import RightResform from './components/teamrights/reqResForm/response'
 
 import DefaultCom from './components/mycommision/default'
 import SpecializedCom from './components/mycommision/specialized'
@@ -634,18 +636,10 @@ const dashboard2 = [
                     <Roless />
                   </TabPane>
                   <TabPane tabId='26'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Rights Request Form
-                        </div>
-                      </UncontrolledAlert>
+                    <RightReqform />
                   </TabPane>
                   <TabPane tabId='27'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Role Listing And Creation Page
-                        </div>
-                      </UncontrolledAlert>
+                    <RightResform />
                   </TabPane>
                   <TabPane tabId='28'>
                      <RightRequestList />
@@ -682,7 +676,6 @@ const dashboard2 = [
 }
 
 export default Details
-
 
 // 1. right request +>
 //   a. login User (disabled)
