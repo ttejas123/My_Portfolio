@@ -114,15 +114,15 @@ const WarehouseList = () => {
           minWidth: '50px'
         },
         {
+            name: 'Gst Number',
+            selector: 'gstNumber',
+            sortable: false,
+            minWidth: '50px'
+          },
+        {
           name: 'Address',
           selector: 'address',
           sortable: false,
-          minWidth: '150px'
-        },
-        {
-          name: 'City',
-          selector: 'city',
-          sortable: true,
           minWidth: '150px'
         },
         {
@@ -132,17 +132,17 @@ const WarehouseList = () => {
           minWidth: '150px'
         },
         {
-          name: 'Country',
-          selector: 'country',
-          sortable: true,
-          minWidth: '150px'
-        },
+            name: 'PinCode',
+            selector: 'pinCode',
+            sortable: true,
+            minWidth: '150px'
+          },
         {
-          name: `Bidoya's Warehouse`,
-          selector: 'isBidoyasWarehouse',
-          sortable: true,
-          minWidth: '150px'
-        },
+            name: 'Created By',
+            selector: 'createdBy',
+            sortable: false,
+            minWidth: '150px'
+          },
         {
           name: 'Created Date',
           selector: 'createdDate',

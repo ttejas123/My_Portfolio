@@ -42,8 +42,9 @@ const Notifications = () => {
         </div>
         <div className="ml-lg-4 mr-lg-4" >
           <Row>
-            <Col md='3' xs='12'>
-              <Card>
+
+            <Col md='12' xs='12'>
+               <Card>
                 <CardBody>
                   <Filters store={store}
                     dispatch={dispatch}
@@ -52,9 +53,6 @@ const Notifications = () => {
                     
                 </CardBody>
               </Card>
-            </Col>
-
-            <Col md='9' xs='12'>
               <Card  >
                 <CardBody>
                   <Content store={store}

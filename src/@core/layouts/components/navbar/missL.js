@@ -56,6 +56,10 @@ const CustomerDropDown = () => {
               
               <span className='align-middle'>Role and Rights</span>
         </DropdownItem>
+        <DropdownItem tag={Link} to='/sales-order'>
+              
+              <span className='align-middle'>Sales Order</span>
+        </DropdownItem>
         
       </DropdownMenu>
     </UncontrolledDropdown>

@@ -9,7 +9,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
-
+import AutoComplete from '@components/autocomplete'
 // ** React Imports
 import { Fragment, useState, forwardRef } from 'react'
 import { selectThemeColors } from '@utils'
@@ -89,11 +89,39 @@ const DataTableWithButtons = () => {
       }
   }
 
+  const [suggestions, setSuggestions] = useState([
+    
+        {
+          title: 'Tejas'
+        },
+        {
+          title: 'Pravin'
+        },
+        {
+          title: 'Komal'
+        },
+        {
+          title: 'Harpriya'
+        },
+        {
+          title: 'Sneha'
+        },
+        {
+          title: 'Vijay'
+        },
+        {
+          title: 'Vanita'
+        },
+        {
+          title: 'Dhavde'
+        }
+  ])
+
   //columns
   const columns = [
         {
           name: 'orderid',
-          selector: 'orderid',
+          selector: 'orderId',
           sortable: true,
           minWidth: '150px'
         },
@@ -168,6 +196,32 @@ const DataTableWithButtons = () => {
     setCurrentPage(page.selected)
   }
 
+      // ** Function to handle filter
+  const handleFilter = e => {
+    const value = e
+    let updatedData = []
+    setSearchValue(value)
+    console.log(value)
+    if (value.length) {
+      updatedData = data.filter(item => {
+        
+        const startsWith =
+          item.name.toLowerCase().startsWith(value.toLowerCase()) 
+          
+        const includes =
+          item.name.toLowerCase().includes(value.toLowerCase())
+                   
+        if (startsWith) {
+          return startsWith
+        } else if (!startsWith && includes) {
+          return includes
+        } else return null
+       })
+      setFilteredData(updatedData)
+      setSearchValue(value)
+    }
+  }
+
    // ** Converts table to CSV
   function convertArrayOfObjectsToCSV(array) {
     let result
@@ -229,11 +283,25 @@ const DataTableWithButtons = () => {
       <Card>
       
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Sponser Key</CardTitle>
-          <div className='d-flex mt-md-0 mt-1'>
-        
-          </div>
+          <CardTitle tag='h4'>Pending Payments</CardTitle>
         </CardHeader>
+
+        <Row className='justify-content-end mx-0'>
+            <Col className='d-flex align-items-center justify-content-end mt-1 ' md='4' sm='12'>
+              <Label className='mr-1' for='search-input-1'>
+                <b>Name of User</b>
+              </Label>
+              <AutoComplete
+                suggestions={suggestions}
+                className='form-control'
+                filterKey='title'
+                onChange={(e) => handleFilter(e.target.value)}
+                userssValue={(e) => handleFilter(e)} 
+                filterHeaderKey='groupTitle'
+                placeholder="Backup"
+              />
+            </Col>
+          </Row>
       
         <CardBody>
         <DataTable

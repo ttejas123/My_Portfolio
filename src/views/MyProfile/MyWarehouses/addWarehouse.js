@@ -178,7 +178,7 @@ const AddWarehouse = () => {
           <Input type='text' id='warehouseName' placeholder='Name' defaultValue={userData && userData.warehouseName} />
         </FormGroup>
       </Col>
-      <Col md='6' sm='12'>
+      {/* <Col md='6' sm='12'>
         <FormGroup>
           <FormGroup className='mx-auto mt-1 pt-1 d-block'>
               <CustomInput
@@ -192,7 +192,7 @@ const AddWarehouse = () => {
               />
                </FormGroup>
         </FormGroup>
-      </Col>
+      </Col> */}
 <Col md='12' sm='12'>
       <Row>
         <Col sm='12'>

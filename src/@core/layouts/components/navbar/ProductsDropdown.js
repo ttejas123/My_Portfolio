@@ -102,7 +102,7 @@ const ProductDropDown = () => {
           <Link to='/Homes/bid'>
             <Submenu className='m-0 p-0' label='Bid'>
             
-                <Link to='/Homes/bid'><Item >Create New</Item></Link>
+                <Link to='/bid/bidCreate'><Item >Create New</Item></Link>
                 <Link to='/Homes/bid'><Item >My Bids</Item></Link>
                 <Link to='/Homes/bid'><Item >New Leads</Item></Link>
             

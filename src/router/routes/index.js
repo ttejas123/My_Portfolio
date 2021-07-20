@@ -169,14 +169,29 @@ const Routes = [
     component: lazy(() => import('../../views/Login'))
   },
   {
+    path: '/order-details', // USE THIS
+    component: lazy(() => import('../../views/Orders/orderDetailsView/orderDetails'))
+  },
+  {
     path: '/login1',
     component: lazy(() => import('../../views/register/LoginV1')),
     layout: 'BlankLayout'
   },
   {
     path: '/site-map',
-    component: lazy(() => import('../../views/SiteMap')),
-    layout: 'BlankLayout'
+    component: lazy(() => import('../../views/SiteMap'))
+  },
+  {
+    path: '/sales-order',
+    component: lazy(() => import('../../views/Orders'))
+  },
+  {
+    path: '/raise-redressal',
+    component: lazy(() => import('../../views/MyProfile/Redressal/raiseRedressal'))
+  },
+  {
+    path: '/redressal-list',
+    component: lazy(() => import('../../views/MyProfile/Redressal/redressalList'))
   },
   {
     path: '/error',

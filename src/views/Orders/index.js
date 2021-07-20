@@ -1,4 +1,95 @@
-// ** React Imports
+// // ** React Imports
+// <<<<<<< HEAD
+// import { useState } from 'react'
+// import { Link } from 'react-router-dom'
+// import Rating from 'react-rating'
+// // ** Third Party Components
+// import classnames from 'classnames'
+// import { useRTL } from '@hooks/useRTL'
+// import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, User } from 'react-feather'
+// import {
+//   Row,
+//   Col,
+//   CardText,
+//   CardBody,
+//   Card,
+//   UncontrolledButtonDropdown,
+//   DropdownToggle,
+//   TabContent,
+//   TabPane,
+//   ListGroup, ListGroupItem,
+//   Badge
+// } from 'reactstrap'
+// import SwiperCore, {
+//   Navigation,
+//   Pagination,
+//   EffectFade,
+//   EffectCube,
+//   EffectCoverflow,
+//   Autoplay,
+//   Lazy,
+//   Virtual
+// } from 'swiper'
+
+// import image from '@src/assets/images/avatars/1-small.png'
+// import SalesOrder from '../Orders/salesOrder'
+// import ProductsIssued from './productIssued'
+// const Orders = props => {
+
+// SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow, Autoplay, Lazy, Virtual])
+// const [isOpen, setIsOpen] = useState(false)
+// const toggle = () => setIsOpen(!isOpen)
+//  const [activeTab, setActiveTab] = useState('1')
+// const toggle1 = tab => setActiveTab(tab)
+
+//   // ** Condition btn tag
+//   const CartBtnTag = 'button'
+//  const [isRtl, setIsRtl] = useRTL()
+//   return (
+
+//     <>
+//     <Row className="ml-lg-5 mr-lg-5 pl-lg-2 pr-lg-2">
+          
+//           <Col md='2' xs='12'>
+//           <Card className='p-0'>
+//                   <CardBody className='p-1' >
+//           <h4><b>Orders</b></h4>
+//       <div>
+//           <ListGroup flush>
+//             <ListGroupItem className='cursor-pointer'  onClick={() => toggle1('1')}>
+//               <span className="mr-1">Sales Order</span>
+//               {/* <Badge color='primary' pill>
+//                 New
+//               </Badge> */}
+//             </ListGroupItem>
+//             <ListGroupItem  className='cursor-pointer'  onClick={() => toggle1('2')}>
+//               <span >Product Issued</span> 
+//             </ListGroupItem>
+//           </ListGroup>
+         
+//       </div>
+//       </CardBody>
+//       </Card>
+//           </Col>
+//           <Col md='10' xs='12'>
+//                   <TabContent activeTab={activeTab}>
+//                   <TabPane tabId='1'>
+//                <SalesOrder/>
+//               </TabPane>
+//               <TabPane tabId='2'>
+//               <ProductsIssued/>
+//                    </TabPane>
+//                   </TabContent>
+//           </Col>
+      
+// </Row>    
+//       {/* <DashboardMenuItem /> */}
+//     </>
+//   )
+// }
+
+// export default Orders
+// =======
 import { useEffect, Fragment, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AlignJustify, Rss, Info, Image, User, MapPin, Book, Edit, FileText, Home, Award, Layers, Upload, Plus, Target, Percent, ArrowDownCircle, Box, ShoppingCart, Package, DollarSign, Truck, UserPlus, Star, Eye, Tool, Map } from 'react-feather'
@@ -35,8 +126,13 @@ import {
   UncontrolledAlert,
   NavLink
 } from 'reactstrap'
+import SalesOrder from './salesOrder'
+import ProductsIssued from './productIssued'
+
 import DataTable from './components/payment/datatable'
-import SForm from './components/payment/form'
+import DataTable1 from './components/paymentR/datatable'
+import DataTable2 from './components/gstR/datatable'
+import OrderDetails from './orderDetailsView/orderDetails'
 
 // ** Custom Components
 const Details = () => {
@@ -249,6 +345,30 @@ const Bid = [
                       </ListGroupItem>                            
                     </ListGroup>
 
+                    <ListGroup className='border-bottom' flush>
+                      <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '17'} onClick={() => toggle1('17')}>
+                         <Nav className='mb-0 ml-md-0 ' >
+                          <NavItem >
+                            <NavLink className='font-weight-bold d-flex'>
+                                <><FileText  size={17} style={{marginRight:"3px"}} /><span style={{fontSize: '14px'}}> Sales Order </span></>
+                            </NavLink>
+                          </NavItem>
+                        </Nav>
+                      </ListGroupItem>                            
+                    </ListGroup>
+
+                    <ListGroup className='border-bottom' flush>
+                      <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '18'} onClick={() => toggle1('18')}>
+                         <Nav className='mb-0 ml-md-0 ' >
+                          <NavItem >
+                            <NavLink className='font-weight-bold d-flex'>
+                                <><FileText  size={17} style={{marginRight:"3px"}} /><span style={{fontSize: '14px'}}> Products Issued </span></>
+                            </NavLink>
+                          </NavItem>
+                        </Nav>
+                      </ListGroupItem>                            
+                    </ListGroup>
+
                     <div><AppCollapse data={Bid} /></div>
 
                   </CardBody>
@@ -287,11 +407,7 @@ const Bid = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='5'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Tracker
-                        </div>
-                      </UncontrolledAlert>
+                    <OrderDetails/>
                   </TabPane>
                   <TabPane tabId='6'>
                      <UncontrolledAlert color='primary'>
@@ -304,18 +420,10 @@ const Bid = [
                      <DataTable />
                   </TabPane>
                   <TabPane tabId='8'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Pending Payments
-                        </div>
-                      </UncontrolledAlert>
+                     <DataTable1 />
                   </TabPane>
                   <TabPane tabId='9'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Payment Report
-                        </div>
-                      </UncontrolledAlert>
+                     <DataTable2 />
                   </TabPane>
                   <TabPane tabId='10'>
                      <UncontrolledAlert color='primary'>
@@ -366,6 +474,12 @@ const Bid = [
                           Create Invoices
                         </div>
                       </UncontrolledAlert>
+                  </TabPane>
+                  <TabPane tabId='17'>
+                     <SalesOrder/>
+                  </TabPane>
+                  <TabPane tabId='18'>
+                     <ProductsIssued/>
                   </TabPane>
                  
                 </TabContent>

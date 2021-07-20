@@ -31,11 +31,11 @@ import SwiperCore, {
 } from 'swiper'
 
 import image from '@src/assets/images/avatars/1-small.png'
-import MyGalleryTab from './myGallery'
 import MyKyc from './MyKyc'
 import MyWarehouses from './MyWarehouses'
 import PersonalKyc from './MyKyc/personal'
 import TeamKyc from './TeamKyc'
+import MyGallery from './MyGallery'
 
 const MyProducts = props => {
 
@@ -93,7 +93,7 @@ const toggle1 = tab => setActiveTab(tab)
                   <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
                 {/* <ByUserTab/> */}
-                <MyGalleryTab isRtl={isRtl} />
+            <MyGallery/>
               </TabPane>
               <TabPane tabId='2'>
               <PersonalKyc/>
@@ -101,7 +101,7 @@ const toggle1 = tab => setActiveTab(tab)
                    <TabPane tabId='3'>
               <TeamKyc/>
                    </TabPane>
-              <TabPane tabId='6'>
+              <TabPane tabId='7'>
               <MyWarehouses/>
               </TabPane>
                   </TabContent>

@@ -139,6 +139,22 @@ const ApprovedProducts = () => {
 
   //columns
   const columns = [
+    {
+      name: 'Image',
+      selector: 'Image',
+      sortable: false,
+      minWidth: '50px',
+      style : tempStyle,
+      allowOverflow : true,
+      cell: row => (
+        <div className='d-flex justify-content-left align-items-center '>
+          {renderProduct(row)}
+          <div className=''>
+             
+          </div>
+        </div>
+      )
+    },
         {
           name: 'Product Name',
           selector: 'product_name',
@@ -154,26 +170,36 @@ const ApprovedProducts = () => {
           style : tempStyle
         },
         {
-          name: 'Asin Number',
+          name: 'Asin / Fsn/ Hsn Code',
           selector: 'asinNumber',
           sortable: true,
           minWidth: '50px',
-          style : tempStyle
+          style : tempStyle,
+          cell: row => (
+            <div className=' '>
+              <span>{row.asinNumber}</span> <br/>
+              <span>{row.fsnNumber}</span> <br/>
+              <span>{row.hsnCode}</span> 
+              <div className=''>
+                 
+              </div>
+            </div>
+          )
         },
-        {
-            name: 'Fsn Number',
-            selector: 'fsnNumber',
-            sortable: true,
-            minWidth: '50px',
-            style : tempStyle
-        },
-        {
-            name: 'HSN Code',
-            selector: 'hsnCode',
-            sortable: true,
-            minWidth: '50px',
-            style : tempStyle
-        },
+        // {
+        //     name: 'Fsn Number',
+        //     selector: 'fsnNumber',
+        //     sortable: true,
+        //     minWidth: '50px',
+        //     style : tempStyle
+        // },
+        // {
+        //     name: 'HSN Code',
+        //     selector: 'hsnCode',
+        //     sortable: true,
+        //     minWidth: '50px',
+        //     style : tempStyle
+        // },
         {
             name: 'EAN UPC Code',
             selector: 'eanUpcCode',
@@ -182,8 +208,8 @@ const ApprovedProducts = () => {
             style : tempStyle
         },
         {
-            name: 'Rate',
-            selector: 'rate',
+            name: 'My Price',
+            selector: 'myPrice',
             sortable: true,
             minWidth: '50px',
             style : tempStyle
@@ -218,23 +244,7 @@ const ApprovedProducts = () => {
                   {row.samplingAvailable === 'yes' ? <Check/> : <X/>}
                 </div>
               )
-        },
-        {
-            name: 'Image',
-            selector: 'Image',
-            sortable: false,
-            minWidth: '50px',
-            style : tempStyle,
-            allowOverflow : true,
-            cell: row => (
-              <div className='d-flex justify-content-left align-items-center '>
-                {renderProduct(row)}
-                <div className=''>
-                   
-                </div>
-              </div>
-            )
-          }
+        }       
         //   {
         //     name: 'Actions',
         //     allowOverflow: true,
