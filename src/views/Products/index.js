@@ -304,7 +304,7 @@ const Brand = [
                   <TabPane tabId='6'>
                      <UncontrolledAlert color='primary'>
                         <div className='alert-body'>
-                          Image Uploads
+                          Image Uploadssss
                         </div>
                       </UncontrolledAlert>
                   </TabPane>

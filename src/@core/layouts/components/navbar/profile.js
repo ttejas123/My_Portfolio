@@ -65,7 +65,7 @@ const UserDropdown = () => {
           <span className='align-middle'>Redressal</span>
         </DropdownItem>
         <DropdownItem divider />
-        <DropdownItem tag={Link} to='/pages/account-settings'>
+        <DropdownItem tag={Link} to='/profile/setting1'>
           <Settings size={14} className='mr-75' />
           <span className='align-middle'>Settings</span>
         </DropdownItem>

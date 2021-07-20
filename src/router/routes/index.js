@@ -225,6 +225,14 @@ const Routes = [
   {
     path: '/order/purchase_intent/all',
     component: lazy(() => import('../../views/PurchaseIntent/'))
+  },
+  {
+    path: '/profile/setting',
+    component: lazy(() => import('../../views/AccountSetting'))
+  },
+  {
+    path: '/profile/setting1',
+    component: lazy(() => import('../../views/AccountSetting/'))
   }
 
 ]
