@@ -1,5 +1,6 @@
 //Amout, date, Allocate to, On behalf
 // ** React Imports
+import Swal from 'sweetalert2'
 import { ReactSortable } from 'react-sortablejs'
 import { useParams } from 'react-router-dom'
 import Repeater from '@components/repeater'
@@ -8,7 +9,7 @@ import { selectThemeColors, isObjEmpty } from '@utils'
 import { useState, useEffect } from 'react'
 import Flatpickr from 'react-flatpickr'
 import { MoreVertical, User, Users, Edit, Calendar, FileText, Archive, Trash,  MapPin, DollarSign, X, Plus  } from 'react-feather'
-
+import withReactContent from 'sweetalert2-react-content'
 // ** Custom Components
 import Avatar from '@components/avatar'
 import '@styles/react/libs/flatpickr/flatpickr.scss'
@@ -17,7 +18,7 @@ import '@styles/react/libs/flatpickr/flatpickr.scss'
 import { Media, Row, Col, Button, Form, Input, Label, FormGroup, Table, InputGroup, InputGroupAddon, InputGroupText,  Card, CardHeader,
   CardBody, Badge, ListGroupItem,
   CardTitle, CustomInput } from 'reactstrap'
-
+const MySwal = withReactContent(Swal)
 const RequestChange = (prop) => {
   // const { id } = useParams()
   const initialvalues = {
@@ -43,6 +44,17 @@ const RequestChange = (prop) => {
     {value: "user2345", label: "Footballs"},
     {value: "user3456", label: "Bat"}
   ]
+
+  const handleTitleAlert = () => {
+    return MySwal.fire({
+      title: 'Successful',
+      text: 'Your Data is Successfully submitted.',
+      customClass: {
+        confirmButton: 'btn btn-primary'
+      },
+      buttonsStyling: false
+    })
+  }
 
   //for other input
   const handleInputeChange = (event) => {
@@ -151,10 +163,7 @@ const RequestChange = (prop) => {
 
 
             <Col className='d-flex flex-sm-row flex-column mt-2' sm='12'>
-              <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={ e =>  {
-                                                          submitHandle(e)
-                                                        }
-                                                      } color='primary'>
+              <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' onClick={handleTitleAlert} color='primary'>
                 Save Changes
               </Button.Ripple>
               <Button.Ripple color='secondary' onClick={ () => setValues(initialvalues) } outline>

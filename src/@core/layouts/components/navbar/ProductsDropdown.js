@@ -99,24 +99,24 @@ const ProductDropDown = () => {
                     <DollarSign className='' size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Transaction</small> 
         </Button.Ripple>
         <Menu style={{marginTop : '2.6rem'}} id='submenu_id'>
-          <Link to='/Homes/bid'>
-            <Submenu className='m-0 p-0' label='Bid'>
-            
-                <Link to='/bid/bidCreate'><Item >Create New</Item></Link>
-                <Link to='/Homes/bid'><Item >My Bids</Item></Link>
-                <Link to='/Homes/bid'><Item >New Leads</Item></Link>
-            
-            </Submenu>
-          </Link>
-          <Link to='/Homes/Orders'>
-            <Submenu label='Orders'>
-              
-                <Link to='/Homes/Orders'><Item>Purchase Order</Item></Link>
-                <Link to='/Homes/Orders'><Item>Sales Orders</Item></Link>
-                <Link to='/Homes/Orders'><Item >Product Issues</Item></Link>
-             
-            </Submenu>
-          </Link>
+          {/*<Link to='/Homes/bid'>
+                      <Submenu className='m-0 p-0' label='Bid'>
+                      
+                          <Link to='/bid/bidCreate'><Item >Create New</Item></Link>
+                          <Link to='/Homes/bid'><Item >My Bids</Item></Link>
+                          <Link to='/Homes/bid'><Item >New Leads</Item></Link>
+                      
+                      </Submenu>
+                    </Link>
+                    <Link to='/Homes/Orders'>
+                      <Submenu label='Orders'>
+                        
+                          <Link to='/Homes/Orders'><Item>Purchase Order</Item></Link>
+                          <Link to='/Homes/Orders'><Item>Sales Orders</Item></Link>
+                          <Link to='/Homes/Orders'><Item >Product Issues</Item></Link>
+                       
+                      </Submenu>
+                    </Link>*/}
           <Item onClick={() => handleClick('Option 1')}>Payments</Item>
           <Link to='/Homes/rewards'>
             <Submenu label='Rewards'>

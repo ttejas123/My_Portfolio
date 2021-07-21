@@ -13,6 +13,8 @@ import person from '@src/assets/images/avatars/raviKukreja.jpg'
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
 import '@styles/react/pages/page-profile.scss'
+import BrandListing from './components/Brand/brand'
+import BrandAdd from './components/Brand/add'
 
 import {
   Row,
@@ -309,19 +311,11 @@ const Brand = [
                      <RejectedProducts/>
                   </TabPane>
                   <TabPane tabId='11'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          My Brand Listing
-                        </div>
-                      </UncontrolledAlert>
+                     <BrandListing />
                   </TabPane>
 
                   <TabPane tabId='12'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Add New Brand
-                        </div>
-                      </UncontrolledAlert>
+                     <BrandAdd />
                   </TabPane>
                   <TabPane tabId='13'>
                      <UncontrolledAlert color='primary'>

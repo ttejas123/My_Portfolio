@@ -1,95 +1,3 @@
-// // ** React Imports
-// <<<<<<< HEAD
-// import { useState } from 'react'
-// import { Link } from 'react-router-dom'
-// import Rating from 'react-rating'
-// // ** Third Party Components
-// import classnames from 'classnames'
-// import { useRTL } from '@hooks/useRTL'
-// import { Star, ShoppingCart, DollarSign, Heart, Share2, Facebook, Twitter, Youtube, Instagram, Check, Mail, GitHub, Truck, Pocket, User } from 'react-feather'
-// import {
-//   Row,
-//   Col,
-//   CardText,
-//   CardBody,
-//   Card,
-//   UncontrolledButtonDropdown,
-//   DropdownToggle,
-//   TabContent,
-//   TabPane,
-//   ListGroup, ListGroupItem,
-//   Badge
-// } from 'reactstrap'
-// import SwiperCore, {
-//   Navigation,
-//   Pagination,
-//   EffectFade,
-//   EffectCube,
-//   EffectCoverflow,
-//   Autoplay,
-//   Lazy,
-//   Virtual
-// } from 'swiper'
-
-// import image from '@src/assets/images/avatars/1-small.png'
-// import SalesOrder from '../Orders/salesOrder'
-// import ProductsIssued from './productIssued'
-// const Orders = props => {
-
-// SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow, Autoplay, Lazy, Virtual])
-// const [isOpen, setIsOpen] = useState(false)
-// const toggle = () => setIsOpen(!isOpen)
-//  const [activeTab, setActiveTab] = useState('1')
-// const toggle1 = tab => setActiveTab(tab)
-
-//   // ** Condition btn tag
-//   const CartBtnTag = 'button'
-//  const [isRtl, setIsRtl] = useRTL()
-//   return (
-
-//     <>
-//     <Row className="ml-lg-5 mr-lg-5 pl-lg-2 pr-lg-2">
-          
-//           <Col md='2' xs='12'>
-//           <Card className='p-0'>
-//                   <CardBody className='p-1' >
-//           <h4><b>Orders</b></h4>
-//       <div>
-//           <ListGroup flush>
-//             <ListGroupItem className='cursor-pointer'  onClick={() => toggle1('1')}>
-//               <span className="mr-1">Sales Order</span>
-//               {/* <Badge color='primary' pill>
-//                 New
-//               </Badge> */}
-//             </ListGroupItem>
-//             <ListGroupItem  className='cursor-pointer'  onClick={() => toggle1('2')}>
-//               <span >Product Issued</span> 
-//             </ListGroupItem>
-//           </ListGroup>
-         
-//       </div>
-//       </CardBody>
-//       </Card>
-//           </Col>
-//           <Col md='10' xs='12'>
-//                   <TabContent activeTab={activeTab}>
-//                   <TabPane tabId='1'>
-//                <SalesOrder/>
-//               </TabPane>
-//               <TabPane tabId='2'>
-//               <ProductsIssued/>
-//                    </TabPane>
-//                   </TabContent>
-//           </Col>
-      
-// </Row>    
-//       {/* <DashboardMenuItem /> */}
-//     </>
-//   )
-// }
-
-// export default Orders
-// =======
 import { useEffect, Fragment, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AlignJustify, Rss, Info, Image, User, MapPin, Book, Edit, FileText, Home, Award, Layers, Upload, Plus, Target, Percent, ArrowDownCircle, Box, ShoppingCart, Package, DollarSign, Truck, UserPlus, Star, Eye, Tool, Map } from 'react-feather'
@@ -99,7 +7,6 @@ import AppCollapse from '@components/app-collapse'
 
 // ** Custom Components
 import BreadCrumbs from '@components/breadcrumbs'
-
 import person from '@src/assets/images/avatars/raviKukreja.jpg'
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
@@ -128,9 +35,11 @@ import {
 } from 'reactstrap'
 import SalesOrder from './salesOrder'
 import ProductsIssued from './productIssued'
-
+import InvoiceList from './components/invoice/list'
+import InvoiceAdd from './components/invoice/add'
 import DataTable from './components/payment/datatable'
 import DataTable1 from './components/paymentR/datatable'
+import DataTable3 from './components/paymentAT/datatable'
 import DataTable2 from './components/gstR/datatable'
 import OrderDetails from './orderDetailsView/orderDetails'
 import OrdersList from './ordersList'
@@ -142,6 +51,9 @@ const Details = () => {
   const [activeTab, setActiveTab] = useState('1')
   const toggle1 = tab => setActiveTab(tab)
 
+  const AddRecord = () => {
+    toggle1('15')
+  }
   
 const Bid = [
   {
@@ -423,11 +335,7 @@ const Bid = [
                     <OrderDetails/>
                   </TabPane>
                   <TabPane tabId='6'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Order Details
-                        </div>
-                      </UncontrolledAlert>
+                     <DataTable3 />
                   </TabPane>
                   <TabPane tabId='7'>
                      <DataTable />
@@ -468,18 +376,10 @@ const Bid = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='14'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Connect Bidoya
-                        </div>
-                      </UncontrolledAlert>
+                     <InvoiceList AddRecord={AddRecord} />
                   </TabPane>
                   <TabPane tabId='15'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          List of Invoices
-                        </div>
-                      </UncontrolledAlert>
+                     <InvoiceAdd />
                   </TabPane>
                   <TabPane tabId='16'>
                      <UncontrolledAlert color='primary'>

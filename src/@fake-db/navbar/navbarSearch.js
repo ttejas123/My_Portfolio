@@ -211,7 +211,7 @@ export const searchArr = [
         isBookmarked: false,
         title: 'Account Settings',
         icon: 'Settings',
-        link: '/pages/account-settings'
+        link: '/profile/setting1'
       },
       {
         id: 27,

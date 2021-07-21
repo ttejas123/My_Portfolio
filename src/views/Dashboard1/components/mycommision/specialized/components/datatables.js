@@ -95,14 +95,31 @@ const DataTableWithButtons = () => {
           sortable: true
         },
         {
-          name: 'Commission',
-          selector: 'comision',
+          name: 'Befor Commission',
+          selector: 'comisionOld',
           sortable: true,
           minWidth: '150px',
           cell: row => {
             return (
               <div className='d-flex justify-content-left align-items-center'>
-                 {row.comision}%
+                <Badge color='danger' className='badge-glow'>
+                    {row.comisionOld}%
+                </Badge>
+              </div>
+            )
+          }
+        },
+        {
+          name: 'New Commission',
+          selector: 'comisionNew',
+          sortable: true,
+          minWidth: '150px',
+          cell: row => {
+            return (
+              <div className='d-flex justify-content-left align-items-center'>
+                <Badge color='success' className='badge-glow'>
+                    {row.comisionNew}%
+                </Badge>
               </div>
             )
           }
