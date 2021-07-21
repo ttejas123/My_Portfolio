@@ -7,6 +7,9 @@ export const salesOrderData = [
         mrp : '2000',
         quantity : '80',
         totalAmount : '1,60,000',
+        requestFor : 'Return',
+        buyer : 'TCS',
+        bidId : 'B0009',
         seller : 'Reatailsnet'
     },
     {
@@ -17,6 +20,9 @@ export const salesOrderData = [
         mrp : '1999',
         quantity : '65',
         totalAmount : '1,29,935',
+        requestFor : 'Refund',
+        buyer : 'Accenture',
+        bidId : 'B0004',
         seller : 'Puma India'
     },
     {
@@ -27,6 +33,9 @@ export const salesOrderData = [
         mrp : '1499',
         quantity : '80',
         totalAmount : '1,19,920',
+        requestFor : 'Return',
+        buyer : 'Cognizant',
+        bidId : 'B0002',
         seller : 'Reebok'
     },
     {
@@ -37,6 +46,9 @@ export const salesOrderData = [
         mrp : '4999',
         quantity : '40',
         totalAmount : '1,99,960',
+        requestFor : 'Refund',
+        buyer : 'TCS',
+        bidId : 'B0006',
         seller : 'Titan'
     },
     {
@@ -47,6 +59,9 @@ export const salesOrderData = [
         mrp : '10999',
         quantity : '100',
         totalAmount : '10,99,900',
+        requestFor : 'Return',
+        buyer : 'Accenture',
+        bidId : 'B0003',
         seller : 'Fossil India'
     },
     {
@@ -57,6 +72,9 @@ export const salesOrderData = [
         mrp : '2000',
         quantity : '50',
         totalAmount : '1,00,000',
+        requestFor : 'Refund',
+        buyer : 'Infosys',
+        bidId : 'B0001',
         seller : 'Reatailsnet'
     }
 ]

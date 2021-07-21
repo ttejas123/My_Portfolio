@@ -67,6 +67,10 @@ import Myratingsreviews from './components/myratingreviews'
 import Temrights from './components/teamrights'
 import Backups from './components/backups/addBackup'
 import Sitemap from './components/sitemap'
+import MyKyc from '../MyProfile/MyKyc'
+import TeamKyc from '../MyProfile/TeamKyc'
+import MyGallery from '../MyProfile/MyGallery'
+import MyWarehouses from '../MyProfile/MyWarehouses'
 
 
 // ** Custom Components
@@ -523,18 +527,10 @@ const dashboard2 = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='5'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          My KYC 
-                        </div>
-                      </UncontrolledAlert>
+                   <MyKyc/>
                   </TabPane>
                   <TabPane tabId='6'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Team KYC
-                        </div>
-                      </UncontrolledAlert>
+                     <TeamKyc/>
                   </TabPane>
                   <TabPane tabId='7'>
                      <UncontrolledAlert color='primary'>
@@ -544,18 +540,10 @@ const dashboard2 = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='8'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          My Images
-                        </div>
-                      </UncontrolledAlert>
+                     <MyGallery/>
                   </TabPane>
                   <TabPane tabId='9'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Bulk Upload Form
-                        </div>
-                      </UncontrolledAlert>
+                  <MyGallery/>
                   </TabPane>
                   <TabPane tabId='10'>
                      <UncontrolledAlert color='primary'>
@@ -598,18 +586,10 @@ const dashboard2 = [
                      <RequestChange />
                   </TabPane>
                   <TabPane tabId='18'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          WareHouse List
-                        </div>
-                      </UncontrolledAlert>
+                     <MyWarehouses/>
                   </TabPane>
                   <TabPane tabId='19'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Warehouse Add Form
-                        </div>
-                      </UncontrolledAlert>
+                  <MyWarehouses/>
                   </TabPane>
                   <TabPane tabId='20'>
                     <BidCoin />

@@ -33,6 +33,7 @@ import OrderBidInfo from './orderBidInfo'
 import BillingAddress from './billingAddress'
 import OrderedProducts from './orderedProducts'
 import ActionSection from './ActionSection'
+import SellerActionSection from './SellerActionSection'
 
 const OrderDetails = () => {
   const cols = { md: '3', sm: '6' }
@@ -143,12 +144,13 @@ const OrderDetails = () => {
         <Col md='6' sm='12'>
         <OrderDocuments/>
         </Col>
-        <Col md='12' sm='12' className='px-0'>
+        <Col md='12' sm='12' className=''>
         <OrderedProducts/>
         </Col>
     </Row>
     <Col md='12' sm='12' className='px-0'>
        <ActionSection/>
+       <SellerActionSection/>
         </Col>
         {/* <Row>
         <Col md='12' sm='12'>

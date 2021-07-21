@@ -133,6 +133,7 @@ import DataTable from './components/payment/datatable'
 import DataTable1 from './components/paymentR/datatable'
 import DataTable2 from './components/gstR/datatable'
 import OrderDetails from './orderDetailsView/orderDetails'
+import OrdersList from './ordersList'
 
 // ** Custom Components
 const Details = () => {
@@ -369,6 +370,18 @@ const Bid = [
                       </ListGroupItem>                            
                     </ListGroup>
 
+                    <ListGroup className='border-bottom' flush>
+                      <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '19'} onClick={() => toggle1('19')}>
+                         <Nav className='mb-0 ml-md-0 ' >
+                          <NavItem >
+                            <NavLink className='font-weight-bold d-flex'>
+                                <><FileText  size={17} style={{marginRight:"3px"}} /><span style={{fontSize: '14px'}}> Orders List </span></>
+                            </NavLink>
+                          </NavItem>
+                        </Nav>
+                      </ListGroupItem>                            
+                    </ListGroup>
+
                     <div><AppCollapse data={Bid} /></div>
 
                   </CardBody>
@@ -481,7 +494,9 @@ const Bid = [
                   <TabPane tabId='18'>
                      <ProductsIssued/>
                   </TabPane>
-                 
+                  <TabPane tabId='19'>
+                     <OrdersList/>
+                  </TabPane>
                 </TabContent>
             </Col>
 

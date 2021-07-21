@@ -35,6 +35,12 @@ import {
   UncontrolledAlert,
   NavLink
 } from 'reactstrap'
+import RejectedProducts from '../Seller/Products/MyProducts/rejectedProducts'
+import ApprovedProducts from '../Seller/Products/MyProducts/approvedProducts'
+import Drafts from '../Seller/Products/MyProducts/drafts'
+import AsinImportTab from '../Seller/Products/CreateProduct/asinImport'
+import FromExcel from '../Seller/Products/CreateProduct/FromExcel'
+import ByUserTab from '../Seller/Products/CreateProduct/byUser'
 
 
 // ** Custom Components
@@ -272,39 +278,19 @@ const Brand = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='2'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          AMZ Import
-                        </div>
-                      </UncontrolledAlert>
+                    <AsinImportTab/>
                   </TabPane>
                   <TabPane tabId='3'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          BUIN Import
-                        </div>
-                      </UncontrolledAlert>
+                  <AsinImportTab/>
                   </TabPane>
                   <TabPane tabId='4'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          File Uploads 
-                        </div>
-                      </UncontrolledAlert>
+                    <FromExcel/>
                   </TabPane>
                   <TabPane tabId='5'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Individual Creation
-                        </div>
-                      </UncontrolledAlert>
+                    <ByUserTab/>
                   </TabPane>
                   <TabPane tabId='6'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Image Uploads
-                        </div>
-                      </UncontrolledAlert>
+                     <FromExcel/>
                   </TabPane>
                   <TabPane tabId='7'>
                      <UncontrolledAlert color='primary'>
@@ -314,25 +300,13 @@ const Brand = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='8'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Draft Products
-                        </div>
-                      </UncontrolledAlert>
+                    <Drafts/>
                   </TabPane>
                   <TabPane tabId='9'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Approved
-                        </div>
-                      </UncontrolledAlert>
+                     <ApprovedProducts/>
                   </TabPane>
                   <TabPane tabId='10'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Rejected
-                        </div>
-                      </UncontrolledAlert>
+                     <RejectedProducts/>
                   </TabPane>
                   <TabPane tabId='11'>
                      <UncontrolledAlert color='primary'>

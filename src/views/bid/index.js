@@ -39,6 +39,7 @@ import {
 
 import List from './components/PI/List'
 import AcceptReject from './components/PI/acceptReject'
+import BidsList from './MyBids/myBids'
 
 // ** Custom Components
 const Details = () => {
@@ -222,11 +223,7 @@ const Customizations = [
             <Col md='10' xs='12'>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          My Bid 
-                        </div>
-                      </UncontrolledAlert>
+                    <BidsList/>
                   </TabPane>
                   <TabPane tabId='2'>
                     <UncontrolledAlert color='primary'>

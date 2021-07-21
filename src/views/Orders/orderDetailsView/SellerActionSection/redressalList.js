@@ -2,12 +2,11 @@
 import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 // ** React Imports
-import AppCollapse from '@components/app-collapse'
 import { Fragment, useState, forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 import Avatar from '@components/avatar'
 // ** Table Data & Columns
-import { data } from './data'
+import Select from 'react-select'
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
 import DataTable from 'react-data-table-component'
@@ -26,53 +25,35 @@ import {
   Row,
   Media,
   Col,
-  Badge,  UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardText
+  Badge, UncontrolledDropdown
 } from 'reactstrap'
 
 // ** Bootstrap Checkbox Component
-const BootstrapCheckbox = forwardRef(({ onClick, ...rest }, ref) => (
-  <div className='custom-control custom-checkbox'>
-    <input type='checkbox' className='custom-control-input' ref={ref} {...rest} />
-    <label className='custom-control-label' onClick={onClick} />
-  </div>
-))
 
-const renderProduct = row => {
-  const stateNum = Math.floor(Math.random() * 6),
-  states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
-  color = states[stateNum]
-  const str = `${row.product_name}`
-  const initial = str.substring(0, 1)
-  return (
-      <Media>
-            { row.image ? (
-                <CardBody>
-              <img src={row.image} width='80' height='80' className='h-25 w-10' />
-              </CardBody>
-              ) : (
-                <Avatar
-                  initials
-                  className='mr-2 mb-3 h-25 w-10'
-                  color={color}
-                  className='rounded mr-2 my-25'
-                  content={initial}
-                  contentStyles={{
-                    borderRadius: 0,
-                    fontSize: 'calc(36px)',
-                    width: '100%',
-                    height: '100%'
-                  }}
-                  style={{
-                    height: '40px',
-                    width: '40px'
-                  }}
-              />)
-             }
-          </Media>
-    )
-}
+const RedressalList = () => {
 
-const OrderedProducts = () => {
+    const data = [
+        {
+            time : 'Jul 15 2021 18:00:42',
+            for : 'Product',
+            reason : 'Images are fake'
+        },
+        {
+            time : 'Jul 14 2021 18:00:42',
+            for : 'Bid',
+            reason : 'Details are fake'
+        },
+        {
+            time : 'Jul 14 2021 17:00:42',
+            for : 'Order',
+            reason : 'Delivery got Delayed'
+        },
+        {
+            time : 'Jul 15 2021 18:30:42',
+            for : 'Product',
+            reason : 'Price is fake'
+        }
+    ]
   // ** States
   const [formModal, setFormModal] = useState(false)
   const [modal, setModal] = useState(false)
@@ -84,12 +65,10 @@ const OrderedProducts = () => {
   const [Filter, setFilter] = useState('')
   const [addClicked, setAddClicked] = useState(0)
   const [values, setValues] = useState('')
-  
-  const tempStyle = {
-      minHeight : '130px'
-  }
 
-  const handleAction = (action) => {
+   //deleteCountry
+  const deleteState = (val) => {
+    //here we passing id to delete this specific record
     const userselection = confirm("Are you sure you want to delete")
  
       if (userselection === true) {
@@ -98,80 +77,51 @@ const OrderedProducts = () => {
       console.log("not deleted ")
       }
   }
+    //edit action
+   const AddeditEvent = (val) => {
+     //here we hande event which comming from addNewModel.js (Form for add and edit)
+     console.log(currentId)
+      setCurrentId("")
+      console.log(val)
+  }
+
+  const tempStyle = {
+      minHeight : '130px'
+  }
+
   //columns
   const columns = [
-    {
-      name: 'Image',
-      selector: 'Image',
-      sortable: false,
-      minWidth: '50px',
-      style : tempStyle,
-      allowOverflow : true,
-      cell: row => (
-        <div className='d-flex justify-content-left align-items-center '>
-          {renderProduct(row)}
-          <div className=''>
-             
-          </div>
-        </div>
-      )
-    },
         {
-          name: 'Product Name',
-          selector: 'product_name',
+          name: 'Time',
+          selector: 'time',
           sortable: true,
-          minWidth: '50px',
-          style : tempStyle
+          minWidth: '50px'
         },
         {
-          name: 'MRP',
-          selector: 'MRP',
+          name: 'For',
+          selector: 'for',
           sortable: true,
-          minWidth: '50px',
-          style : tempStyle
+          minWidth: '50px'
         },
         {
-          name: 'Quantity',
-          selector: 'quantity',
-          sortable: true,
-          minWidth: '50px',
-          style : tempStyle
-        },
-        {
-          name: 'Request For',
-          selector: 'requestFor',
-          sortable: true,
-          minWidth: '50px',
-          style : tempStyle
-        },
-        {
-          name: 'Actions',
-          allowOverflow: true,
-          style : tempStyle,
-          cell: row => {
-            return (
-              <div className='d-flex'>
-              <UncontrolledDropdown>
-                <DropdownToggle className='pr-1' tag='span'>
-                  <MoreVertical size={15} />
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
-                    <FileText size={15} />
-                    <span className='align-middle ml-50'>Approve</span>
-                  </DropdownItem>
-                  <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
-                    <Archive size={15} />
-                    <span className='align-middle ml-50'>Reject</span>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </div>
-            )
-          }
+            name: 'Reason',
+            selector: 'reason',
+            sortable: true,
+            minWidth: '50px'
         }
     ]
 
+
+  // ** Function to handle toggle
+  const handleModal = () => {
+    if (addClicked === 1) {
+     setAddClicked(0)
+    } else {
+      setAddClicked(1)
+    }
+  }
+
+  // ** Function to handle filter
   const handleFilter = e => {
     const value = e.target.value
     let updatedData = []
@@ -207,7 +157,6 @@ const OrderedProducts = () => {
     setCurrentPage(page.selected)
   }
 
-
   // ** Custom Pagination
   const CustomPagination = () => (
     <ReactPaginate
@@ -215,7 +164,7 @@ const OrderedProducts = () => {
       nextLabel=''
       forcePage={currentPage}
       onPageChange={page => handlePagination(page)}
-      pageCount={searchValue.length ? filteredData.length / 5 : data.length / 5 || 1}
+      pageCount={searchValue.length ? filteredData.length / 7 : data.length / 7 || 1}
       breakLabel='...'
       pageRangeDisplayed={2}
       marginPagesDisplayed={2}
@@ -234,37 +183,35 @@ const OrderedProducts = () => {
     />
   )
 
-  const cdata = [
-    {
-      title: 'Ordered Products',
-      content: (
+
+  return (
+    <Fragment>
+ <Card>
+      <CardHeader>
+        <CardTitle tag='h4'>Redressal</CardTitle>
+      </CardHeader>
+      <CardBody>
+        <Row>
+      <Col xs='12' lg='12' md='12' sm='12' style={{boxShadow:'0 4px 24px 0 rgb(34 41 47 / 10%)', borderRadius : '5px'}} className='py-1'>
+        
         <DataTable
           noHeader
           pagination
           dense='true'
           columns={columns}
-          paginationPerPage={5}
+          paginationPerPage={7}
           className='react-dataTable'
           sortIcon={<ChevronDown size={10} />}
           paginationDefaultPage={currentPage + 1}
           paginationComponent={CustomPagination}
           data={searchValue.length ? filteredData : data}
         />
-        
-      )
-    }
-  ]
-
-  return (
-    <Fragment>
-      
-      <Card>
-        <CardBody>
-        <AppCollapse data={cdata} />
+        </Col>
+        </Row>
         </CardBody>
       </Card>
     </Fragment>
   )
 }
 
-export default OrderedProducts
+export default RedressalList
