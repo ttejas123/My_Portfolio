@@ -39,22 +39,27 @@ const Customizer = props => {
 
   const [DataOfSite, setdataOfSize] = useState('')
   const TitleDescription = {
-    Dashboards: {
+    dashboards: {
         Title: "Dashboard Page",
         pageName: "Dashboard",
         SmallContent: "Handle Your Bid and Statistics"
     },
-    Products: {
+    products: {
         Title: "Product Page",
         pageName: "Product",
         SmallContent: "Here You Can Get Product Releted Links"
+    },
+    searchpage: {
+        Title: "Search Page",
+        pageName: "Search",
+        SmallContent: "Here You Can Search Product with Advance Filter"
     },
     home: {
         Title: "Home Page",
         pageName: "Home",
         SmallContent: "This is Your Landing Page"
     },
-    bidCreate: {
+    bidcreate: {
         Title: "Bid Create Page",
         pageName: "Bid",
         SmallContent: "Here You Can Create Bids"
@@ -69,43 +74,39 @@ const Customizer = props => {
         pageName: "Rewards",
         SmallContent: "Here We Include Bidcoin and Bidcash"
     },
-    Sponsorship: {
+    sponsorship: {
         Title: "Sponsorship Page",
         pageName: "Sponsorship",
         SmallContent: "Here Are Some Links Releted To Sponsorship"
     },
-    Orders: {
+    orders: {
         Title: "Orders Page",
         pageName: "Orders",
         SmallContent: "Orders related To Statistics"
-    },
-    searchPage: {
-        Title: "Search Page",
-        pageName: "Search",
-        SmallContent: "All Product And Info Is here"
     }
   }
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    const urlOfLink = window.location.href
+    let urlOfLink = window.location.href
+    urlOfLink = urlOfLink.toLowerCase()
     const LinkuserName = urlOfLink.replace('http://localhost:3000/', '')
-    const fgf = LinkuserName.replace('Homes/', '')
-    if (fgf === 'Dashboards') {
-      setdataOfSize(TitleDescription.Dashboards)
-    } else if (fgf === 'Products') {
-      setdataOfSize(TitleDescription.Products)
-    } else if (fgf === 'bidCreate') {
-      setdataOfSize(TitleDescription.bidCreate)
+    const fgf = LinkuserName.replace('homes/', '')
+    if (fgf === 'dashboards') {
+      setdataOfSize(TitleDescription.dashboards)
+    } else if (fgf === 'products') {
+      setdataOfSize(TitleDescription.products)
+    } else if (fgf === 'bidcreate') {
+      setdataOfSize(TitleDescription.bidcreate)
     } else if (fgf === 'bid') {
       setdataOfSize(TitleDescription.bid)
     } else if (fgf === 'rewards') {
       setdataOfSize(TitleDescription.rewards)
-    } else if (fgf === 'Sponsorship') {
-      setdataOfSize(TitleDescription.Sponsorship)
-    } else if (fgf === 'Orders') {
-      setdataOfSize(TitleDescription.Orders)
-    } else if (fgf === 'searchPage') {
-      setdataOfSize(TitleDescription.searchPage)
+    } else if (fgf === 'sponsorship') {
+      setdataOfSize(TitleDescription.sponsorship)
+    } else if (fgf === 'orders') {
+      setdataOfSize(TitleDescription.orders)
+    } else if (fgf === 'searchpage') {
+      setdataOfSize(TitleDescription.searchpage)
     } else if (fgf === 'home') {
       setdataOfSize(TitleDescription.home)
     }

@@ -6,6 +6,7 @@ import auth from './auth'
 import navbar from './navbar'
 import layout from './layout'
 import loginOut from './loginOut'
+import CurrentPageTab from './CurrentPageTab'
 import invoice from '@src/views/invoice/store/reducer'
 import ecommerce from '@src/@core/layouts/components/navbar/store/reducer'
 // import notifications from '@src/views/Notification/store/reducer'
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   loginOut,
   invoice,
   ecommerce,
-  notifications
+  notifications,
+  CurrentPageTab
 })
 
 export default rootReducer

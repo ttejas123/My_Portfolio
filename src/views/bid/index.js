@@ -13,7 +13,7 @@ import person from '@src/assets/images/avatars/raviKukreja.jpg'
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
 import '@styles/react/pages/page-profile.scss'
-
+import BidList from '@src/views/Rfq7/rfqN'
 import {
   Row,
   Card, CardBody,
@@ -222,11 +222,7 @@ const Customizations = [
             <Col md='10' xs='12'>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          My Bid 
-                        </div>
-                      </UncontrolledAlert>
+                    <BidList />
                   </TabPane>
                   <TabPane tabId='2'>
                     <UncontrolledAlert color='primary'>

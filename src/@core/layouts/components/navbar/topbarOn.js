@@ -130,7 +130,9 @@ const Topbar = props => {
                   </Col>
 
                   <Col md='3' sm='6'>
-                  <Search size={30} className='mr-1' onClick={() => usDispatch(SearhPrp())} />
+                  <Button.Ripple className='p-0 bg-white' color='white' tag={Link} to='/homes/searchpage'>
+                    <Search  size={30} className='mr-1' onClick={() => usDispatch(SearhPrp())} />
+                  </Button.Ripple> 
                       {/* <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
 =======
                   <Col md='3' sm='6' >

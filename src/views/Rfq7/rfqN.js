@@ -62,27 +62,26 @@ const Checkout = () => {
 
   return (
       <div  >
-        <div  className="mb-1">
-              <Topbar />
-        </div>
-       
-           <div className="mb-1 text-right ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3">
-              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill >
-                Marketing<XCircle size={30} style={{color:"#ff6666", marginLeft:"5px"}} />
-              </Badge>
-              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill >
-                200 Units<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
-              </Badge>
-              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill>
-                30 Days<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
-              </Badge>
-              <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill>
-                Pending<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
-              </Badge>
-              
-            </div>
+       {/* <div  className="mb-1">
+                     <Topbar />
+               </div>
+              <div className="mb-1 text-right">
+                         <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill >
+                           Marketing<XCircle size={30} style={{color:"#ff6666", marginLeft:"5px"}} />
+                         </Badge>
+                         <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill >
+                           200 Units<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
+                         </Badge>
+                         <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill>
+                           30 Days<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
+                         </Badge>
+                         <Badge   color='primary' style={{padding:'10px', marginRight: "5px"}} pill>
+                           Pending<XCircle size={30}  style={{ color:"#ff6666", marginLeft:"5px"}} />
+                         </Badge>
+                         
+                       </div>*/}
         
-        <div  className='ml-lg-5 mr-lg-5 pl-lg-3 pr-lg-3'>  
+        <div  className=''>  
           <Cards
                 stepper={stepper}
                 products={products}

@@ -60,6 +60,30 @@ const renderClient = row => {
   }
 }
 
+      const custom =  (row) => {
+        return row.custom === true ? (
+            <div className='d-flex'><div style={{fontSize: "10px"}}>Customization:</div> <Check className='ml-1' size={13} /></div>
+          ) : (
+            <div className='d-flex'><div style={{fontSize: "10px"}}>Customization:</div> <X className='ml-1' size={13}/></div>
+          )
+      }
+
+      const Inspec = (row) => {
+         return row.inspection === 0 ? (
+            <div className='d-flex'><div style={{fontSize: "10px"}}>Inspection:</div> <Check className='ml-1' size={13} /></div>
+          ) : (
+            <div className='d-flex'><div style={{fontSize: "10px"}}>Inspection:</div> <X className='ml-1' size={13}/></div>
+          )
+      }
+
+      const Sampling = (row) => {
+        return row.sampling === true ? (
+            <div className='d-flex'><div style={{fontSize: "10px"}}>Sampling:</div> <Check className='ml-1' size={13} /></div>
+          ) : (
+            <div className='d-flex'><div style={{fontSize: "10px"}}>Sampling:</div> <X className='ml-1' size={13}/></div>
+          )
+      }
+
 // ** Table columns
 export const columns = [
   {
@@ -136,7 +160,7 @@ export const columns = [
     name: 'Photo',
     selector: 'releaseDate',
     sortable: false,
-    minWidth: '200px',
+    minWidth: '150px',
     cell: row => {
       const avatar = row.avatar1 ? row.avatar1 : Gal
       return (
@@ -147,41 +171,18 @@ export const columns = [
     }
   },
   {
-    name: 'Customization',
+    name: 'CIS',
     selector: 'balance',
     sortable: true,
     minWidth: '150px',
     cell: row => {
-      return row.custom === true ? (
-        <Check className='ml-1' size={18} />
-      ) : (
-        <X className='ml-1' size={18}/>
-      )
-    }
-  },
-  {
-    name: 'Inspection',
-    selector: 'balance',
-    sortable: true,
-    minWidth: '150px',
-    cell: row => {
-      return row.inspection === 0 ? (
-        <Check className='ml-1' size={18} />
-      ) : (
-        <X className='ml-1' size={18}/>
-      )
-    }
-  },
-  {
-    name: 'Sampling',
-    selector: 'balance',
-    sortable: true,
-    minWidth: '164px',
-    cell: row => {
-      return row.sampling === true ? (
-        <Check className='ml-1' size={18} />
-      ) : (
-        <X className='ml-1' size={18}/>
+
+      return (
+        <div className="d-flex flex-column">
+          <div>{custom(row)}</div>
+          <div>{Inspec(row)}</div>
+          <div>{Sampling(row)}</div>
+        </div>
       )
     }
   },
