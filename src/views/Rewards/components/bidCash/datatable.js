@@ -89,49 +89,49 @@ const DataTableWithButtons = () => {
   //columns
   const columns = [
         {
-          name: 'Activated On',
+          name: 'Message',
           minWidth: '150px',
-          selector: 'Category',
-          sortable: true
+          selector: 'name',
+          sortable: true,
+          cell: row => (
+            <div className='d-flex justify-content-left align-items-center'>
+            
+              <div className='d-flex flex-column'>
+                
+                  <span className='font-weight-bold'>{row.name}</span>
+                
+              </div>
+            </div>
+          )
         },
         {
-          name: 'Befor Commission',
-          selector: 'comisionOld',
+          name: 'Amount',
+          selector: 'budget',
           sortable: true,
           minWidth: '150px',
           cell: row => {
+            const str = row.budget
+            const res = str.substring(0, 1)
             return (
               <div className='d-flex justify-content-left align-items-center'>
-                <Badge color='danger' className='badge-glow'>
-                    {row.comisionOld}%
-                </Badge>
+                {
+                  res === '+' ? (
+                        <Badge color='light-success'>
+                          {str}
+                        </Badge>    
+                    ) : (
+                        <Badge color='light-danger'>
+                          {str}
+                        </Badge>
+                    )
+                }
+
               </div>
             )
           }
         },
         {
-          name: 'New Commission',
-          selector: 'comisionNew',
-          sortable: true,
-          minWidth: '150px',
-          cell: row => {
-            return (
-              <div className='d-flex justify-content-left align-items-center'>
-                <Badge color='success' className='badge-glow'>
-                    {row.comisionNew}%
-                </Badge>
-              </div>
-            )
-          }
-        },
-        {
-          name: 'Activated Date',
-          selector: 'Date',
-          sortable: true,
-          minWidth: '150px'
-        },
-        {
-          name: 'To date',
+          name: 'Date',
           selector: 'Date',
           sortable: true,
           minWidth: '150px'
@@ -211,7 +211,7 @@ const DataTableWithButtons = () => {
       <Card>
       
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Specialized Commission List</CardTitle>
+          <CardTitle tag='h4'>Bid Cash Audit Trail</CardTitle>
           <div className='d-flex mt-md-0 mt-1'>
         
           </div>
