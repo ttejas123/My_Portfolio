@@ -9,7 +9,7 @@ const DefaultRoute = '/home'
 // ** Merge Routes
 const Routes = [
   {
-    path: '/bids/response',
+    path: '/Homes/response',
     component: lazy(() => import('@src/views/invoice/list'))
   },
   {

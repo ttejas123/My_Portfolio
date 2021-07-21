@@ -35,7 +35,7 @@ import {
   UncontrolledAlert,
   NavLink
 } from 'reactstrap'
-
+import { useSelector, useDispatch } from 'react-redux'
 
 import Left from './components/mydashboard/left/MainSubMenu'
 import Main from './components/mydashboard/main/index.js'
@@ -77,11 +77,16 @@ import MyWarehouses from '../MyProfile/MyWarehouses'
 
 // ** Custom Components
 const Details = () => {
+  const dispatch = useDispatch()
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   const [activeTab, setActiveTab] = useState('1')
   const toggle1 = tab => setActiveTab(tab)
-
+  const newData = useSelector(state => { return state.CurrentPageTab.dashboardTab })
+  useEffect(() => {
+      //console.log(newData)
+      setActiveTab(`${newData}`)
+  }, [newData])
   const dashboard = [
   {
     title: (<> <Home size={17} style={{marginRight:"1px"}} /> Dashboard </>),

@@ -236,9 +236,9 @@ const direction = 'ltr'
                 </Row>
               </Card>
           </Col>
-          <Button.Ripple tag={Link} to='/rfq/rfqN/bidDetails' className='d-none d-lg-block m-0 p-0 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
+          <Button.Ripple tag={Link} to='/Homes/response' className='d-none d-lg-block pt-0 m-0 p-0 mb-sm-0 mr-0 mr-sm-1' color='#fff'>
                 <ChevronDown  size={40} className='d-block mx-auto' style={{marginTop:-10, zIndex:1000}}/>
-        </Button.Ripple>
+          </Button.Ripple>
         
     </Card>
        

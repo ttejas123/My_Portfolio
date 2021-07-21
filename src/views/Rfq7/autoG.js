@@ -9,17 +9,13 @@ import img4 from '@src/assets/images/logo/sh6.jpg'
 
 
 const params = {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  },
+  effect: 'fade',
+  navigation: true,
   pagination: {
     clickable: true
-  },
-  navigation: true
+  }
 }
+
 
 const SwiperAutoplay = ({ isRtl }) => {
   return (

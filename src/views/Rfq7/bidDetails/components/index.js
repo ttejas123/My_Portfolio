@@ -84,16 +84,27 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
     <Col lg='12' className='p-0 d-lg-flex justify-content-between'>
       <h4>Air Jordan 300xs Shoes with korean style</h4>
       <div className='d-lg-flex text-right'>
-        <div className='mr-lg-1'><b>Created Date:</b> <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '58%'}} type="text" /></div>
-        <div className='mb-xs-1'><b>End Date :</b> <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '58%'}} type="text" /></div>
+        <div className='mx-1 d-lg-flex'><div className='mr-1'>Created Date:</div><Input   type='text' name='text' id='exampleText'  placeholder='Enter Date' /> </div>
+        <div className='mr-1 d-lg-flex'><div className='mr-1'>End Date :</div><Input  type='text' name='text' id='exampleText' placeholder='Enter Date' /> </div>
       </div>
     </Col>
     <Row>    
-      <Col className=' align-items-center m-0 p-0' md='4' xs='12'>
+      <Col className=' align-items-center m-0 p-0' md='3' xs='12'>
         
           <AutoG isRtl={isRtls} />
+          <div>
+                <Label>Billing Address:-</Label><br />
+                <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Billing Address' />
+          </div>
+          <div >
+                <Label>Shipping Address:-</Label><br />
+                <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Shipping Address' />
+          </div>
+          <div className='pt-1 '>
+            <Button.Ripple color='primary' block onClick={() => view()}><span style={{paddingLeft: "4px"}}>Add More</span></Button.Ripple>
+          </div>
       </Col>
-      <Col md='4' xs='12'>
+      <Col md='5' xs='12'>
         <div className='  mt-1'>
           <ul className='unstyled-list list-inline '>
     
@@ -113,7 +124,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
 
         <hr />
         <Row>
-          <Col md='7' xs='12'> 
+          <Col md='5' xs='12'> 
             <div style={{paddingTop: '5px'}}>
               <DollarSign size={18} /> <span style={{paddingLeft:"5px"}}>MRP : ₹2000 - ₹3500</span>
             </div>
@@ -135,20 +146,20 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
             </div>
           </Col>
 
-          <Col md='5' xs='12' className={edits  ? ("d-block") : ("d-block")}> 
+          <Col md='7' xs='12' className={edits  ? ("d-block") : ("d-block")}> 
             <div className='d-lg-flex' >
-              <Label> Rate:-</Label><br />
-              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" />
+              <Label style={{marginTop: '0.5rem', marginRight: "10px"}}> Rate:-</Label>
+              <Input   type='text' name='text' id='exampleText'  placeholder='Enter Rate(₹) / MRP(₹)' />
             </div>
 
-            <div className='d-lg-flex mt-lg-2' style={{paddingTop: '5px'}}>
-              <Label> Quantity:-</Label><br />
-              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" />
+            <div className='d-lg-flex ' style={{ marginTop: '0.8rem'}}>
+              <Label style={{marginTop: '9px', marginRight: "10px"}}> Quantity:-</Label>
+              <Input   type='text' name='text' id='exampleText'  placeholder='eg. 200' />
             </div>
 
-            <div className='d-lg-flex mt-lg-2' style={{paddingTop: '5px'}}>
-              <Label>Days:-</Label><br />
-              <input style={{borderTopStyle: "hidden", borderRightStyle: "hidden", borderLeftStyle: "hidden", borderBottomStyle: "groove", width: '98%'}} type="text" />
+            <div className='d-lg-flex ' style={{marginTop: '0.6rem'}}>
+              <Label style={{marginTop: '0.7rem', marginRight: "10px"}}>Days:-</Label>
+              <Input   type='text' name='text' id='exampleText'  placeholder='eg. 5' />
             </div>
           </Col>
         </Row>
@@ -193,28 +204,22 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
             </div>
           </div>
         </div>
+        <Col md='12' style={{position:'absolute', bottom:'0', textAlign:'right', width:'100%'}}>
+            <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
+            <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Reset</span></Button.Ripple>
+            <Button.Ripple color='danger' className='mr-1'><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
+        </Col>
       </Col>
     </Row>
     <Row className='pl-0 '>
-        <Col md='8' className='d-lg-flex pl-0'>
-          <div  className='col-md-4'>
-                <Label>Billing Address:-</Label><br />
-                <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Billing Address' />
-          </div>
+        {/*<Col md='8' className='d-lg-flex pl-0'>
 
-          <div className='col-md-4' >
-                <Label>Shipping Address:-</Label><br />
-                <Input type='textarea' name='text' id='exampleText' rows='3' placeholder='Shipping Address' />
-          </div>
-          <div className='pt-lg-5 mt-lg-1'>
-            <Button.Ripple color='primary' onClick={() => view()}><span style={{paddingLeft: "4px"}}>Add More</span></Button.Ripple>
-          </div>
         </Col>
-        <Col md='4' className='pl-lg-5 pt-lg-5 mt-lg-1'>
-            <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
-            <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Reset</span></Button.Ripple>
-            <Button.Ripple color='danger' ><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
-        </Col>
+        <Col md='4' className='pl-lg-5 mt-lg-0'>
+                    <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
+                    <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Reset</span></Button.Ripple>
+                    <Button.Ripple color='danger' ><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
+                </Col>*/}
         <Modelsss open={modal} handleModal={handleModal} />
     </Row>
     </>
