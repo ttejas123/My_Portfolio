@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-
+import { Redirect } from 'react-router-dom'
 // ** Document title
 const TemplateTitle = '%s - Bidoya'
 
@@ -39,6 +39,30 @@ const Routes = [
   {
     path: '/invoice-to-select',
     component: lazy(() => import('../../views/RFQ/invoiceToSelect.js'))
+  },
+  {
+    path: '/Homes/invoicepreview/:id',
+    component: lazy(() => import('../../views/Orders/components/invoice/preview')),
+    meta: {
+      navLink: '/Homes/invoicepreview'
+    }
+  },
+  {
+    path: '/Homes/invoicepreview',
+    exact: true,
+    component: () => <Redirect to='/Homes/invoicepreview/4987' />
+  },
+  {
+    path: '/Homes/invoiceprint',
+    layout: 'BlankLayout',
+    component: lazy(() => import('../../views/Orders/components/invoice/print'))
+  },
+  {
+    path: '/Homes/invoiceedit/:id',
+    component: lazy(() => import('../../views/Orders/components/invoice/edit')),
+    meta: {
+      navLink: '/apps/invoice/edit'
+    }
   },
   {
     path: '/temp',
@@ -89,11 +113,11 @@ const Routes = [
     component: lazy(() => import('../../views/prodSellerGrid'))
   },
   {
-    path: '/bid/bidCreate',
+    path: '/Homes/bidCreate',
     component: lazy(() => import('../../views/Rfq7/bidDetails'))
   },
   {
-    path: '/search/searchPage',
+    path: '/Homes/searchPage',
     component: lazy(() => import('../../views/search'))
   },
   {
@@ -230,11 +254,3 @@ const Routes = [
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }
-
-// /bids/response
-// /profile/rewards
-// /rights/teamr
-// /bid/bidCreate
-
-// Approximate turnover expected => 500cd
-// current company revenu => 453cr

@@ -1,3 +1,6 @@
+// Sponser key add form
+// Sponser Key List page(Key, product, About paid, start end date)
+
 // ** Custom Components
 import Avatar from '@components/avatar'
 //import { DropDownList } from '@progress/kendo-react-dropdowns'
@@ -6,7 +9,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
-
+import AutoComplete from '@components/autocomplete'
 // ** React Imports
 import { Fragment, useState, forwardRef } from 'react'
 import { selectThemeColors } from '@utils'
@@ -86,52 +89,104 @@ const DataTableWithButtons = () => {
       }
   }
 
+  const [suggestions, setSuggestions] = useState([
+    
+        {
+          title: 'Tejas'
+        },
+        {
+          title: 'Pravin'
+        },
+        {
+          title: 'Komal'
+        },
+        {
+          title: 'Harpriya'
+        },
+        {
+          title: 'Sneha'
+        },
+        {
+          title: 'Vijay'
+        },
+        {
+          title: 'Vanita'
+        },
+        {
+          title: 'Dhavde'
+        }
+  ])
+
   //columns
   const columns = [
         {
-          name: 'Activated On',
-          minWidth: '150px',
-          selector: 'Category',
-          sortable: true
-        },
-        {
-          name: 'Befor Commission',
-          selector: 'comisionOld',
-          sortable: true,
-          minWidth: '150px',
-          cell: row => {
-            return (
-              <div className='d-flex justify-content-left align-items-center'>
-                <Badge color='danger' className='badge-glow'>
-                    {row.comisionOld}%
-                </Badge>
-              </div>
-            )
-          }
-        },
-        {
-          name: 'New Commission',
-          selector: 'comisionNew',
-          sortable: true,
-          minWidth: '150px',
-          cell: row => {
-            return (
-              <div className='d-flex justify-content-left align-items-center'>
-                <Badge color='success' className='badge-glow'>
-                    {row.comisionNew}%
-                </Badge>
-              </div>
-            )
-          }
-        },
-        {
-          name: 'Activated Date',
-          selector: 'Date',
+          name: 'orderid',
+          selector: 'orderId',
           sortable: true,
           minWidth: '150px'
         },
         {
-          name: 'To date',
+          name: 'Name',
+          minWidth: '150px',
+          selector: 'Name',
+          sortable: true,
+          cell: row => (
+            <div className='d-flex justify-content-left align-items-center'>
+              {renderClient(row)}
+              <div className='d-flex flex-column'>
+                
+                  <span className='font-weight-bold'>{row.name}</span>
+                  <small className='text-truncate text-muted mb-0'>@{row.name}</small>
+                
+              </div>
+            </div>
+          )
+        },
+        {
+          name: 'Bid Id',
+          selector: 'Bid',
+          sortable: true,
+          minWidth: '150px'
+        },
+        {
+          name: 'Amount',
+          selector: 'budget',
+          sortable: true,
+          minWidth: '150px',
+          cell: row => {
+            const str = row.budget
+            const res = str.substring(0, 1)
+            return (
+              <div className='d-flex justify-content-left align-items-center'>
+                { row.type === "R" ? (
+                        <Badge color='light-success'>
+                          {str}
+                        </Badge>
+                     ) : (
+                        <Badge color='light-danger'>
+                          {str}
+                        </Badge> 
+                     )               
+                }
+
+              </div>
+            )
+          }
+        },
+        {
+          name: 'Invoice',
+          selector: 'invoice',
+          sortable: true,
+          minWidth: '150px'
+        },
+        {
+          name: 'mode',
+          selector: 'modeOfP',
+          sortable: true,
+          minWidth: '150px'
+        },
+        {
+          name: 'Payment Date',
           selector: 'Date',
           sortable: true,
           minWidth: '150px'
@@ -148,6 +203,32 @@ const DataTableWithButtons = () => {
   // ** Function to handle Pagination
   const handlePagination = page => {
     setCurrentPage(page.selected)
+  }
+
+      // ** Function to handle filter
+  const handleFilter = e => {
+    const value = e
+    let updatedData = []
+    setSearchValue(value)
+    console.log(value)
+    if (value.length) {
+      updatedData = data.filter(item => {
+        
+        const startsWith =
+          item.name.toLowerCase().startsWith(value.toLowerCase()) 
+          
+        const includes =
+          item.name.toLowerCase().includes(value.toLowerCase())
+                   
+        if (startsWith) {
+          return startsWith
+        } else if (!startsWith && includes) {
+          return includes
+        } else return null
+       })
+      setFilteredData(updatedData)
+      setSearchValue(value)
+    }
   }
 
    // ** Converts table to CSV
@@ -211,11 +292,25 @@ const DataTableWithButtons = () => {
       <Card>
       
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Specialized Commission List</CardTitle>
-          <div className='d-flex mt-md-0 mt-1'>
-        
-          </div>
+          <CardTitle tag='h4'>Payment Audit Trail</CardTitle>
         </CardHeader>
+
+        <Row className='justify-content-end mx-0'>
+            <Col className='d-flex align-items-center justify-content-end mt-1 ' md='4' sm='12'>
+              <Label className='mr-1' for='search-input-1'>
+                <b>Name of User</b>
+              </Label>
+              <AutoComplete
+                suggestions={suggestions}
+                className='form-control'
+                filterKey='title'
+                onChange={(e) => handleFilter(e.target.value)}
+                userssValue={(e) => handleFilter(e)} 
+                filterHeaderKey='groupTitle'
+                placeholder="Search User"
+              />
+            </Col>
+          </Row>
       
         <CardBody>
         <DataTable
@@ -241,3 +336,9 @@ const DataTableWithButtons = () => {
 }
 
 export default DataTableWithButtons
+
+//orderid, Payment Name, bid id, invoice, amount, Expected Date
+
+//mode of payment
+
+//order id product, price payed, SGST, IGST, CGST

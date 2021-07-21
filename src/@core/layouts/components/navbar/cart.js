@@ -91,9 +91,11 @@ const CartDropdown = () => {
               <h6 className='font-weight-bolder mb-0'>Total:</h6>
               <h6 className='text-primary font-weight-bolder mb-0'>${Number(total.toFixed(2))}</h6>
             </div>
-            <Button.Ripple tag={Link} to='/apps/ecommerce/checkout' color='primary' block onClick={toggle}>
-              Checkout
-            </Button.Ripple>
+            <div className='d-flex justify-content-between'>
+              <Button.Ripple tag={Link} to='/cart-page' color='primary' block onClick={toggle}>
+                  View All
+              </Button.Ripple>
+            </div>
           </li>
         </Fragment>
       )

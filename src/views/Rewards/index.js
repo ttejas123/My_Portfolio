@@ -37,7 +37,8 @@ import {
 } from 'reactstrap'
 import BidCashRquest from './components/bidCash'
 import BidCoinRquest from './components/bidCoin' 
-
+import BidCashAudit from './components/bidCash/datatable'
+import BidCoinAudit from './components/bidCoin/datatable'
 // ** Custom Components
 const Details = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -154,11 +155,7 @@ const bidCash = [
             <Col md='10' xs='12'>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          List And Audit
-                        </div>
-                      </UncontrolledAlert>
+                    <BidCoinAudit />
                   </TabPane>
                   <TabPane tabId='2'>
                     <BidCoinRquest />
@@ -171,11 +168,7 @@ const bidCash = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='4'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          List And Audit
-                        </div>
-                      </UncontrolledAlert>
+                     <BidCashAudit />
                   </TabPane>
                   <TabPane tabId='5'>
                      <BidCashRquest />

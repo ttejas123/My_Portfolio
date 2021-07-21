@@ -38,7 +38,7 @@ const UserDropdown = () => {
         <Archive size={18} style={{marginRight:'3px', paddingBottom: '2px'}} /><small className='user-name h6' style={{ color:'black'}}>Bid</small> 
       </DropdownToggle>
       <DropdownMenu right style={{marginTop: '-0.0rem'}}>
-        <DropdownItem tag={Link} to='/bid/bidCreate'>
+        <DropdownItem tag={Link} to='/Homes/bidCreate'>
           <PlusCircle  size={14} className='mr-75' />
           <span className='align-middle'>Create New</span>
         </DropdownItem>

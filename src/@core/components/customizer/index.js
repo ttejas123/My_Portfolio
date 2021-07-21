@@ -1,5 +1,5 @@
 // ** React Imports
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // ** Third Party Components
 import Select from 'react-select'
@@ -8,7 +8,7 @@ import { Settings, X } from 'react-feather'
 import { CustomInput, FormGroup } from 'reactstrap'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import { selectThemeColors } from '@utils'
-
+import Logo from '@src/assets/images/logo/logo.jpg'
 // ** Styles
 import '@styles/react/libs/react-select/_react-select.scss'
 
@@ -37,6 +37,79 @@ const Customizer = props => {
     setTransition
   } = props
 
+  const [DataOfSite, setdataOfSize] = useState('')
+  const TitleDescription = {
+    Dashboards: {
+        Title: "Dashboard Page",
+        pageName: "Dashboard",
+        SmallContent: "Handle Your Bid and Statistics"
+    },
+    Products: {
+        Title: "Product Page",
+        pageName: "Product",
+        SmallContent: "Here You Can Get Product Releted Links"
+    },
+    home: {
+        Title: "Home Page",
+        pageName: "Home",
+        SmallContent: "This is Your Landing Page"
+    },
+    bidCreate: {
+        Title: "Bid Create Page",
+        pageName: "Bid",
+        SmallContent: "Here You Can Create Bids"
+    },
+    bid: {
+        Title: "Bid Info Page",
+        pageName: "Bid",
+        SmallContent: "Links, Statistics related Bids"
+    },
+    rewards: {
+        Title: "Rewards Page",
+        pageName: "Rewards",
+        SmallContent: "Here We Include Bidcoin and Bidcash"
+    },
+    Sponsorship: {
+        Title: "Sponsorship Page",
+        pageName: "Sponsorship",
+        SmallContent: "Here Are Some Links Releted To Sponsorship"
+    },
+    Orders: {
+        Title: "Orders Page",
+        pageName: "Orders",
+        SmallContent: "Orders related To Statistics"
+    },
+    searchPage: {
+        Title: "Search Page",
+        pageName: "Search",
+        SmallContent: "All Product And Info Is here"
+    }
+  }
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    const urlOfLink = window.location.href
+    const LinkuserName = urlOfLink.replace('http://localhost:3000/', '')
+    const fgf = LinkuserName.replace('Homes/', '')
+    if (fgf === 'Dashboards') {
+      setdataOfSize(TitleDescription.Dashboards)
+    } else if (fgf === 'Products') {
+      setdataOfSize(TitleDescription.Products)
+    } else if (fgf === 'bidCreate') {
+      setdataOfSize(TitleDescription.bidCreate)
+    } else if (fgf === 'bid') {
+      setdataOfSize(TitleDescription.bid)
+    } else if (fgf === 'rewards') {
+      setdataOfSize(TitleDescription.rewards)
+    } else if (fgf === 'Sponsorship') {
+      setdataOfSize(TitleDescription.Sponsorship)
+    } else if (fgf === 'Orders') {
+      setdataOfSize(TitleDescription.Orders)
+    } else if (fgf === 'searchPage') {
+      setdataOfSize(TitleDescription.searchPage)
+    } else if (fgf === 'home') {
+      setdataOfSize(TitleDescription.home)
+    }
+  }, [window.location.href])
   // ** State
   const [openCustomizer, setOpenCustomizer] = useState(false)
 
@@ -208,148 +281,230 @@ const Customizer = props => {
         open: openCustomizer
       })}
     >
-      <a href='/' className='customizer-toggle d-flex align-items-center justify-content-center' onClick={handleToggle}>
-        <Settings size={14} className='spinner' />
+         {/*
+            <a href='/' className='customizer-toggle d-flex align-items-center justify-content-center' onClick={handleToggle}>
+              <Settings size={14} className='spinner' />
+            </a>
+          */}
+      <a href='/' className='bg-white customizer-toggle d-flex align-items-center justify-content-center' onClick={handleToggle}>
+              <img src={Logo} width='20'  />
       </a>
+
       <PerfectScrollbar className='customizer-content'>
-        <div className='customizer-header px-2 pt-1 pb-0 position-relative'>
-          <h4 className='mb-0'>Theme Customizer</h4>
-          <p className='m-0'>Customize & Preview in Real Time</p>
-          <a href='/' className='customizer-close' onClick={handleToggle}>
-            <X />
-          </a>
-        </div>
-
-        <hr />
-
-        <div className='px-2'>
-          <FormGroup className='mb-2'>
-            <p className='font-weight-bold'>Skin</p>
-            <div className='d-flex'>{renderSkinsRadio()}</div>
-          </FormGroup>
-
-          <FormGroup className='mb-2'>
-            <p className='font-weight-bold'>Content Width</p>
-            <div className='d-flex'>
-              <CustomInput
-                type='radio'
-                id='full-width'
-                className='mr-1'
-                label='Full Width'
-                checked={contentWidth === 'full'}
-                onChange={() => setContentWidth('full')}
-              />
-              <CustomInput
-                type='radio'
-                id='boxes'
-                label='Boxed'
-                checked={contentWidth === 'boxed'}
-                onChange={() => setContentWidth('boxed')}
-              />
-            </div>
-          </FormGroup>
-
-          <FormGroup className='mb-2'>
-            <div className='d-flex'>
-              <p className='font-weight-bold mr-auto mb-0'>RTL</p>
-              <CustomInput type='switch' id='rtl' name='RTL' checked={isRtl} onChange={() => setIsRtl(!isRtl)} />
-            </div>
-          </FormGroup>
-
-          <FormGroup className='mb-2'>
-            <div className='d-flex justify-content-between align-items-center'>
-              <p className='font-weight-bold mb-0'>Router Transition</p>
-              <Select
-                theme={selectThemeColors}
-                className='react-select'
-                classNamePrefix='select'
-                defaultValue={transitionOptions[0]}
-                value={transitionValue}
-                options={transitionOptions}
-                isClearable={false}
-                onChange={({ value }) => setTransition(value)}
-              />
-            </div>
-          </FormGroup>
-        </div>
-
-        <hr />
-
-        <div className='px-2'>
-          <p className='font-weight-bold'>Menu Layout</p>
-          <FormGroup className='mb-2'>
-            <div className='d-flex align-items-center'>
-              <CustomInput
-                type='radio'
-                id='vertical-layout'
-                label='Vertical'
-                checked={layout === 'VerticalLayout'}
-                onChange={() => setLayout('vertical')}
-                className='mr-1'
-              />
-              <CustomInput
-                type='radio'
-                id='horizontal-layout'
-                label='Horizontal'
-                checked={layout === 'HorizontalLayout'}
-                onChange={() => setLayout('horizontal')}
-              />
-            </div>
-          </FormGroup>
-          {layout !== 'HorizontalLayout' ? (
-            <FormGroup className='mb-2'>
-              <div className='d-flex align-items-center'>
-                <p className='font-weight-bold mr-auto mb-0'>Menu Collapsed</p>
-                <CustomInput
-                  type='switch'
-                  id='menu-collapsed'
-                  name='menu-collapsed'
-                  checked={menuCollapsed}
-                  onChange={() => setMenuCollapsed(!menuCollapsed)}
-                />
+              <div className='customizer-header px-2 pt-1 pb-0 position-relative'>
+                <h4 className='mb-0'>{DataOfSite.Title}</h4>
+                <p className='m-0'>Information About {DataOfSite.Title}</p>
+                <a href='/' className='customizer-close' onClick={handleToggle}>
+                  <X />
+                </a>
               </div>
-            </FormGroup>
-          ) : null}
+      
+              <hr />
+      
+              <div className='px-2'>
+                <FormGroup className='mb-2'>
+                  <p className='font-weight-bold'>{DataOfSite.pageName}</p>
+                  <div className='d-flex'>{DataOfSite.SmallContent}</div>
+                </FormGroup>
+      
+                <FormGroup className='mb-2'>
+                  <p className='font-weight-bold'>Main Content</p>
+                  <div className='d-flex'>
+                    <CustomInput
+                        key='links'
+                        type='radio'
+                        id='Links'
+                        label="Links"
+                        checked={true}
+                        className='mr-1'
+                      />
+                      
+                    <CustomInput
+                        key='Search'
+                        type='radio'
+                        id='Search'
+                        label="Search" 
+                        checked={true}
+                        className='mr-1'
+                      />
 
-          <FormGroup className='mb-2'>
-            <div className='d-flex align-items-center'>
-              <p className='font-weight-bold mr-auto mb-0'>Menu Hidden</p>
-              <CustomInput
-                type='switch'
-                id='menu-hidden'
-                name='menu-hidden'
-                checked={isHidden}
-                onChange={() => setIsHidden(!isHidden)}
-              />
-            </div>
-          </FormGroup>
-        </div>
+                    <CustomInput
+                        key='Subscription'
+                        type='radio'
+                        id='Subscription'
+                        label="Subscription" 
+                        checked={true}
+                        className='mr-1'
+                      />
 
-        <hr />
+                    <CustomInput
+                        key='Info'
+                        type='radio'
+                        id='Info'
+                        label="Info" 
+                        checked={true}
+                        
+                      />
+                  </div>
+                </FormGroup>
+              </div>
 
-        <div className='px-2'>
-          {layout !== 'HorizontalLayout' ? (
-            <FormGroup className='mb-2'>
-              <p className='font-weight-bold'>Navbar Color</p>
-              <ul className='list-inline unstyled-list'>{renderNavbarColors()}</ul>
-            </FormGroup>
-          ) : null}
+              <hr />
 
-          <FormGroup className='mb-2'>
-            <p className='font-weight-bold'>{layout === 'HorizontalLayout' ? 'Menu' : 'Navbar'} Type</p>
-            <div className='d-flex'>{renderNavbarTypeRadio()}</div>
-          </FormGroup>
-        </div>
+              <div className='px-2'>
+                <FormGroup className='mb-2'>
+                  <div>
+                    <p className='font-weight-bold mr-auto mb-0'>Information</p>
+                    <div className='d-flex'>- This Page is Landing Page. Here We Have Multiple Links.</div>
+                    <div className='d-flex'>- If You Want SubScription Go Down And send your Email to Bidoya.</div>
+                    <div className='d-flex'>- Search Box :-<br /> 1.Enter Product Name <br /> 2. Quantity <br /> 3. Budget</div>
+                    <div className='d-flex'>- BBB<br /> See How Bidoya work and remember "Bid", "Bulk", "Buy"</div>
+                  </div>
+                </FormGroup>
+      
+              </div>
 
-        <hr />
+            </PerfectScrollbar>
 
-        <div className='px-2'>
-          <FormGroup className='mb-2'>
-            <p className='font-weight-bold'>Footer Type</p>
-            <div className='d-flex'>{renderFooterTypeRadio()}</div>
-          </FormGroup>
-        </div>
-      </PerfectScrollbar>
+      {/*<PerfectScrollbar className='customizer-content'>
+              <div className='customizer-header px-2 pt-1 pb-0 position-relative'>
+                <h4 className='mb-0'>Theme Customizer</h4>
+                <p className='m-0'>Customize & Preview in Real Time</p>
+                <a href='/' className='customizer-close' onClick={handleToggle}>
+                  <X />
+                </a>
+              </div>
+      
+              <hr />
+      
+              <div className='px-2'>
+                <FormGroup className='mb-2'>
+                  <p className='font-weight-bold'>Skin</p>
+                  <div className='d-flex'>{renderSkinsRadio()}</div>
+                </FormGroup>
+      
+                <FormGroup className='mb-2'>
+                  <p className='font-weight-bold'>Content Width</p>
+                  <div className='d-flex'>
+                    <CustomInput
+                      type='radio'
+                      id='full-width'
+                      className='mr-1'
+                      label='Full Width'
+                      checked={contentWidth === 'full'}
+                      onChange={() => setContentWidth('full')}
+                    />
+                    <CustomInput
+                      type='radio'
+                      id='boxes'
+                      label='Boxed'
+                      checked={contentWidth === 'boxed'}
+                      onChange={() => setContentWidth('boxed')}
+                    />
+                  </div>
+                </FormGroup>
+      
+                <FormGroup className='mb-2'>
+                  <div className='d-flex'>
+                    <p className='font-weight-bold mr-auto mb-0'>RTL</p>
+                    <CustomInput type='switch' id='rtl' name='RTL' checked={isRtl} onChange={() => setIsRtl(!isRtl)} />
+                  </div>
+                </FormGroup>
+      
+                <FormGroup className='mb-2'>
+                  <div className='d-flex justify-content-between align-items-center'>
+                    <p className='font-weight-bold mb-0'>Router Transition</p>
+                    <Select
+                      theme={selectThemeColors}
+                      className='react-select'
+                      classNamePrefix='select'
+                      defaultValue={transitionOptions[0]}
+                      value={transitionValue}
+                      options={transitionOptions}
+                      isClearable={false}
+                      onChange={({ value }) => setTransition(value)}
+                    />
+                  </div>
+                </FormGroup>
+              </div>
+      
+              <hr />
+      
+              <div className='px-2'>
+                <p className='font-weight-bold'>Menu Layout</p>
+                <FormGroup className='mb-2'>
+                  <div className='d-flex align-items-center'>
+                    <CustomInput
+                      type='radio'
+                      id='vertical-layout'
+                      label='Vertical'
+                      checked={layout === 'VerticalLayout'}
+                      onChange={() => setLayout('vertical')}
+                      className='mr-1'
+                    />
+                    <CustomInput
+                      type='radio'
+                      id='horizontal-layout'
+                      label='Horizontal'
+                      checked={layout === 'HorizontalLayout'}
+                      onChange={() => setLayout('horizontal')}
+                    />
+                  </div>
+                </FormGroup>
+                {layout !== 'HorizontalLayout' ? (
+                  <FormGroup className='mb-2'>
+                    <div className='d-flex align-items-center'>
+                      <p className='font-weight-bold mr-auto mb-0'>Menu Collapsed</p>
+                      <CustomInput
+                        type='switch'
+                        id='menu-collapsed'
+                        name='menu-collapsed'
+                        checked={menuCollapsed}
+                        onChange={() => setMenuCollapsed(!menuCollapsed)}
+                      />
+                    </div>
+                  </FormGroup>
+                ) : null}
+      
+                <FormGroup className='mb-2'>
+                  <div className='d-flex align-items-center'>
+                    <p className='font-weight-bold mr-auto mb-0'>Menu Hidden</p>
+                    <CustomInput
+                      type='switch'
+                      id='menu-hidden'
+                      name='menu-hidden'
+                      checked={isHidden}
+                      onChange={() => setIsHidden(!isHidden)}
+                    />
+                  </div>
+                </FormGroup>
+              </div>
+      
+              <hr />
+      
+              <div className='px-2'>
+                {layout !== 'HorizontalLayout' ? (
+                  <FormGroup className='mb-2'>
+                    <p className='font-weight-bold'>Navbar Color</p>
+                    <ul className='list-inline unstyled-list'>{renderNavbarColors()}</ul>
+                  </FormGroup>
+                ) : null}
+      
+                <FormGroup className='mb-2'>
+                  <p className='font-weight-bold'>{layout === 'HorizontalLayout' ? 'Menu' : 'Navbar'} Type</p>
+                  <div className='d-flex'>{renderNavbarTypeRadio()}</div>
+                </FormGroup>
+              </div>
+      
+              <hr />
+      
+              <div className='px-2'>
+                <FormGroup className='mb-2'>
+                  <p className='font-weight-bold'>Footer Type</p>
+                  <div className='d-flex'>{renderFooterTypeRadio()}</div>
+                </FormGroup>
+              </div>
+            </PerfectScrollbar>*/}
     </div>
   )
 }
