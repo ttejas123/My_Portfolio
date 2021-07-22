@@ -40,6 +40,9 @@ import {
 import List from './components/PI/List'
 import AcceptReject from './components/PI/acceptReject'
 import BidsList from './MyBids/myBids'
+import RejectedBids from './RejectedBids'
+import DeclinedBids from './DeclinedBids'
+import NoShow from './NoShow'
 
 // ** Custom Components
 const Details = () => {
@@ -226,25 +229,13 @@ const Customizations = [
                     <BidsList/>
                   </TabPane>
                   <TabPane tabId='2'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Declined
-                        </div>
-                      </UncontrolledAlert>
+                   <DeclinedBids/>
                   </TabPane>
                   <TabPane tabId='3'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Rejected
-                        </div>
-                      </UncontrolledAlert>
+                     <RejectedBids/>
                   </TabPane>
                   <TabPane tabId='4'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          No Show 
-                        </div>
-                      </UncontrolledAlert>
+                     <NoShow/>
                   </TabPane>
                   <TabPane tabId='5'>
                      <UncontrolledAlert color='primary'>

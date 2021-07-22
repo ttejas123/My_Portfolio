@@ -189,6 +189,10 @@ const Routes = [
     component: lazy(() => import('../../views/MyProfile'))
   },
   {
+    path: '/edit-product/:id',
+    component: lazy(() => import('../../views/Seller/Products/CreateProduct/editProduct'))
+  },
+  {
     path: '/login', // USE THIS
     component: lazy(() => import('../../views/Login'))
   },

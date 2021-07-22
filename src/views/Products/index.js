@@ -43,6 +43,7 @@ import Drafts from '../Seller/Products/MyProducts/drafts'
 import AsinImportTab from '../Seller/Products/CreateProduct/asinImport'
 import FromExcel from '../Seller/Products/CreateProduct/FromExcel'
 import ByUserTab from '../Seller/Products/CreateProduct/byUser'
+import MyProducts from '../Seller/Products/MyProducts/myProducts'
 
 
 // ** Custom Components
@@ -273,11 +274,7 @@ const Brand = [
             <Col md='10' xs='12'>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                    <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          My Products
-                        </div>
-                      </UncontrolledAlert>
+                  <MyProducts/>
                   </TabPane>
                   <TabPane tabId='2'>
                     <AsinImportTab/>

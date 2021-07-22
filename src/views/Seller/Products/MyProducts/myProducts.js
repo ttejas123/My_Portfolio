@@ -84,7 +84,7 @@ const renderProduct = row => {
     )
 }
 
-const ApprovedProducts = () => {
+const MyProducts = () => {
   // ** States
   const [formModal, setFormModal] = useState(false)
   const [modal, setModal] = useState(false)
@@ -244,6 +244,23 @@ const ApprovedProducts = () => {
                   {row.samplingAvailable === 'yes' ? <Check/> : <X/>}
                 </div>
               )
+        },       
+        {
+          name: 'Actions',
+          allowOverflow: true,
+          style : tempStyle,
+          cell: row => {
+            return (
+              <div className='d-flex'>
+                <Link  to={`/edit-product/${row.id}`}><Edit  
+                  size={15} 
+                  onClick={ () => { 
+                                   
+                                     } }>
+                                     </Edit></Link>
+              </div>
+            )
+          }
         }
     ]
 
@@ -396,7 +413,7 @@ const ApprovedProducts = () => {
       <Card>
 
         <CardHeader className='flex-md-row flex-column align-md-items-center align-items-start border-bottom'>
-          <CardTitle tag='h4'>Approved Products</CardTitle>
+          <CardTitle tag='h4'>My Products</CardTitle>
           <div className='d-flex mt-md-0 mt-1'>
             <Link to={`create-product`}>
               <Button className='ml-2' color='primary' >
@@ -443,4 +460,4 @@ const ApprovedProducts = () => {
   )
 }
 
-export default ApprovedProducts
+export default MyProducts

@@ -38,6 +38,7 @@ import SwiperCore, {
 import image from '@src/assets/images/avatars/1-small.png'
 import AddFromExisting from './fromExistingProducts'
 import FromExcel from './FromExcel'
+import EditProduct from './editProduct'
 
 const CreateProduct = props => {
 
@@ -95,7 +96,7 @@ const toggle1 = tab => setActiveTab(tab)
               <FromExcel/>
               </TabPane>
               <TabPane tabId='4'>
-              <ByUserTab/>
+              <EditProduct/>
               </TabPane>
                     
                     {/* <TabPane tabId='3'>
