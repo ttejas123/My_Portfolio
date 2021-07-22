@@ -1,0 +1,33 @@
+.bor  { 
+        border-left: 1px solid #d9d9d9; 
+    }
+.searchCon {
+    display: none;
+}
+
+.imageSection:hover .searchCon { 
+    display: inline-block;
+}
+
+.sidebar-sm {
+    min-width: 1000px;
+}
+
+.sidebarFilter {
+    min-width: 800px;
+}
+
+@media only screen and (max-width: 500px)  {
+    .sidebar-sm {
+        min-width: 330px;
+    }
+    .bor  { 
+        border: none;
+        border-top: 1px solid #d9d9d9; 
+    }   
+    
+}
+.DropDowns{
+    text-align: center;
+    vertical-align: middle;
+}

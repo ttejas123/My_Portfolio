@@ -171,31 +171,8 @@ const ApprovedProducts = () => {
           minWidth: '50px'
         },
         {
-          name: 'Asin / Fsn/ Hsn Code',
-          selector: 'asinNumber',
-          sortable: true,
-          minWidth: '50px',
-          
-          cell: row => (
-            <div className=' '>
-              <span>{row.asinNumber}</span> <br/>
-              <span>{row.fsnNumber}</span> <br/>
-              <span>{row.hsnCode}</span> 
-              <div className=''>
-                 
-              </div>
-            </div>
-          )
-        },
-        {
             name: 'EAN UPC Code',
             selector: 'eanUpcCode',
-            sortable: true,
-            minWidth: '50px'
-        },
-        {
-            name: 'My Price',
-            selector: 'myPrice',
             sortable: true,
             minWidth: '50px'
         },
@@ -206,28 +183,10 @@ const ApprovedProducts = () => {
             minWidth: '50px'
         },
         {
-            name: 'Customization Available',
-            selector: 'customizationAvailable',
+            name: 'Requirment',
+            selector: 'cmt',
             sortable: true,
-            minWidth: '50px',
-            
-            cell: row => (
-                <div className='d-flex justify-content-left align-items-center '>
-                 {row.customizationAvailable === 'yes' ? <Check/> : <X/>}
-                </div>
-              )
-        },
-        {
-            name: 'Sampling Available',
-            selector: 'samplingAvailable',
-            sortable: true,
-            minWidth: '50px',
-            
-            cell: row => (
-                <div className='d-flex justify-content-left align-items-center '>
-                  {row.samplingAvailable === 'yes' ? <Check/> : <X/>}
-                </div>
-              )
+            minWidth: '50px'
         }, 
         {
             name: 'Response',
