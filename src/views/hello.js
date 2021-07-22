@@ -20,3 +20,9 @@
 
 
 //docer contener devox
+
+
+//Navigation Menu
+//Bid Listing
+//POC : it's just link profile info
+//Customization: 1. Name, 2. Product, 3. SKU, 4. Customization, 5. Action

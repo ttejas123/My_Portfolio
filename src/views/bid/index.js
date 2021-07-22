@@ -38,6 +38,10 @@ import {
 
 
 import List from './components/PI/List'
+import RfqN from './components/NewL/rfqN'
+
+import Customi from './components/custom'
+
 import AcceptReject from './components/PI/acceptReject'
 import BidsList from './MyBids/myBids'
 
@@ -223,7 +227,7 @@ const Customizations = [
             <Col md='10' xs='12'>
                 <TabContent activeTab={activeTab}>
                   <TabPane tabId='1'>
-                    <BidsList/>
+                    <BidList />
                   </TabPane>
                   <TabPane tabId='2'>
                     <UncontrolledAlert color='primary'>
@@ -254,11 +258,7 @@ const Customizations = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='6'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          New Lead
-                        </div>
-                      </UncontrolledAlert>
+                     <RfqN />
                   </TabPane>
                   <TabPane tabId='7'>
                      <List />
@@ -274,18 +274,10 @@ const Customizations = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='10'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Sales Orders
-                        </div>
-                      </UncontrolledAlert>
+                     <Customi />
                   </TabPane>
                   <TabPane tabId='11'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Customizations List
-                        </div>
-                      </UncontrolledAlert>
+                     <Customi />
                   </TabPane>
                  
                 </TabContent>

@@ -53,15 +53,15 @@ const UserDropdown = () => {
           <User size={14} className='mr-75' />
           <span className='align-middle'>Profile</span>
         </DropdownItem>
-        <DropdownItem tag={Link} to='/apps/email'>
+        <DropdownItem onClick= {() => dispatch(DashBoard(1))} tag={Link} to='/Homes/Dashboards'>
           <Home size={14} className='mr-75' />
           <span className='align-middle'>Dashboard</span>
         </DropdownItem>
-        <DropdownItem tag={Link} to='/apps/todo'>
+        <DropdownItem onClick= {() => dispatch(DashBoard(8))} tag={Link} to='/Homes/Dashboards'>
           <Image size={14} className='mr-75' />
           <span className='align-middle'>Gallery</span>
         </DropdownItem>
-        <DropdownItem tag={Link} to='/apps/chat'>
+        <DropdownItem onClick= {() => dispatch(DashBoard(10))} tag={Link} to='/Homes/Dashboards'>
           <MessageSquare size={14} className='mr-75' />
           <span className='align-middle'>Redressal</span>
         </DropdownItem>
@@ -70,7 +70,7 @@ const UserDropdown = () => {
           <Settings size={14} className='mr-75' />
           <span className='align-middle'>Settings</span>
         </DropdownItem>
-        <DropdownItem tag={Link} to='/pages/pricing'>
+        <DropdownItem tag={Link} to='/site-map'>
           <Map size={14} className='mr-75' />
           <span className='align-middle'>Sitemap</span>
         </DropdownItem>
