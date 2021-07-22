@@ -9,9 +9,10 @@ import Avatar from '@components/avatar'
 import { isUserLoggedIn } from '@utils'
 
 // ** Store & Actions
-import { useDispatch } from 'react-redux'
-import { handleLogout } from '@store/actions/auth'
-
+// import { useDispatch } from 'react-redux'
+// import { handleLogout } from '@store/actions/auth'
+import { useSelector, useDispatch } from 'react-redux'
+import { DashBoard, ProductTab, BidTabs, SponsorTab } from '@src/redux/actions/CurrentPageTab'
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
 import { User, Mail, Home, Package, Map, Book, Image, ShoppingCart, CheckSquare, MessageSquare, Settings, CreditCard, HelpCircle, Power } from 'react-feather'
@@ -22,7 +23,7 @@ import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
 const UserDropdown = () => {
   // ** Store Vars
   const dispatch = useDispatch()
-
+  // useSelector(state => { console.log(state.CurrentPageTab) }) 
   // ** State
   const [userData, setUserData] = useState(null)
 
@@ -48,7 +49,7 @@ const UserDropdown = () => {
         <Avatar img={userAvatar} imgHeight='35' imgWidth='35' status='online' />
       </DropdownToggle>
       <DropdownMenu right>
-        <DropdownItem tag={Link} to='/pages/profile'>
+        <DropdownItem onClick= {() => dispatch(DashBoard(4))} tag={Link} to='/Homes/Dashboards'>
           <User size={14} className='mr-75' />
           <span className='align-middle'>Profile</span>
         </DropdownItem>

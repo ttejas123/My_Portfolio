@@ -13,7 +13,7 @@ import person from '@src/assets/images/avatars/raviKukreja.jpg'
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
 import '@styles/react/pages/page-profile.scss'
-
+import BidList from '@src/views/Rfq7/rfqN'
 import {
   Row,
   Card, CardBody,

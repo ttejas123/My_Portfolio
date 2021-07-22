@@ -21,10 +21,14 @@ const data1 =  [
     {
       id: 4987,
       SKU_ID: "#sku5643",
-      rating: 1,
+      category: "Shirt",
       Lead_time: '5 days',
       review:"Your product is really good but still it's out of price range and also we can't add much customizations",
       Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
       custom:true,
@@ -51,10 +55,14 @@ const data1 =  [
     {
       id: 4988,
       SKU_ID: "#sku5643",
-      rating: 1,
+      category: "Shirt",
       Lead_time: '5 days',
       review:"Your product is really good but still it's out of price range and also we can't add much customizations",
       Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
       custom:true,
@@ -81,10 +89,14 @@ const data1 =  [
     {
       id: 4989,
       SKU_ID: "#sku5643",
-      rating: 5,
+      category: "Pants",
       Lead_time: '5 days',
       review:"Your product is really good but still it's out of price range and also we can't add much customizations",
       Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
       custom:true,
@@ -111,10 +123,14 @@ const data1 =  [
     {
       id: 4990,
       SKU_ID: "#sku5643",
-      rating: 2,
+      category: "Watches",
       Lead_time: '5 days',
       review:"Your product is really good but still it's out of price range and also we can't add much customizations",
       Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
       custom:true,
@@ -141,10 +157,14 @@ const data1 =  [
     {
       id: 4991,
       SKU_ID: "#sku5643",
-      rating: 1,
+      category: "Shirt",
       Lead_time: '5 days',
       review:"Your product is really good but still it's out of price range and also we can't add much customizations",
       Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
       custom:true,
@@ -171,10 +191,206 @@ const data1 =  [
     {
       id: 4992,
       SKU_ID: "#sku5643",
-      rating: 3,
+      category: "Shirt",
       Lead_time: '5 days',
       review:"Your product is really good but still it's out of price range and also we can't add much customizations",
       Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
+      MOQ: '200pcs',
+      BUIN:'#bidoya5462',
+      custom:true,
+      inspection:true,
+      sampling: true,
+      brand: "Naruto",
+      releaseDate: '26 Aug 2019',
+      client: {
+        address: '661 Perez Run Apt. 778',
+        company: 'Burnett-Young PLC',
+        companyEmail: 'guerrerobrandy@beasley-harper.com',
+        country: 'Botswana',
+        contact: '(511) 938-9617',
+        name: 'Amanda Phillips'
+      },
+      service: 'UI/UX Design & Development',
+      total: 2771,
+      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
+      avatar: '',
+      invoiceStatus: 'Paid',
+      balance: 0,
+      dueDate: '24 Jun 2019'
+    },
+    {
+      id: 4987,
+      SKU_ID: "#sku5643",
+      Lead_time: '5 days',
+      Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
+      MOQ: '200pcs',
+      BUIN:'#bidoya5462',
+      custom:true,
+      inspection:true,
+      sampling: true,
+      brand: "Nike",
+      releaseDate: '5 days',
+      client: {
+        address: '7777 Mendez Plains',
+        company: 'Hall-Robbins PLC',
+        companyEmail: 'don85@johnson.com',
+        country: 'USA',
+        contact: '(616) 865-4180',
+        name: 'Jordan Stevenson'
+      },
+      service: 'Software Development',
+      total: 3428,
+      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
+      avatar: '',
+      invoiceStatus: 'Paid',
+      balance: '$724',
+      dueDate: '23 Apr 2019'
+    },
+    {
+      id: 4988,
+      SKU_ID: "#sku5643",
+      Lead_time: '5 days',
+      Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
+      MOQ: '200pcs',
+      BUIN:'#bidoya5462',
+      custom:true,
+      inspection:true,
+      sampling: true,
+      brand: "Naruto",
+      releaseDate: '17 Jul 2019',
+      client: {
+        address: '04033 Wesley Wall Apt. 961',
+        company: 'Mccann LLC and Sons',
+        companyEmail: 'brenda49@taylor.info',
+        country: 'Haiti',
+        contact: '(226) 204-8287',
+        name: 'Stephanie Burns'
+      },
+      service: 'UI/UX Design & Development',
+      total: 5219,
+      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
+      avatar: require('@src/assets/images/avatars/10-small.png').default,
+      invoiceStatus: 'Downloaded',
+      balance: 0,
+      dueDate: '15 Dec 2019'
+    },
+    {
+      id: 4989,
+      SKU_ID: "#sku5643",
+      Lead_time: '5 days',
+      Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
+      MOQ: '200pcs',
+      BUIN:'#bidoya5462',
+      custom:true,
+      inspection:true,
+      sampling: true,
+      brand: "Naruto",
+      releaseDate: '19 Oct 2019',
+      client: {
+        address: '5345 Robert Squares',
+        company: 'Leonard-Garcia and Sons',
+        companyEmail: 'smithtiffany@powers.com',
+        country: 'Denmark',
+        contact: '(955) 676-1076',
+        name: 'Tony Herrera'
+      },
+      service: 'Unlimited Extended License',
+      total: 3719,
+      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
+      avatar: require('@src/assets/images/avatars/1-small.png').default,
+      invoiceStatus: 'Paid',
+      balance: 0,
+      dueDate: '03 Nov 2019'
+    },
+    {
+      id: 4990,
+      SKU_ID: "#sku5643",
+      Lead_time: '5 days',
+      Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
+      MOQ: '200pcs',
+      BUIN:'#bidoya5462',
+      custom:true,
+      inspection:true,
+      sampling: true,
+      brand: "Naruto",
+      releaseDate: '06 Mar 2020',
+      client: {
+        address: '19022 Clark Parks Suite 149',
+        company: 'Smith, Miller and Henry LLC',
+        companyEmail: 'mejiageorge@lee-perez.com',
+        country: 'Cambodia',
+        contact: '(832) 323-6914',
+        name: 'Kevin Patton'
+      },
+      service: 'Software Development',
+      total: 4749,
+      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
+      avatar: require('@src/assets/images/avatars/9-small.png').default,
+      invoiceStatus: 'Sent',
+      balance: 0,
+      dueDate: '11 Feb 2020'
+    },
+    {
+      id: 4991,
+      SKU_ID: "#sku5643",
+      Lead_time: '5 days',
+      Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
+      MOQ: '200pcs',
+      BUIN:'#bidoya5462',
+      custom:true,
+      inspection:true,
+      sampling: true,
+      brand: "Naruto",
+      releaseDate: '08 Feb 2020',
+      client: {
+        address: '8534 Saunders Hill Apt. 583',
+        company: 'Garcia-Cameron and Sons',
+        companyEmail: 'brandon07@pierce.com',
+        country: 'Martinique',
+        contact: '(970) 982-3353',
+        name: 'Mrs. Julie Donovan MD'
+      },
+      service: 'UI/UX Design & Development',
+      total: 4056,
+      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
+      avatar: require('@src/assets/images/avatars/10-small.png').default,
+      invoiceStatus: 'Draft',
+      balance: '$815',
+      dueDate: '30 Jun 2019'
+    },
+    {
+      id: 4992,
+      SKU_ID: "#sku5643",
+      Lead_time: '5 days',
+      Rate: '5000',
+      dCom: '10%',
+      rCom: '6%',
+      Apturn: '100K',
+      ComRev: '90L',
       MOQ: '200pcs',
       BUIN:'#bidoya5462',
       custom:true,
@@ -200,347 +416,6 @@ const data1 =  [
     }
 ]
 
-const data2 =  [
-    {
-      id: 4987,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Nike",
-      releaseDate: '5 days',
-      client: {
-        address: '7777 Mendez Plains',
-        company: 'Hall-Robbins PLC',
-        companyEmail: 'don85@johnson.com',
-        country: 'USA',
-        contact: '(616) 865-4180',
-        name: 'Jordan Stevenson'
-      },
-      service: 'Software Development',
-      total: 3428,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: '',
-      invoiceStatus: 'Paid',
-      balance: '$724',
-      dueDate: '23 Apr 2019'
-    },
-    {
-      id: 4988,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '17 Jul 2019',
-      client: {
-        address: '04033 Wesley Wall Apt. 961',
-        company: 'Mccann LLC and Sons',
-        companyEmail: 'brenda49@taylor.info',
-        country: 'Haiti',
-        contact: '(226) 204-8287',
-        name: 'Stephanie Burns'
-      },
-      service: 'UI/UX Design & Development',
-      total: 5219,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/10-small.png').default,
-      invoiceStatus: 'Downloaded',
-      balance: 0,
-      dueDate: '15 Dec 2019'
-    },
-    {
-      id: 4989,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '19 Oct 2019',
-      client: {
-        address: '5345 Robert Squares',
-        company: 'Leonard-Garcia and Sons',
-        companyEmail: 'smithtiffany@powers.com',
-        country: 'Denmark',
-        contact: '(955) 676-1076',
-        name: 'Tony Herrera'
-      },
-      service: 'Unlimited Extended License',
-      total: 3719,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/1-small.png').default,
-      invoiceStatus: 'Paid',
-      balance: 0,
-      dueDate: '03 Nov 2019'
-    },
-    {
-      id: 4990,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '06 Mar 2020',
-      client: {
-        address: '19022 Clark Parks Suite 149',
-        company: 'Smith, Miller and Henry LLC',
-        companyEmail: 'mejiageorge@lee-perez.com',
-        country: 'Cambodia',
-        contact: '(832) 323-6914',
-        name: 'Kevin Patton'
-      },
-      service: 'Software Development',
-      total: 4749,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/9-small.png').default,
-      invoiceStatus: 'Sent',
-      balance: 0,
-      dueDate: '11 Feb 2020'
-    },
-    {
-      id: 4991,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '08 Feb 2020',
-      client: {
-        address: '8534 Saunders Hill Apt. 583',
-        company: 'Garcia-Cameron and Sons',
-        companyEmail: 'brandon07@pierce.com',
-        country: 'Martinique',
-        contact: '(970) 982-3353',
-        name: 'Mrs. Julie Donovan MD'
-      },
-      service: 'UI/UX Design & Development',
-      total: 4056,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/10-small.png').default,
-      invoiceStatus: 'Draft',
-      balance: '$815',
-      dueDate: '30 Jun 2019'
-    },
-    {
-      id: 4992,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '26 Aug 2019',
-      client: {
-        address: '661 Perez Run Apt. 778',
-        company: 'Burnett-Young PLC',
-        companyEmail: 'guerrerobrandy@beasley-harper.com',
-        country: 'Botswana',
-        contact: '(511) 938-9617',
-        name: 'Amanda Phillips'
-      },
-      service: 'UI/UX Design & Development',
-      total: 2771,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: '',
-      invoiceStatus: 'Paid',
-      balance: 0,
-      dueDate: '24 Jun 2019'
-    }
-]
-
-const data3 =  [
-    {
-      id: 4987,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Nike",
-      releaseDate: '5 days',
-      client: {
-        address: '7777 Mendez Plains',
-        company: 'Hall-Robbins PLC',
-        companyEmail: 'don85@johnson.com',
-        country: 'USA',
-        contact: '(616) 865-4180',
-        name: 'Jordan Stevenson'
-      },
-      service: 'Software Development',
-      total: 3428,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: '',
-      invoiceStatus: 'Paid',
-      balance: '$724',
-      dueDate: '23 Apr 2019'
-    },
-    {
-      id: 4988,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '17 Jul 2019',
-      client: {
-        address: '04033 Wesley Wall Apt. 961',
-        company: 'Mccann LLC and Sons',
-        companyEmail: 'brenda49@taylor.info',
-        country: 'Haiti',
-        contact: '(226) 204-8287',
-        name: 'Stephanie Burns'
-      },
-      service: 'UI/UX Design & Development',
-      total: 5219,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/10-small.png').default,
-      invoiceStatus: 'Downloaded',
-      balance: 0,
-      dueDate: '15 Dec 2019'
-    },
-    {
-      id: 4989,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '19 Oct 2019',
-      client: {
-        address: '5345 Robert Squares',
-        company: 'Leonard-Garcia and Sons',
-        companyEmail: 'smithtiffany@powers.com',
-        country: 'Denmark',
-        contact: '(955) 676-1076',
-        name: 'Tony Herrera'
-      },
-      service: 'Unlimited Extended License',
-      total: 3719,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/1-small.png').default,
-      invoiceStatus: 'Paid',
-      balance: 0,
-      dueDate: '03 Nov 2019'
-    },
-    {
-      id: 4990,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '06 Mar 2020',
-      client: {
-        address: '19022 Clark Parks Suite 149',
-        company: 'Smith, Miller and Henry LLC',
-        companyEmail: 'mejiageorge@lee-perez.com',
-        country: 'Cambodia',
-        contact: '(832) 323-6914',
-        name: 'Kevin Patton'
-      },
-      service: 'Software Development',
-      total: 4749,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/9-small.png').default,
-      invoiceStatus: 'Sent',
-      balance: 0,
-      dueDate: '11 Feb 2020'
-    },
-    {
-      id: 4991,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '08 Feb 2020',
-      client: {
-        address: '8534 Saunders Hill Apt. 583',
-        company: 'Garcia-Cameron and Sons',
-        companyEmail: 'brandon07@pierce.com',
-        country: 'Martinique',
-        contact: '(970) 982-3353',
-        name: 'Mrs. Julie Donovan MD'
-      },
-      service: 'UI/UX Design & Development',
-      total: 4056,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: require('@src/assets/images/avatars/10-small.png').default,
-      invoiceStatus: 'Draft',
-      balance: '$815',
-      dueDate: '30 Jun 2019'
-    },
-    {
-      id: 4992,
-      SKU_ID: "#sku5643",
-      Lead_time: '5 days',
-      Rate: '5000',
-      MOQ: '200pcs',
-      BUIN:'#bidoya5462',
-      custom:true,
-      inspection:true,
-      sampling: true,
-      brand: "Naruto",
-      releaseDate: '26 Aug 2019',
-      client: {
-        address: '661 Perez Run Apt. 778',
-        company: 'Burnett-Young PLC',
-        companyEmail: 'guerrerobrandy@beasley-harper.com',
-        country: 'Botswana',
-        contact: '(511) 938-9617',
-        name: 'Amanda Phillips'
-      },
-      service: 'UI/UX Design & Development',
-      total: 2771,
-      avatar1: require('@src/assets/images/logo/ss2.jpg').default,
-      avatar: '',
-      invoiceStatus: 'Paid',
-      balance: 0,
-      dueDate: '24 Jun 2019'
-    }
-]
 const BankGuaranteeApplPendingList = (props) => {
 
     //console.log(BankGuarranteApplsColumns)
@@ -629,69 +504,46 @@ const renderClient = row => {
 
 const columns1 = [
     {
-      name: 'User',
-      selector: 'user',
+      name: 'Category',
+      selector: 'category',
       sortable: true,
       minWidth: '50px'
     },
     {
-      name: 'Financial Institute',
-      selector: 'financialInstitute',
+      name: 'Default Commission',
+      selector: 'dCom',
       sortable: true,
       minWidth: '50px'
     },
     {
-        name: 'Amount',
-        selector: 'amount',
+        name: 'Requested Commission',
+        selector: 'rCom',
         sortable: true,
         minWidth: '50px'
     },
     {
-        name: 'Approved By',
-        selector: 'approvedBy',
+        name: 'Comment',
+        selector: 'review',
         sortable: true,
         minWidth: '50px'
     },
     {
-        name: 'Approved Time',
-        selector: 'approvedTime',
+        name: 'Approximate Turnover',
+        selector: 'Apturn',
         sortable: true,
         minWidth: '50px'
     },
     {
-        name: 'Created Time',
-        selector: 'createdTime',
+        name: 'Company Revenue',
+        selector: 'ComRev',
         sortable: true,
         minWidth: '50px'
     },
     {
-        name: 'Updated Time',
-        selector: 'updatedTime',
+        name: 'Date',
+        selector: 'dueDate',
         sortable: true,
         minWidth: '50px'
-    },
-    {
-      name: 'Actions',
-      allowOverflow: true,
-      cell: row => {
-        return (
-          <div key = {row.financialInstitute} className='d-flex'>
-            <UncontrolledDropdown>
-              <DropdownToggle className='pr-1' tag='span'>
-                <Trash size={15} onClick={e => { handleDelete(row) }} />
-              </DropdownToggle>
-            </UncontrolledDropdown>
-            <Link  to={`/edit-bank-guarrante-appl`}><Edit  
-                  size={15} 
-                  onClick={ () => { 
-                                    //setCurrentId(row.id)
-                                    //setModal(true)
-                                     } }>
-                                       <Link to='/edit-bank-guarrante-appl'/>
-                                     </Edit></Link>
-          </div>
-        )
-      }
     }
   ]
 
@@ -791,14 +643,14 @@ const columns1 = [
       <Fragment>
     <Card>
       <CardHeader className='border-bottom'>
-        <CardTitle tag='h4'>Reviews And Ratings</CardTitle>
+        <CardTitle tag='h4'>Commission Updates</CardTitle>
       </CardHeader>
       
       <DataTable
         noHeader
         pagination
         selectableRowsNoSelectAll
-        columns={columns}
+        columns={columns1}
         className='react-dataTable'
         paginationPerPage={4}
         sortIcon={<ChevronDown size={10} />}

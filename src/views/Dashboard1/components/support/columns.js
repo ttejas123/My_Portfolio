@@ -1,14 +1,12 @@
 // ** React Imports
 import { Fragment } from 'react'
-
+import Rating from 'react-rating'
 import { Link } from 'react-router-dom'
 
 // ** Custom Components
 import Avatar from '@components/avatar'
 import Gal from '@src/assets/images/logo/g.png'
 // ** Store & Actions
-import { deleteInvoice } from '../store/actions'
-import { store } from '@store/storeConfig/store'
 
 // ** Third Party Components
 import {
@@ -30,6 +28,7 @@ import {
   Copy,
   Check,
   X,
+  Star,
   CheckCircle,
   Save,
   ArrowDownCircle,
@@ -87,23 +86,6 @@ const renderClient = row => {
 // ** Table columns
 export const columns = [
   {
-    name: 'Name',
-    minWidth: '150px',
-    selector: 'client.name',
-    sortable: true,
-    cell: row => {
-      const name = row.client ? row.client.name : 'John Doe',
-        email = row.client ? row.client.companyEmail : 'johnDoe@email.com'
-      return (
-        <div className='align-items-center'>
-          <div className='d-flex flex-column'>
-            <div className='user-name text-truncate mb-0 w-75 text-truncate'>{name}</div>
-          </div>
-        </div>
-      )
-    }
-  },
-  {
     name: 'SKU ID',
     minWidth: '150px',
     selector: 'SKU_ID',
@@ -112,21 +94,6 @@ export const columns = [
       return (
         <div>
           {row.SKU_ID}
-        </div>
-      )
-    }
-  },
-  {
-    name: 'Lead Time',
-    minWidth: '150px',
-    selector: 'Lead_time',
-    sortable: true,
-    cell: row => {
-      return (
-        <div className='align-items-center'>
-          <div className='d-flex flex-column'>
-            <div className='user-name text-truncate mb-0'>{row.Lead_time}</div>
-          </div>
         </div>
       )
     }
@@ -145,16 +112,27 @@ export const columns = [
     }
   },
   {
-    name: 'MOQ',
-    minWidth: '150px',
-    selector: 'MOQ',
-    sortable: true
-  },
-  {
     name: 'BUIN',
     selector: 'BUIN',
     sortable: true,
     minWidth: '150px'
+  },
+  {
+    name: 'Name',
+    minWidth: '150px',
+    selector: 'client.name',
+    sortable: true,
+    cell: row => {
+      const name = row.client ? row.client.name : 'John Doe',
+        email = row.client ? row.client.companyEmail : 'johnDoe@email.com'
+      return (
+        <div className='align-items-center'>
+          <div className='d-flex flex-column'>
+            <div className='user-name text-truncate mb-0 w-75 text-truncate'>{name}</div>
+          </div>
+        </div>
+      )
+    }
   },
   {
     name: 'Photo',
@@ -187,45 +165,27 @@ export const columns = [
     }
   },
   {
-    name: 'Action',
-    minWidth: '110px',
-    selector: '',
-    sortable: true,
-    cell: row => (
-      <div className='column-action d-flex align-items-center'>
-      
-        <Link to={`/rfq/rfqN/bidDetails`} id={`pw-tooltip-${row.id}`}>
-          <Eye size={17} className='mx-1' />
-        </Link>
-        <UncontrolledTooltip placement='top' target={`pw-tooltip-${row.id}`}>
-          Preview Invoice
-        </UncontrolledTooltip>
-        <UncontrolledDropdown>
-          <DropdownToggle tag='span'>
-            <MoreVertical size={17} className='cursor-pointer' />
-          </DropdownToggle>
-          <DropdownMenu right>
-            
-            <DropdownItem tag={Link} to={`/apps/invoice/edit/${row.id}`} className='w-100'>
-              <Edit size={14} className='mr-50' />
-              <span className='align-middle'>Edit</span>
-            </DropdownItem>
-            <DropdownItem
-              tag='a'
-              href='/'
-              className='w-100'
-              onClick={e => {
-                e.preventDefault()
-                store.dispatch(deleteInvoice(row.id))
-              }}
-            >
-              <Trash size={14} className='mr-50' />
-              <span className='align-middle'>Delete</span>
-            </DropdownItem>
-            
-          </DropdownMenu>
-        </UncontrolledDropdown>
-      </div>
-    )
-  }
+          name: 'Rating',
+          selector: 'rating',
+          sortable: true,
+          minWidth: '150px',
+          cell: row => (
+            <div className='d-flex justify-content-left align-items-center'>
+              <div className='d-flex flex-column'>
+                <Rating
+                    emptySymbol={<Star size={15} fill='#babfc7' stroke='#babfc7' />}
+                    fullSymbol={<Star size={15} fill='#ff9933' stroke='#ff8000' />}
+                    initialRating={row.rating}
+                    readonly
+                  />  
+              </div>
+            </div>
+          )
+        },
+        {
+          name: 'Review',
+          selector: 'review',
+          sortable: true,
+          maxWidth: '150px'
+        }
 ]
