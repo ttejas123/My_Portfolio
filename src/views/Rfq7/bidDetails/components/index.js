@@ -85,7 +85,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
       <h4>Air Jordan 300xs Shoes with korean style</h4>
       <div className='d-lg-flex text-right'>
         <div className='mx-1 d-lg-flex'><div className='mr-1'>Created Date:</div><Input   type='text' name='text' id='exampleText'  placeholder='Enter Date' /> </div>
-        <div className='mr-1 d-lg-flex'><div className='mr-1'>End Date :</div><Input  type='text' name='text' id='exampleText' placeholder='Enter Date' /> </div>
+        <div className='pr-0 mr-0 d-lg-flex'><div className='mr-1'>End Date :</div><Input className='mr-0'  type='text' name='text' id='exampleText' placeholder='Enter Date' /> </div>
       </div>
     </Col>
     <Row>    
@@ -181,7 +181,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
         <hr />
       </Col>
 
-      <Col md='4' xs='12' className=''>
+      <Col md='4' xs='12' className='mr-0 pr-0'>
         <div className='mt-lg-5 pt-lg-5'>
           <CardText>
             Add your Required Customization
@@ -207,7 +207,7 @@ SwiperCore.use([Navigation, Pagination, EffectFade, EffectCube, EffectCoverflow,
         <Col md='12' style={{position:'absolute', bottom:'0', textAlign:'right', width:'100%'}}>
             <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Submit</span></Button.Ripple>
             <Button.Ripple color='primary' className='mr-1'><span style={{paddingLeft: "4px"}}>Reset</span></Button.Ripple>
-            <Button.Ripple color='danger' className='mr-1'><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
+            <Button.Ripple color='danger' className=''><Trash2 size={14} /><span style={{paddingLeft: "4px"}}>Delete</span></Button.Ripple>
         </Col>
       </Col>
     </Row>

@@ -44,8 +44,12 @@ import BidCash from './components/rewards/bidcash'
 import BidCoin from './components/rewards/bidcoin'
 
 import Myprofile from './components/myprofile'
+import MyprofileInfo from './components/myprofile/view/employeeView'
 import Mygallery from './components/mygallery'
+
 import Support from './components/support'
+import SupportComU from './components/support/commiU'
+import SupportProdChan from './components/support/prodChang'
 
 import MyBackup from './components/teamrights/MyBackUp'
 import MyRights from './components/teamrights/MyRights'
@@ -65,7 +69,9 @@ import SpecializedCom from './components/mycommision/specialized'
 import RequestChange from './components/mycommision/requesttochange/index'
 
 import Warehouse from './components/warehouse'
+
 import Myratingsreviews from './components/myratingreviews'
+
 import Temrights from './components/teamrights'
 import Backups from './components/backups/addBackup'
 import Sitemap from './components/sitemap'
@@ -527,11 +533,7 @@ const dashboard2 = [
                      <Left />
                   </TabPane>
                   <TabPane tabId='4'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                           My Details  
-                        </div>
-                      </UncontrolledAlert>
+                     <MyprofileInfo />
                   </TabPane>
                   <TabPane tabId='5'>
                    <MyKyc/>
@@ -553,18 +555,10 @@ const dashboard2 = [
                   <MyGallery/>
                   </TabPane>
                   <TabPane tabId='10'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Product Changes
-                        </div>
-                      </UncontrolledAlert>
+                     <SupportProdChan />
                   </TabPane>
                   <TabPane tabId='11'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Commission Changes
-                        </div>
-                      </UncontrolledAlert>
+                     <SupportComU />
                   </TabPane>
                   <TabPane tabId='12'>
                       <UncontrolledAlert color='primary'>
@@ -605,11 +599,7 @@ const dashboard2 = [
                     <BidCash />
                   </TabPane>
                   <TabPane tabId='22'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Rating And Reviews
-                        </div>
-                      </UncontrolledAlert>
+                     <Myratingsreviews />
                   </TabPane>
                   <TabPane tabId='23'>
                      <About />
