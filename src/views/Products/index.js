@@ -44,7 +44,10 @@ import AsinImportTab from '../Seller/Products/CreateProduct/asinImport'
 import FromExcel from '../Seller/Products/CreateProduct/FromExcel'
 import ByUserTab from '../Seller/Products/CreateProduct/byUser'
 import MyProducts from '../Seller/Products/MyProducts/myProducts'
+
 import ProductEditHistory from '../Seller/Products/MyProducts/productEditHistory'
+
+import Reporting from './components/Reporting'
 
 
 // ** Custom Components
@@ -173,27 +176,7 @@ const Brand = [
                           </NavItem>
                         </Nav>
                       </ListGroupItem>
-                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '13' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('13')}>
-                        <Nav className='mb-0 ml-md-0 cursor-pointer' >
-                          <NavItem style={{paddingLeft: '5px'}}>
-                            <NavLink className='font-weight-bold'>
-                              <span className='d-none d-md-block'>Request Approval</span>
-                              <Home className='d-block d-md-none' size={14} />
-                            </NavLink>
-                          </NavItem>
-                        </Nav>
-                      </ListGroupItem>
-                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '14' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('14')}>
-                        <Nav className='mb-0 ml-md-0 cursor-pointer' >
-                          <NavItem style={{paddingLeft: '5px'}}>
-                            <NavLink className='font-weight-bold'>
-                              <span className='d-none d-md-block'>Invoice Upload</span>
-                              <Home className='d-block d-md-none' size={14} />
-                            </NavLink>
-                          </NavItem>
-                        </Nav>
-                      </ListGroupItem>
-          
+            
                     </ListGroup>
     )
   }
@@ -293,11 +276,7 @@ const Brand = [
                      <FromExcel/>
                   </TabPane>
                   <TabPane tabId='7'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Product Reporting
-                        </div>
-                      </UncontrolledAlert>
+                     <Reporting />
                   </TabPane>
                   <TabPane tabId='8'>
                     <Drafts/>

@@ -9,7 +9,6 @@ import person from '@src/assets/images/avatars/raviKukreja.jpg'
 import a1 from '@src/assets/images/avatars/1-small.png'
 // ** Third Party Components
 import '@styles/react/pages/page-profile.scss'
-
 import {
   Row,
   Card, CardBody,
@@ -29,7 +28,8 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap'
-
+import MUS from './MUS'
+import DocU from './DocU'
 const Details = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
@@ -55,8 +55,14 @@ const Details = () => {
 
                               <NavItem style={{paddingLeft: '5px'}}>
                                 <NavLink className='font-weight-bold' active={activeTab === '1'} onClick={() => toggle1('1')}>
-                                  <span className='d-none d-md-block'>Bid Cash</span>
+                                  <span className='d-none d-md-block'>KYC Docs</span>
                                   <Home className='d-block d-md-none' size={14} />
+                                </NavLink>
+                              </NavItem>
+                              <NavItem>
+                                <NavLink className='font-weight-bold' active={activeTab === '2'} onClick={() => toggle1('2')}>
+                                  <span className='d-none d-md-block'>Add</span>
+                                  <ShoppingCart className='d-block d-md-none' size={14} />
                                 </NavLink>
                               </NavItem>
                               
@@ -74,7 +80,10 @@ const Details = () => {
                   <Col md='12' xs='12'>
                           <TabContent activeTab={activeTab}>
                             <TabPane tabId='1'>
-                              Hello 
+                              <MUS /> 
+                            </TabPane>
+                            <TabPane tabId='2'>
+                              <DocU /> 
                             </TabPane>
                           </TabContent>
                   </Col>    
