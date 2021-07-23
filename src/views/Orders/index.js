@@ -203,7 +203,7 @@ const Bid = [
                   <CardBody className='p-1' > 
                     <h4>Orders</h4>
                     
-                    <ListGroup className='border-bottom' flush>
+                    {/* <ListGroup className='border-bottom' flush>
                       <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '1'} onClick={() => toggle1('1')}>
                          <Nav className='mb-0 ml-md-0 ' >
                           <NavItem >
@@ -214,7 +214,7 @@ const Bid = [
                           </NavItem>
                         </Nav>
                       </ListGroupItem>                            
-                    </ListGroup>
+                    </ListGroup> */}
 
                      <ListGroup className='border-bottom' flush>
                       <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '2'} onClick={() => toggle1('2')}>
@@ -228,7 +228,7 @@ const Bid = [
                       </ListGroupItem>                            
                     </ListGroup>
 
-                     <ListGroup className='border-bottom' flush>
+                     {/* <ListGroup className='border-bottom' flush>
                       <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '3'} onClick={() => toggle1('3')}>
                          <Nav className='mb-0 ml-md-0 ' >
                           <NavItem >
@@ -238,9 +238,9 @@ const Bid = [
                           </NavItem>
                         </Nav>
                       </ListGroupItem>                            
-                    </ListGroup>
+                    </ListGroup> */}
 
-                     <ListGroup className='border-bottom' flush>
+                     {/* <ListGroup className='border-bottom' flush>
                       <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '4'} onClick={() => toggle1('4')}>
                          <Nav className='mb-0 ml-md-0 ' >
                           <NavItem >
@@ -250,7 +250,7 @@ const Bid = [
                           </NavItem>
                         </Nav>
                       </ListGroupItem>                            
-                    </ListGroup>
+                    </ListGroup> */}
 
                      <ListGroup className='border-bottom' flush>
                       <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} active={activeTab === '5'} onClick={() => toggle1('5')}>
