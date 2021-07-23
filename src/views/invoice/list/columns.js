@@ -9,7 +9,7 @@ import Gal from '@src/assets/images/logo/g.png'
 // ** Store & Actions
 import { deleteInvoice } from '../store/actions'
 import { store } from '@store/storeConfig/store'
-
+import nego from '@src/assets/images/icons/nego.png'
 // ** Third Party Components
 import {
   Badge,
@@ -85,6 +85,64 @@ const renderClient = row => {
       }
 
 // ** Table columns
+const ndata = [
+  {
+    title: 'Buyer',
+    content: 'I need only 20 items',
+    meta: '01-05-2021 11:30 AM',
+    metaClassName: 'mr-1'
+    // customContent: (
+    //   <Media>
+    //     <img className='mr-1' src={jsonImg} alt='data.json' height='23' />
+    //     <Media className='mb-0' body>
+    //       data.json
+    //     </Media>
+    //   </Media>
+    //)
+  },
+  {
+    title: 'Seller',
+    content: 'Ok, But My MOQ is 25',
+    meta: '01-05-2021 12:30 PM',
+    metaClassName: 'mr-1',
+    color: 'warning'
+  },
+  {
+    title: 'Buyer',
+    content: 'Then, reduce the price',
+    color: 'info',
+    meta: '01-05-2021 01:30 PM',
+    metaClassName: 'mr-1'
+  },
+  {
+    title: 'Seller',
+    content: 'No, My price is reasonable',
+    color: 'danger',
+    meta: '01-05-2021 02:00 PM',
+    metaClassName: 'mr-1'
+  },
+  {
+    title: 'Buyer',
+    content: 'Can I get it for 30 per unit',
+    color: 'danger',
+    meta: '01-05-2021 02:30 PM',
+    metaClassName: 'mr-1'
+  },
+  {
+    title: 'Seller',
+    content: 'No',
+    color: 'danger',
+    meta: '01-05-2021 03:00 PM',
+    metaClassName: 'mr-1'
+  },
+  {
+    title: 'Approved By',
+    content: 'Pravin Poshmani',
+    color: 'warning',
+    meta: '01-05-2021 03:00 PM',
+    metaClassName: 'mr-1'
+  }
+]
 export const columns = [
   {
     name: 'Name',
@@ -102,6 +160,18 @@ export const columns = [
         </div>
       )
     }
+  },
+  {
+    name: 'Buyer',
+    minWidth: '150px',
+    selector: 'buyer',
+    sortable: true
+  },
+  {
+    name: 'Seller',
+    minWidth: '150px',
+    selector: 'seller',
+    sortable: true
   },
   {
     name: 'SKU ID',
@@ -185,6 +255,20 @@ export const columns = [
         </div>
       )
     }
+  },
+  {
+    name: 'Negotiation History',
+    minWidth: '138px',
+    selector: 'negotiationHistory',
+    sortable: true,
+    cell: row => (
+      <div className='cursor-pointer' onClick={() => {
+        // setModal(!modal)
+      } }>
+      <img src={nego} width='30px'/>
+      <span>View</span>
+      </div>
+    )
   },
   {
     name: 'Action',

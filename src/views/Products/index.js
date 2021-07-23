@@ -44,6 +44,7 @@ import AsinImportTab from '../Seller/Products/CreateProduct/asinImport'
 import FromExcel from '../Seller/Products/CreateProduct/FromExcel'
 import ByUserTab from '../Seller/Products/CreateProduct/byUser'
 import MyProducts from '../Seller/Products/MyProducts/myProducts'
+import ProductEditHistory from '../Seller/Products/MyProducts/productEditHistory'
 
 
 // ** Custom Components
@@ -329,11 +330,7 @@ const Brand = [
                       </UncontrolledAlert>
                   </TabPane>
                   <TabPane tabId='15'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Edit History
-                        </div>
-                      </UncontrolledAlert>
+                     <ProductEditHistory/>
                   </TabPane>
                  
                 </TabContent>

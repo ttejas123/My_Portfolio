@@ -43,6 +43,7 @@ import DataTable3 from './components/paymentAT/datatable'
 import DataTable2 from './components/gstR/datatable'
 import OrderDetails from './orderDetailsView/orderDetails'
 import OrdersList from './ordersList'
+import ReplacementRequest from './replacementRequests'
 
 // ** Custom Components
 const Details = () => {
@@ -362,11 +363,7 @@ const Bid = [
                   </TabPane>
 
                   <TabPane tabId='12'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Refunds
-                        </div>
-                      </UncontrolledAlert>
+                     <ReplacementRequest/>
                   </TabPane>
                   <TabPane tabId='13'>
                      <UncontrolledAlert color='primary'>

@@ -13,6 +13,11 @@ import img4 from '@src/assets/images/elements/puma-super-mario.jpg'
 export const data = [
     {
         
+        buin : 'B0001',
+        entityChanged : 'MRP',
+        previousValue : '1000',
+        updatedValue : '999',
+        date : '01-06-2021',
         product_name: "Men's Regular Fit T-Shirt",
         MRP: "₹ 1400",
         asinNumber : '974718374',
@@ -30,7 +35,12 @@ export const data = [
         status : 'pending'
     },
       {
-        product_name: "WILDHORN® Carter Leather Wallet for Men (Blue Hunter)",
+        buin : 'B0002',
+        entityChanged : 'MRP',
+        previousValue : '1500',
+        updatedValue : '1299',
+        date : '01-06-2021',
+          product_name: "WILDHORN® Carter Leather Wallet for Men (Blue Hunter)",
         MRP: "₹ 1400",
         asinNumber : '34718375',
         fsnNumber : '2355655553',
@@ -47,7 +57,12 @@ export const data = [
         status : 'pending'
     },
       {
-        product_name: "Men's Regular Fit T-Shirt",
+        buin : 'B0003',
+        entityChanged : 'Inventory',
+        previousValue : '100',
+        updatedValue : '120',
+        date : '01-06-2021',
+          product_name: "Men's Regular Fit T-Shirt",
         MRP: "₹ 1400",
         asinNumber : '65432374',
         fsnNumber : '987654543',
@@ -64,7 +79,12 @@ export const data = [
         status : 'pending'
     },
       {
-        product_name: "Men's Regular Fit T-Shirt",
+        buin : 'B0004',
+        entityChanged : 'Sampling Status',
+        previousValue : 'Available',
+        updatedValue : 'Not Available',
+        date : '01-06-2021',
+          product_name: "Men's Regular Fit T-Shirt",
         MRP: "₹ 1400",
         asinNumber : '098745574',
         fsnNumber : '876534543',
@@ -81,7 +101,12 @@ export const data = [
         status : 'appproval'
     },
       {
-        product_name: "Hornbull Gift Hamper for Men | Brown Wallet and Brown Belt Men's Combo Gift Set | Leather Wallets for Men | Men's Wallet",
+        buin : 'B0005',
+        entityChanged : 'MRP',
+        previousValue : '1000',
+        updatedValue : '999',
+        date : '01-06-2021',
+          product_name: "Hornbull Gift Hamper for Men | Brown Wallet and Brown Belt Men's Combo Gift Set | Leather Wallets for Men | Men's Wallet",
         MRP: "₹ 1400",
         asinNumber : '9747454',
         fsnNumber : '234565443',
@@ -98,7 +123,12 @@ export const data = [
         status : 'pending'
     },
       {
-        product_name: "Men's Regular Fit",
+        buin : 'B0006',
+        entityChanged : 'MRP',
+        previousValue : '1200',
+        updatedValue : '999',
+        date : '01-06-2021',
+          product_name: "Men's Regular Fit",
         MRP: "₹ 1400",
         asinNumber : '098745423',
         fsnNumber : '12345443',
@@ -115,7 +145,12 @@ export const data = [
         status : 'pending'
     },
       {
-        product_name: "Kraasa Sports Shoes for Men | Latest Stylish Casual Sneakers for Men",
+        buin : 'B0007',
+        entityChanged : 'MRP',
+        previousValue : '1100',
+        updatedValue : '999',
+        date : '01-06-2021',
+          product_name: "Kraasa Sports Shoes for Men | Latest Stylish Casual Sneakers for Men",
         MRP: "₹ 1400",
         asinNumber : '974745423',
         fsnNumber : '12345443',
@@ -132,7 +167,12 @@ export const data = [
         status : 'approved'
     },
       {
-        product_name: "Latest Stylish Casual Sneakers for Men",
+        buin : 'B0008',
+        entityChanged : 'MRP',
+        previousValue : '1800',
+        updatedValue : '1999',
+        date : '01-06-2021',
+          product_name: "Latest Stylish Casual Sneakers for Men",
         MRP: "₹ 1400",
         asinNumber : '6543445423',
         fsnNumber : '987845443',
@@ -149,7 +189,12 @@ export const data = [
         status : 'pending'
     },
       {
-        product_name: "Men's Regular Fit T-Shirt",
+        buin : 'B0009',
+        entityChanged : 'MRP',
+        previousValue : '500',
+        updatedValue : '550',
+        date : '01-06-2021',
+          product_name: "Men's Regular Fit T-Shirt",
         MRP: "₹ 1400",
         asinNumber : '974745423',
         fsnNumber : '12345443',

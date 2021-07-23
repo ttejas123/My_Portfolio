@@ -29,6 +29,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Paid',
       balance: '$724',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '23 Apr 2019'
     },
     {
@@ -57,6 +59,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/10-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '15 Dec 2019'
     },
     {
@@ -85,6 +89,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '03 Nov 2019'
     },
     {
@@ -113,6 +119,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Sent',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '11 Feb 2020'
     },
     {
@@ -141,6 +149,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/10-small.png').default,
       invoiceStatus: 'Draft',
       balance: '$815',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '30 Jun 2019'
     },
     {
@@ -169,6 +179,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Paid',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '24 Jun 2019'
     },
     {
@@ -197,6 +209,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Draft',
       balance: '$407',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '22 Nov 2019'
     },
     {
@@ -225,6 +239,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Paid',
       balance: '-$205',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '10 Feb 2020'
     },
     {
@@ -253,6 +269,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/2-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '24 Dec 2019'
     },
     {
@@ -281,6 +299,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: '$305',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '02 Jun 2019'
     },
     {
@@ -309,6 +329,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/4-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '$666',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '18 Mar 2020'
     },
     {
@@ -337,6 +359,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/5-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '17 Jan 2020'
     },
     {
@@ -365,6 +389,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/7-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '01 Oct 2019'
     },
     {
@@ -393,6 +419,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '22 May 2019'
     },
     {
@@ -421,6 +449,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/2-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$202',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '02 Aug 2019'
     },
     {
@@ -449,6 +479,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/6-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: '$731',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '15 Dec 2019'
     },
     {
@@ -477,6 +509,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Sent',
       balance: '-$344',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '17 Sep 2019'
     },
     {
@@ -505,6 +539,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/7-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$253',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '16 Aug 2019'
     },
     {
@@ -533,6 +569,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Past Due',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '01 Aug 2019'
     },
     {
@@ -561,6 +599,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/6-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: '$883',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '12 Apr 2019'
     },
     {
@@ -589,6 +629,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Sent',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '19 Nov 2019'
     },
     {
@@ -617,6 +659,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/8-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '30 Nov 2019'
     },
     {
@@ -645,6 +689,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/3-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '10 Sep 2019'
     },
     {
@@ -673,6 +719,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/2-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '08 Dec 2019'
     },
     {
@@ -701,6 +749,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Draft',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '01 Feb 2020'
     },
     {
@@ -729,6 +779,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/4-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '18 Oct 2019'
     },
     {
@@ -757,6 +809,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/10-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '01 Nov 2019'
     },
     {
@@ -785,6 +839,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Downloaded',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '23 Sep 2019'
     },
     {
@@ -813,6 +869,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/7-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '01 Apr 2019'
     },
     {
@@ -841,6 +899,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Paid',
       balance: '$951',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '30 Sep 2019'
     },
     {
@@ -869,6 +929,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$153',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '25 Aug 2019'
     },
     {
@@ -897,6 +959,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/5-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '10 Jul 2019'
     },
     {
@@ -925,6 +989,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/8-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$459',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '14 Oct 2019'
     },
     {
@@ -953,6 +1019,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/4-small.png').default,
       invoiceStatus: 'Past Due',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '28 Mar 2019'
     },
     {
@@ -981,6 +1049,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Sent',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '06 Sep 2019'
     },
     {
@@ -1009,6 +1079,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Sent',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '09 May 2019'
     },
     {
@@ -1037,6 +1109,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '23 Jul 2019'
     },
     {
@@ -1065,6 +1139,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '25 Sep 2019'
     },
     {
@@ -1093,6 +1169,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Downloaded',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '07 Jun 2019'
     },
     {
@@ -1121,6 +1199,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/6-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '22 Oct 2019'
     },
     {
@@ -1149,6 +1229,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Sent',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '04 Feb 2020'
     },
     {
@@ -1177,6 +1259,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Paid',
       balance: '$361',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '02 Mar 2020'
     },
     {
@@ -1205,6 +1289,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Paid',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '25 Aug 2019'
     },
     {
@@ -1233,6 +1319,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Draft',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '06 Mar 2020'
     },
     {
@@ -1261,6 +1349,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/3-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '09 Jun 2019'
     },
     {
@@ -1289,6 +1379,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Past Due',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '22 Oct 2019'
     },
     {
@@ -1317,6 +1409,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '22 Mar 2020'
     },
     {
@@ -1345,6 +1439,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Paid',
       balance: 0,
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '22 Oct 2019'
     },
     {
@@ -1373,6 +1469,8 @@ const data = {
       avatar: '',
       invoiceStatus: 'Draft',
       balance: '$762',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '12 Jun 2019'
     },
     {
@@ -1401,6 +1499,8 @@ const data = {
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Paid',
       balance: '-$205',
+      buyer : 'TCS',
+      seller : 'Retailsnet',
       dueDate: '25 Sep 2019'
     }
   ]

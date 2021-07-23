@@ -1,7 +1,7 @@
 // ** React Imports
 import { useState, useEffect, forwardRef } from 'react'
 import { Link } from 'react-router-dom'
-
+import Timeline from '@components/timeline'
 // ** Table Columns
 import { columns } from './columns'
 
@@ -9,7 +9,7 @@ import { columns } from './columns'
 import ReactPaginate from 'react-paginate'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
-import { Button, Label, Input, CustomInput, Row, Col, Card, FormGroup } from 'reactstrap'
+import { Button, Label, Input, CustomInput, Row, Col, Card, FormGroup, Modal, ModalBody, ModalHeader } from 'reactstrap'
 
 // ** Store & Actions
 import { getData } from '../store/actions'
@@ -25,11 +25,77 @@ const InvoiceList = () => {
     return state.invoice
   })
 
+  
+  const [modal, setModal] = useState(false)
   const [value, setValue] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const [statusValue, setStatusValue] = useState('')
   const [rowsPerPage, setRowsPerPage] = useState(10)
   const [model, setModel] = useState(false)
+
+  const handleNegoClick = () => {
+    setModal(true)
+  }
+  
+  const ndata = [
+    {
+      title: 'Buyer',
+      content: 'I need only 20 items',
+      meta: '01-05-2021 11:30 AM',
+      metaClassName: 'mr-1'
+      // customContent: (
+      //   <Media>
+      //     <img className='mr-1' src={jsonImg} alt='data.json' height='23' />
+      //     <Media className='mb-0' body>
+      //       data.json
+      //     </Media>
+      //   </Media>
+      //)
+    },
+    {
+      title: 'Seller',
+      content: 'Ok, But My MOQ is 25',
+      meta: '01-05-2021 12:30 PM',
+      metaClassName: 'mr-1',
+      color: 'warning'
+    },
+    {
+      title: 'Buyer',
+      content: 'Then, reduce the price',
+      color: 'info',
+      meta: '01-05-2021 01:30 PM',
+      metaClassName: 'mr-1'
+    },
+    {
+      title: 'Seller',
+      content: 'No, My price is reasonable',
+      color: 'danger',
+      meta: '01-05-2021 02:00 PM',
+      metaClassName: 'mr-1'
+    },
+    {
+      title: 'Buyer',
+      content: 'Can I get it for 30 per unit',
+      color: 'danger',
+      meta: '01-05-2021 02:30 PM',
+      metaClassName: 'mr-1'
+    },
+    {
+      title: 'Seller',
+      content: 'No',
+      color: 'danger',
+      meta: '01-05-2021 03:00 PM',
+      metaClassName: 'mr-1'
+    },
+    {
+      title: 'Approved By',
+      content: 'Pravin Poshmani',
+      color: 'warning',
+      meta: '01-05-2021 03:00 PM',
+      metaClassName: 'mr-1'
+    }
+  ]
+  
 
   const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage }) => {
   return (
@@ -266,6 +332,13 @@ const InvoiceList = () => {
   }
 
   return (
+    <>
+    <Modal isOpen={modal} toggle={() => setModal(!modal)}>
+          <ModalHeader toggle={() => setModal(!modal)}>Negotiation History</ModalHeader>
+          <ModalBody>
+          <Timeline className='ml-50 mb-0' data={ndata} />
+          </ModalBody>
+        </Modal>
     <div className='invoice-list-wrapper rounded'>
       <Card className='mx-1'>
         <div className='invoice-list-dataTable'>
@@ -298,6 +371,7 @@ const InvoiceList = () => {
         </div>
       </Card>
     </div>
+    </>
   )
 }
 
