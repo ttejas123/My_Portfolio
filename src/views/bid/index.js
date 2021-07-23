@@ -36,7 +36,7 @@ import {
   NavLink
 } from 'reactstrap'
 
-
+import DetailsPage from '@src/views/Dashboard1/components/bidDetail/bidDetails.js'
 import List from './components/PI/List'
 import RfqN from './components/NewL/rfqN'
 
@@ -242,11 +242,7 @@ const Customizations = [
                      <NoShow/>
                   </TabPane>
                   <TabPane tabId='5'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          Individual Bid
-                        </div>
-                      </UncontrolledAlert>
+                     <DetailsPage />
                   </TabPane>
                   <TabPane tabId='6'>
                      <RfqN />

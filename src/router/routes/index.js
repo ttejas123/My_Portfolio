@@ -21,8 +21,8 @@ const Routes = [
     component: lazy(() => import('../../views/Rfq7/rfqN'))
   },
   {
-    path: '/Rfq7s/subbar',
-    component: lazy(() => import('../../views/Rfq7/subBar'))
+    path: '/Homes/bidDetailPage/:id',
+    component: lazy(() => import('@src/views/Dashboard1/components/bidDetail/bidDetails.js'))
   },
   {
     path: '/topbar',

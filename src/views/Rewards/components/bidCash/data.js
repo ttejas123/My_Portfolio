@@ -132,3 +132,89 @@ export const data = [
         customizations :"Company WaterMark"
       }
 ]
+
+
+export const data1 = [
+      {
+        id:1,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹5',
+        category: 'Electronics',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"Logo of team"
+       
+      },
+      {
+        id:2,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹10',
+        category: 'Clothers',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"differnt Color"
+      },
+      {
+        id:3,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹15',
+        category: 'Hair Products',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"Company WaterMark"
+      },
+      {
+        id:4,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹50',
+        category: 'Skin Care',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"Logo of team"
+      },
+      {
+        id:5,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹0.2',
+        category: 'luxury Products and Brands',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"differnt Color"
+      },
+      {
+        id:6,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹32',
+        category: 'Musical Instruments',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"Company WaterMark"
+      },
+      {
+        id:7,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹5',
+        category: 'Clothing',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"Company WaterMark"
+      },
+      {
+        id:8,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹5',
+        category: 'Electronics',
+        review:"Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"Logo of team"
+      },
+      {
+        id:9,
+        MRid: '800 Bid Cash',
+        bidCash: '1 Bid Cash',
+        rs: '₹5',
+        category: 'Electronics',
+        review: "Your product is really good but still it's out of price range and also we can't add much customizations",
+        customizations :"Company WaterMark"
+      }
+]

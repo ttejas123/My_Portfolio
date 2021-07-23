@@ -168,7 +168,7 @@ const VerticalLayout = props => {
         </div>
       </Navbar>
     {/* "header-navbar" => use This Line here-->|vvvvv|*/}
-      <Navbar className={dds === true ? ('d-block  p-0') : ('d-none p-0')} style={{marginBottom: '-5rem'}}>
+      <Navbar className={dds === true ? ('d-block header-navbar  p-0') : ('d-none p-0')} style={{marginBottom: '-5rem'}}>
               <TopbarNav />
       </Navbar>
       </div>

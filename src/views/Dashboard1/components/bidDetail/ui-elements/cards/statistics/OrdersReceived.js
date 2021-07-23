@@ -4,33 +4,7 @@ import { Package } from 'react-feather'
 import StatsWithAreaChart from '@components/widgets/stats/StatsWithAreaChart'
 
 const OrdersReceived = ({ kFormatter, warning }) => {
-  const [data, setData] = useState({
-        profit:
-        {
-            series: [
-                {
-                    name: 'Profit',
-                    data: [28, 40, 36, 52, 38, 60, 55]
-                }
-            ],
-            analyticsData: {
-                sales: "92600"
-            }
-        },
-        product:
-        {
-            series: [
-                {
-                    name: 'Product',
-                    data: [0, 33, 36, 52, 95, 44, 67]
-                }
-            ],
-            analyticsData: {
-                sales: "300K"
-            }
-        }
-
-    })
+  const [data, setData] = useState(null)
 
   const options = {
     chart: {
@@ -81,18 +55,18 @@ const OrdersReceived = ({ kFormatter, warning }) => {
     }
   }
 
-  // useEffect(() => {
-  //   axios.get('/card/card-statistics/orders').then(res => setData(res.data))
-  // }, []) // Commeted by komal
+  useEffect(() => {
+    axios.get('/card/card-statistics/orders').then(res => setData(res.data))
+  }, [])
 
   return data !== null ? (
     <StatsWithAreaChart
       icon={<Package size={21} />}
       color='warning'
-      stats={kFormatter(data.product.analyticsData.sales)}
-      statTitle='Nos Products'
+      stats={kFormatter(data.analyticsData.orders)}
+      statTitle='Orders Received'
       options={options}
-      series={data.product.series}
+      series={data.series}
       type='area'
     />
   ) : null

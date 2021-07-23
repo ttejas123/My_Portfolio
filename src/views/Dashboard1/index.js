@@ -36,7 +36,7 @@ import {
   NavLink
 } from 'reactstrap'
 import { useSelector, useDispatch } from 'react-redux'
-
+import DetailsPage from '@src/views/Dashboard1/components/bidDetail/bidDetails.js'
 import Left from './components/mydashboard/left/MainSubMenu'
 import Main from './components/mydashboard/main/index.js'
 
@@ -44,6 +44,7 @@ import BidCash from './components/rewards/bidcash'
 import BidCoin from './components/rewards/bidcoin'
 
 import Myprofile from './components/myprofile'
+import MyprofileKYCD from './components/myprofile/KYCD'
 import MyprofileInfo from './components/myprofile/view/employeeView'
 import Mygallery from './components/mygallery'
 
@@ -53,6 +54,8 @@ import SupportProdChan from './components/support/prodChang'
 
 import MyBackup from './components/teamrights/MyBackUp'
 import MyRights from './components/teamrights/MyRights'
+
+import SITEMAP from '@src/views/SiteMap'
 
 import About from './components/teamrights/MyTeam/Components/about.js'
 import Members from './components/teamrights/MyTeam/Components/members.js'
@@ -74,7 +77,7 @@ import Myratingsreviews from './components/myratingreviews'
 
 import Temrights from './components/teamrights'
 import Backups from './components/backups/addBackup'
-import Sitemap from './components/sitemap'
+
 import MyKyc from '../MyProfile/MyKyc'
 import TeamKyc from '../MyProfile/TeamKyc'
 import MyGallery from '../MyProfile/MyGallery'
@@ -145,11 +148,11 @@ const Details = () => {
                           </NavItem>
                         </Nav>
                       </ListGroupItem>
-                      <ListGroupItem className='m-0 p-0 cursor-pointer'>
-                        <Nav className='mb-0 ml-md-0 cursor-pointer' style={activeTab === '5' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('5')} >
+                      <ListGroupItem className='m-0 p-0 cursor-pointer' style={activeTab === '5' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('5')}>
+                        <Nav className='mb-0 ml-md-0 cursor-pointer'>
                           <NavItem style={{paddingLeft: '5px'}}>
                             <NavLink className='font-weight-bold'>
-                              <span className='d-none d-md-block'>My KYC</span>
+                              <span className='d-none d-md-block'>My & Team KYC</span>
                               <Home className='d-block d-md-none' size={14} />
                             </NavLink>
                           </NavItem>
@@ -159,7 +162,7 @@ const Details = () => {
                         <Nav className='mb-0 ml-md-0 cursor-pointer'>
                           <NavItem style={{paddingLeft: '5px'}}>
                             <NavLink className='font-weight-bold'>
-                              <span className='d-none d-md-block'>Team KYC</span>
+                              <span className='d-none d-md-block'>Corporate KYC List and Upload</span>
                               <Home className='d-block d-md-none' size={14} />
                             </NavLink>
                           </NavItem>
@@ -504,7 +507,7 @@ const dashboard2 = [
                     <div className='border-bottom'><AppCollapse data={dashboard2} /></div>
                     <ListGroup  flush>
 
-                      <ListGroupItem className='cursor-pointer' style={{paddingLeft: '6px'}} style={activeTab === '33' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('33')}>
+                      <ListGroupItem tag={Link} to='/site-map' className='cursor-pointer' style={{paddingLeft: '6px'}} style={activeTab === '33' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('33')}>
                          <Nav className='mb-0 ml-md-0 pl-0  ' >
                           <NavItem >
                             <NavLink className='font-weight-bold  d-flex'>
@@ -542,11 +545,7 @@ const dashboard2 = [
                      <TeamKyc/>
                   </TabPane>
                   <TabPane tabId='7'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          KYC Doc
-                        </div>
-                      </UncontrolledAlert>
+                     <MyprofileKYCD />
                   </TabPane>
                   <TabPane tabId='8'>
                      <MyGallery/>
@@ -632,11 +631,7 @@ const dashboard2 = [
                      <Backups />
                   </TabPane>
                   <TabPane tabId='33'>
-                     <UncontrolledAlert color='primary'>
-                        <div className='alert-body'>
-                          SiteMap
-                        </div>
-                      </UncontrolledAlert>
+                     Site Map
                   </TabPane>
                 </TabContent>
             </Col>

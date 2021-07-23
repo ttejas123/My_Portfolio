@@ -105,7 +105,7 @@ const direction = 'ltr'
   }
 
   // ** Render cart items
-  const renderCart = () => {
+  const renderCart = (val) => {
     const [isRtls, setIsRtl] = useRTL()
     const [OpenStyle, setOpenStyle] = useState(false)
           return (
@@ -114,7 +114,7 @@ const direction = 'ltr'
           <div>
              <Row >
                 <Col lg='3' sm='3' xs='6' className="m-0 pl-3 mt-1 mb-1">
-                  <h5 className='Col-lg-8 text-truncate'><b>Air Jordan 3 Blue Cap Dark Purple Dust Atomic Pink</b></h5>
+                  <div tag={Link} to={`/Homes/bidDetailPage/${val}`}><h5 className='Col-lg-8 text-truncate'><b>Air Jordan 3 Blue Cap Dark Purple Dust Atomic Pink</b></h5></div>
                 </Col>
                 <Col lg='3' sm='3' xs='6' className="m-0 mt-1 mb-1">
                     mr.pankaj khurana 
@@ -600,7 +600,7 @@ const direction = 'ltr'
       <div className='checkout-items list-view' >
           { 
             render.map((val) => {
-              return (<div key={val}>{renderCart()}</div>)
+              return (<div key={val}>{renderCart(val)}</div>)
             })
           }
           
