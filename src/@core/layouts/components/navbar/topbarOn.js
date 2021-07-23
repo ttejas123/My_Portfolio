@@ -102,7 +102,7 @@ const Topbar = props => {
   const renderCart = () => {
       return (
 
-        <Card className='mb-0  shadow-none' style={{marginTop: '0.7rem'}} >
+        <Card className='mb-0  shadow-none' style={{marginTop: '6rem'}} >
         <CardBody className='pb-0'>
         <Row> 
           <Col lg='9' sm='12' className='pl-lg-2'>

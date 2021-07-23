@@ -153,7 +153,7 @@ const VerticalLayout = props => {
           currentActiveItem={currentActiveItem}
         />
       ) : null}
-
+      <div>
       <Navbar
         expand='lg'
         light={skin !== 'dark'}
@@ -166,11 +166,12 @@ const VerticalLayout = props => {
         <div className=' mb-0 navbar-container content py-0'>
           {navbar ? navbar : <NavbarComponent setMenuVisibility={setMenuVisibility} skin={skin} setSkin={setSkin} />}
         </div>
-
-        <div className={dds === true ? ('d-block p-0') : ('d-none p-0')} style={{margin: '0rem'}}>
-              <TopbarNav />
-        </div>
       </Navbar>
+    {/* "header-navbar" => use This Line here-->|vvvvv|*/}
+      <Navbar className={dds === true ? ('d-block  p-0') : ('d-none p-0')} style={{marginBottom: '-5rem'}}>
+              <TopbarNav />
+      </Navbar>
+      </div>
 
       {children}
 
