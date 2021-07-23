@@ -45,9 +45,9 @@ import {
 } from 'reactstrap'
 // ** Styles
 
-import Mob from './assets/M1.jpg'
-import Tel from './assets/T1.jpeg'
-import TS from './assets/TS1.jpg'
+import Mob from '@src/views/Rfq7/assets/M1.jpg'
+import Tel from '@src/views/Rfq7/assets/T1.jpeg'
+import TS from '@src/views/Rfq7/assets/TS1.jpg'
 
 import Polo from '@src/views/Rfq7/assets/poloLogo.jpg'
 import OneP from '@src/views/Rfq7/assets/onPlusLogo.jpg'

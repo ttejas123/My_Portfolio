@@ -14,6 +14,7 @@ export const data = [
     {
         
         product_name: "Men's Regular Fit T-Shirt",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Approved',
         asinNumber : '974718374',
@@ -32,6 +33,7 @@ export const data = [
     },
       {
         product_name: "WILDHORN® Carter Leather Wallet for Men (Blue Hunter)",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Disapproved',
         asinNumber : '34718375',
@@ -50,6 +52,7 @@ export const data = [
     },
       {
         product_name: "Men's Regular Fit T-Shirt",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Approved',
         asinNumber : '65432374',
@@ -68,6 +71,7 @@ export const data = [
     },
       {
         product_name: "Men's Regular Fit T-Shirt",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Approved',
         asinNumber : '098745574',
@@ -86,6 +90,7 @@ export const data = [
     },
       {
         product_name: "Hornbull Gift Hamper for Men | Brown Wallet and Brown Belt Men's Combo Gift Set | Leather Wallets for Men | Men's Wallet",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Disapproved',
         asinNumber : '9747454',
@@ -104,6 +109,7 @@ export const data = [
     },
       {
         product_name: "Men's Regular Fit",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Approved',
         asinNumber : '098745423',
@@ -122,6 +128,7 @@ export const data = [
     },
       {
         product_name: "Kraasa Sports Shoes for Men | Latest Stylish Casual Sneakers for Men",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Approved',
         asinNumber : '974745423',
@@ -140,6 +147,7 @@ export const data = [
     },
       {
         product_name: "Latest Stylish Casual Sneakers for Men",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Approved',
         asinNumber : '6543445423',
@@ -158,6 +166,7 @@ export const data = [
     },
       {
         product_name: "Men's Regular Fit T-Shirt",
+        cmt:"I Want Printed Logo But it is not present there.",
         MRP: "₹ 1400",
         response: 'Approved',
         asinNumber : '974745423',

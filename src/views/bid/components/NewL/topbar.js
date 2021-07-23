@@ -10,8 +10,6 @@ import { Card, CardBody, CardText, CardHeader, Button, Label, InputGroup, FormGr
 import logo from '@src/assets/images/logo/bidoyaLogo.png'
 import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
 import Avatar from '@components/avatar'
-import { useSelector, useDispatch } from 'react-redux'
-import { SearhPrp } from '@src/redux/actions/loginOut/index.js'
 
 // ** Styles
 import '@styles/base/pages/app-ecommerce.scss'
@@ -71,7 +69,6 @@ const Topbar = props => {
 
   const [values, setValues] = useState(initialvalues)
   // ** Props
-  const usDispatch = useDispatch()
  // const { products, stepper, deleteCartItem, dispatch, addToWishlist, deleteWishlistItem, getCartItems } = props
 
   // ** Function to convert Date
@@ -102,7 +99,7 @@ const Topbar = props => {
   const renderCart = () => {
       return (
 
-        <Card className='mb-0  shadow-none' style={{marginTop: '6rem'}} >
+        <Card className='mb-0 mb-1 shadow-none' style={{marginTop:'-1rem'}}>
         <CardBody className='pb-0'>
         <Row> 
           <Col lg='9' sm='12' className='pl-lg-2'>
@@ -130,9 +127,7 @@ const Topbar = props => {
                   </Col>
 
                   <Col md='3' sm='6'>
-                  <Button.Ripple className='p-0 bg-white' color='white' tag={Link} to='/homes/searchpage'>
-                    <Search  size={30} className='mr-1' onClick={() => usDispatch(SearhPrp())} />
-                  </Button.Ripple> 
+                  <Search size={30} className='mr-1 ' />
                       {/* <Button.Ripple className='px-1' style={{backgroundColor : '#000000'}} type='submit' color='primary'>
 =======
                   <Col md='3' sm='6' >
@@ -153,7 +148,7 @@ const Topbar = props => {
                         <span>Cart</span>
                 </Button.Ripple>
           </Col>
-          <Col lg='1' sm='12' className='ml-2'>  
+          <Col lg='1' sm='12' className='ml-lg-1 mt-1 mt-lg-0 mb-1 mb-lg-0'>  
               
                 <Button.Ripple className='d-flex' type='submit' color='primary'>
                   <Zap size={13} className='mr-1' />

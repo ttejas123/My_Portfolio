@@ -20,3 +20,18 @@
 
 
 //docer contener devox
+
+
+//Navigation Menu
+//Bid Listing
+//POC : it's just link profile info
+//Customization: 1. Name, 2. Product, 3. SKU, 4. Customization, 5. Action
+
+
+// 1.My KYC: Doc Number (No T menue)
+// 2.KYC Doc: Mesmury View (Upload)
+
+// 3.Bid Coin 
+// 1. header : following Category,(mobile), BidCoin, Conversion, Maximum Redumsion
+
+// Rules Of (Lora Limsum)+. No tranfer, 
