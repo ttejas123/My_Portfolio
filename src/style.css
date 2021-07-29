@@ -1,0 +1,7 @@
+.bgMainDivRoot {
+	/*background-image: url('@src/assets/images/banner/MBack5.jpg');*/
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
