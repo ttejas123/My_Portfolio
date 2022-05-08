@@ -1,3 +1,10 @@
 .navbarLeftMwnu{
-	
+	display: flex;
+	margin: 0 0 0 7rem;
+}
+
+@media screen and (max-width: 1397px) {
+  .navbarLeftMwnu{
+	margin: 0 0 0 1rem;
+}
 }

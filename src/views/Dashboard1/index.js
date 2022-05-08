@@ -3,9 +3,10 @@ import { useEffect, Fragment, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { AlignJustify, Rss, Info, Image, User, Edit, Home, Award, ShoppingCart, Package, DollarSign, Truck, UserPlus, Star, Eye, Tool, Map } from 'react-feather'
 import AppCollapse from '@components/app-collapse'
-
+import PerfectScrollbar from 'react-perfect-scrollbar'
+import 'react-perfect-scrollbar/dist/css/styles.css'
 // import RelatedProducts from './RelatedProducts'
-
+import './style.css'
 // ** Custom Components
 import BreadCrumbs from '@components/breadcrumbs'
 
@@ -488,8 +489,9 @@ const dashboard2 = [
         <Row>
          
           <Col md='2' xs='12'> 
-                <Card >
-                  <CardBody className='p-1' > 
+              <PerfectScrollbar>
+                <Card className='overflow-auto' id='style-1' style={{height: '70vh'}} >
+                  <CardBody className='p-1'  > 
                     <h4>Dashboard</h4>
                     <div className='border-bottom'><AppCollapse data={dashboard} /></div>
                     <ListGroup className='border-bottom' flush>
@@ -504,7 +506,7 @@ const dashboard2 = [
                         </Nav>
                       </ListGroupItem>                            
                     </ListGroup>
-                    <div className='border-bottom'><AppCollapse data={dashboard2} /></div>
+                    <div className='border-bottom '><AppCollapse data={dashboard2} /></div>
                     <ListGroup  flush>
 
                       <ListGroupItem tag={Link} to='/site-map' className='cursor-pointer' style={{paddingLeft: '6px'}} style={activeTab === '33' ? {borderLeft: '1px solid red', paddingLeft: '6px'} : {paddingLeft: '6px'}} onClick={() => toggle1('33')}>
@@ -521,7 +523,7 @@ const dashboard2 = [
                     </ListGroup>
                   </CardBody>
                 </Card>  
-                
+              </PerfectScrollbar>  
             </Col>
 
             <Col md='10' xs='12'>

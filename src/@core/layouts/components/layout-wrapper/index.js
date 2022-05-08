@@ -54,10 +54,9 @@ const LayoutWrapper = props => {
     }
     return () => cleanUp()
   }, [])
-
   return (
     <div
-      className={classnames('app-content content overflow-hidden px-0 ', {
+      className={classnames(' content overflow-hidden px-0 ', {
         [wrapperClass]: wrapperClass,
         'show-overlay': navbarStore.query.length
       })

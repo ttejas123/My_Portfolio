@@ -1,17 +1,15 @@
-// ** React Imports
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 // ** Third Party Components
 import ReactCountryFlag from 'react-country-flag'
 import { UncontrolledDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
-import logo from '@src/assets/images/logo/logo.jpg'
+import logo from '@src/assets/images/banner/tLogo.jpg'
 
 // ** Internationalization Context
 import { IntlContext } from '@src/utility/context/Internationalization'
 const IntlDropdown = () => {
   // ** Context
   const intlContext = useContext(IntlContext)
-  console.log(intlContext)
 
   // ** Vars
   const langObj = {
@@ -28,18 +26,18 @@ const IntlDropdown = () => {
   }
 
   return (
-    <UncontrolledDropdown href='/' tag='li' className='dropdown-language nav-item'>
-      <DropdownToggle href='/' tag='a' className='nav-link' onClick={e => e.preventDefault()}>
+    <UncontrolledDropdown href='/' tag='li' >
+      <DropdownToggle href='/' tag='a' className='mr-1' onClick={e => e.preventDefault()}>
         {/* <ReactCountryFlag
           className='country-flag flag-icon'
           countryCode='us'
           svg
         /> */}
-         <Link to='/home'>
+         <Link to='/'>
         <div className='d-inline-block' style={{paddingTop:'7px'}}>
-      <img className='mb-1' src={logo} alt={"Logo"} height='25' width='25'/>
+      <img style={{marginBottom: "0.7rem"}} src={logo} alt={"Logo"} height='32' width='35'/>
       </div>
-        <span className='font-weight-bold mr-1 h2 ' style={{marginLeft:5, fontWeight:1500, color:'black'}}>Bidoya</span>
+        <span className='font-weight-bold  mr-0 h2 ' style={{marginLeft:5, fontWeight:1500, color:'black'}}>Tejas</span>
         </Link>
       </DropdownToggle>
     </UncontrolledDropdown>

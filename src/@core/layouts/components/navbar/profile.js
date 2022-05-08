@@ -1,4 +1,3 @@
-// ** React Imports
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +6,9 @@ import Avatar from '@components/avatar'
 
 // ** Utils
 import { isUserLoggedIn } from '@utils'
-
+//import { handleLogout } from '@store/actions/auth'
+// import { StatusBS } from '@src/redux/actions/statusBS/index'
+// import { removeauth } from '@src/redux/actions/authenticate/index.js'
 // ** Store & Actions
 // import { useDispatch } from 'react-redux'
 // import { handleLogout } from '@store/actions/auth'
@@ -23,16 +24,10 @@ import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
 const UserDropdown = () => {
   // ** Store Vars
   const dispatch = useDispatch()
+  const code = {jwt: 400}
   // useSelector(state => { console.log(state.CurrentPageTab) }) 
   // ** State
   const [userData, setUserData] = useState(null)
-
-  //** ComponentDidMount
-  // useEffect(() => {
-  //   if (isUserLoggedIn() !== null) {
-  //     setUserData(JSON.parse(localStorage.getItem('userData')))
-  //   }
-  // }, [])
 
   //** Vars
   const userAvatar = defaultAvatar
@@ -79,7 +74,11 @@ const UserDropdown = () => {
           <span className='align-middle'>Help</span>
         </DropdownItem>
         <DropdownItem divider />
-        <DropdownItem  tag={Link} to='/login'>
+        <DropdownItem onClick={() => {
+          //dispatch(removeauth(null))
+          //dispatch(StatusBS(null))
+          
+        }}  tag={Link} to='/login'>
           <Power style={{color: '#ff3333'}} size={14} className='mr-75' />
           <span style={{color: '#ff3333'}} className='align-middle'>Logout</span>
         </DropdownItem>
