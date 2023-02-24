@@ -10,7 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Tejas Thakare </span>
             from <span className="purple"> Airoli, Navi Mumbai, India.</span>
-            <br />I am a Senior pursuing MSC in Computer Science in 
+            <br />I am pursuing MSC in Computer Science in 
             <br />University Of Mumbai.
             Apart from coding, some other
             <br />activities that I love to do!
@@ -30,7 +30,7 @@ function AboutCard() {
           <p style={{ color: "rgb(155 126 172)" }}>
             "Strive to build things that make a difference!"{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Tejas</footer>
         </blockquote>
       </Card.Body>
     </Card>
